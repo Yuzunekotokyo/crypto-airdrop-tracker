@@ -1,0 +1,8 @@
+# Crypto Airdrop Tracker — cron設定例
+# crontab -e で追加 (毎日午前8時に更新)
+
+# サーバーのcronを使う場合 (scheduler.py不要):
+0 8 * * * cd /path/to/crypto-airdrop-tracker && /path/to/venv/bin/python -c "from updater import run_daily_update; run_daily_update(force_email=True)"
+
+# Flaskアプリを常時起動する場合 (自動スケジューラ内蔵):
+# @reboot cd /path/to/crypto-airdrop-tracker && /path/to/venv/bin/python app.py
