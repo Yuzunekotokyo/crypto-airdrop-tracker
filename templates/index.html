@@ -15,6 +15,10 @@
     <div class="update-meta">
       <span class="update-badge">🔄 最新更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
+      {% set has_detail = latest_update.added_names or latest_update.changes or latest_update.removed_names %}
+      {% if has_detail %}
+      <button class="banner-detail-toggle" onclick="toggleBannerDetail()" id="detail-toggle-btn">詳細 ▼</button>
+      {% endif %}
     </div>
     <div class="update-stats">
       <span class="stat-chip stat-total">
@@ -33,20 +37,54 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
+      {% if latest_update.removed_names %}
+      <span class="stat-chip stat-removed">
+        🗑 削除 <strong>{{ latest_update.removed_names | length }}</strong> 件
+      </span>
+      {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
         📧 メール送信済
       </span>
       {% endif %}
     </div>
-    {% if latest_update.added_names %}
-    <div class="update-new-items">
-      <strong>新規追加:</strong>
-      {% for name in latest_update.added_names %}
-      <span class="new-tag">{{ name }}</span>
-      {% endfor %}
+
+    <!-- 詳細展開パネル -->
+    {% if has_detail %}
+    <div class="banner-detail" id="banner-detail" style="display:none;">
+      {% if latest_update.added_names %}
+      <div class="detail-group">
+        <span class="detail-label detail-label-new">🆕 新規追加</span>
+        <span class="detail-items">
+          {% for name in latest_update.added_names %}
+          <span class="new-tag">{{ name }}</span>
+          {% endfor %}
+        </span>
+      </div>
+      {% endif %}
+      {% if latest_update.changes %}
+      <div class="detail-group">
+        <span class="detail-label detail-label-changed">✏️ 変更内容</span>
+        <ul class="detail-change-list">
+          {% for c in latest_update.changes[:6] %}
+          <li><strong>{{ c.name }}</strong>: {{ c.changes | join(' / ') }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% if latest_update.removed_names %}
+      <div class="detail-group">
+        <span class="detail-label detail-label-removed">🗑 終了/削除</span>
+        <span class="detail-items">
+          {% for name in latest_update.removed_names %}
+          <span class="removed-tag">{{ name }}</span>
+          {% endfor %}
+        </span>
+      </div>
+      {% endif %}
     </div>
     {% endif %}
+
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>
@@ -260,5 +298,15 @@
 </footer>
 
 <script src="/static/js/app.js"></script>
+<script>
+function toggleBannerDetail() {
+  const panel = document.getElementById('banner-detail');
+  const btn = document.getElementById('detail-toggle-btn');
+  if (!panel) return;
+  const open = panel.style.display !== 'none';
+  panel.style.display = open ? 'none' : 'block';
+  btn.textContent = open ? '詳細 ▼' : '閉じる ▲';
+}
+</script>
 </body>
 </html>

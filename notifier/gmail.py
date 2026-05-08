@@ -13,7 +13,7 @@ from config import GMAIL_SENDER, GMAIL_APP_PASSWORD, GMAIL_RECIPIENT
 logger = logging.getLogger(__name__)
 
 
-def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[dict]) -> str:
+def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[dict], changes: list[dict] | None = None) -> str:
     today = datetime.now().strftime("%Y年%m月%d日")
     hot = [a for a in airdrops if a.get("is_hot")]
 
@@ -24,6 +24,18 @@ def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[
         <div style="background:#fff3cd;border-left:4px solid #ffc107;padding:12px 16px;margin:16px 0;border-radius:4px;">
           <strong>🆕 新着エアドロップ ({len(new_items)}件)</strong>
           <ul style="margin:8px 0 0 0;">{items_html}</ul>
+        </div>"""
+
+    changes_html = ""
+    if changes:
+        rows = "".join(
+            f"<li><strong>{c['name']}</strong>: {'、'.join(c['changes'])}</li>"
+            for c in changes[:8]
+        )
+        changes_html = f"""
+        <div style="background:#e8f4fd;border-left:4px solid #17a2b8;padding:12px 16px;margin:16px 0;border-radius:4px;">
+          <strong>✏️ 変更情報 ({len(changes)}件)</strong>
+          <ul style="margin:8px 0 0 0;">{rows}</ul>
         </div>"""
 
     hot_rows = ""
@@ -71,6 +83,7 @@ def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[
   </div>
   <div style="background:white;padding:24px;border-radius:0 0 8px 8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
     {new_html}
+    {changes_html}
 
     <h3 style="color:#dc3545;">🔥 注目のホットエアドロップ</h3>
     <table style="width:100%;border-collapse:collapse;margin-top:8px;">
@@ -98,7 +111,7 @@ def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[
 </html>"""
 
 
-def send_daily_report(airdrops: list[dict], new_items: list[str], trending: list[dict]) -> bool:
+def send_daily_report(airdrops: list[dict], new_items: list[str], trending: list[dict], changes: list[dict] | None = None) -> bool:
     if not GMAIL_SENDER or not GMAIL_APP_PASSWORD:
         logger.warning("Gmail認証情報が未設定のためメール送信をスキップ (.envを確認してください)")
         return False
@@ -108,14 +121,20 @@ def send_daily_report(airdrops: list[dict], new_items: list[str], trending: list
     subject = f"[Airdrop] {today} 更新 — ホット案件{hot_count}件"
     if new_items:
         subject += f" 🆕新着{len(new_items)}件"
+    if changes:
+        subject += f" ✏️変更{len(changes)}件"
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = GMAIL_SENDER
     msg["To"] = GMAIL_RECIPIENT
 
-    html_body = _build_html_body(airdrops, new_items, trending)
-    plain_body = f"{today} Airdrop更新レポート\nホット案件: {hot_count}件\n新着: {', '.join(new_items) if new_items else 'なし'}"
+    html_body = _build_html_body(airdrops, new_items, trending, changes=changes)
+    plain_body = (
+        f"{today} Airdrop更新レポート\nホット案件: {hot_count}件\n"
+        f"新着: {', '.join(new_items) if new_items else 'なし'}\n"
+        f"変更: {len(changes)}件" if changes else f"{today} Airdrop更新レポート\nホット案件: {hot_count}件\n新着: {', '.join(new_items) if new_items else 'なし'}"
+    )
 
     msg.attach(MIMEText(plain_body, "plain", "utf-8"))
     msg.attach(MIMEText(html_body, "html", "utf-8"))

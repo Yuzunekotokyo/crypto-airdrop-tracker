@@ -167,6 +167,22 @@ def _build_seed_airdrops() -> list[dict]:
     ]
 
 
+def _enrich_with_trending(airdrops: list[dict], trending: list[dict]) -> list[dict]:
+    """CoinGeckoトレンドコインと照合してホット案件を自動昇格"""
+    if not trending:
+        return airdrops
+    trending_names = {t["name"].lower() for t in trending}
+    trending_symbols = {t["symbol"].lower() for t in trending}
+    for a in airdrops:
+        name_lower = a["name"].lower()
+        sym_lower = a.get("symbol", "").lower()
+        name_match = any(name_lower in tn or tn in name_lower for tn in trending_names)
+        sym_match = bool(sym_lower) and sym_lower in trending_symbols
+        if name_match or sym_match:
+            a["is_hot"] = True
+    return airdrops
+
+
 def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     """
     全ソースからエアドロップデータを収集し、変更点リストと共に返す。
@@ -174,6 +190,7 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     """
     curated = _build_seed_airdrops()
     scraped = _scrape_airdrops_io()
+    trending = get_trending_coins()
 
     seen_names = {a["name"].lower() for a in curated}
     new_items = []
@@ -200,6 +217,9 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
             })
             new_items.append(s["name"])
             seen_names.add(s["name"].lower())
+
+    # CoinGeckoトレンドと照合してホット案件を自動検出
+    curated = _enrich_with_trending(curated, trending)
 
     # 注目度でソート: is_hot → estimated_value_usd
     curated.sort(key=lambda x: (not x.get("is_hot"), -x.get("estimated_value_usd", 0)))
