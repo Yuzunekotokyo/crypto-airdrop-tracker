@@ -12,49 +12,84 @@
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
+
+    <!-- メタ行 -->
     <div class="update-meta">
       <span class="update-badge">🔄 最新更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
+      {% if latest_update.email_sent %}
+      <span class="stat-chip stat-email" title="tsukamoto.kei@gmail.com に送信済">📧 メール送信済</span>
+      {% endif %}
     </div>
+
+    <!-- 統計チップ行 -->
     <div class="update-stats">
-      <span class="stat-chip stat-total">
-        📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
-      </span>
-      <span class="stat-chip stat-hot">
-        🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
-      </span>
+      <span class="stat-chip stat-total">📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件</span>
+      <span class="stat-chip stat-hot">🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件</span>
       {% if latest_update.added_count > 0 %}
-      <span class="stat-chip stat-new">
-        🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
-      </span>
+      <span class="stat-chip stat-new">🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件</span>
       {% endif %}
       {% if latest_update.changed_count > 0 %}
-      <span class="stat-chip stat-changed">
-        ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
-      </span>
+      <span class="stat-chip stat-changed">✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件</span>
       {% endif %}
-      {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
-      </span>
+      {% if latest_update.removed_count is defined and latest_update.removed_count > 0 %}
+      <span class="stat-chip stat-removed">🗑️ 削除 <strong>{{ latest_update.removed_count }}</strong> 件</span>
       {% endif %}
     </div>
+
+    <!-- 新着名リスト -->
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
+      <strong>🆕 新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
+
+    <!-- トレンドコイン -->
     {% if latest_update.trending_coins %}
     <div class="update-trending">
-      <strong>📈 トレンド:</strong>
+      <strong>📈 CoinGeckoトレンド:</strong>
       {{ latest_update.trending_coins | join(' · ') }}
     </div>
     {% endif %}
+
+    <!-- 変更詳細・削除 (折りたたみ) -->
+    {% set has_detail = (latest_update.changes and latest_update.changes | length > 0) or (latest_update.removed_names and latest_update.removed_names | length > 0) %}
+    {% if has_detail %}
+    <button class="banner-detail-toggle" onclick="toggleBannerDetail()" id="banner-detail-btn">
+      ▼ 変更詳細を表示
+    </button>
+    <div id="banner-detail" class="banner-detail hidden">
+      {% if latest_update.changes %}
+      <div class="banner-detail-section">
+        <div class="banner-detail-title">✏️ 変更内容</div>
+        {% for item in latest_update.changes %}
+        <div class="banner-change-item">
+          <span class="banner-change-name">{{ item.name }}</span>
+          <span class="banner-change-desc">{{ item.changes | join(' / ') }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if latest_update.removed_names %}
+      <div class="banner-detail-section">
+        <div class="banner-detail-title">🗑️ 削除・終了</div>
+        {% for name in latest_update.removed_names %}
+        <span class="removed-tag">{{ name }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if not latest_update.added_count and not latest_update.changed_count %}
+    <div class="update-no-change">本日の新着・変更はありません</div>
+    {% endif %}
+
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 

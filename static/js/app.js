@@ -121,6 +121,15 @@ function showRefreshNotice() {
   setTimeout(() => notice.remove(), 15000);
 }
 
+function toggleBannerDetail() {
+  const detail = document.getElementById("banner-detail");
+  const btn = document.getElementById("banner-detail-btn");
+  if (!detail || !btn) return;
+  const isHidden = detail.classList.toggle("hidden");
+  btn.textContent = isHidden ? "▼ 変更詳細を表示" : "▲ 変更詳細を閉じる";
+  btn.classList.toggle("open", !isHidden);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   scheduleAutoRefresh();
 
