@@ -10,6 +10,34 @@
 
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
+
+{# 新着HOT案件がある場合は赤い緊急アラートバナー #}
+{% set new_hot_names = [] %}
+{% for name in latest_update.added_names %}
+  {% for airdrop in airdrops %}
+    {% if airdrop.name == name and airdrop.is_hot %}
+      {% if new_hot_names.append(name) %}{% endif %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if new_hot_names %}
+<div id="hot-alert-banner" class="hot-alert-banner">
+  <div class="hot-alert-inner">
+    <span class="hot-alert-icon">🚨</span>
+    <div class="hot-alert-body">
+      <strong>注目の新規HOT案件が追加されました！</strong>
+      <div class="hot-alert-names">
+        {% for name in new_hot_names %}
+        <span class="hot-alert-tag">🔥 {{ name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <button class="banner-close" onclick="document.getElementById('hot-alert-banner').style.display='none'">✕</button>
+</div>
+{% endif %}
+
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
     <div class="update-meta">
@@ -33,20 +61,36 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
+      {% if latest_update.removed_count is defined and latest_update.removed_count > 0 %}
+      <span class="stat-chip stat-removed">
+        ✕ 終了 <strong>{{ latest_update.removed_count }}</strong> 件
+      </span>
+      {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
         📧 メール送信済
       </span>
       {% endif %}
     </div>
+
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
+      <strong>🆕 新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
+
+    {% if latest_update.changes %}
+    <div class="update-changes">
+      <strong>✏️ 変更:</strong>
+      {% for ch in latest_update.changes %}
+      <span class="change-tag">{{ ch.name }}: {{ ch.changes | join(' / ') }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>
