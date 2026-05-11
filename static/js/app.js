@@ -93,38 +93,81 @@ function colIndex(col) {
   return map[col] || 1;
 }
 
-// 自動リロード: 毎30分チェック
+/* ===== 次回更新カウントダウン (毎日 08:00 JST) ===== */
+function updateCountdown() {
+  const el = document.getElementById("next-update-countdown");
+  if (!el) return;
+
+  const now = new Date();
+  // JST = UTC+9
+  const jstNow = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+  const target = new Date(jstNow);
+  target.setUTCHours(8 - 9, 0, 0, 0); // 08:00 JST = 23:00 UTC前日
+  // JSTで08:00を設定
+  target.setUTCHours(target.getUTCHours()); // 正規化
+  // もし今日の08:00 JSTをすでに過ぎていたら翌日の08:00 JSTを設定
+  const jstHour = jstNow.getUTCHours();
+  const jstMin  = jstNow.getUTCMinutes();
+  let minutesUntil = (8 * 60) - (jstHour * 60 + jstMin);
+  if (minutesUntil <= 0) minutesUntil += 24 * 60;
+
+  const h = Math.floor(minutesUntil / 60);
+  const m = minutesUntil % 60;
+
+  if (h === 0) {
+    el.textContent = `⏱ あと${m}分で更新`;
+    el.style.color = "#ff6348";
+  } else {
+    el.textContent = `⏱ 次回更新まで ${h}時間${m}分`;
+  }
+}
+
+/* ===== 自動リロード: 10分ごとにチェック ===== */
 function scheduleAutoRefresh() {
   setTimeout(() => {
     fetch("/api/updates")
       .then(r => r.json())
       .then(updates => {
         if (updates.length > 0) {
-          const latestDate = updates[0].timestamp;
-          const pageDate = document.querySelector(".update-time")?.textContent;
-          if (latestDate && pageDate && !pageDate.includes(updates[0].date)) {
+          const pageTimeEl = document.querySelector(".update-time");
+          if (pageTimeEl && updates[0].time_jst && !pageTimeEl.textContent.includes(updates[0].date)) {
             showRefreshNotice();
           }
         }
       })
       .catch(() => {})
       .finally(() => scheduleAutoRefresh());
-  }, 30 * 60 * 1000);
+  }, 10 * 60 * 1000); // 10分ごと
 }
 
 function showRefreshNotice() {
+  if (document.getElementById("refresh-notice")) return;
   const notice = document.createElement("div");
-  notice.style.cssText = "position:fixed;bottom:20px;right:20px;background:#7c4dff;color:white;padding:14px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;z-index:999;box-shadow:0 4px 20px rgba(0,0,0,0.4);";
+  notice.id = "refresh-notice";
+  notice.style.cssText = [
+    "position:fixed", "bottom:20px", "right:20px",
+    "background:#7c4dff", "color:white",
+    "padding:14px 20px", "border-radius:10px",
+    "font-size:14px", "font-weight:700",
+    "cursor:pointer", "z-index:999",
+    "box-shadow:0 4px 20px rgba(0,0,0,0.4)",
+    "animation:slideUp 0.3s ease-out",
+  ].join(";");
   notice.textContent = "🔄 新しい更新があります — クリックで再読み込み";
   notice.onclick = () => location.reload();
   document.body.appendChild(notice);
-  setTimeout(() => notice.remove(), 15000);
+  setTimeout(() => notice.remove(), 20000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // カウントダウン起動 (1分ごとに更新)
+  updateCountdown();
+  setInterval(updateCountdown, 60 * 1000);
+
+  // 自動リフレッシュチェック起動
   scheduleAutoRefresh();
 
-  // テーブル行にツールチップ
+  // テーブル行ツールチップ
   document.querySelectorAll(".airdrop-row[title]").forEach(row => {
     row.style.cursor = "pointer";
   });

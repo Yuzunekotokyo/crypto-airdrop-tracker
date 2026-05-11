@@ -8,13 +8,35 @@
 </head>
 <body>
 
-<!-- ===== 最新更新バナー ===== -->
+<!-- ===== HOT ALERT: 新着ホット案件が出現した場合のみ表示 ===== -->
+{% if latest_update and latest_update.added_hot_names %}
+<div id="hot-alert-top" class="hot-alert-top">
+  <div class="hot-alert-inner">
+    <div class="hot-alert-icon-wrap">
+      <span class="hot-alert-flash">🚨</span>
+    </div>
+    <div class="hot-alert-body">
+      <div class="hot-alert-title">新着 HOT エアドロップ発見！</div>
+      <div class="hot-alert-names">
+        {% for name in latest_update.added_hot_names %}
+        <span class="hot-alert-name-chip">{{ name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <a href="#hot-section" class="hot-alert-cta">今すぐ確認 →</a>
+  </div>
+  <button class="banner-close" onclick="document.getElementById('hot-alert-top').style.display='none'" title="閉じる">✕</button>
+</div>
+{% endif %}
+
+<!-- ===== 最新更新バナー (常時表示・スティッキー) ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
     <div class="update-meta">
       <span class="update-badge">🔄 最新更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
+      <span class="next-update-badge" id="next-update-countdown" title="次回 08:00 JST に自動更新">⏱ 計算中...</span>
     </div>
     <div class="update-stats">
       <span class="stat-chip stat-total">
@@ -23,6 +45,11 @@
       <span class="stat-chip stat-hot">
         🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
       </span>
+      {% if latest_update.defi_watch_count %}
+      <span class="stat-chip stat-defi">
+        🔭 DeFi候補 <strong>{{ latest_update.defi_watch_count }}</strong> 件
+      </span>
+      {% endif %}
       {% if latest_update.added_count > 0 %}
       <span class="stat-chip stat-new">
         🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
@@ -42,9 +69,12 @@
     {% if latest_update.added_names %}
     <div class="update-new-items">
       <strong>新規追加:</strong>
-      {% for name in latest_update.added_names %}
+      {% for name in latest_update.added_names[:5] %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
+      {% if latest_update.added_names | length > 5 %}
+      <span class="new-tag">+{{ latest_update.added_names | length - 5 }}件</span>
+      {% endif %}
     </div>
     {% endif %}
     {% if latest_update.trending_coins %}
@@ -54,7 +84,7 @@
     </div>
     {% endif %}
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 
@@ -63,7 +93,7 @@
   <div class="container">
     <div class="header-brand">
       <h1>🪂 Crypto Airdrop Tracker</h1>
-      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日自動更新</p>
+      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日08:00 JST 自動更新</p>
     </div>
     <div class="header-info">
       <span class="last-updated">最終更新: {{ now }}</span>
@@ -107,7 +137,7 @@
   <!-- ホットピックセクション -->
   {% set hot_airdrops = airdrops | selectattr("is_hot") | list %}
   {% if hot_airdrops %}
-  <section class="hot-section">
+  <section class="hot-section" id="hot-section">
     <h2 class="section-title">🔥 今狙うべき注目エアドロップ</h2>
     <div class="hot-grid">
       {% for airdrop in hot_airdrops[:3] %}
@@ -119,6 +149,9 @@
           <div>
             <h3 class="hot-card-name">{{ airdrop.name }}</h3>
             <span class="category-tag">{{ airdrop.category }}</span>
+            {% if airdrop.source == 'defillama' %}
+            <span class="source-tag">🔭 DeFiLlama</span>
+            {% endif %}
           </div>
           <span class="hot-badge">🔥 HOT</span>
         </div>
@@ -131,6 +164,12 @@
                 {% if airdrop.estimated_value_usd %}~${{ "{:,}".format(airdrop.estimated_value_usd) }}{% else %}未定{% endif %}
               </span>
             </div>
+            {% if airdrop.tvl_usd %}
+            <div class="value-block">
+              <span class="value-label">TVL</span>
+              <span class="value-amount tvl-amount">${{ "{:.1f}".format(airdrop.tvl_usd / 1e6) }}M</span>
+            </div>
+            {% endif %}
             <div class="value-block">
               <span class="value-label">難易度</span>
               <span class="difficulty-badge difficulty-{{ airdrop.difficulty }}">{{ airdrop.difficulty | upper }}</span>
@@ -182,7 +221,7 @@
         </thead>
         <tbody id="airdrop-tbody">
           {% for airdrop in airdrops %}
-          <tr class="airdrop-row {% if airdrop.is_hot %}row-hot{% endif %}"
+          <tr class="airdrop-row {% if airdrop.is_hot %}row-hot{% endif %} {% if airdrop.source == 'defillama' %}row-defi{% endif %}"
               data-status="{{ airdrop.status }}"
               data-difficulty="{{ airdrop.difficulty }}"
               data-hot="{{ 'true' if airdrop.is_hot else 'false' }}"
@@ -197,8 +236,9 @@
                 {% endif %}
                 <div>
                   <strong>{{ airdrop.name }}</strong>
-                  {% if airdrop.symbol %}<span class="symbol-tag">{{ airdrop.symbol }}</span>{% endif %}
+                  {% if airdrop.symbol and airdrop.symbol != '未発行' %}<span class="symbol-tag">{{ airdrop.symbol }}</span>{% endif %}
                   {% if airdrop.is_hot %}<span class="mini-hot">🔥</span>{% endif %}
+                  {% if airdrop.source == 'defillama' %}<span class="mini-defi">🔭</span>{% endif %}
                 </div>
               </div>
             </td>
@@ -238,9 +278,10 @@
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
+          {% if upd.defi_watch_count %}<span class="h-defi">🔭{{ upd.defi_watch_count }}</span>{% endif %}
           {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
           {% if upd.added_names %}
-          <span class="h-names">{{ upd.added_names | join(', ') }}</span>
+          <span class="h-names">{{ upd.added_names[:3] | join(', ') }}{% if upd.added_names | length > 3 %}...{% endif %}</span>
           {% endif %}
         </div>
       </div>
@@ -254,7 +295,7 @@
 <!-- ===== フッター ===== -->
 <footer class="site-footer">
   <div class="container">
-    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
+    <p>🪂 Crypto Airdrop Tracker — 毎日 08:00 JST 自動更新 · DeFiLlama連携</p>
     <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
   </div>
 </footer>

@@ -1,6 +1,8 @@
 """
 Airdrop情報をWeb/APIから収集するモジュール。
-現在はairdrops.ioのパブリックページとCoinGeckoトレンドを組み合わせて使用。
+- airdrops.ioのパブリックページをスクレイピング
+- DeFiLlamaからトークン未発行の高TVLプロトコルを取得
+- CoinGeckoトレンドと組み合わせて使用
 """
 
 import requests
@@ -49,6 +51,82 @@ def _scrape_airdrops_io() -> list[dict]:
         return items
     except Exception as e:
         logger.warning(f"airdrops.io scrape failed: {e}")
+        return []
+
+
+def _fetch_defi_llama_watchlist() -> list[dict]:
+    """
+    DeFiLlama: TVL高・時価総額低のプロトコル = エアドロップ有力候補。
+    トークン未発行で実際の利用実績があるプロトコルを毎日最新で取得する。
+    """
+    try:
+        r = requests.get("https://api.llama.fi/protocols", headers=HEADERS, timeout=25)
+        r.raise_for_status()
+        protocols = r.json()
+
+        today = datetime.utcnow()
+        candidates = []
+
+        for p in protocols:
+            tvl = float(p.get("tvl") or 0)
+            mcap = float(p.get("mcap") or 0)
+            name = (p.get("name") or "").strip()
+
+            if not name:
+                continue
+            # TVL $30M+ かつ 時価総額 $5M未満 (トークン未発行 or 極小)
+            if tvl < 30_000_000 or mcap > 5_000_000:
+                continue
+
+            chains = p.get("chains") or []
+            category = p.get("category") or "DeFi"
+            symbol = (p.get("symbol") or "").strip()
+            slug = p.get("slug") or name.lower().replace(" ", "-")
+
+            # TVLに基づくユーザーあたり推定エアドロップ価値
+            # 想定: TVLの1%をエアドロップ総額とし、利用者数でわる
+            est_users = max(tvl / 8000, 200)
+            per_user = min(int(tvl * 0.01 / est_users), 3000)
+            per_user = max(per_user, 30)
+
+            is_hot = tvl > 100_000_000  # $100M+ TVL = HOT
+
+            candidates.append({
+                "id": f"llama-{slug[:50]}",
+                "name": name,
+                "symbol": symbol if (symbol and len(symbol) <= 6) else "未発行",
+                "category": category,
+                "type": "DeFiLlamaウォッチ",
+                "status": "active",
+                "difficulty": "easy" if len(chains) <= 2 else "medium",
+                "estimated_value_usd": per_user,
+                "description": (
+                    f"TVL ${tvl / 1e6:.1f}M・{len(chains)}チェーン対応のプロトコル。"
+                    f"トークン未発行のため将来エアドロップが期待される注目案件。"
+                    f"カテゴリ: {category}"
+                ),
+                "tasks": [
+                    "プロトコルを積極的かつ継続的に利用する",
+                    "流動性提供・ステーキングを行う",
+                    "定期的なトランザクション活動を維持する",
+                    "公式DiscordやXで情報をフォロー",
+                ],
+                "end_date": (today + timedelta(days=365)).strftime("%Y-%m-%d"),
+                "logo": p.get("logo") or "",
+                "url": p.get("url") or f"https://defillama.com/protocol/{slug}",
+                "is_hot": is_hot,
+                "added_date": today.strftime("%Y-%m-%d"),
+                "source": "defillama",
+                "tvl_usd": int(tvl),
+                "mcap_usd": int(mcap),
+            })
+
+        # TVL降順ソート、上位10件
+        candidates.sort(key=lambda x: x.get("tvl_usd", 0), reverse=True)
+        return candidates[:10]
+
+    except Exception as e:
+        logger.warning(f"DeFiLlama watchlist fetch failed: {e}")
         return []
 
 
@@ -170,14 +248,17 @@ def _build_seed_airdrops() -> list[dict]:
 def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     """
     全ソースからエアドロップデータを収集し、変更点リストと共に返す。
+    データソース: キュレート済み + airdrops.ioスクレイプ + DeFiLlamaウォッチリスト
     Returns: (airdrops_list, new_items_names)
     """
     curated = _build_seed_airdrops()
     scraped = _scrape_airdrops_io()
+    defi_llama = _fetch_defi_llama_watchlist()
 
     seen_names = {a["name"].lower() for a in curated}
     new_items = []
 
+    # airdrops.ioのスクレイプ結果を追加
     for s in scraped:
         if s["name"].lower() not in seen_names:
             curated.append({
@@ -200,6 +281,13 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
             })
             new_items.append(s["name"])
             seen_names.add(s["name"].lower())
+
+    # DeFiLlamaウォッチリストを追加 (毎日最新データを取得)
+    for p in defi_llama:
+        if p["name"].lower() not in seen_names:
+            curated.append(p)
+            new_items.append(p["name"])
+            seen_names.add(p["name"].lower())
 
     # 注目度でソート: is_hot → estimated_value_usd
     curated.sort(key=lambda x: (not x.get("is_hot"), -x.get("estimated_value_usd", 0)))

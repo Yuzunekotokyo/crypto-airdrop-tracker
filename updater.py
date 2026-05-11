@@ -1,8 +1,8 @@
 """
 毎日の更新処理コア。
-- エアドロップデータを最新化
+- エアドロップデータを最新化 (airdrops.io + DeFiLlama + CoinGecko)
 - 更新ログを記録
-- Gmail通知を送信
+- Gmail通知を毎日送信 (新着・ホット案件時は即時アラートも)
 """
 
 import json
@@ -64,14 +64,17 @@ def run_daily_update(force_email: bool = False) -> dict:
 
     old_airdrops = _load_json(AIRDROPS_FILE, [])
 
-    # データ取得
+    # データ取得 (airdrops.io + DeFiLlama + キュレート済み)
     new_airdrops, scraped_new = fetch_all_airdrops()
     trending = get_trending_coins()
 
     # 変更検出
     diff = _detect_changes(old_airdrops, new_airdrops)
 
-    # 新規ホット案件アラート
+    # DeFiLlamaウォッチリスト: sourceがdefillama のもの
+    defi_watchlist = [a for a in new_airdrops if a.get("source") == "defillama"]
+
+    # 新規ホット案件アラート (即時送信)
     newly_hot = [a for a in diff["added"] if a.get("is_hot")]
     for airdrop in newly_hot:
         send_hot_alert(airdrop)
@@ -89,7 +92,9 @@ def run_daily_update(force_email: bool = False) -> dict:
         "removed_count": len(diff["removed"]),
         "changed_count": len(diff["changed"]),
         "hot_count": sum(1 for a in new_airdrops if a.get("is_hot")),
+        "defi_watch_count": len(defi_watchlist),
         "added_names": [a["name"] for a in diff["added"]],
+        "added_hot_names": [a["name"] for a in diff["added"] if a.get("is_hot")],
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
@@ -101,13 +106,15 @@ def run_daily_update(force_email: bool = False) -> dict:
     updates_log = updates_log[:30]  # 直近30件を保持
     _save_json(UPDATES_FILE, updates_log)
 
-    # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
-    if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
-        summary["email_sent"] = sent
-        updates_log[0]["email_sent"] = sent
-        _save_json(UPDATES_FILE, updates_log)
+    # メール送信: 毎日必ず送信 (日次サマリー)
+    # ホット案件出現・変化があればより詳細な内容で送信
+    sent = send_daily_report(new_airdrops, scraped_new, trending, defi_watchlist)
+    summary["email_sent"] = sent
+    updates_log[0]["email_sent"] = sent
+    _save_json(UPDATES_FILE, updates_log)
 
-    logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件 ===")
+    logger.info(
+        f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件, "
+        f"DeFiLlama候補{len(defi_watchlist)}件, メール={'送信済' if sent else '未送信'} ==="
+    )
     return summary
