@@ -13,12 +13,15 @@
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
     <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
-      <span class="update-time">{{ latest_update.time_jst }}</span>
+      <span class="update-badge">📢 UPDATE</span>
+      <span class="update-time">{{ latest_update.time_jst }} 更新</span>
+      {% if latest_update.email_sent %}
+      <span class="stat-chip stat-email" style="font-size:11px;padding:2px 8px;">📧 メール送信済</span>
+      {% endif %}
     </div>
     <div class="update-stats">
       <span class="stat-chip stat-total">
-        📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
+        📋 総数 <strong>{{ latest_update.total_airdrops }}</strong> 件
       </span>
       <span class="stat-chip stat-hot">
         🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
@@ -33,28 +36,54 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
-      {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
+      {% if latest_update.removed_count is defined and latest_update.removed_count > 0 %}
+      <span class="stat-chip stat-removed">
+        🗑️ 終了 <strong>{{ latest_update.removed_count }}</strong> 件
       </span>
       {% endif %}
     </div>
+
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
+      <strong>🆕 新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
+
     {% if latest_update.trending_coins %}
     <div class="update-trending">
-      <strong>📈 トレンド:</strong>
-      {{ latest_update.trending_coins | join(' · ') }}
+      <strong>📈 トレンド:</strong> {{ latest_update.trending_coins | join(' · ') }}
+    </div>
+    {% endif %}
+
+    {% if latest_update.changes %}
+    <div class="update-changes-toggle">
+      <button class="changes-toggle-btn" onclick="toggleChangesDetail()">
+        <span id="changes-toggle-icon">▶</span> 変更詳細を表示 ({{ latest_update.changes | length }}件)
+      </button>
+    </div>
+    <div id="changes-detail" class="changes-detail" style="display:none;">
+      {% for c in latest_update.changes %}
+      <div class="change-item">
+        <span class="change-name">{{ c.name }}</span>
+        <span class="change-desc">{{ c.changes | join(' / ') }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if latest_update.removed_names %}
+    <div class="update-removed-items">
+      <strong>🗑️ 終了:</strong>
+      {% for name in latest_update.removed_names %}
+      <span class="removed-tag">{{ name }}</span>
+      {% endfor %}
     </div>
     {% endif %}
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 

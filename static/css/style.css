@@ -79,11 +79,12 @@ a:hover { color: var(--accent2); }
   border-radius: 20px;
   font-weight: 600;
 }
-.stat-total  { background: rgba(30,144,255,0.15); border: 1px solid #1e90ff; color: #1e90ff; }
-.stat-hot    { background: rgba(255,71,87,0.15);  border: 1px solid var(--hot); color: var(--hot2); }
-.stat-new    { background: rgba(46,213,115,0.15); border: 1px solid var(--green); color: var(--green); }
-.stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
-.stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
+.stat-total   { background: rgba(30,144,255,0.15);  border: 1px solid #1e90ff; color: #1e90ff; }
+.stat-hot     { background: rgba(255,71,87,0.15);   border: 1px solid var(--hot); color: var(--hot2); }
+.stat-new     { background: rgba(46,213,115,0.15);  border: 1px solid var(--green); color: var(--green); }
+.stat-changed { background: rgba(255,165,2,0.15);   border: 1px solid var(--yellow); color: var(--yellow); }
+.stat-removed { background: rgba(150,150,150,0.15); border: 1px solid #888; color: #bbb; }
+.stat-email   { background: rgba(124,77,255,0.15);  border: 1px solid var(--accent); color: var(--accent); }
 
 .update-new-items { font-size: 13px; color: var(--text2); }
 
@@ -98,7 +99,62 @@ a:hover { color: var(--accent2); }
   margin: 2px 4px 2px 0;
 }
 
+.removed-tag {
+  display: inline-block;
+  background: rgba(150,150,150,0.15);
+  border: 1px solid #666;
+  color: #aaa;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+  text-decoration: line-through;
+}
+
+.update-removed-items { font-size: 13px; color: var(--text2); }
+
 .update-trending { font-size: 12px; color: var(--text2); }
+
+.update-changes-toggle { margin-top: 6px; }
+
+.changes-toggle-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.changes-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.changes-detail {
+  margin-top: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.change-item {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.change-name {
+  font-weight: 700;
+  color: var(--text);
+  min-width: 140px;
+}
+
+.change-desc { color: var(--yellow); }
 
 .banner-close {
   background: none;

@@ -121,6 +121,15 @@ function showRefreshNotice() {
   setTimeout(() => notice.remove(), 15000);
 }
 
+function toggleChangesDetail() {
+  const detail = document.getElementById("changes-detail");
+  const icon = document.getElementById("changes-toggle-icon");
+  if (!detail) return;
+  const isOpen = detail.style.display !== "none";
+  detail.style.display = isOpen ? "none" : "block";
+  if (icon) icon.textContent = isOpen ? "▶" : "▼";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   scheduleAutoRefresh();
 
