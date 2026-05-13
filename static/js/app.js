@@ -9,10 +9,10 @@ function applyFilters() {
   let visible = 0;
 
   rows.forEach(row => {
-    const status = row.dataset.status;
+    const status     = row.dataset.status;
     const difficulty = row.dataset.difficulty;
-    const hot = row.dataset.hot === "true";
-    const name = row.dataset.name || "";
+    const hot        = row.dataset.hot === "true";
+    const name       = row.dataset.name || "";
 
     const statusOk = activeFilters.status === "all" || status === activeFilters.status;
     const diffOk   = activeFilters.difficulty === "all" || difficulty === activeFilters.difficulty;
@@ -25,9 +25,9 @@ function applyFilters() {
   });
 
   hotCards.forEach(card => {
-    const status = card.dataset.status;
+    const status     = card.dataset.status;
     const difficulty = card.dataset.difficulty;
-    const name = card.dataset.name || "";
+    const name       = card.dataset.name || "";
     const statusOk = activeFilters.status === "all" || status === activeFilters.status;
     const diffOk   = activeFilters.difficulty === "all" || difficulty === activeFilters.difficulty;
     const searchOk = !activeFilters.search || name.includes(activeFilters.search.toLowerCase());
@@ -73,15 +73,13 @@ function sortTable(col) {
   const rows = Array.from(tbody.querySelectorAll(".airdrop-row"));
 
   rows.sort((a, b) => {
-    let av = a.dataset[col] || a.querySelector(`td:nth-child(${colIndex(col)})`).textContent.trim();
-    let bv = b.dataset[col] || b.querySelector(`td:nth-child(${colIndex(col)})`).textContent.trim();
-
     if (col === "estimated_value_usd" || col === "value") {
-      av = parseFloat(a.dataset.value || "0");
-      bv = parseFloat(b.dataset.value || "0");
+      const av = parseFloat(a.dataset.value || "0");
+      const bv = parseFloat(b.dataset.value || "0");
       return (av - bv) * sortState.dir;
     }
-
+    const av = a.dataset[col] || a.querySelector(`td:nth-child(${colIndex(col)})`).textContent.trim();
+    const bv = b.dataset[col] || b.querySelector(`td:nth-child(${colIndex(col)})`).textContent.trim();
     return av.localeCompare(bv, "ja") * sortState.dir;
   });
 
@@ -93,18 +91,59 @@ function colIndex(col) {
   return map[col] || 1;
 }
 
-// 自動リロード: 毎30分チェック
+/* ===== 変更詳細の折りたたみ ===== */
+function toggleChanges() {
+  const body  = document.getElementById("update-changes");
+  const arrow = document.getElementById("changes-arrow");
+  if (!body) return;
+  const open = body.style.display === "none" || body.style.display === "";
+  body.style.display  = open ? "block" : "none";
+  if (arrow) arrow.textContent = open ? "▲" : "▼";
+}
+
+/* ===== 次回更新カウントダウン ===== */
+function startCountdown() {
+  const el = document.getElementById("countdown-timer");
+  if (!el) return;
+
+  const target = new Date(el.dataset.target);
+  if (isNaN(target.getTime())) return;
+
+  function tick() {
+    const now  = new Date();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      el.textContent = "更新中...";
+      setTimeout(() => location.reload(), 5000);
+      return;
+    }
+
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+
+    el.textContent = `${h}時間 ${String(m).padStart(2,"0")}分 ${String(s).padStart(2,"0")}秒`;
+    setTimeout(tick, 1000);
+  }
+
+  tick();
+}
+
+/* ===== 自動リロード: 30分ごとに新規更新確認 ===== */
+let _lastKnownTimestamp = null;
+
 function scheduleAutoRefresh() {
   setTimeout(() => {
     fetch("/api/updates")
       .then(r => r.json())
       .then(updates => {
-        if (updates.length > 0) {
-          const latestDate = updates[0].timestamp;
-          const pageDate = document.querySelector(".update-time")?.textContent;
-          if (latestDate && pageDate && !pageDate.includes(updates[0].date)) {
-            showRefreshNotice();
-          }
+        if (!updates.length) return;
+        const latest = updates[0].timestamp;
+        if (_lastKnownTimestamp === null) {
+          _lastKnownTimestamp = latest;
+        } else if (latest !== _lastKnownTimestamp) {
+          showRefreshToast();
         }
       })
       .catch(() => {})
@@ -112,20 +151,35 @@ function scheduleAutoRefresh() {
   }, 30 * 60 * 1000);
 }
 
-function showRefreshNotice() {
-  const notice = document.createElement("div");
-  notice.style.cssText = "position:fixed;bottom:20px;right:20px;background:#7c4dff;color:white;padding:14px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;z-index:999;box-shadow:0 4px 20px rgba(0,0,0,0.4);";
-  notice.textContent = "🔄 新しい更新があります — クリックで再読み込み";
-  notice.onclick = () => location.reload();
-  document.body.appendChild(notice);
-  setTimeout(() => notice.remove(), 15000);
+function showRefreshToast() {
+  if (document.querySelector(".refresh-toast")) return;
+
+  const toast = document.createElement("div");
+  toast.className = "refresh-toast";
+  toast.textContent = "🔄 新しい更新があります — クリックで再読み込み";
+  toast.onclick = () => location.reload();
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    if (toast.parentNode) toast.remove();
+  }, 20000);
 }
 
+/* ===== 初期化 ===== */
 document.addEventListener("DOMContentLoaded", () => {
+  startCountdown();
   scheduleAutoRefresh();
 
-  // テーブル行にツールチップ
+  // テーブル行のカーソル
   document.querySelectorAll(".airdrop-row[title]").forEach(row => {
     row.style.cursor = "pointer";
   });
+
+  // 初回タイムスタンプを取得
+  fetch("/api/updates")
+    .then(r => r.json())
+    .then(updates => {
+      if (updates.length) _lastKnownTimestamp = updates[0].timestamp;
+    })
+    .catch(() => {});
 });
