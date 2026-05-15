@@ -93,38 +93,98 @@ function colIndex(col) {
   return map[col] || 1;
 }
 
-// 自動リロード: 毎30分チェック
+/* バナーを閉じてセッション中は非表示 */
+function closeBanner() {
+  const banner = document.getElementById("update-banner");
+  if (banner) {
+    banner.style.transition = "opacity 0.3s";
+    banner.style.opacity = "0";
+    setTimeout(() => { banner.style.display = "none"; }, 300);
+    try { sessionStorage.setItem("banner_closed", "1"); } catch(e) {}
+  }
+}
+
+/* 自動リロード: 10分おきにAPIを確認し、新しい更新があればトースト表示 */
+let _lastKnownTimestamp = null;
+
 function scheduleAutoRefresh() {
   setTimeout(() => {
     fetch("/api/updates")
       .then(r => r.json())
       .then(updates => {
-        if (updates.length > 0) {
-          const latestDate = updates[0].timestamp;
-          const pageDate = document.querySelector(".update-time")?.textContent;
-          if (latestDate && pageDate && !pageDate.includes(updates[0].date)) {
-            showRefreshNotice();
+        if (!updates.length) return;
+        const latest = updates[0];
+
+        if (_lastKnownTimestamp === null) {
+          _lastKnownTimestamp = latest.timestamp;
+          return;
+        }
+
+        if (latest.timestamp !== _lastKnownTimestamp) {
+          _lastKnownTimestamp = latest.timestamp;
+          // 新HOT案件があれば目立つトースト
+          if (latest.newly_hot_count && latest.newly_hot_count > 0) {
+            showRefreshNotice(
+              `🚨 新HOT案件が${latest.newly_hot_count}件登場！ページを更新してください`,
+              "#dc3545"
+            );
+          } else {
+            showRefreshNotice("🔄 新しい更新があります — クリックで再読み込み", "#7c4dff");
           }
         }
       })
       .catch(() => {})
       .finally(() => scheduleAutoRefresh());
-  }, 30 * 60 * 1000);
+  }, 10 * 60 * 1000); // 10分ごと
 }
 
-function showRefreshNotice() {
+function showRefreshNotice(message, color) {
+  // 既存トーストを削除
+  document.querySelectorAll(".refresh-toast").forEach(el => el.remove());
+
   const notice = document.createElement("div");
-  notice.style.cssText = "position:fixed;bottom:20px;right:20px;background:#7c4dff;color:white;padding:14px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;z-index:999;box-shadow:0 4px 20px rgba(0,0,0,0.4);";
-  notice.textContent = "🔄 新しい更新があります — クリックで再読み込み";
+  notice.className = "refresh-toast";
+  notice.style.cssText = `
+    position: fixed; bottom: 24px; right: 24px;
+    background: ${color}; color: white;
+    padding: 14px 20px; border-radius: 12px;
+    font-size: 14px; font-weight: 700;
+    cursor: pointer; z-index: 9999;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    max-width: 360px; line-height: 1.4;
+    animation: toast-in 0.3s ease-out;
+  `;
+  notice.innerHTML = message;
   notice.onclick = () => location.reload();
   document.body.appendChild(notice);
-  setTimeout(() => notice.remove(), 15000);
+
+  // 30秒後に自動消去
+  setTimeout(() => {
+    notice.style.transition = "opacity 0.4s";
+    notice.style.opacity = "0";
+    setTimeout(() => notice.remove(), 400);
+  }, 30000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  scheduleAutoRefresh();
+  // セッション中に閉じていたらバナーを非表示
+  try {
+    if (sessionStorage.getItem("banner_closed") === "1") {
+      const banner = document.getElementById("update-banner");
+      if (banner) banner.style.display = "none";
+    }
+  } catch(e) {}
 
-  // テーブル行にツールチップ
+  // 現在のタイムスタンプを記録してから監視開始
+  fetch("/api/updates")
+    .then(r => r.json())
+    .then(updates => {
+      if (updates.length) _lastKnownTimestamp = updates[0].timestamp;
+    })
+    .catch(() => {})
+    .finally(() => scheduleAutoRefresh());
+
+  // テーブル行ホバーでツールチップ
   document.querySelectorAll(".airdrop-row[title]").forEach(row => {
     row.style.cursor = "pointer";
   });

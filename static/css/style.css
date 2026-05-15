@@ -39,7 +39,7 @@ a:hover { color: var(--accent2); }
 .update-banner {
   background: linear-gradient(135deg, #0d2137, #1a1a2e);
   border-bottom: 2px solid var(--accent);
-  padding: 14px 20px;
+  padding: 12px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -49,24 +49,53 @@ a:hover { color: var(--accent2); }
   gap: 12px;
 }
 
-.update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+/* HOT案件出現時はバナー全体を赤系に */
+.update-banner--hot-alert {
+  background: linear-gradient(135deg, #2d0a0a, #1a0a0e, #1a1a2e);
+  border-bottom: 2px solid var(--hot);
+  box-shadow: 0 2px 20px rgba(255,71,87,0.4);
+  animation: hot-banner-glow 3s ease-in-out infinite;
+}
 
-.update-meta { display: flex; align-items: center; gap: 12px; }
+@keyframes hot-banner-glow {
+  0%, 100% { box-shadow: 0 2px 20px rgba(255,71,87,0.4); }
+  50%       { box-shadow: 0 2px 30px rgba(255,71,87,0.7); }
+}
+
+.update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 7px; }
+
+.update-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.update-row--top { gap: 12px; }
+
+.update-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
 .update-badge {
   background: var(--accent);
   color: white;
   font-size: 12px;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 3px 12px;
   border-radius: 20px;
   letter-spacing: 0.5px;
   animation: pulse-badge 2s infinite;
+  white-space: nowrap;
+}
+
+.update-badge--alert {
+  background: linear-gradient(135deg, var(--hot), #c0392b);
+  font-size: 13px;
+  padding: 4px 14px;
+  animation: pulse-badge-hot 1.5s infinite;
 }
 
 @keyframes pulse-badge {
   0%, 100% { box-shadow: 0 0 0 0 rgba(124,77,255,0.6); }
-  50% { box-shadow: 0 0 0 6px rgba(124,77,255,0); }
+  50%       { box-shadow: 0 0 0 6px rgba(124,77,255,0); }
+}
+
+@keyframes pulse-badge-hot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,71,87,0.8); }
+  50%       { box-shadow: 0 0 0 8px rgba(255,71,87,0); }
 }
 
 .update-time { color: var(--text2); font-size: 13px; }
@@ -78,6 +107,7 @@ a:hover { color: var(--accent2); }
   padding: 3px 12px;
   border-radius: 20px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .stat-total  { background: rgba(30,144,255,0.15); border: 1px solid #1e90ff; color: #1e90ff; }
 .stat-hot    { background: rgba(255,71,87,0.15);  border: 1px solid var(--hot); color: var(--hot2); }
@@ -85,7 +115,41 @@ a:hover { color: var(--accent2); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
+/* HOT新着アラート行 */
+.update-hot-alert {
+  background: rgba(255,71,87,0.12);
+  border: 1px solid rgba(255,71,87,0.4);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.hot-alert-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--hot2);
+  white-space: nowrap;
+}
+
+.hot-alert-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(255,71,87,0.3), rgba(255,107,129,0.2));
+  border: 1px solid var(--hot);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hot-alert-note {
+  font-size: 12px;
+  color: var(--hot2);
+  font-style: italic;
+}
+
+/* 新着・変更の行 */
 .update-new-items { font-size: 13px; color: var(--text2); }
+.update-changes   { font-size: 12px; color: var(--text2); flex-wrap: wrap; }
 
 .new-tag {
   display: inline-block;
@@ -97,6 +161,23 @@ a:hover { color: var(--accent2); }
   font-size: 12px;
   margin: 2px 4px 2px 0;
 }
+.new-tag--hot {
+  background: rgba(255,71,87,0.2);
+  border-color: var(--hot);
+  color: var(--hot2);
+}
+
+.change-item {
+  display: inline-block;
+  background: rgba(255,165,2,0.1);
+  border: 1px solid rgba(255,165,2,0.3);
+  color: var(--yellow);
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+}
+.change-item em { font-style: normal; font-weight: 700; }
 
 .update-trending { font-size: 12px; color: var(--text2); }
 
@@ -110,6 +191,7 @@ a:hover { color: var(--accent2); }
   border-radius: 50%;
   transition: background 0.2s;
   flex-shrink: 0;
+  align-self: flex-start;
 }
 .banner-close:hover { background: rgba(255,255,255,0.1); }
 
@@ -245,6 +327,32 @@ main { padding: 28px 0 60px; }
   background: linear-gradient(90deg, var(--hot), var(--accent));
 }
 .hot-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+
+/* 新着HOTカードは枠を光らせる */
+.hot-card--new {
+  border-color: var(--hot);
+  box-shadow: 0 0 0 2px rgba(255,71,87,0.4), var(--shadow);
+  animation: new-card-glow 3s ease-in-out infinite;
+}
+@keyframes new-card-glow {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(255,71,87,0.4), var(--shadow); }
+  50%       { box-shadow: 0 0 0 4px rgba(255,71,87,0.2), 0 8px 32px rgba(255,71,87,0.3); }
+}
+
+/* NEW リボン */
+.new-ribbon {
+  position: absolute;
+  top: 12px;
+  right: -8px;
+  background: linear-gradient(135deg, var(--hot), #c0392b);
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 3px 14px;
+  letter-spacing: 1px;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 8px 50%);
+}
 
 .hot-card-header {
   padding: 18px 18px 12px;
@@ -402,8 +510,24 @@ main { padding: 28px 0 60px; }
 .airdrop-row { transition: background 0.15s; }
 .airdrop-row:hover { background: var(--card2); }
 .airdrop-row.row-hot { border-left: 3px solid var(--hot); }
+.airdrop-row.row-new { border-left: 3px solid var(--green); background: rgba(46,213,115,0.04); }
+.airdrop-row.row-new.row-hot { border-left: 3px solid var(--hot); background: rgba(255,71,87,0.05); }
 .airdrop-row.hidden { display: none; }
 .airdrop-row:last-child td { border-bottom: none; }
+
+/* NEW バッジ (テーブル内) */
+.new-badge {
+  display: inline-block;
+  background: var(--green);
+  color: #000;
+  font-size: 9px;
+  font-weight: 900;
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-left: 4px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
 
 .name-cell { display: flex; align-items: center; gap: 10px; }
 
@@ -466,6 +590,12 @@ main { padding: 28px 0 60px; }
 .h-changed { color: var(--yellow); font-weight: 700; }
 .h-email   { color: var(--accent); }
 .h-names   { color: var(--text2); }
+.h-hot-new { color: var(--hot2); font-weight: 700; }
+
+.history-item--hot {
+  border-color: rgba(255,71,87,0.4);
+  background: rgba(255,71,87,0.05);
+}
 
 /* ===== Footer ===== */
 .site-footer {
