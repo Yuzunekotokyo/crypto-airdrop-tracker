@@ -1,8 +1,10 @@
-# Crypto Airdrop Tracker — cron設定例
-# crontab -e で追加 (毎日午前8時に更新)
-
-# サーバーのcronを使う場合 (scheduler.py不要):
-0 8 * * * cd /path/to/crypto-airdrop-tracker && /path/to/venv/bin/python -c "from updater import run_daily_update; run_daily_update(force_email=True)"
-
-# Flaskアプリを常時起動する場合 (自動スケジューラ内蔵):
-# @reboot cd /path/to/crypto-airdrop-tracker && /path/to/venv/bin/python app.py
+# ===== Crypto Airdrop Tracker — crontab設定例 =====
+#
+# Flaskアプリと一緒に起動する場合 → scheduler.py が自動で
+# 毎日 UPDATE_HOUR:UPDATE_MINUTE (デフォルト 08:00 JST) に実行します。
+# Flaskアプリを常時起動:
+# @reboot cd /path/to/crypto-airdrop-tracker && /path/to/venv/bin/python app.py >> /var/log/airdrop.log 2>&1
+#
+# --- standalone cron (Flaskなし) ---
+# 毎日 08:00 JST (= 23:00 UTC 前日) に更新 + メール送信
+0 23 * * * cd /path/to/crypto-airdrop-tracker && /path/to/venv/bin/python -c "from updater import run_daily_update; run_daily_update()" >> /var/log/airdrop-tracker.log 2>&1

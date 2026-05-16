@@ -67,7 +67,7 @@ def api_updates():
 @app.route("/api/trigger-update", methods=["POST"])
 def trigger_update():
     """手動で更新をトリガー (開発・管理用)"""
-    force_email = request.json.get("force_email", False) if request.is_json else False
+    force_email = request.json.get("force_email", True) if request.is_json else True
     summary = run_daily_update(force_email=force_email)
     return jsonify({"status": "ok", "summary": summary})
 

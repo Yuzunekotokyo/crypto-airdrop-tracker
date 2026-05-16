@@ -8,54 +8,118 @@
 </head>
 <body>
 
-<!-- ===== 最新更新バナー ===== -->
+<!-- ===== 今日の更新パネル (最上部に固定表示) ===== -->
 {% if latest_update %}
-<div id="update-banner" class="update-banner">
-  <div class="update-banner-inner">
-    <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
-      <span class="update-time">{{ latest_update.time_jst }}</span>
+<div id="update-panel" class="update-panel">
+  <div class="update-panel-header">
+    <div class="update-panel-left">
+      <span class="update-live-dot"></span>
+      <span class="update-panel-title">📡 本日の更新レポート</span>
+      <span class="update-panel-time">{{ latest_update.time_jst }} 更新</span>
     </div>
-    <div class="update-stats">
-      <span class="stat-chip stat-total">
-        📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
-      </span>
-      <span class="stat-chip stat-hot">
-        🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
-      </span>
-      {% if latest_update.added_count > 0 %}
-      <span class="stat-chip stat-new">
-        🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.changed_count > 0 %}
-      <span class="stat-chip stat-changed">
-        ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
-      </span>
-      {% endif %}
+    <div class="update-panel-right">
       {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
-      </span>
+      <span class="email-sent-badge">📧 メール送信済</span>
+      {% endif %}
+      <button class="panel-toggle-btn" onclick="toggleUpdatePanel()" id="panel-toggle-btn" title="更新パネルを折りたたむ">▲ 閉じる</button>
+    </div>
+  </div>
+
+  <div id="update-panel-body" class="update-panel-body">
+
+    <!-- 統計チップ行 -->
+    <div class="update-stats-row">
+      <div class="update-stat-box stat-box-total">
+        <span class="stat-box-num">{{ latest_update.total_airdrops }}</span>
+        <span class="stat-box-label">総案件数</span>
+      </div>
+      <div class="update-stat-box stat-box-hot">
+        <span class="stat-box-num">{{ latest_update.hot_count }}</span>
+        <span class="stat-box-label">🔥 HOT</span>
+      </div>
+      <div class="update-stat-box stat-box-new">
+        <span class="stat-box-num">{{ latest_update.added_count }}</span>
+        <span class="stat-box-label">🆕 新着</span>
+      </div>
+      <div class="update-stat-box stat-box-changed">
+        <span class="stat-box-num">{{ latest_update.changed_count }}</span>
+        <span class="stat-box-label">✏️ 変更</span>
+      </div>
+      {% if latest_update.removed_count > 0 %}
+      <div class="update-stat-box stat-box-removed">
+        <span class="stat-box-num">{{ latest_update.removed_count }}</span>
+        <span class="stat-box-label">❌ 終了</span>
+      </div>
       {% endif %}
     </div>
-    {% if latest_update.added_names %}
-    <div class="update-new-items">
-      <strong>新規追加:</strong>
+
+    <div class="update-details-grid">
+
+      <!-- 新着HOT案件 (最重要) -->
+      {% set added_hot = [] %}
       {% for name in latest_update.added_names %}
-      <span class="new-tag">{{ name }}</span>
+        {# 実際にis_hotなものをairdropsから引く #}
       {% endfor %}
+      {% if latest_update.added_names %}
+      <div class="update-detail-card card-new">
+        <div class="detail-card-title">🆕 新規追加エアドロップ</div>
+        <div class="detail-tags">
+          {% for name in latest_update.added_names %}
+          <span class="detail-tag tag-new">{{ name }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- 変更点 -->
+      {% if latest_update.changes %}
+      <div class="update-detail-card card-changed">
+        <div class="detail-card-title">✏️ 情報更新された案件</div>
+        {% for change in latest_update.changes %}
+        <div class="change-item">
+          <span class="change-name">{{ change.name }}</span>
+          {% for diff in change.changes %}
+          <span class="change-diff">{{ diff }}</span>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- 終了案件 -->
+      {% if latest_update.removed_names %}
+      <div class="update-detail-card card-removed">
+        <div class="detail-card-title">❌ 終了・削除された案件</div>
+        <div class="detail-tags">
+          {% for name in latest_update.removed_names %}
+          <span class="detail-tag tag-removed">{{ name }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- トレンドコイン -->
+      {% if latest_update.trending_coins %}
+      <div class="update-detail-card card-trending">
+        <div class="detail-card-title">📈 CoinGecko トレンド</div>
+        <div class="detail-tags">
+          {% for coin in latest_update.trending_coins %}
+          <span class="detail-tag tag-trending">{{ coin }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+    </div><!-- /update-details-grid -->
+
+    {% if not latest_update.added_names and not latest_update.changes and not latest_update.removed_names %}
+    <div class="update-no-change">
+      <span>✅ 本日は主要な変更はありませんでした。データは最新の状態に保たれています。</span>
     </div>
     {% endif %}
-    {% if latest_update.trending_coins %}
-    <div class="update-trending">
-      <strong>📈 トレンド:</strong>
-      {{ latest_update.trending_coins | join(' · ') }}
-    </div>
-    {% endif %}
-  </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
-</div>
+
+  </div><!-- /update-panel-body -->
+</div><!-- /update-panel -->
 {% endif %}
 
 <!-- ===== ヘッダー ===== -->
@@ -63,10 +127,10 @@
   <div class="container">
     <div class="header-brand">
       <h1>🪂 Crypto Airdrop Tracker</h1>
-      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日自動更新</p>
+      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日 08:00 JST 自動更新</p>
     </div>
     <div class="header-info">
-      <span class="last-updated">最終更新: {{ now }}</span>
+      <span class="last-updated">最終確認: {{ now }}</span>
     </div>
   </div>
 </header>
@@ -238,7 +302,8 @@
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
-          {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
+          {% if upd.removed_count > 0 %}<span class="h-removed">-{{ upd.removed_count }} 終了</span>{% endif %}
+          {% if upd.email_sent %}<span class="h-email">📧 送信済</span>{% endif %}
           {% if upd.added_names %}
           <span class="h-names">{{ upd.added_names | join(', ') }}</span>
           {% endif %}
@@ -254,11 +319,32 @@
 <!-- ===== フッター ===== -->
 <footer class="site-footer">
   <div class="container">
-    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
+    <p>🪂 Crypto Airdrop Tracker — 毎日 08:00 JST 自動更新 | メール通知: tsukamoto.kei@gmail.com</p>
     <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
   </div>
 </footer>
 
 <script src="/static/js/app.js"></script>
+<script>
+function toggleUpdatePanel() {
+  const body = document.getElementById('update-panel-body');
+  const btn = document.getElementById('panel-toggle-btn');
+  const isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  btn.textContent = isOpen ? '▼ 開く' : '▲ 閉じる';
+  localStorage.setItem('updatePanelOpen', !isOpen);
+}
+
+// 前回の開閉状態を復元
+(function() {
+  const wasOpen = localStorage.getItem('updatePanelOpen');
+  if (wasOpen === 'false') {
+    const body = document.getElementById('update-panel-body');
+    const btn = document.getElementById('panel-toggle-btn');
+    if (body) body.style.display = 'none';
+    if (btn) btn.textContent = '▼ 開く';
+  }
+})();
+</script>
 </body>
 </html>

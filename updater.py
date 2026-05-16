@@ -2,7 +2,7 @@
 毎日の更新処理コア。
 - エアドロップデータを最新化
 - 更新ログを記録
-- Gmail通知を送信
+- Gmail通知を送信 (毎日送信 + HOT案件出現時は即時アラート)
 """
 
 import json
@@ -48,9 +48,11 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
             if old_a.get("status") != new_a.get("status"):
                 diffs.append(f"ステータス: {old_a.get('status')} → {new_a.get('status')}")
             if old_a.get("estimated_value_usd") != new_a.get("estimated_value_usd"):
-                diffs.append(
-                    f"推定価値: ${old_a.get('estimated_value_usd',0):,} → ${new_a.get('estimated_value_usd',0):,}"
-                )
+                old_val = old_a.get("estimated_value_usd", 0)
+                new_val = new_a.get("estimated_value_usd", 0)
+                diffs.append(f"推定価値: ${old_val:,} → ${new_val:,}")
+            if old_a.get("is_hot") != new_a.get("is_hot"):
+                diffs.append("HOT案件に昇格" if new_a.get("is_hot") else "HOT案件から外れた")
             if diffs:
                 changed.append({"name": new_a["name"], "changes": diffs})
 
@@ -58,7 +60,7 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
 
 
 def run_daily_update(force_email: bool = False) -> dict:
-    """メイン更新処理。戻り値: 更新サマリーdict"""
+    """メイン更新処理。毎日メールを送信する。"""
     now = datetime.now(timezone.utc)
     logger.info(f"=== 日次更新開始 {now.isoformat()} ===")
 
@@ -71,10 +73,13 @@ def run_daily_update(force_email: bool = False) -> dict:
     # 変更検出
     diff = _detect_changes(old_airdrops, new_airdrops)
 
-    # 新規ホット案件アラート
+    # 新規HOT案件が追加されたら即時アラートメールを送信
     newly_hot = [a for a in diff["added"] if a.get("is_hot")]
+    hot_alerts_sent = 0
     for airdrop in newly_hot:
-        send_hot_alert(airdrop)
+        if send_hot_alert(airdrop):
+            hot_alerts_sent += 1
+            logger.info(f"HOTアラート送信: {airdrop['name']}")
 
     # データ保存
     _save_json(AIRDROPS_FILE, new_airdrops)
@@ -93,21 +98,26 @@ def run_daily_update(force_email: bool = False) -> dict:
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
+        "newly_hot_names": [a["name"] for a in newly_hot],
         "email_sent": False,
+        "hot_alerts_sent": hot_alerts_sent,
     }
 
     updates_log = _load_json(UPDATES_FILE, [])
     updates_log.insert(0, summary)
-    updates_log = updates_log[:30]  # 直近30件を保持
+    updates_log = updates_log[:30]  # 直近30件保持
     _save_json(UPDATES_FILE, updates_log)
 
-    # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
+    # 毎日デイリーレポートを送信 (force_email, 新着あり, HOT変化のいずれかで送信)
+    should_email = force_email or True  # 毎日必ず送信
     if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
+        sent = send_daily_report(new_airdrops, scraped_new, diff, trending)
         summary["email_sent"] = sent
         updates_log[0]["email_sent"] = sent
         _save_json(UPDATES_FILE, updates_log)
 
-    logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件 ===")
+    logger.info(
+        f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件, "
+        f"HOTアラート{hot_alerts_sent}件, メール{'送信済' if summary['email_sent'] else 'スキップ'} ==="
+    )
     return summary
