@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "timestamp": "2026-05-17T00:06:39.312555+00:00",
+    "date": "2026-05-17",
+    "time_jst": "2026年05月17日 00:06 JST",
+    "total_airdrops": 12,
+    "added_count": 12,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [
+      "Monad (MON)",
+      "MegaETH",
+      "Hyperliquid (HYPE)",
+      "Story Protocol (IP)",
+      "Initia (INIT)",
+      "Unichain"
+    ],
+    "removed_names": [],
+    "hot_added": [
+      "Monad (MON)",
+      "MegaETH",
+      "Hyperliquid (HYPE)",
+      "Story Protocol (IP)",
+      "Initia (INIT)",
+      "Unichain"
+    ],
+    "changes": [],
+    "trending_coins": [
+      "Monad",
+      "Hyperliquid",
+      "Berachain",
+      "Story Protocol",
+      "Abstract"
+    ],
+    "email_sent": false
+  }
+]

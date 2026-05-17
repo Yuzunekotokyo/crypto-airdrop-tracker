@@ -91,6 +91,7 @@ def run_daily_update(force_email: bool = False) -> dict:
         "hot_count": sum(1 for a in new_airdrops if a.get("is_hot")),
         "added_names": [a["name"] for a in diff["added"]],
         "removed_names": diff["removed"],
+        "hot_added": [a["name"] for a in newly_hot],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
         "email_sent": False,
@@ -102,9 +103,9 @@ def run_daily_update(force_email: bool = False) -> dict:
     _save_json(UPDATES_FILE, updates_log)
 
     # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
+    should_email = force_email or diff["added"] or newly_hot or diff["changed"]
     if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
+        sent = send_daily_report(new_airdrops, scraped_new, trending, diff["changed"])
         summary["email_sent"] = sent
         updates_log[0]["email_sent"] = sent
         _save_json(UPDATES_FILE, updates_log)
