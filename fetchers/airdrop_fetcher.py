@@ -1,6 +1,6 @@
 """
 Airdrop情報をWeb/APIから収集するモジュール。
-現在はairdrops.ioのパブリックページとCoinGeckoトレンドを組み合わせて使用。
+airdrops.ioスクレイピング + 厳選シードデータ + CoinGecko新着コインを統合。
 """
 
 import requests
@@ -53,60 +53,60 @@ def _scrape_airdrops_io() -> list[dict]:
 
 
 def _build_seed_airdrops() -> list[dict]:
-    """手動管理の注目エアドロップシードデータ (定期的に更新)"""
+    """厳選エアドロップシードデータ (2025-2026年注目案件)"""
     today = datetime.utcnow()
     return [
         {
-            "id": "layerzero-zro",
-            "name": "LayerZero (ZRO)",
-            "symbol": "ZRO",
-            "category": "インフラ",
+            "id": "monad-monad",
+            "name": "Monad",
+            "symbol": "MONAD",
+            "category": "Layer1",
+            "type": "テストネット/レトロアクティブ",
+            "status": "upcoming",
+            "difficulty": "easy",
+            "estimated_value_usd": 2000,
+            "description": "EVM互換の並列処理L1チェーン。超高速・低コストで注目度No.1。テストネット参加者にエアドロップ予定。",
+            "tasks": ["テストネットfaucetからトークン取得", "テストネット上でトランザクション実行", "Discordでの認証・ロール取得", "MonadエコシステムdApps利用"],
+            "end_date": (today + timedelta(days=90)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/35618/small/monad.jpg",
+            "url": "https://monad.xyz/",
+            "is_hot": True,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
+            "id": "megaeth-meth",
+            "name": "MegaETH",
+            "symbol": "METH",
+            "category": "Layer2",
+            "type": "テストネット/レトロアクティブ",
+            "status": "upcoming",
+            "difficulty": "easy",
+            "estimated_value_usd": 1500,
+            "description": "毎秒100,000トランザクションを目指すEthereum L2。リアルタイムブロックチェーン。テストネット活発中。",
+            "tasks": ["テストネット参加・ウォレット接続", "テスト用ETH取得・送金", "MegaETH上のdApps利用", "コミュニティ活動"],
+            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/38043/small/ZKTokenBlack.png",
+            "url": "https://megaeth.systems/",
+            "is_hot": True,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
+            "id": "story-protocol-ip",
+            "name": "Story Protocol (IP)",
+            "symbol": "IP",
+            "category": "インフラ/IP",
             "type": "レトロアクティブ",
             "status": "active",
             "difficulty": "medium",
-            "estimated_value_usd": 500,
-            "description": "クロスチェーンメッセージングプロトコル。ブリッジ・DeFi利用者向けエアドロップ。",
-            "tasks": ["Stargate経由でブリッジを実行", "複数チェーンでのトランザクション", "LayerZero対応dApps利用"],
-            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
-            "url": "https://layerzero.network/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "scroll-scr",
-            "name": "Scroll (SCR)",
-            "symbol": "SCR",
-            "category": "Layer2",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 300,
-            "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。",
-            "tasks": ["ScrollネットワークへETHブリッジ", "Scroll上でのDeFi利用", "複数週にわたるアクティビティ"],
-            "end_date": (today + timedelta(days=90)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
-            "url": "https://scroll.io/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "zksync-era",
-            "name": "zkSync Era",
-            "symbol": "ZK",
-            "category": "Layer2",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 200,
-            "description": "Matter Labsが開発するZK-Rollup。エコシステムが急拡大中。",
-            "tasks": ["Era上でのスワップ", "Syncswap/Mute利用", "zkSync公式ブリッジ利用"],
+            "estimated_value_usd": 800,
+            "description": "知的財産をオンチェーンで管理するL1ブロックチェーン。a16zが出資する注目プロジェクト。",
+            "tasks": ["Story上にIPAsset登録", "ライセンストークン取得", "IPをリミックス・派生作品作成", "ウォレット接続・Odyssey参加"],
             "end_date": (today + timedelta(days=45)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/38043/small/ZKTokenBlack.png",
-            "url": "https://zksync.io/",
-            "is_hot": False,
+            "logo": "https://assets.coingecko.com/coins/images/37452/small/story.png",
+            "url": "https://www.story.foundation/",
+            "is_hot": True,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
@@ -115,12 +115,12 @@ def _build_seed_airdrops() -> list[dict]:
             "name": "Hyperliquid (HYPE)",
             "symbol": "HYPE",
             "category": "DeFi/DEX",
-            "type": "取引所トークン",
+            "type": "取引量報酬",
             "status": "active",
             "difficulty": "medium",
-            "estimated_value_usd": 1000,
-            "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。",
-            "tasks": ["Hyperliquid上での先物取引", "流動性提供", "紹介プログラム参加"],
+            "estimated_value_usd": 1200,
+            "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量に応じたポイント報酬継続中。",
+            "tasks": ["Hyperliquid上での先物取引", "現物取引での流動性提供", "紹介プログラム参加", "HLPへの流動性提供"],
             "end_date": (today + timedelta(days=30)).strftime("%Y-%m-%d"),
             "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
             "url": "https://hyperliquid.xyz/",
@@ -129,16 +129,70 @@ def _build_seed_airdrops() -> list[dict]:
             "source": "curated",
         },
         {
+            "id": "babylon-baby",
+            "name": "Babylon Chain (BABY)",
+            "symbol": "BABY",
+            "category": "インフラ/Bitcoin",
+            "type": "ステーキング報酬",
+            "status": "active",
+            "difficulty": "medium",
+            "estimated_value_usd": 900,
+            "description": "BitcoinをPoSチェーンのステーキングに活用するプロトコル。BTCホルダー向けの新収益源。",
+            "tasks": ["BTCをBabylonでステーキング", "ステーキングポイント蓄積", "パートナーチェーンへの参加", "Babylon Capsule取得"],
+            "end_date": (today + timedelta(days=80)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/36181/small/babylon.png",
+            "url": "https://babylonchain.io/",
+            "is_hot": True,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
+            "id": "initia-init",
+            "name": "Initia (INIT)",
+            "symbol": "INIT",
+            "category": "Layer1/L2エコシステム",
+            "type": "テストネット/ポイント",
+            "status": "active",
+            "difficulty": "medium",
+            "estimated_value_usd": 600,
+            "description": "相互接続されたL2群を持つL1ブロックチェーン。Binance Labsが出資。Celestia技術採用。",
+            "tasks": ["テストネット参加・DeFi利用", "Initia上でのスワップ・流動性提供", "バリデータ参加またはデリゲート", "Echelon/BlackwingなどエコシステムdApps利用"],
+            "end_date": (today + timedelta(days=40)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/38506/small/Initia.png",
+            "url": "https://initia.xyz/",
+            "is_hot": True,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
+            "id": "symbiotic-restaking",
+            "name": "Symbiotic",
+            "symbol": "SYM",
+            "category": "インフラ/リステーキング",
+            "type": "リステーキング報酬",
+            "status": "active",
+            "difficulty": "hard",
+            "estimated_value_usd": 700,
+            "description": "Paradigm出資のリステーキングプロトコル。EigenLayerの競合として急成長中。",
+            "tasks": ["stETH/wstETHをデポジット", "wBTCまたはETHをステーキング", "ネットワークへの参加", "ポイント蓄積"],
+            "end_date": (today + timedelta(days=100)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/38748/small/symbiotic.png",
+            "url": "https://symbiotic.fi/",
+            "is_hot": False,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
             "id": "eigenlayer-eigen",
             "name": "EigenLayer (EIGEN)",
             "symbol": "EIGEN",
-            "category": "インフラ",
-            "type": "リステーキング",
+            "category": "インフラ/リステーキング",
+            "type": "追加リステーキング報酬",
             "status": "active",
             "difficulty": "hard",
-            "estimated_value_usd": 800,
-            "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。",
-            "tasks": ["ETHをリステーキング", "LST (stETH等) をデポジット", "AVSへの参加"],
+            "estimated_value_usd": 500,
+            "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし複数プロトコルのセキュリティを担保。",
+            "tasks": ["ETHをリステーキング", "LST (stETH等) をデポジット", "AVSへの参加・デリゲート", "EigenDA利用"],
             "end_date": (today + timedelta(days=120)).strftime("%Y-%m-%d"),
             "logo": "https://assets.coingecko.com/coins/images/33751/small/eigen.png",
             "url": "https://eigenlayer.xyz/",
@@ -147,24 +201,107 @@ def _build_seed_airdrops() -> list[dict]:
             "source": "curated",
         },
         {
-            "id": "movement-move",
-            "name": "Movement (MOVE)",
-            "symbol": "MOVE",
+            "id": "ink-network",
+            "name": "Ink Network",
+            "symbol": "INK",
             "category": "Layer2",
-            "type": "新規上場",
-            "status": "upcoming",
+            "type": "テストネット/レトロアクティブ",
+            "status": "active",
             "difficulty": "easy",
             "estimated_value_usd": 400,
-            "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ予定。",
-            "tasks": ["テストネット参加", "Discordコミュニティ参加", "テストトランザクション実行"],
-            "end_date": (today + timedelta(days=20)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/39619/small/MOVE_color.png",
-            "url": "https://movementlabs.xyz/",
-            "is_hot": True,
+            "description": "Krakenが開発するOP StackベースのEthereum L2。DeFi特化チェーン。",
+            "tasks": ["Inkブリッジ経由でETH転送", "Ink上でのDeFi活動", "公式dApps利用", "コミュニティポイント取得"],
+            "end_date": (today + timedelta(days=50)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/39741/small/ink.png",
+            "url": "https://inkonchain.com/",
+            "is_hot": False,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
+            "id": "abstract-chain-abs",
+            "name": "Abstract Chain (ABS)",
+            "symbol": "ABS",
+            "category": "Layer2",
+            "type": "コンシューマー向けL2",
+            "status": "active",
+            "difficulty": "easy",
+            "estimated_value_usd": 350,
+            "description": "ZKsync技術基盤のコンシューマー向けL2。NFT・ゲーム・ソーシャルに特化。",
+            "tasks": ["Abstractウォレット作成", "Abstract上でのNFT購入/Mint", "ゲームdApps参加", "Abstractパスポート取得"],
+            "end_date": (today + timedelta(days=35)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/39783/small/abstract.png",
+            "url": "https://abs.xyz/",
+            "is_hot": False,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
+            "id": "scroll-scr",
+            "name": "Scroll (SCR)",
+            "symbol": "SCR",
+            "category": "Layer2",
+            "type": "レトロアクティブ継続",
+            "status": "active",
+            "difficulty": "easy",
+            "estimated_value_usd": 300,
+            "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ継続中。",
+            "tasks": ["ScrollネットワークへETHブリッジ", "Scroll上でのDeFi利用", "複数週にわたるアクティビティ", "Scroll Canvas NFT取得"],
+            "end_date": (today + timedelta(days=70)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
+            "url": "https://scroll.io/",
+            "is_hot": False,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
+            "id": "layerzero-zro",
+            "name": "LayerZero (ZRO) S2",
+            "symbol": "ZRO",
+            "category": "インフラ",
+            "type": "シーズン2レトロアクティブ",
+            "status": "upcoming",
+            "difficulty": "medium",
+            "estimated_value_usd": 300,
+            "description": "クロスチェーンメッセージングプロトコル。シーズン2エアドロップに向けたアクティビティ継続中。",
+            "tasks": ["Stargate経由でブリッジを実行", "複数チェーンでのトランザクション", "LayerZero対応dApps (STG, CAKE等) 利用"],
+            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
+            "url": "https://layerzero.network/",
+            "is_hot": False,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
     ]
+
+
+def _detect_hot_new_coins(new_coins: list[dict]) -> list[dict]:
+    """CoinGeckoの新着コインからエアドロップ候補を検出"""
+    candidates = []
+    known_keywords = ["airdrop", "drop", "reward", "points", "testnet"]
+    for coin in new_coins[:10]:
+        name_lower = coin.get("name", "").lower()
+        symbol_lower = coin.get("symbol", "").lower()
+        if any(kw in name_lower or kw in symbol_lower for kw in known_keywords):
+            candidates.append({
+                "id": f"cgecko-{coin.get('id', 'unknown')}",
+                "name": coin.get("name", "Unknown"),
+                "symbol": coin.get("symbol", "").upper(),
+                "category": "新着コイン",
+                "type": "CoinGecko新着",
+                "status": "active",
+                "difficulty": "easy",
+                "estimated_value_usd": 0,
+                "description": f"CoinGeckoに新規上場。エアドロップの可能性があります。",
+                "tasks": ["詳細を調査", "公式サイト確認"],
+                "end_date": "未定",
+                "logo": "",
+                "url": f"https://www.coingecko.com/en/coins/{coin.get('id', '')}",
+                "is_hot": False,
+                "added_date": datetime.utcnow().strftime("%Y-%m-%d"),
+                "source": "coingecko_new",
+            })
+    return candidates
 
 
 def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
@@ -174,10 +311,12 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     """
     curated = _build_seed_airdrops()
     scraped = _scrape_airdrops_io()
+    new_coins = get_new_coins()
 
     seen_names = {a["name"].lower() for a in curated}
     new_items = []
 
+    # airdrops.ioスクレイピング結果を統合
     for s in scraped:
         if s["name"].lower() not in seen_names:
             curated.append({
@@ -200,6 +339,14 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
             })
             new_items.append(s["name"])
             seen_names.add(s["name"].lower())
+
+    # CoinGecko新着コイン候補を統合
+    cg_candidates = _detect_hot_new_coins(new_coins)
+    for coin in cg_candidates:
+        if coin["name"].lower() not in seen_names:
+            curated.append(coin)
+            new_items.append(f"{coin['name']} (新規上場)")
+            seen_names.add(coin["name"].lower())
 
     # 注目度でソート: is_hot → estimated_value_usd
     curated.sort(key=lambda x: (not x.get("is_hot"), -x.get("estimated_value_usd", 0)))

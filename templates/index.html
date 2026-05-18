@@ -8,53 +8,84 @@
 </head>
 <body>
 
-<!-- ===== 最新更新バナー ===== -->
+<!-- ===== 最新更新バナー (最上部・スティッキー) ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
-    <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
-      <span class="update-time">{{ latest_update.time_jst }}</span>
+
+    <!-- 1行目: バッジ + 更新時刻 + 統計チップ -->
+    <div class="update-row update-row-top">
+      <div class="update-meta">
+        <span class="update-badge update-badge-pulse">🔄 最新更新</span>
+        <span class="update-time">{{ latest_update.time_jst }}</span>
+      </div>
+      <div class="update-stats">
+        <span class="stat-chip stat-total">
+          📋 <strong>{{ latest_update.total_airdrops }}</strong>件
+        </span>
+        <span class="stat-chip stat-hot">
+          🔥 HOT <strong>{{ latest_update.hot_count }}</strong>件
+        </span>
+        {% if latest_update.added_count > 0 %}
+        <span class="stat-chip stat-new">
+          🆕 新着 <strong>{{ latest_update.added_count }}</strong>件
+        </span>
+        {% endif %}
+        {% if latest_update.changed_count > 0 %}
+        <span class="stat-chip stat-changed">
+          ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong>件
+        </span>
+        {% endif %}
+        {% if latest_update.get('newly_hot_count', 0) > 0 %}
+        <span class="stat-chip stat-alert">
+          🚨 HOT昇格 <strong>{{ latest_update.newly_hot_count }}</strong>件
+        </span>
+        {% endif %}
+        {% if latest_update.email_sent %}
+        <span class="stat-chip stat-email">📧 メール送信済</span>
+        {% endif %}
+      </div>
     </div>
-    <div class="update-stats">
-      <span class="stat-chip stat-total">
-        📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
-      </span>
-      <span class="stat-chip stat-hot">
-        🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
-      </span>
-      {% if latest_update.added_count > 0 %}
-      <span class="stat-chip stat-new">
-        🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.changed_count > 0 %}
-      <span class="stat-chip stat-changed">
-        ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
-      </span>
-      {% endif %}
-    </div>
+
+    <!-- 2行目: 新規追加案件 -->
     {% if latest_update.added_names %}
-    <div class="update-new-items">
-      <strong>新規追加:</strong>
-      {% for name in latest_update.added_names %}
-      <span class="new-tag">{{ name }}</span>
-      {% endfor %}
+    <div class="update-row update-detail-row">
+      <span class="detail-label">🆕 新規追加:</span>
+      <div class="tag-list">
+        {% for name in latest_update.added_names %}
+        <span class="new-tag">{{ name }}</span>
+        {% endfor %}
+      </div>
     </div>
     {% endif %}
+
+    <!-- 3行目: 変更された案件 -->
+    {% if latest_update.changes %}
+    <div class="update-row update-detail-row">
+      <span class="detail-label">✏️ 変更内容:</span>
+      <div class="tag-list">
+        {% for change in latest_update.changes[:3] %}
+        <span class="changed-tag" title="{{ change.changes | join(', ') }}">
+          {{ change.name }}: {{ change.changes | join(' / ') }}
+        </span>
+        {% endfor %}
+        {% if latest_update.changes | length > 3 %}
+        <span class="more-tag">+{{ (latest_update.changes | length) - 3 }}件</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- 4行目: トレンドコイン -->
     {% if latest_update.trending_coins %}
-    <div class="update-trending">
-      <strong>📈 トレンド:</strong>
-      {{ latest_update.trending_coins | join(' · ') }}
+    <div class="update-row update-trending-row">
+      <span class="detail-label">📈 CoinGeckoトレンド:</span>
+      <span class="trending-text">{{ latest_update.trending_coins | join(' · ') }}</span>
     </div>
     {% endif %}
+
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 
@@ -63,7 +94,7 @@
   <div class="container">
     <div class="header-brand">
       <h1>🪂 Crypto Airdrop Tracker</h1>
-      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日自動更新</p>
+      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日 08:00 JST 自動更新</p>
     </div>
     <div class="header-info">
       <span class="last-updated">最終更新: {{ now }}</span>
@@ -203,7 +234,7 @@
               </div>
             </td>
             <td><span class="category-chip">{{ airdrop.category }}</span></td>
-            <td>{{ airdrop.type }}</td>
+            <td class="type-cell">{{ airdrop.type }}</td>
             <td class="value-cell">
               {% if airdrop.estimated_value_usd %}
               <span class="value-text">~${{ "{:,}".format(airdrop.estimated_value_usd) }}</span>
@@ -229,7 +260,7 @@
   <!-- 更新履歴 -->
   {% if updates %}
   <section class="history-section">
-    <h2 class="section-title">📅 更新履歴</h2>
+    <h2 class="section-title">📅 更新履歴 (直近5回)</h2>
     <div class="history-list">
       {% for upd in updates %}
       <div class="history-item">
@@ -238,7 +269,7 @@
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
-          {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
+          {% if upd.email_sent %}<span class="h-email">📧 送信済</span>{% endif %}
           {% if upd.added_names %}
           <span class="h-names">{{ upd.added_names | join(', ') }}</span>
           {% endif %}
@@ -254,8 +285,8 @@
 <!-- ===== フッター ===== -->
 <footer class="site-footer">
   <div class="container">
-    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
-    <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
+    <p>🪂 Crypto Airdrop Tracker — 毎日 08:00 JST 自動更新 · メール通知: tsukamoto.kei@gmail.com</p>
+    <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資・エアドロップ参加は自己責任で行ってください。</p>
   </div>
 </footer>
 

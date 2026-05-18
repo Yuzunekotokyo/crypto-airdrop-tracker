@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "timestamp": "2026-05-18T00:22:08.494319+00:00",
+    "date": "2026-05-18",
+    "time_jst": "2026年05月18日 00:22",
+    "total_airdrops": 12,
+    "added_count": 12,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Monad",
+      "MegaETH",
+      "Hyperliquid (HYPE)",
+      "Babylon Chain (BABY)",
+      "Story Protocol (IP)",
+      "Initia (INIT)",
+      "Symbiotic",
+      "EigenLayer (EIGEN)",
+      "Ink Network",
+      "Abstract Chain (ABS)",
+      "Scroll (SCR)",
+      "LayerZero (ZRO) S2"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "newly_hot_count": 6,
+    "email_sent": false
+  }
+]
