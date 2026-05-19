@@ -40,6 +40,7 @@ def index():
         latest_update=latest_update,
         updates=updates[:5],
         now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
+        today_date=datetime.now().strftime("%Y-%m-%d"),
     )
 
 

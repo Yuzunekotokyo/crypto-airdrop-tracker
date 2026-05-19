@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "timestamp": "2026-05-19T00:14:54.351051+00:00",
+    "date": "2026-05-19",
+    "time_jst": "2026年05月19日 00:14",
+    "total_airdrops": 13,
+    "added_count": 13,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "Monad",
+      "Berachain (BERA)",
+      "MegaETH",
+      "Story Protocol (IP)",
+      "Humanity Protocol (RH)",
+      "EigenLayer (EIGEN)",
+      "Symbiotic",
+      "Nillion (NIL)",
+      "Plume Network (PLUME)",
+      "Sonic (S)",
+      "Movement (MOVE)",
+      "Scroll (SCR)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

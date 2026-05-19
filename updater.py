@@ -2,7 +2,7 @@
 毎日の更新処理コア。
 - エアドロップデータを最新化
 - 更新ログを記録
-- Gmail通知を送信
+- Gmail通知を送信 (毎日ダイジェスト + ホット案件即時アラート)
 """
 
 import json
@@ -49,7 +49,11 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
                 diffs.append(f"ステータス: {old_a.get('status')} → {new_a.get('status')}")
             if old_a.get("estimated_value_usd") != new_a.get("estimated_value_usd"):
                 diffs.append(
-                    f"推定価値: ${old_a.get('estimated_value_usd',0):,} → ${new_a.get('estimated_value_usd',0):,}"
+                    f"推定価値: ${old_a.get('estimated_value_usd', 0):,} → ${new_a.get('estimated_value_usd', 0):,}"
+                )
+            if old_a.get("is_hot") != new_a.get("is_hot"):
+                diffs.append(
+                    "HOT: " + ("🔥 追加" if new_a.get("is_hot") else "解除")
                 )
             if diffs:
                 changed.append({"name": new_a["name"], "changes": diffs})
@@ -71,7 +75,7 @@ def run_daily_update(force_email: bool = False) -> dict:
     # 変更検出
     diff = _detect_changes(old_airdrops, new_airdrops)
 
-    # 新規ホット案件アラート
+    # 新規ホット案件即時アラート
     newly_hot = [a for a in diff["added"] if a.get("is_hot")]
     for airdrop in newly_hot:
         send_hot_alert(airdrop)
@@ -101,13 +105,22 @@ def run_daily_update(force_email: bool = False) -> dict:
     updates_log = updates_log[:30]  # 直近30件を保持
     _save_json(UPDATES_FILE, updates_log)
 
-    # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
+    # 毎日メールを送信 (force_email=True、新着あり、変更あり、またはホット案件変化時)
+    should_email = (
+        force_email
+        or diff["added"]
+        or newly_hot
+        or diff["changed"]
+        or not old_airdrops  # 初回は必ず送信
+    )
     if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
+        sent = send_daily_report(new_airdrops, scraped_new, trending, diff)
         summary["email_sent"] = sent
         updates_log[0]["email_sent"] = sent
         _save_json(UPDATES_FILE, updates_log)
 
-    logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件 ===")
+    logger.info(
+        f"=== 日次更新完了: 追加{len(diff['added'])}件, "
+        f"変更{len(diff['changed'])}件, メール={'送信' if summary['email_sent'] else 'スキップ'} ==="
+    )
     return summary
