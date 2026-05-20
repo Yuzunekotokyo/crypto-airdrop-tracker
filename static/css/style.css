@@ -487,6 +487,158 @@ main { padding: 28px 0 60px; }
   .history-item { flex-direction: column; gap: 8px; }
 }
 
+/* ===== Hot Alert Bar (最上部ホット新着速報) ===== */
+.hot-alert-bar {
+  background: linear-gradient(135deg, #7f0000, #c62828, #7f0000);
+  background-size: 200% 100%;
+  animation: slide-gradient 4s linear infinite;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 12px rgba(198,40,40,0.6);
+}
+
+@keyframes slide-gradient {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.hot-alert-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.hot-alert-icon { font-size: 18px; animation: blink 1s step-end infinite; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.hot-alert-label {
+  background: white;
+  color: #c62828;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.hot-alert-names {
+  color: white;
+  font-size: 14px;
+}
+
+.hot-alert-names strong { text-decoration: underline; }
+
+.hot-alert-time {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ===== New Hot Card ===== */
+.hot-card-new {
+  border: 2px solid var(--hot) !important;
+  box-shadow: 0 0 20px rgba(255,71,87,0.4) !important;
+}
+
+.hot-card-new::before {
+  background: linear-gradient(90deg, #ff4757, #ffa502, #ff4757) !important;
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.new-hot-badge {
+  margin-left: auto;
+  background: linear-gradient(135deg, #ff4757, #ffa502);
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  animation: pulse-badge 1.5s infinite;
+}
+
+/* ===== New Tag HOT variant ===== */
+.new-tag-hot {
+  background: rgba(255,71,87,0.2) !important;
+  border: 1px solid var(--hot) !important;
+  color: var(--hot2) !important;
+  font-weight: 700;
+}
+
+/* ===== Changes Detail (展開式) ===== */
+.update-changes-wrap { margin-top: 4px; }
+
+.changes-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.changes-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.changes-toggle.open  { border-color: var(--accent); color: var(--accent); }
+
+.changes-detail {
+  margin-top: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.change-row {
+  display: flex;
+  gap: 12px;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.change-row:last-child { border-bottom: none; }
+
+.change-name {
+  font-weight: 700;
+  color: var(--text);
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.change-diffs { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.change-diff-item {
+  background: rgba(255,165,2,0.12);
+  border: 1px solid rgba(255,165,2,0.3);
+  color: var(--yellow);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+/* ===== History HOT badge ===== */
+.h-hot { color: var(--hot2); font-weight: 700; }
+
 /* ===== Scrollbar ===== */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }

@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "timestamp": "2026-05-20T00:14:52.470073+00:00",
+    "date": "2026-05-20",
+    "time_jst": "2026年05月20日 09:14",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Monad (MONAD)",
+      "MegaETH",
+      "Babylon (BABY)",
+      "Story Protocol (IP)",
+      "Fuel Network (FUEL)",
+      "Grass Protocol (GRASS)",
+      "Initia (INIT)",
+      "IO.net (IO)",
+      "Sonic (S)",
+      "Abstract (ABS)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "newly_hot_names": [
+      "Monad (MONAD)",
+      "MegaETH",
+      "Babylon (BABY)",
+      "Story Protocol (IP)",
+      "Fuel Network (FUEL)",
+      "Grass Protocol (GRASS)"
+    ],
+    "hot_upgraded_names": [],
+    "top_new": [
+      {
+        "name": "Monad (MONAD)",
+        "value": 2000
+      },
+      {
+        "name": "MegaETH",
+        "value": 1500
+      },
+      {
+        "name": "Babylon (BABY)",
+        "value": 1200
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

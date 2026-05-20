@@ -69,7 +69,14 @@ def trigger_update():
     """手動で更新をトリガー (開発・管理用)"""
     force_email = request.json.get("force_email", False) if request.is_json else False
     summary = run_daily_update(force_email=force_email)
-    return jsonify({"status": "ok", "summary": summary})
+    return jsonify({
+        "status": "ok",
+        "total": summary.get("total_airdrops"),
+        "added": summary.get("added_count"),
+        "changed": summary.get("changed_count"),
+        "newly_hot": summary.get("newly_hot_names", []),
+        "email_sent": summary.get("email_sent"),
+    })
 
 
 if __name__ == "__main__":
