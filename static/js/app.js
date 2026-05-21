@@ -93,32 +93,42 @@ function colIndex(col) {
   return map[col] || 1;
 }
 
-// 自動リロード: 毎30分チェック
+// 自動リロード: 毎10分チェック
+const _pageLoadTime = Date.now();
+
 function scheduleAutoRefresh() {
   setTimeout(() => {
     fetch("/api/updates")
       .then(r => r.json())
       .then(updates => {
         if (updates.length > 0) {
-          const latestDate = updates[0].timestamp;
-          const pageDate = document.querySelector(".update-time")?.textContent;
-          if (latestDate && pageDate && !pageDate.includes(updates[0].date)) {
-            showRefreshNotice();
+          const latestTs = new Date(updates[0].timestamp).getTime();
+          if (latestTs > _pageLoadTime) {
+            showRefreshNotice(updates[0]);
           }
         }
       })
       .catch(() => {})
       .finally(() => scheduleAutoRefresh());
-  }, 30 * 60 * 1000);
+  }, 10 * 60 * 1000);
 }
 
-function showRefreshNotice() {
+function showRefreshNotice(update) {
+  const existing = document.getElementById("refresh-notice");
+  if (existing) return;
+
+  const parts = [];
+  if (update.added_count > 0) parts.push(`🆕 新着${update.added_count}件`);
+  if (update.new_candidates_count > 0) parts.push(`💡 新候補${update.new_candidates_count}件`);
+  const detail = parts.length ? ` (${parts.join(' ')})` : "";
+
   const notice = document.createElement("div");
-  notice.style.cssText = "position:fixed;bottom:20px;right:20px;background:#7c4dff;color:white;padding:14px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;z-index:999;box-shadow:0 4px 20px rgba(0,0,0,0.4);";
-  notice.textContent = "🔄 新しい更新があります — クリックで再読み込み";
+  notice.id = "refresh-notice";
+  notice.style.cssText = "position:fixed;bottom:20px;right:20px;background:linear-gradient(135deg,#7c4dff,#ff4757);color:white;padding:14px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;z-index:999;box-shadow:0 4px 20px rgba(0,0,0,0.5);max-width:340px;";
+  notice.innerHTML = `🔄 新しい更新があります${detail}<br><span style="font-size:11px;opacity:0.8;font-weight:400;">${update.time_jst} — クリックで再読み込み</span>`;
   notice.onclick = () => location.reload();
   document.body.appendChild(notice);
-  setTimeout(() => notice.remove(), 15000);
+  setTimeout(() => notice.remove(), 20000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

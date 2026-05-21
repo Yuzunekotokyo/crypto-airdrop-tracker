@@ -8,6 +8,39 @@
 </head>
 <body>
 
+<!-- ===== 市場ティッカーバー ===== -->
+{% if news and news.prices %}
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    {% for sym, d in news.prices.items() %}
+    <span class="ticker-item">
+      <span class="ticker-sym">{{ sym }}</span>
+      <span class="ticker-price">${{ "{:,.0f}".format(d.usd) if d.usd > 100 else "${:.2f}".format(d.usd) }}</span>
+      <span class="ticker-change {% if d.up %}up{% else %}down{% endif %}">
+        {% if d.up %}▲{% else %}▼{% endif %}{{ "{:.2f}".format(d.change_24h | abs) }}%
+      </span>
+    </span>
+    {% endfor %}
+    {% if news.global_market %}
+    <span class="ticker-divider">|</span>
+    <span class="ticker-item">
+      <span class="ticker-sym" style="color:#9fa8da;">時価総額</span>
+      <span class="ticker-price">${{ "${:.2f}T".format(news.global_market.total_market_cap_usd / 1e12) }}</span>
+      <span class="ticker-change {% if news.global_market.market_cap_change_24h >= 0 %}up{% else %}down{% endif %}">
+        {% if news.global_market.market_cap_change_24h >= 0 %}▲{% else %}▼{% endif %}
+        {{ "{:.2f}".format(news.global_market.market_cap_change_24h | abs) }}%
+      </span>
+    </span>
+    <span class="ticker-item">
+      <span class="ticker-sym" style="color:#9fa8da;">BTC支配率</span>
+      <span class="ticker-price">{{ "{:.1f}".format(news.global_market.btc_dominance) }}%</span>
+    </span>
+    {% endif %}
+  </div>
+  <span class="ticker-updated">{{ news.updated_jst }} 更新</span>
+</div>
+{% endif %}
+
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
@@ -33,6 +66,11 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
+      {% if latest_update.get('new_candidates_count', 0) > 0 %}
+      <span class="stat-chip stat-candidate">
+        💡 新候補 <strong>{{ latest_update.new_candidates_count }}</strong> 件
+      </span>
+      {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
         📧 メール送信済
@@ -44,6 +82,14 @@
       <strong>新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if latest_update.get('new_candidate_names') %}
+    <div class="update-new-items">
+      <strong style="color:#ffa502;">💡 新候補:</strong>
+      {% for name in latest_update.new_candidate_names %}
+      <span class="new-tag" style="border-color:#ffa502;color:#ffa502;background:rgba(255,165,2,0.1);">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
@@ -163,6 +209,48 @@
   </section>
   {% endif %}
 
+  <!-- DeFiLlama エアドロップ候補セクション -->
+  {% if news and news.airdrop_candidates %}
+  <section class="candidates-section">
+    <h2 class="section-title">
+      💡 DeFiLlama エアドロップ有望候補
+      <span class="section-subtitle">トークン未発行・高TVL — 将来のエアドロップ実施の可能性大</span>
+    </h2>
+    <div class="candidates-grid">
+      {% for c in news.airdrop_candidates[:6] %}
+      {% set tvl_b = c.tvl_usd / 1e9 %}
+      {% set tvl_m = c.tvl_usd / 1e6 %}
+      <div class="candidate-card {% if c in (news.new_candidates or []) %}candidate-new{% endif %}">
+        {% if c in (news.new_candidates or []) %}
+        <span class="candidate-new-badge">🆕 NEW</span>
+        {% endif %}
+        <div class="candidate-header">
+          {% if c.logo %}
+          <img src="{{ c.logo }}" alt="{{ c.name }}" class="candidate-logo" onerror="this.style.display='none'">
+          {% endif %}
+          <div>
+            <h4 class="candidate-name">{{ c.name }}</h4>
+            <span class="candidate-chain">{{ c.chain }}</span>
+          </div>
+        </div>
+        <div class="candidate-tvl">
+          TVL: <strong>{% if tvl_b >= 1 %}${{ "{:.2f}".format(tvl_b) }}B{% else %}${{ "{:.0f}".format(tvl_m) }}M{% endif %}</strong>
+        </div>
+        {% if c.category %}
+        <div class="candidate-cat">{{ c.category }}</div>
+        {% endif %}
+        {% if c.description %}
+        <p class="candidate-desc">{{ c.description[:100] }}{% if c.description|length > 100 %}...{% endif %}</p>
+        {% endif %}
+        {% if c.url %}
+        <a href="{{ c.url }}" target="_blank" rel="noopener" class="btn-sm candidate-btn">参加する →</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <!-- 全エアドロップリスト -->
   <section class="all-section">
     <h2 class="section-title">📋 全エアドロップ一覧 <span id="visible-count" class="count-badge">{{ airdrops | length }}</span>件</h2>
@@ -238,7 +326,9 @@
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
+          {% if upd.get('new_candidates_count', 0) > 0 %}<span class="h-candidate">💡{{ upd.new_candidates_count }} 候補</span>{% endif %}
           {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
+          {% if upd.get('btc_price_usd') %}<span class="h-btc">BTC ${{ "{:,.0f}".format(upd.btc_price_usd) }}</span>{% endif %}
           {% if upd.added_names %}
           <span class="h-names">{{ upd.added_names | join(', ') }}</span>
           {% endif %}
@@ -254,7 +344,7 @@
 <!-- ===== フッター ===== -->
 <footer class="site-footer">
   <div class="container">
-    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
+    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新 | メール通知: tsukamoto.kei@gmail.com</p>
     <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
   </div>
 </footer>

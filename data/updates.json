@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "timestamp": "2026-05-21T00:11:59.650204+00:00",
+    "date": "2026-05-21",
+    "time_jst": "2026年05月21日 00:11",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "new_candidates_count": 0,
+    "new_candidate_names": [],
+    "btc_price_usd": 0,
+    "market_change_24h": 0,
+    "email_sent": false
+  }
+]

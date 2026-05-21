@@ -9,7 +9,7 @@ from datetime import datetime
 
 from flask import Flask, jsonify, render_template, request
 
-from config import AIRDROPS_FILE, UPDATES_FILE
+from config import AIRDROPS_FILE, UPDATES_FILE, NEWS_FILE
 from scheduler import start_scheduler
 from updater import run_daily_update
 
@@ -33,14 +33,22 @@ def _load_json(path: str, default):
 def index():
     airdrops = _load_json(AIRDROPS_FILE, [])
     updates = _load_json(UPDATES_FILE, [])
+    news = _load_json(NEWS_FILE, {})
     latest_update = updates[0] if updates else None
     return render_template(
         "index.html",
         airdrops=airdrops,
         latest_update=latest_update,
         updates=updates[:5],
+        news=news,
         now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
     )
+
+
+@app.route("/api/news")
+def api_news():
+    news = _load_json(NEWS_FILE, {})
+    return jsonify(news)
 
 
 @app.route("/api/airdrops")
