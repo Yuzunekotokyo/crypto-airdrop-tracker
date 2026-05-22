@@ -92,7 +92,7 @@ def run_daily_update(force_email: bool = False) -> dict:
         "added_names": [a["name"] for a in diff["added"]],
         "removed_names": diff["removed"],
         "changes": diff["changed"],
-        "trending_coins": [t["name"] for t in trending[:5]],
+        "trending_coins": [t["name"] for t in trending[:8]],
         "email_sent": False,
     }
 

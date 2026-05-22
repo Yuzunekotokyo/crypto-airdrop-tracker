@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "timestamp": "2026-05-22T00:20:17.382855+00:00",
+    "date": "2026-05-22",
+    "time_jst": "2026年05月22日 00:20",
+    "total_airdrops": 12,
+    "added_count": 12,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 7,
+    "added_names": [
+      "Monad",
+      "Berachain (BERA)",
+      "MegaETH",
+      "Initia",
+      "Hyperliquid (HYPE)",
+      "Story Protocol (IP)",
+      "Abstract (ABS)",
+      "EigenLayer (EIGEN)",
+      "Fuel Network (FUEL)",
+      "LayerZero (ZRO)",
+      "Linea",
+      "Scroll (SCR)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
