@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "timestamp": "2026-05-23T00:12:58.626633+00:00",
+    "date": "2026-05-23",
+    "time_jst": "2026年05月23日 00:12",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [
+      "Monad (MON)",
+      "Berachain (BERA)",
+      "Hyperliquid (HYPE)",
+      "MegaETH",
+      "Eclipse",
+      "Initia (INIT)",
+      "EigenLayer (EIGEN)",
+      "Sonic (S)",
+      "Movement (MOVE)",
+      "Story Protocol (IP)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
