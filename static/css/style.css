@@ -37,28 +37,30 @@ a:hover { color: var(--accent2); }
 
 /* ===== Update Banner ===== */
 .update-banner {
-  background: linear-gradient(135deg, #0d2137, #1a1a2e);
-  border-bottom: 2px solid var(--accent);
-  padding: 14px 20px;
+  background: linear-gradient(135deg, #080d1f, #0d1b33);
+  border-bottom: 3px solid var(--accent);
+  padding: 12px 20px 14px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 20px rgba(124,77,255,0.3);
+  box-shadow: 0 4px 24px rgba(124,77,255,0.4);
   display: flex;
   align-items: flex-start;
   gap: 12px;
 }
 
-.update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 7px; }
 
-.update-meta { display: flex; align-items: center; gap: 12px; }
+.update-top-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+
+.update-meta { display: flex; align-items: center; gap: 10px; }
 
 .update-badge {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), #5b2be8);
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 20px;
   letter-spacing: 0.5px;
   animation: pulse-badge 2s infinite;
@@ -66,15 +68,15 @@ a:hover { color: var(--accent2); }
 
 @keyframes pulse-badge {
   0%, 100% { box-shadow: 0 0 0 0 rgba(124,77,255,0.6); }
-  50% { box-shadow: 0 0 0 6px rgba(124,77,255,0); }
+  50% { box-shadow: 0 0 0 8px rgba(124,77,255,0); }
 }
 
 .update-time { color: var(--text2); font-size: 13px; }
 
-.update-stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.update-stats { display: flex; flex-wrap: wrap; gap: 6px; }
 
 .stat-chip {
-  font-size: 13px;
+  font-size: 12px;
   padding: 3px 12px;
   border-radius: 20px;
   font-weight: 600;
@@ -85,7 +87,38 @@ a:hover { color: var(--accent2); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
-.update-new-items { font-size: 13px; color: var(--text2); }
+/* 新着ホット案件アラート行 */
+.update-hot-alert {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: rgba(255,71,87,0.12);
+  border: 1px solid rgba(255,71,87,0.4);
+  border-radius: 8px;
+  padding: 6px 12px;
+  animation: glow-hot 2s ease-in-out infinite;
+}
+@keyframes glow-hot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,71,87,0.3); }
+  50%       { box-shadow: 0 0 12px 2px rgba(255,71,87,0.2); }
+}
+
+.hot-alert-icon { font-size: 15px; }
+.hot-alert-label { font-size: 12px; font-weight: 700; color: var(--hot2); }
+.hot-alert-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--hot), var(--accent));
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* 新規追加 */
+.update-new-items { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; font-size: 13px; }
+.new-label { color: var(--green); font-weight: 700; font-size: 12px; margin-right: 2px; }
 
 .new-tag {
   display: inline-block;
@@ -95,10 +128,26 @@ a:hover { color: var(--accent2); }
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 12px;
-  margin: 2px 4px 2px 0;
 }
 
-.update-trending { font-size: 12px; color: var(--text2); }
+/* 変更点 */
+.update-changes { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 4px 8px; font-size: 12px; }
+.changes-label { color: var(--yellow); font-weight: 700; white-space: nowrap; }
+.changes-list { display: flex; flex-wrap: wrap; gap: 4px; }
+.change-item {
+  background: rgba(255,165,2,0.1);
+  border: 1px solid rgba(255,165,2,0.3);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 11px;
+}
+.change-item strong { color: var(--text); }
+.change-detail { color: var(--yellow); margin-left: 4px; }
+.change-more { color: var(--text2); font-size: 11px; }
+
+/* トレンド */
+.update-trending { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text2); }
+.trending-label { color: #b39ddb; font-weight: 700; }
 
 .banner-close {
   background: none;
@@ -441,6 +490,7 @@ main { padding: 28px 0 60px; }
 .value-unknown { color: var(--text2); }
 
 .date-cell { color: var(--text2); font-size: 13px; white-space: nowrap; }
+.type-text { font-size: 12px; color: var(--text2); }
 
 /* ===== Update History ===== */
 .history-section { margin-bottom: 40px; }

@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "timestamp": "2026-05-24T00:17:29.896571+00:00",
+    "date": "2026-05-24",
+    "time_jst": "2026年05月24日 09:17 JST",
+    "total_airdrops": 13,
+    "added_count": 13,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 9,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "Monad",
+      "Berachain (BERA)",
+      "MegaETH",
+      "Initia (INIT)",
+      "Sonic (S)",
+      "Abstract (ABS)",
+      "Movement (MOVE)",
+      "Kaito (KAITO)",
+      "EigenLayer (EIGEN)",
+      "Scroll (SCR)",
+      "LayerZero (ZRO)",
+      "zkSync Era (ZK)"
+    ],
+    "added_hot_names": [
+      "Hyperliquid (HYPE)",
+      "Monad",
+      "Berachain (BERA)",
+      "MegaETH",
+      "Initia (INIT)",
+      "Sonic (S)",
+      "Abstract (ABS)",
+      "Movement (MOVE)",
+      "Kaito (KAITO)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
