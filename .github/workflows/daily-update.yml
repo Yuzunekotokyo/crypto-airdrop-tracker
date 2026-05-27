@@ -1,0 +1,120 @@
+name: 🪂 Daily Airdrop Update
+
+on:
+  # 毎日 08:00 JST (= 23:00 UTC 前日) に自動実行
+  schedule:
+    - cron: '0 23 * * *'
+
+  # 手動実行も可能
+  workflow_dispatch:
+    inputs:
+      force_email:
+        description: 'メールを強制送信 (変更なしでも送信)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+jobs:
+  update:
+    name: エアドロップデータ更新 & メール通知
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📦 コードをチェックアウト
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: 🐍 Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📚 依存パッケージインストール
+        run: pip install -r requirements.txt
+
+      - name: 🔄 エアドロップデータを更新
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT || 'tsukamoto.kei@gmail.com' }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          FORCE_EMAIL: ${{ github.event.inputs.force_email || 'false' }}
+        run: |
+          python run_daily_update.py
+
+      - name: 📊 更新結果を確認
+        run: |
+          echo "=== airdrops.json (件数) ==="
+          python -c "import json; data=json.load(open('data/airdrops.json')); print(f'合計: {len(data)}件, HOT: {sum(1 for a in data if a.get(\"is_hot\"))}件')"
+          echo ""
+          echo "=== 最新の更新ログ ==="
+          python -c "
+          import json
+          updates = json.load(open('data/updates.json'))
+          if updates:
+              u = updates[0]
+              print(f'更新時刻: {u[\"time_jst\"]}')
+              print(f'追加: {u[\"added_count\"]}件, 変更: {u[\"changed_count\"]}件')
+              print(f'メール送信: {u[\"email_sent\"]}')
+              if u['added_names']:
+                  print(f'新着: {u[\"added_names\"]}')
+          "
+
+      - name: 💾 更新データをコミット & プッシュ
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "Airdrop Bot 🪂"
+
+          git add data/airdrops.json data/updates.json
+
+          # 変更がある場合のみコミット
+          if git diff --staged --quiet; then
+            echo "変更なし — コミットをスキップ"
+          else
+            TODAY=$(date -u '+%Y-%m-%d')
+            ADDED=$(python -c "import json; u=json.load(open('data/updates.json')); print(u[0]['added_count'] if u else 0)" 2>/dev/null || echo 0)
+            HOT=$(python -c "import json; u=json.load(open('data/updates.json')); print(u[0]['hot_count'] if u else 0)" 2>/dev/null || echo 0)
+
+            git commit -m "🪂 [${TODAY}] 日次更新: +${ADDED}件追加, 🔥${HOT}件ホット
+
+自動更新ワークフローによる日次エアドロップデータ更新。
+Automated daily airdrop data update via GitHub Actions."
+
+            git push origin HEAD
+            echo "✅ データをプッシュしました"
+          fi
+
+      - name: 📝 サマリー出力
+        if: always()
+        run: |
+          echo "## 🪂 Airdrop Daily Update" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          python -c "
+          import json, sys
+          try:
+              updates = json.load(open('data/updates.json'))
+              if updates:
+                  u = updates[0]
+                  print(f'| 項目 | 値 |')
+                  print(f'|------|-----|')
+                  print(f'| 更新時刻 | {u[\"time_jst\"]} |')
+                  print(f'| 合計件数 | {u[\"total_airdrops\"]}件 |')
+                  print(f'| 🔥 ホット | {u[\"hot_count\"]}件 |')
+                  print(f'| 🆕 新着 | {u[\"added_count\"]}件 |')
+                  print(f'| ✏️ 変更 | {u[\"changed_count\"]}件 |')
+                  print(f'| 📧 メール送信 | {\"✅\" if u[\"email_sent\"] else \"❌\"} |')
+                  if u.get(\"added_names\"):
+                      print(f'| 新着案件 | {\" / \".join(u[\"added_names\"][:5])} |')
+          except Exception as e:
+              print(f'エラー: {e}', file=sys.stderr)
+          " >> $GITHUB_STEP_SUMMARY

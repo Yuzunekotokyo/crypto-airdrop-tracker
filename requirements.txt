@@ -7,3 +7,4 @@ google-auth-oauthlib==1.2.0
 google-api-python-client==2.128.0
 beautifulsoup4==4.12.3
 lxml==5.2.1
+pytz==2024.1

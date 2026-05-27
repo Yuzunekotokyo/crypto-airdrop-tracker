@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "timestamp": "2026-05-27T00:12:40.061245+00:00",
+    "date": "2026-05-27",
+    "time_jst": "2026年05月27日 09:12 JST",
+    "total_airdrops": 13,
+    "added_count": 13,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 7,
+    "newly_hot_count": 7,
+    "added_names": [
+      "Bittensor エコシステム",
+      "Hyperliquid (HYPE)",
+      "Monad (MON)",
+      "MegaETH",
+      "Aethir (ATH)",
+      "io.net (IO)",
+      "Story Protocol (IP)",
+      "EigenLayer (EIGEN)",
+      "Movement (MOVE)",
+      "Celestia (TIA)",
+      "LayerZero シーズン2",
+      "zkSync Era",
+      "Scroll (SCR)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "newly_hot_names": [
+      "Bittensor エコシステム",
+      "Hyperliquid (HYPE)",
+      "Monad (MON)",
+      "MegaETH",
+      "Aethir (ATH)",
+      "io.net (IO)",
+      "Story Protocol (IP)"
+    ],
+    "trending_coins": [],
+    "email_sent": false,
+    "email_recipient": "tsukamoto.kei@gmail.com"
+  }
+]
