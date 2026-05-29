@@ -10,51 +10,100 @@
 
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
-<div id="update-banner" class="update-banner">
+<div id="update-banner" class="update-banner"
+     data-timestamp="{{ latest_update.timestamp }}">
   <div class="update-banner-inner">
+
+    <!-- ヘッダー行: 更新時刻 + サマリー -->
     <div class="update-meta">
       <span class="update-badge">🔄 最新更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
+      <div class="update-stats">
+        <span class="stat-chip stat-total">
+          📋 計 <strong>{{ latest_update.total_airdrops }}</strong>件
+        </span>
+        <span class="stat-chip stat-hot">
+          🔥 ホット <strong>{{ latest_update.hot_count }}</strong>件
+        </span>
+        {% if latest_update.added_count > 0 %}
+        <span class="stat-chip stat-new">
+          🆕 新着 <strong>{{ latest_update.added_count }}</strong>件
+        </span>
+        {% endif %}
+        {% if latest_update.changed_count > 0 %}
+        <span class="stat-chip stat-changed">
+          ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong>件
+        </span>
+        {% endif %}
+        {% if latest_update.removed_count is defined and latest_update.removed_count > 0 %}
+        <span class="stat-chip stat-removed">
+          🗑 削除 <strong>{{ latest_update.removed_count }}</strong>件
+        </span>
+        {% endif %}
+        {% if latest_update.email_sent %}
+        <span class="stat-chip stat-email">📧 メール送信済</span>
+        {% endif %}
+      </div>
     </div>
-    <div class="update-stats">
-      <span class="stat-chip stat-total">
-        📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
-      </span>
-      <span class="stat-chip stat-hot">
-        🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
-      </span>
-      {% if latest_update.added_count > 0 %}
-      <span class="stat-chip stat-new">
-        🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.changed_count > 0 %}
-      <span class="stat-chip stat-changed">
-        ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
-      </span>
-      {% endif %}
+
+    <!-- 新着ホット案件アラート -->
+    {% set newly_hot_added = latest_update.added_names | default([]) %}
+    {% if latest_update.added_count > 0 and latest_update.hot_count > 0 %}
+    <div class="update-hot-alert">
+      <span class="hot-alert-icon">🚨</span>
+      <span class="hot-alert-text">新着ホット案件あり！下の「🔥 今狙うべき注目エアドロップ」をチェック</span>
     </div>
+    {% endif %}
+
+    <!-- 新規追加案件 -->
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
+      <strong>🆕 新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
+
+    <!-- 変更された案件 -->
+    {% if latest_update.changes %}
+    <div class="update-changes-toggle">
+      <button class="changes-btn" onclick="toggleChanges()">
+        ✏️ 変更詳細を表示 ({{ latest_update.changes | length }}件) ▼
+      </button>
+    </div>
+    <div id="changes-detail" class="update-changes-detail" style="display:none;">
+      {% for ch in latest_update.changes %}
+      <div class="change-item">
+        <span class="change-name">{{ ch.name }}</span>
+        {% for c in ch.changes %}
+        <span class="change-desc">{{ c }}</span>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- 削除された案件 -->
+    {% if latest_update.removed_names %}
+    <div class="update-removed-items">
+      <strong>🗑 終了・削除:</strong>
+      {% for name in latest_update.removed_names %}
+      <span class="removed-tag">{{ name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- トレンドコイン -->
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>
-      {{ latest_update.trending_coins | join(' · ') }}
+      <span class="trending-ticker">{{ latest_update.trending_coins | join(' · ') }}</span>
     </div>
     {% endif %}
+
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 
@@ -63,7 +112,7 @@
   <div class="container">
     <div class="header-brand">
       <h1>🪂 Crypto Airdrop Tracker</h1>
-      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日自動更新</p>
+      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
     </div>
     <div class="header-info">
       <span class="last-updated">最終更新: {{ now }}</span>
@@ -237,6 +286,7 @@
         <div class="history-details">
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
+          {% if upd.removed_count is defined and upd.removed_count > 0 %}<span class="h-removed">-{{ upd.removed_count }} 削除</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
           {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
           {% if upd.added_names %}
@@ -254,11 +304,24 @@
 <!-- ===== フッター ===== -->
 <footer class="site-footer">
   <div class="container">
-    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
+    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新 · メール通知: tsukamoto.kei@gmail.com</p>
     <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
   </div>
 </footer>
 
 <script src="/static/js/app.js"></script>
+<script>
+function toggleChanges() {
+  const el = document.getElementById('changes-detail');
+  const btn = document.querySelector('.changes-btn');
+  if (el.style.display === 'none') {
+    el.style.display = 'block';
+    btn.textContent = btn.textContent.replace('▼', '▲').replace('表示', '非表示');
+  } else {
+    el.style.display = 'none';
+    btn.textContent = btn.textContent.replace('▲', '▼').replace('非表示', '表示');
+  }
+}
+</script>
 </body>
 </html>

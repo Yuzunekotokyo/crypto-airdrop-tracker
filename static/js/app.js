@@ -93,16 +93,17 @@ function colIndex(col) {
   return map[col] || 1;
 }
 
-// 自動リロード: 毎30分チェック
+// 自動リロード: 毎30分チェック (タイムスタンプ比較)
+const _pageTimestamp = document.getElementById("update-banner")?.dataset.timestamp || "";
+
 function scheduleAutoRefresh() {
   setTimeout(() => {
     fetch("/api/updates")
       .then(r => r.json())
       .then(updates => {
-        if (updates.length > 0) {
-          const latestDate = updates[0].timestamp;
-          const pageDate = document.querySelector(".update-time")?.textContent;
-          if (latestDate && pageDate && !pageDate.includes(updates[0].date)) {
+        if (updates.length > 0 && _pageTimestamp) {
+          const serverTimestamp = updates[0].timestamp || "";
+          if (serverTimestamp && serverTimestamp !== _pageTimestamp) {
             showRefreshNotice();
           }
         }

@@ -85,7 +85,8 @@ a:hover { color: var(--accent2); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
-.update-new-items { font-size: 13px; color: var(--text2); }
+.update-new-items { font-size: 13px; color: var(--text2); margin-top: 2px; }
+.update-removed-items { font-size: 13px; color: var(--text2); margin-top: 2px; }
 
 .new-tag {
   display: inline-block;
@@ -98,7 +99,87 @@ a:hover { color: var(--accent2); }
   margin: 2px 4px 2px 0;
 }
 
-.update-trending { font-size: 12px; color: var(--text2); }
+.removed-tag {
+  display: inline-block;
+  background: rgba(255,71,87,0.15);
+  border: 1px solid var(--hot);
+  color: var(--hot2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+  text-decoration: line-through;
+  opacity: 0.85;
+}
+
+/* 新着ホット案件アラート */
+.update-hot-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,71,87,0.12);
+  border: 1px solid var(--hot);
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-top: 4px;
+  animation: pulse-hot 1.5s infinite;
+}
+
+@keyframes pulse-hot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,71,87,0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(255,71,87,0); }
+}
+
+.hot-alert-icon { font-size: 18px; }
+.hot-alert-text { color: var(--hot2); font-size: 13px; font-weight: 700; }
+
+/* 変更詳細トグル */
+.update-changes-toggle { margin-top: 4px; }
+
+.changes-btn {
+  background: rgba(255,165,2,0.1);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  padding: 4px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.changes-btn:hover { background: rgba(255,165,2,0.2); }
+
+.update-changes-detail {
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.change-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.change-name { font-weight: 700; color: var(--text); min-width: 120px; }
+.change-desc {
+  color: var(--yellow);
+  font-size: 12px;
+  background: rgba(255,165,2,0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.stat-removed { background: rgba(255,71,87,0.15); border: 1px solid var(--hot); color: var(--hot2); }
+
+.update-trending { font-size: 12px; color: var(--text2); margin-top: 2px; }
+.trending-ticker { color: var(--accent); font-weight: 600; }
 
 .banner-close {
   background: none;
@@ -463,6 +544,7 @@ main { padding: 28px 0 60px; }
 .history-details { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 13px; }
 
 .h-new     { color: var(--green); font-weight: 700; }
+.h-removed { color: var(--hot); font-weight: 700; }
 .h-changed { color: var(--yellow); font-weight: 700; }
 .h-email   { color: var(--accent); }
 .h-names   { color: var(--text2); }

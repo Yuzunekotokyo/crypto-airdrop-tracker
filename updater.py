@@ -10,7 +10,7 @@ import logging
 import os
 from datetime import datetime, timezone
 
-from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR
+from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR, ALWAYS_SEND_EMAIL
 from fetchers.airdrop_fetcher import fetch_all_airdrops
 from fetchers.coingecko import get_trending_coins
 from notifier.gmail import send_daily_report, send_hot_alert
@@ -80,10 +80,17 @@ def run_daily_update(force_email: bool = False) -> dict:
     _save_json(AIRDROPS_FILE, new_airdrops)
 
     # 更新ログ
+    try:
+        from zoneinfo import ZoneInfo
+        jst = ZoneInfo("Asia/Tokyo")
+        time_jst = now.astimezone(jst).strftime("%Y年%m月%d日 %H:%M")
+    except Exception:
+        time_jst = now.strftime("%Y年%m月%d日 %H:%M")
+
     summary = {
         "timestamp": now.isoformat(),
         "date": now.strftime("%Y-%m-%d"),
-        "time_jst": (now.astimezone()).strftime("%Y年%m月%d日 %H:%M"),
+        "time_jst": time_jst,
         "total_airdrops": len(new_airdrops),
         "added_count": len(diff["added"]),
         "removed_count": len(diff["removed"]),
@@ -101,10 +108,10 @@ def run_daily_update(force_email: bool = False) -> dict:
     updates_log = updates_log[:30]  # 直近30件を保持
     _save_json(UPDATES_FILE, updates_log)
 
-    # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
+    # メール送信 (毎日 or 新着あり or ホット案件変化 or 強制送信)
+    should_email = force_email or ALWAYS_SEND_EMAIL or bool(diff["added"]) or bool(newly_hot)
     if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
+        sent = send_daily_report(new_airdrops, scraped_new, trending, diff)
         summary["email_sent"] = sent
         updates_log[0]["email_sent"] = sent
         _save_json(UPDATES_FILE, updates_log)
