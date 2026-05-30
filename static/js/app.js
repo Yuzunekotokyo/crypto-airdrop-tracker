@@ -121,6 +121,13 @@ function showRefreshNotice() {
   setTimeout(() => notice.remove(), 15000);
 }
 
+function toggleBannerChanges(btn) {
+  const detail = btn.nextElementSibling;
+  const open = detail.style.display !== "none";
+  detail.style.display = open ? "none" : "block";
+  btn.textContent = btn.textContent.replace(open ? "▲" : "▼", open ? "▼" : "▲");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   scheduleAutoRefresh();
 
@@ -128,4 +135,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".airdrop-row[title]").forEach(row => {
     row.style.cursor = "pointer";
   });
+
+  // HOT新着がある場合はバナーを点滅強調
+  const banner = document.getElementById("update-banner");
+  if (banner && banner.classList.contains("update-banner--has-hot")) {
+    banner.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 });

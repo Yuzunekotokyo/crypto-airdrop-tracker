@@ -79,6 +79,21 @@ def run_daily_update(force_email: bool = False) -> dict:
     # データ保存
     _save_json(AIRDROPS_FILE, new_airdrops)
 
+    # 注目新着案件 (is_hot=True の新規追加)
+    new_hot_items = [
+        {
+            "name": a["name"],
+            "symbol": a.get("symbol", ""),
+            "category": a.get("category", ""),
+            "estimated_value_usd": a.get("estimated_value_usd", 0),
+            "difficulty": a.get("difficulty", ""),
+            "end_date": a.get("end_date", "未定"),
+            "url": a.get("url", ""),
+        }
+        for a in diff["added"]
+        if a.get("is_hot")
+    ]
+
     # 更新ログ
     summary = {
         "timestamp": now.isoformat(),
@@ -92,7 +107,9 @@ def run_daily_update(force_email: bool = False) -> dict:
         "added_names": [a["name"] for a in diff["added"]],
         "removed_names": diff["removed"],
         "changes": diff["changed"],
+        "new_hot_items": new_hot_items,
         "trending_coins": [t["name"] for t in trending[:5]],
+        "trending_detail": trending[:5],
         "email_sent": False,
     }
 
