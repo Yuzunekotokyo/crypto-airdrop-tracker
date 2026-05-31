@@ -8,6 +8,25 @@
 </head>
 <body>
 
+<!-- ===== 🚨 ホットアラートバナー (新HOT案件が出た時のみ表示) ===== -->
+{% if latest_update and latest_update.newly_hot_names %}
+<div id="hot-alert-banner" class="hot-alert-banner">
+  <div class="hot-alert-inner">
+    <span class="hot-alert-icon">🚨</span>
+    <div class="hot-alert-text">
+      <strong>NEW HOT AIRDROP 出現！</strong>
+      <span class="hot-alert-names">
+        {% for name in latest_update.newly_hot_names %}
+        <span class="hot-name-tag">🔥 {{ name }}</span>
+        {% endfor %}
+      </span>
+    </div>
+    <span class="hot-alert-time">{{ latest_update.time_jst }}</span>
+  </div>
+  <button class="banner-close hot-close" onclick="document.getElementById('hot-alert-banner').style.display='none'">✕</button>
+</div>
+{% endif %}
+
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
@@ -15,6 +34,9 @@
     <div class="update-meta">
       <span class="update-badge">🔄 最新更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
+      {% if latest_update.email_sent %}
+      <span class="stat-chip stat-email">📧 メール送信済</span>
+      {% endif %}
     </div>
     <div class="update-stats">
       <span class="stat-chip stat-total">
@@ -33,20 +55,31 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
-      {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
-      </span>
-      {% endif %}
     </div>
+
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
+      <strong>🆕 新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
+
+    {% if latest_update.changes %}
+    <div class="update-changes">
+      <strong>✏️ 変更:</strong>
+      {% for change in latest_update.changes[:3] %}
+      <span class="change-item">
+        <span class="change-name">{{ change.name }}</span>
+        {% for diff in change.changes %}
+        <span class="change-diff">{{ diff }}</span>
+        {% endfor %}
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>
@@ -63,7 +96,7 @@
   <div class="container">
     <div class="header-brand">
       <h1>🪂 Crypto Airdrop Tracker</h1>
-      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日自動更新</p>
+      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日 08:00 JST 自動更新</p>
     </div>
     <div class="header-info">
       <span class="last-updated">最終更新: {{ now }}</span>
@@ -238,6 +271,7 @@
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
+          {% if upd.newly_hot_names %}<span class="h-hot">🔥 HOT: {{ upd.newly_hot_names | join(', ') }}</span>{% endif %}
           {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
           {% if upd.added_names %}
           <span class="h-names">{{ upd.added_names | join(', ') }}</span>
@@ -254,7 +288,7 @@
 <!-- ===== フッター ===== -->
 <footer class="site-footer">
   <div class="container">
-    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
+    <p>🪂 Crypto Airdrop Tracker — 毎日 08:00 JST 自動更新 · Gmail通知対応</p>
     <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
   </div>
 </footer>

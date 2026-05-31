@@ -35,6 +35,70 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent2); }
 
+/* ===== Hot Alert Banner ===== */
+.hot-alert-banner {
+  background: linear-gradient(135deg, #7b0000, #c0392b, #e74c3c);
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  box-shadow: 0 2px 20px rgba(231,76,60,0.6);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: hot-flash 1.5s ease-in-out 3;
+}
+
+@keyframes hot-flash {
+  0%, 100% { background: linear-gradient(135deg, #7b0000, #c0392b, #e74c3c); }
+  50% { background: linear-gradient(135deg, #c0392b, #e74c3c, #ff6b6b); }
+}
+
+.hot-alert-inner {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hot-alert-icon { font-size: 22px; flex-shrink: 0; }
+
+.hot-alert-text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hot-alert-text strong {
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.hot-name-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hot-alert-time {
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+  margin-left: auto;
+}
+
+.hot-close { color: rgba(255,255,255,0.8) !important; }
+.hot-close:hover { background: rgba(255,255,255,0.2) !important; }
+
 /* ===== Update Banner ===== */
 .update-banner {
   background: linear-gradient(135deg, #0d2137, #1a1a2e);
@@ -99,6 +163,22 @@ a:hover { color: var(--accent2); }
 }
 
 .update-trending { font-size: 12px; color: var(--text2); }
+
+.update-changes { font-size: 13px; color: var(--text2); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+.change-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,165,2,0.1);
+  border: 1px solid rgba(255,165,2,0.3);
+  border-radius: 8px;
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+.change-name { color: var(--yellow); font-weight: 700; }
+.change-diff { color: var(--text2); font-size: 11px; }
 
 .banner-close {
   background: none;
@@ -464,6 +544,7 @@ main { padding: 28px 0 60px; }
 
 .h-new     { color: var(--green); font-weight: 700; }
 .h-changed { color: var(--yellow); font-weight: 700; }
+.h-hot     { color: var(--hot); font-weight: 700; }
 .h-email   { color: var(--accent); }
 .h-names   { color: var(--text2); }
 

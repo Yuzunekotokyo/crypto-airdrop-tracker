@@ -41,6 +41,8 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
     added = [a for aid, a in new_ids.items() if aid not in old_ids]
     removed = [a["name"] for aid, a in old_ids.items() if aid not in new_ids]
     changed = []
+    newly_became_hot = []
+
     for aid, new_a in new_ids.items():
         if aid in old_ids:
             old_a = old_ids[aid]
@@ -53,8 +55,16 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
                 )
             if diffs:
                 changed.append({"name": new_a["name"], "changes": diffs})
+            # 新たにホット案件になった既存プロジェクトを検出
+            if not old_a.get("is_hot") and new_a.get("is_hot"):
+                newly_became_hot.append(new_a)
 
-    return {"added": added, "removed": removed, "changed": changed}
+    return {
+        "added": added,
+        "removed": removed,
+        "changed": changed,
+        "newly_became_hot": newly_became_hot,
+    }
 
 
 def run_daily_update(force_email: bool = False) -> dict:
@@ -71,9 +81,11 @@ def run_daily_update(force_email: bool = False) -> dict:
     # 変更検出
     diff = _detect_changes(old_airdrops, new_airdrops)
 
-    # 新規ホット案件アラート
+    # 新規ホット案件アラート（新規追加 + 既存がホット昇格）
     newly_hot = [a for a in diff["added"] if a.get("is_hot")]
     for airdrop in newly_hot:
+        send_hot_alert(airdrop)
+    for airdrop in diff["newly_became_hot"]:
         send_hot_alert(airdrop)
 
     # データ保存
@@ -92,6 +104,7 @@ def run_daily_update(force_email: bool = False) -> dict:
         "added_names": [a["name"] for a in diff["added"]],
         "removed_names": diff["removed"],
         "changes": diff["changed"],
+        "newly_hot_names": [a["name"] for a in newly_hot] + [a["name"] for a in diff["newly_became_hot"]],
         "trending_coins": [t["name"] for t in trending[:5]],
         "email_sent": False,
     }
@@ -101,13 +114,13 @@ def run_daily_update(force_email: bool = False) -> dict:
     updates_log = updates_log[:30]  # 直近30件を保持
     _save_json(UPDATES_FILE, updates_log)
 
-    # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
+    # メール送信: スケジュール実行は必ず送信、手動は新着/ホット変化がある場合のみ
+    should_email = force_email or diff["added"] or newly_hot or diff["newly_became_hot"]
     if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
+        sent = send_daily_report(new_airdrops, scraped_new, trending, changes=diff["changed"])
         summary["email_sent"] = sent
         updates_log[0]["email_sent"] = sent
         _save_json(UPDATES_FILE, updates_log)
 
-    logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件 ===")
+    logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件, ホット{len(newly_hot)}件 ===")
     return summary
