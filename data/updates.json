@@ -1,1 +1,97 @@
-[]
+[
+  {
+    "timestamp": "2026-06-01T00:10:29.183550+00:00",
+    "date": "2026-06-01",
+    "time_jst": "2026年06月01日 09:10 JST",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "Berachain (BERA)",
+      "Monad",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "added_details": [
+      {
+        "name": "Hyperliquid (HYPE)",
+        "category": "DeFi/DEX",
+        "estimated_value_usd": 1000,
+        "is_hot": true,
+        "difficulty": "medium",
+        "url": "https://hyperliquid.xyz/"
+      },
+      {
+        "name": "Berachain (BERA)",
+        "category": "Layer1",
+        "estimated_value_usd": 700,
+        "is_hot": true,
+        "difficulty": "medium",
+        "url": "https://berachain.com/"
+      },
+      {
+        "name": "Monad",
+        "category": "Layer1",
+        "estimated_value_usd": 600,
+        "is_hot": true,
+        "difficulty": "easy",
+        "url": "https://monad.xyz/"
+      },
+      {
+        "name": "LayerZero (ZRO)",
+        "category": "インフラ",
+        "estimated_value_usd": 500,
+        "is_hot": true,
+        "difficulty": "medium",
+        "url": "https://layerzero.network/"
+      },
+      {
+        "name": "Movement (MOVE)",
+        "category": "Layer2",
+        "estimated_value_usd": 400,
+        "is_hot": true,
+        "difficulty": "easy",
+        "url": "https://movementlabs.xyz/"
+      },
+      {
+        "name": "Scroll (SCR)",
+        "category": "Layer2",
+        "estimated_value_usd": 300,
+        "is_hot": true,
+        "difficulty": "easy",
+        "url": "https://scroll.io/"
+      },
+      {
+        "name": "EigenLayer (EIGEN)",
+        "category": "インフラ",
+        "estimated_value_usd": 800,
+        "is_hot": false,
+        "difficulty": "hard",
+        "url": "https://eigenlayer.xyz/"
+      },
+      {
+        "name": "zkSync Era",
+        "category": "Layer2",
+        "estimated_value_usd": 200,
+        "is_hot": false,
+        "difficulty": "easy",
+        "url": "https://zksync.io/"
+      }
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "trending_details": [],
+    "new_coins_count": 0,
+    "email_sent": false,
+    "sources": [
+      "curated"
+    ]
+  }
+]
