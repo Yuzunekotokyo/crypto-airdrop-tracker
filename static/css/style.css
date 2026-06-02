@@ -48,6 +48,10 @@ a:hover { color: var(--accent2); }
   align-items: flex-start;
   gap: 12px;
 }
+.update-banner--alert {
+  border-bottom-color: var(--hot);
+  box-shadow: 0 2px 24px rgba(255,71,87,0.35);
+}
 
 .update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 8px; }
 
@@ -83,15 +87,27 @@ a:hover { color: var(--accent2); }
 .stat-hot    { background: rgba(255,71,87,0.15);  border: 1px solid var(--hot); color: var(--hot2); }
 .stat-new    { background: rgba(46,213,115,0.15); border: 1px solid var(--green); color: var(--green); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
+.stat-removed{ background: rgba(150,150,150,0.1); border: 1px solid #666; color: #aaa; }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
-.update-new-items { font-size: 13px; color: var(--text2); }
+.update-new-items, .update-changes { font-size: 13px; color: var(--text2); }
 
 .new-tag {
   display: inline-block;
   background: rgba(46,213,115,0.15);
   border: 1px solid var(--green);
   color: var(--green);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+}
+
+.change-tag {
+  display: inline-block;
+  background: rgba(255,165,2,0.1);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 12px;

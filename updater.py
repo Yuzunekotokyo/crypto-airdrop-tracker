@@ -104,10 +104,24 @@ def run_daily_update(force_email: bool = False) -> dict:
     # メール送信 (新着あり、またはホット案件変化、または強制送信)
     should_email = force_email or diff["added"] or newly_hot
     if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
+        sent = send_daily_report(new_airdrops, scraped_new, trending, summary)
         summary["email_sent"] = sent
         updates_log[0]["email_sent"] = sent
         _save_json(UPDATES_FILE, updates_log)
+
+    # 通知データを保存 (Gmail MCPによる送信用)
+    if should_email:
+        notification = {
+            "pending": not summary.get("email_sent", False),
+            "summary": summary,
+            "new_items": scraped_new,
+            "hot_airdrops": [a for a in new_airdrops if a.get("is_hot")][:5],
+            "trending": [t["name"] for t in trending[:5]],
+        }
+        _save_json(
+            os.path.join(DATA_DIR, "pending_notification.json"),
+            notification,
+        )
 
     logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件 ===")
     return summary
