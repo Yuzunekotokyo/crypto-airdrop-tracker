@@ -101,13 +101,11 @@ def run_daily_update(force_email: bool = False) -> dict:
     updates_log = updates_log[:30]  # 直近30件を保持
     _save_json(UPDATES_FILE, updates_log)
 
-    # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
-    if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
-        summary["email_sent"] = sent
-        updates_log[0]["email_sent"] = sent
-        _save_json(UPDATES_FILE, updates_log)
+    # メール送信: 毎日必ず送信 (changed / added / hot / force を問わず)
+    sent = send_daily_report(new_airdrops, diff, trending, force_email=force_email)
+    summary["email_sent"] = sent
+    updates_log[0]["email_sent"] = sent
+    _save_json(UPDATES_FILE, updates_log)
 
     logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件 ===")
     return summary

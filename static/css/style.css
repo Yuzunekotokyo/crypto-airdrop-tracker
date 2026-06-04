@@ -37,55 +37,64 @@ a:hover { color: var(--accent2); }
 
 /* ===== Update Banner ===== */
 .update-banner {
-  background: linear-gradient(135deg, #0d2137, #1a1a2e);
-  border-bottom: 2px solid var(--accent);
-  padding: 14px 20px;
+  background: linear-gradient(135deg, #0a1628, #0d2137, #1a1a2e);
+  border-bottom: 3px solid var(--accent);
+  padding: 12px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 20px rgba(124,77,255,0.3);
+  box-shadow: 0 3px 24px rgba(124,77,255,0.4);
   display: flex;
   align-items: flex-start;
   gap: 12px;
 }
 
-.update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 6px; }
 
-.update-meta { display: flex; align-items: center; gap: 12px; }
+.update-top-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.update-meta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 
 .update-badge {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 20px;
   letter-spacing: 0.5px;
-  animation: pulse-badge 2s infinite;
+  animation: pulse-badge 2.5s infinite;
+  white-space: nowrap;
 }
 
 @keyframes pulse-badge {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(124,77,255,0.6); }
-  50% { box-shadow: 0 0 0 6px rgba(124,77,255,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124,77,255,0.7); }
+  50%       { box-shadow: 0 0 0 8px rgba(124,77,255,0); }
 }
 
-.update-time { color: var(--text2); font-size: 13px; }
+.update-time { color: var(--text2); font-size: 12px; white-space: nowrap; }
 
-.update-stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.update-stats { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
 
 .stat-chip {
-  font-size: 13px;
-  padding: 3px 12px;
+  font-size: 12px;
+  padding: 3px 10px;
   border-radius: 20px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .stat-total  { background: rgba(30,144,255,0.15); border: 1px solid #1e90ff; color: #1e90ff; }
-.stat-hot    { background: rgba(255,71,87,0.15);  border: 1px solid var(--hot); color: var(--hot2); }
-.stat-new    { background: rgba(46,213,115,0.15); border: 1px solid var(--green); color: var(--green); }
-.stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
-.stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
+.stat-hot    { background: rgba(255,71,87,0.18);  border: 1px solid var(--hot); color: var(--hot2); }
+.stat-new    { background: rgba(46,213,115,0.18); border: 1px solid var(--green); color: var(--green); }
+.stat-changed{ background: rgba(255,165,2,0.18);  border: 1px solid var(--yellow); color: var(--yellow); }
+.stat-email  { background: rgba(124,77,255,0.18); border: 1px solid var(--accent); color: var(--accent); }
 
-.update-new-items { font-size: 13px; color: var(--text2); }
+.update-new-items { font-size: 12px; color: var(--text2); }
 
 .new-tag {
   display: inline-block;
@@ -94,11 +103,92 @@ a:hover { color: var(--accent2); }
   color: var(--green);
   padding: 2px 8px;
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 11px;
   margin: 2px 4px 2px 0;
 }
 
-.update-trending { font-size: 12px; color: var(--text2); }
+.removed-tag {
+  display: inline-block;
+  background: rgba(255,71,87,0.1);
+  border: 1px solid var(--hot);
+  color: var(--hot2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin: 2px 4px 2px 0;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.update-trending { font-size: 11px; color: var(--text2); }
+
+/* 詳細トグルボタン */
+.banner-toggle {
+  background: rgba(124,77,255,0.15);
+  border: 1px solid rgba(124,77,255,0.4);
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.banner-toggle:hover { background: rgba(124,77,255,0.3); }
+.banner-toggle.open  { background: var(--accent); color: white; }
+
+/* 折りたたみ詳細パネル */
+.banner-detail {
+  margin-top: 10px;
+  border-top: 1px solid rgba(124,77,255,0.25);
+  padding-top: 10px;
+}
+.banner-detail.hidden { display: none; }
+
+.banner-detail-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.detail-block {
+  flex: 1;
+  min-width: 180px;
+}
+
+.detail-block-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.detail-change-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  background: rgba(255,165,2,0.08);
+  border-left: 2px solid var(--yellow);
+  border-radius: 0 4px 4px 0;
+}
+.detail-change-name { font-size: 12px; font-weight: 700; color: var(--text); }
+.detail-change-desc { font-size: 11px; color: var(--yellow); }
+
+/* カウントダウン */
+.countdown-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px;
+}
+.countdown-sub { font-size: 11px; color: var(--text2); margin-top: 3px; }
 
 .banner-close {
   background: none;
@@ -111,7 +201,7 @@ a:hover { color: var(--accent2); }
   transition: background 0.2s;
   flex-shrink: 0;
 }
-.banner-close:hover { background: rgba(255,255,255,0.1); }
+.banner-close:hover { background: rgba(255,255,255,0.12); }
 
 /* ===== Header ===== */
 .site-header {
@@ -462,9 +552,10 @@ main { padding: 28px 0 60px; }
 
 .history-details { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 13px; }
 
-.h-new     { color: var(--green); font-weight: 700; }
+.h-new     { color: var(--green);  font-weight: 700; }
 .h-changed { color: var(--yellow); font-weight: 700; }
-.h-email   { color: var(--accent); }
+.h-removed { color: var(--hot);    font-weight: 700; }
+.h-email   { color: var(--accent); font-weight: 700; }
 .h-names   { color: var(--text2); }
 
 /* ===== Footer ===== */
