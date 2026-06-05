@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "timestamp": "2026-06-05T00:09:22.938286+00:00",
+    "date": "2026-06-05",
+    "time_jst": "2026年06月05日 00:09",
+    "total_airdrops": 11,
+    "added_count": 0,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  },
+  {
+    "timestamp": "2026-06-05T00:09:22.821989+00:00",
+    "date": "2026-06-05",
+    "time_jst": "2026年06月05日 00:09",
+    "total_airdrops": 11,
+    "added_count": 11,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "Monad (MON)",
+      "MegaETH",
+      "Story Protocol (IP)",
+      "Kaito AI (KAITO)",
+      "EigenLayer (EIGEN)",
+      "Initia (INIT)",
+      "Abstract (ABS)",
+      "LayerZero (ZRO)",
+      "Sonic (S)",
+      "Scroll (SCR)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

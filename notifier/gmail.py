@@ -1,6 +1,7 @@
 """
 Gmail通知モジュール。
 smtplib (Gmailアプリパスワード) を使用してメール送信。
+毎日日次サマリーを送信し、ホット案件出現時は即時アラートも送信。
 """
 
 import smtplib
@@ -13,17 +14,73 @@ from config import GMAIL_SENDER, GMAIL_APP_PASSWORD, GMAIL_RECIPIENT
 logger = logging.getLogger(__name__)
 
 
-def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[dict]) -> str:
+def _build_changes_html(diff: dict) -> str:
+    """追加・削除・変更の差分セクションHTML"""
+    if not diff:
+        return ""
+
+    added = diff.get("added", [])
+    removed_names = diff.get("removed_names", [])
+    changed = diff.get("changed", [])
+
+    if not added and not removed_names and not changed:
+        return ""
+
+    sections = []
+
+    if added:
+        items_html = ""
+        for a in added:
+            value = f"~${a.get('estimated_value_usd', 0):,}" if a.get("estimated_value_usd") else "未定"
+            hot_mark = " 🔥" if a.get("is_hot") else ""
+            items_html += f"""
+            <li style="margin:6px 0;">
+              <strong>{a['name']}{hot_mark}</strong>
+              <span style="color:#28a745;margin-left:8px;">{value}</span>
+              <span style="color:#6c757d;font-size:12px;margin-left:8px;">{a.get('category','')}</span>
+            </li>"""
+        sections.append(f"""
+        <div style="background:#d4edda;border-left:4px solid #28a745;padding:12px 16px;margin:12px 0;border-radius:4px;">
+          <strong style="color:#155724;">🆕 新規追加 ({len(added)}件)</strong>
+          <ul style="margin:8px 0 0 0;padding-left:20px;">{items_html}</ul>
+        </div>""")
+
+    if removed_names:
+        items_html = "".join(f"<li style='margin:4px 0;color:#721c24;'>{n}</li>" for n in removed_names)
+        sections.append(f"""
+        <div style="background:#f8d7da;border-left:4px solid #dc3545;padding:12px 16px;margin:12px 0;border-radius:4px;">
+          <strong style="color:#721c24;">🗑️ 終了・削除 ({len(removed_names)}件)</strong>
+          <ul style="margin:8px 0 0 0;padding-left:20px;">{items_html}</ul>
+        </div>""")
+
+    if changed:
+        items_html = ""
+        for c in changed:
+            change_list = "".join(f"<li style='color:#856404;font-size:12px;'>{ch}</li>" for ch in c.get("changes", []))
+            items_html += f"""
+            <li style="margin:6px 0;">
+              <strong>{c['name']}</strong>
+              <ul style="margin:4px 0 0 0;padding-left:16px;">{change_list}</ul>
+            </li>"""
+        sections.append(f"""
+        <div style="background:#fff3cd;border-left:4px solid #ffc107;padding:12px 16px;margin:12px 0;border-radius:4px;">
+          <strong style="color:#856404;">✏️ 情報変更 ({len(changed)}件)</strong>
+          <ul style="margin:8px 0 0 0;padding-left:20px;">{items_html}</ul>
+        </div>""")
+
+    return "".join(sections)
+
+
+def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[dict], diff: dict = None) -> str:
     today = datetime.now().strftime("%Y年%m月%d日")
     hot = [a for a in airdrops if a.get("is_hot")]
+    changes_html = _build_changes_html(diff)
 
-    new_html = ""
-    if new_items:
-        items_html = "".join(f"<li>{n}</li>" for n in new_items)
-        new_html = f"""
-        <div style="background:#fff3cd;border-left:4px solid #ffc107;padding:12px 16px;margin:16px 0;border-radius:4px;">
-          <strong>🆕 新着エアドロップ ({len(new_items)}件)</strong>
-          <ul style="margin:8px 0 0 0;">{items_html}</ul>
+    no_changes_notice = ""
+    if not changes_html:
+        no_changes_notice = """
+        <div style="background:#e8f4f8;border-left:4px solid #17a2b8;padding:10px 16px;margin:12px 0;border-radius:4px;">
+          <span style="color:#0c5460;">ℹ️ 本日の変更なし — 引き続き既存の案件をチェックしてください</span>
         </div>"""
 
     hot_rows = ""
@@ -60,19 +117,36 @@ def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[
         <h3 style="color:#6f42c1;">📈 CoinGecko トレンドコイン</h3>
         <ul>{t_items}</ul>"""
 
+    total = len(airdrops)
+    hot_count = len(hot)
+
     return f"""
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="font-family:Arial,sans-serif;max-width:700px;margin:0 auto;background:#f8f9fa;">
   <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);color:white;padding:24px;border-radius:8px 8px 0 0;">
     <h1 style="margin:0;font-size:22px;">🪂 Crypto Airdrop Tracker</h1>
-    <p style="margin:4px 0 0;opacity:0.8;">{today} 更新レポート</p>
+    <p style="margin:4px 0 0;opacity:0.8;">{today} 日次更新レポート</p>
   </div>
   <div style="background:white;padding:24px;border-radius:0 0 8px 8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-    {new_html}
 
-    <h3 style="color:#dc3545;">🔥 注目のホットエアドロップ</h3>
+    <!-- サマリー -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="background:#e8f4f8;border-radius:8px;padding:10px 16px;text-align:center;min-width:100px;">
+        <div style="font-size:22px;font-weight:800;color:#17a2b8;">{total}</div>
+        <div style="font-size:12px;color:#6c757d;">総案件数</div>
+      </div>
+      <div style="background:#fff0f0;border-radius:8px;padding:10px 16px;text-align:center;min-width:100px;">
+        <div style="font-size:22px;font-weight:800;color:#dc3545;">{hot_count}</div>
+        <div style="font-size:12px;color:#6c757d;">🔥 ホット案件</div>
+      </div>
+    </div>
+
+    {changes_html}
+    {no_changes_notice}
+
+    <h3 style="color:#dc3545;margin-top:20px;">🔥 注目のホットエアドロップ TOP5</h3>
     <table style="width:100%;border-collapse:collapse;margin-top:8px;">
       <thead>
         <tr style="background:#f8f9fa;">
@@ -90,7 +164,7 @@ def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[
 
     <hr style="margin:24px 0;border:none;border-top:1px solid #dee2e6;">
     <p style="color:#6c757d;font-size:12px;margin:0;">
-      ※ このメールはCrypto Airdrop Trackerから自動送信されています。<br>
+      ※ このメールはCrypto Airdrop Trackerから自動送信されています (毎日8:00 JST)。<br>
       投資は自己責任で行ってください。情報は参考目的のみです。
     </p>
   </div>
@@ -98,24 +172,48 @@ def _build_html_body(airdrops: list[dict], new_items: list[str], trending: list[
 </html>"""
 
 
-def send_daily_report(airdrops: list[dict], new_items: list[str], trending: list[dict]) -> bool:
+def send_daily_report(
+    airdrops: list[dict],
+    new_items: list[str],
+    trending: list[dict],
+    diff: dict = None,
+) -> bool:
+    """毎日の日次レポートをtsukamoto.kei@gmail.comに送信"""
     if not GMAIL_SENDER or not GMAIL_APP_PASSWORD:
         logger.warning("Gmail認証情報が未設定のためメール送信をスキップ (.envを確認してください)")
         return False
 
     today = datetime.now().strftime("%Y/%m/%d")
     hot_count = sum(1 for a in airdrops if a.get("is_hot"))
-    subject = f"[Airdrop] {today} 更新 — ホット案件{hot_count}件"
-    if new_items:
-        subject += f" 🆕新着{len(new_items)}件"
+
+    added_count = len(diff.get("added", [])) if diff else len(new_items)
+    removed_count = len(diff.get("removed_names", [])) if diff else 0
+    changed_count = len(diff.get("changed", [])) if diff else 0
+
+    subject_parts = [f"[Airdrop] {today} 日次レポート — ホット{hot_count}件"]
+    if added_count:
+        subject_parts.append(f"🆕新着{added_count}件")
+    if removed_count:
+        subject_parts.append(f"🗑️削除{removed_count}件")
+    if changed_count:
+        subject_parts.append(f"✏️変更{changed_count}件")
+    subject = " ".join(subject_parts)
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = GMAIL_SENDER
     msg["To"] = GMAIL_RECIPIENT
 
-    html_body = _build_html_body(airdrops, new_items, trending)
-    plain_body = f"{today} Airdrop更新レポート\nホット案件: {hot_count}件\n新着: {', '.join(new_items) if new_items else 'なし'}"
+    html_body = _build_html_body(airdrops, new_items, trending, diff)
+    plain_parts = [
+        f"{today} Airdrop日次レポート",
+        f"ホット案件: {hot_count}件 / 総案件: {len(airdrops)}件",
+    ]
+    if added_count:
+        plain_parts.append(f"新着: {', '.join(a['name'] for a in diff.get('added', []))}")
+    if removed_count:
+        plain_parts.append(f"削除: {', '.join(diff.get('removed_names', []))}")
+    plain_body = "\n".join(plain_parts)
 
     msg.attach(MIMEText(plain_body, "plain", "utf-8"))
     msg.attach(MIMEText(html_body, "html", "utf-8"))
@@ -124,7 +222,7 @@ def send_daily_report(airdrops: list[dict], new_items: list[str], trending: list
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(GMAIL_SENDER, GMAIL_APP_PASSWORD)
             server.sendmail(GMAIL_SENDER, GMAIL_RECIPIENT, msg.as_string())
-        logger.info(f"メール送信成功: {GMAIL_RECIPIENT}")
+        logger.info(f"日次レポート送信成功: {GMAIL_RECIPIENT} ({subject})")
         return True
     except smtplib.SMTPAuthenticationError:
         logger.error("Gmail認証失敗。アプリパスワードを確認してください。")
@@ -141,26 +239,31 @@ def send_hot_alert(airdrop: dict) -> bool:
 
     name = airdrop.get("name", "不明")
     value = airdrop.get("estimated_value_usd", 0)
-    subject = f"🚨 [HOT Airdrop] {name} — 推定${value:,}の新案件が登場！"
+    subject = f"🚨 [HOT Airdrop出現] {name} — 推定${value:,} | 今すぐ確認！"
 
     html = f"""
 <!DOCTYPE html><html><head><meta charset="UTF-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
-  <div style="background:#dc3545;color:white;padding:20px;border-radius:8px 8px 0 0;">
-    <h2 style="margin:0;">🚨 ホットエアドロップ出現！</h2>
+  <div style="background:linear-gradient(135deg,#dc3545,#c82333);color:white;padding:20px;border-radius:8px 8px 0 0;">
+    <h2 style="margin:0;">🚨 新しいホットエアドロップが登場！</h2>
+    <p style="margin:4px 0 0;opacity:0.9;">見逃し厳禁の注目案件です</p>
   </div>
   <div style="background:white;padding:20px;border:1px solid #dee2e6;border-top:none;border-radius:0 0 8px 8px;">
-    <h3>{name} ({airdrop.get('symbol','')})</h3>
-    <p><strong>推定価値:</strong> ~${value:,}</p>
-    <p><strong>カテゴリ:</strong> {airdrop.get('category','')}</p>
-    <p><strong>難易度:</strong> {airdrop.get('difficulty','').upper()}</p>
-    <p><strong>概要:</strong> {airdrop.get('description','')}</p>
-    <p><strong>参加方法:</strong></p>
-    <ul>{"".join(f"<li>{t}</li>" for t in airdrop.get('tasks', []))}</ul>
-    <p><strong>期限:</strong> {airdrop.get('end_date','未定')}</p>
-    <a href="{airdrop.get('url','#')}" style="display:inline-block;background:#dc3545;color:white;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:bold;">今すぐ参加する</a>
+    <h3 style="font-size:20px;">{name} <span style="color:#6c757d;font-size:14px;">({airdrop.get('symbol','')})</span></h3>
+    <table style="width:100%;border-collapse:collapse;margin:12px 0;">
+      <tr><td style="padding:8px 0;color:#6c757d;width:120px;">推定価値</td><td style="padding:8px 0;font-weight:800;color:#28a745;font-size:18px;">~${value:,}</td></tr>
+      <tr><td style="padding:8px 0;color:#6c757d;">カテゴリ</td><td style="padding:8px 0;">{airdrop.get('category','')}</td></tr>
+      <tr><td style="padding:8px 0;color:#6c757d;">難易度</td><td style="padding:8px 0;">{airdrop.get('difficulty','').upper()}</td></tr>
+      <tr><td style="padding:8px 0;color:#6c757d;">期限</td><td style="padding:8px 0;">{airdrop.get('end_date','未定')}</td></tr>
+    </table>
+    <p style="background:#f8f9fa;padding:12px;border-radius:6px;color:#333;">{airdrop.get('description','')}</p>
+    <p><strong>📋 参加方法:</strong></p>
+    <ul style="padding-left:20px;">{"".join(f"<li style='margin:6px 0;'>{t}</li>" for t in airdrop.get('tasks', []))}</ul>
+    <div style="margin-top:20px;">
+      <a href="{airdrop.get('url','#')}" style="display:inline-block;background:linear-gradient(135deg,#dc3545,#c82333);color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;">🚀 今すぐ参加する</a>
+    </div>
     <hr style="margin:20px 0;">
-    <p style="color:#6c757d;font-size:12px;">投資は自己責任で行ってください。</p>
+    <p style="color:#6c757d;font-size:12px;">投資は自己責任で行ってください。このアラートはCrypto Airdrop Trackerから自動送信されています。</p>
   </div>
 </body></html>"""
 
@@ -174,7 +277,7 @@ def send_hot_alert(airdrop: dict) -> bool:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(GMAIL_SENDER, GMAIL_APP_PASSWORD)
             server.sendmail(GMAIL_SENDER, GMAIL_RECIPIENT, msg.as_string())
-        logger.info(f"ホットアラート送信: {name}")
+        logger.info(f"ホットアラート送信: {name} → {GMAIL_RECIPIENT}")
         return True
     except Exception as e:
         logger.error(f"ホットアラート送信失敗: {e}")
