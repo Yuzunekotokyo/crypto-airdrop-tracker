@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "timestamp": "2026-06-06T00:11:39.151317+00:00",
+    "date": "2026-06-06",
+    "time_jst": "2026年06月06日 09:11",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "urgency": "urgent",
+    "added_hot": [
+      {
+        "name": "Hyperliquid (HYPE)",
+        "value": 1000,
+        "category": "DeFi/DEX",
+        "difficulty": "medium"
+      },
+      {
+        "name": "LayerZero (ZRO)",
+        "value": 500,
+        "category": "インフラ",
+        "difficulty": "medium"
+      },
+      {
+        "name": "Movement (MOVE)",
+        "value": 400,
+        "category": "Layer2",
+        "difficulty": "easy"
+      },
+      {
+        "name": "Scroll (SCR)",
+        "value": 300,
+        "category": "Layer2",
+        "difficulty": "easy"
+      }
+    ]
+  }
+]

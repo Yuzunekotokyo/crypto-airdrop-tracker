@@ -9,9 +9,12 @@ from datetime import datetime
 
 from flask import Flask, jsonify, render_template, request
 
+import pytz
 from config import AIRDROPS_FILE, UPDATES_FILE
 from scheduler import start_scheduler
 from updater import run_daily_update
+
+JST = pytz.timezone("Asia/Tokyo")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -34,12 +37,14 @@ def index():
     airdrops = _load_json(AIRDROPS_FILE, [])
     updates = _load_json(UPDATES_FILE, [])
     latest_update = updates[0] if updates else None
+    now_jst = datetime.now(JST)
     return render_template(
         "index.html",
         airdrops=airdrops,
         latest_update=latest_update,
         updates=updates[:5],
-        now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
+        now=now_jst.strftime("%Y年%m月%d日 %H:%M JST"),
+        today=now_jst.strftime("%Y-%m-%d"),
     )
 
 

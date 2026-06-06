@@ -1,0 +1,81 @@
+name: 毎日自動更新 (Daily Airdrop Update)
+
+on:
+  schedule:
+    # 毎日 23:00 UTC = 08:00 JST
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+    inputs:
+      force_email:
+        description: "強制メール送信 (yes/no)"
+        required: false
+        default: "yes"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+        with:
+          ref: claude/compassionate-gates-GyMDg
+
+      - name: Python 3.11 セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: 依存パッケージをインストール
+        run: pip install -r requirements.txt
+
+      - name: .env ファイルを生成
+        run: |
+          cat > .env << EOF
+          GMAIL_SENDER=${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD=${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENT=${{ secrets.GMAIL_RECIPIENT || 'tsukamoto.kei@gmail.com' }}
+          COINGECKO_API_KEY=${{ secrets.COINGECKO_API_KEY }}
+          UPDATE_HOUR=8
+          UPDATE_MINUTE=0
+          EOF
+
+      - name: データディレクトリを作成
+        run: mkdir -p data
+
+      - name: 日次更新を実行
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT || 'tsukamoto.kei@gmail.com' }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          FORCE_EMAIL: ${{ github.event.inputs.force_email || 'yes' }}
+        run: |
+          python -c "
+          from updater import run_daily_update
+          import os
+          force = os.getenv('FORCE_EMAIL', 'yes').lower() == 'yes'
+          result = run_daily_update(force_email=force)
+          print('=== 更新結果 ===')
+          print(f'総件数: {result[\"total_airdrops\"]}')
+          print(f'新着: {result[\"added_count\"]}')
+          print(f'変更: {result[\"changed_count\"]}')
+          print(f'ホット: {result[\"hot_count\"]}')
+          print(f'メール送信: {result[\"email_sent\"]}')
+          "
+
+      - name: データファイルをコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/airdrops.json data/updates.json
+          git diff --staged --quiet || git commit -m "chore: 自動更新 $(TZ='Asia/Tokyo' date '+%Y-%m-%d %H:%M JST')"
+
+      - name: プッシュ
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: claude/compassionate-gates-GyMDg

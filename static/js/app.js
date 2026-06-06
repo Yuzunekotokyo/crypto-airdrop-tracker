@@ -93,16 +93,37 @@ function colIndex(col) {
   return map[col] || 1;
 }
 
-// 自動リロード: 毎30分チェック
+// 次回更新までのカウントダウン (毎日08:00 JST)
+function updateCountdown() {
+  const timer = document.getElementById("next-update-timer");
+  if (!timer) return;
+
+  const now = new Date();
+  // JST = UTC+9
+  const jstOffset = 9 * 60; // minutes
+  const jstNow = new Date(now.getTime() + (jstOffset + now.getTimezoneOffset()) * 60000);
+
+  const next = new Date(jstNow);
+  next.setHours(8, 0, 0, 0);
+  if (jstNow >= next) next.setDate(next.getDate() + 1);
+
+  const diff = next - jstNow;
+  const h = Math.floor(diff / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+
+  timer.textContent = `次回更新まで: ${h}時間${m}分${s}秒`;
+}
+
+// 自動リロード: 30分ごとに更新チェック
 function scheduleAutoRefresh() {
   setTimeout(() => {
     fetch("/api/updates")
       .then(r => r.json())
       .then(updates => {
         if (updates.length > 0) {
-          const latestDate = updates[0].timestamp;
-          const pageDate = document.querySelector(".update-time")?.textContent;
-          if (latestDate && pageDate && !pageDate.includes(updates[0].date)) {
+          const timeEl = document.querySelector(".update-time");
+          if (timeEl && !timeEl.textContent.includes(updates[0].date)) {
             showRefreshNotice();
           }
         }
@@ -113,8 +134,24 @@ function scheduleAutoRefresh() {
 }
 
 function showRefreshNotice() {
+  if (document.getElementById("refresh-notice")) return;
   const notice = document.createElement("div");
-  notice.style.cssText = "position:fixed;bottom:20px;right:20px;background:#7c4dff;color:white;padding:14px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;z-index:999;box-shadow:0 4px 20px rgba(0,0,0,0.4);";
+  notice.id = "refresh-notice";
+  notice.style.cssText = [
+    "position:fixed",
+    "bottom:20px",
+    "right:20px",
+    "background:linear-gradient(135deg,#7c4dff,#651fff)",
+    "color:white",
+    "padding:14px 20px",
+    "border-radius:10px",
+    "font-size:14px",
+    "font-weight:700",
+    "cursor:pointer",
+    "z-index:999",
+    "box-shadow:0 4px 20px rgba(0,0,0,0.4)",
+    "animation:banner-slide-in 0.3s ease",
+  ].join(";");
   notice.textContent = "🔄 新しい更新があります — クリックで再読み込み";
   notice.onclick = () => location.reload();
   document.body.appendChild(notice);
@@ -123,8 +160,10 @@ function showRefreshNotice() {
 
 document.addEventListener("DOMContentLoaded", () => {
   scheduleAutoRefresh();
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
 
-  // テーブル行にツールチップ
+  // テーブル行: カーソルをポインターに
   document.querySelectorAll(".airdrop-row[title]").forEach(row => {
     row.style.cursor = "pointer";
   });
