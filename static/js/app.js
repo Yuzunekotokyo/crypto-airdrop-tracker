@@ -121,6 +121,16 @@ function showRefreshNotice() {
   setTimeout(() => notice.remove(), 15000);
 }
 
+function closeBanner() {
+  const banner = document.getElementById("update-banner");
+  if (banner) {
+    banner.style.transition = "opacity 0.3s, transform 0.3s";
+    banner.style.opacity = "0";
+    banner.style.transform = "translateY(-100%)";
+    setTimeout(() => banner.remove(), 300);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   scheduleAutoRefresh();
 

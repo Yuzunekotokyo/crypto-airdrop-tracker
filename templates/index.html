@@ -8,14 +8,20 @@
 </head>
 <body>
 
-<!-- ===== 最新更新バナー ===== -->
+<!-- ===== 最新更新バナー (最上部固定) ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
+
+    <!-- 1行目: バッジ + 日時 + ライブインジケーター -->
     <div class="update-meta">
+      <span class="live-dot"></span>
       <span class="update-badge">🔄 最新更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
+      <span class="next-update-hint">次回更新: 毎日 08:00 JST</span>
     </div>
+
+    <!-- 2行目: 統計チップ -->
     <div class="update-stats">
       <span class="stat-chip stat-total">
         📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
@@ -24,7 +30,7 @@
         🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
       </span>
       {% if latest_update.added_count > 0 %}
-      <span class="stat-chip stat-new">
+      <span class="stat-chip stat-new anim-pulse">
         🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
       </span>
       {% endif %}
@@ -35,26 +41,41 @@
       {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
-        📧 メール送信済
+        📧 Gmail送信済
       </span>
       {% endif %}
     </div>
+
+    <!-- 3行目: 新規追加プロジェクト名 -->
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
+      <strong>🆕 新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
+
+    <!-- 4行目: 変更されたプロジェクト -->
+    {% if latest_update.changes %}
+    <div class="update-changes">
+      <strong>✏️ 変更:</strong>
+      {% for c in latest_update.changes[:3] %}
+      <span class="change-tag">{{ c.name }}: {{ c.changes | join(' / ') }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- 5行目: トレンドコイン -->
     {% if latest_update.trending_coins %}
     <div class="update-trending">
-      <strong>📈 トレンド:</strong>
+      <strong>📈 CoinGecko トレンド:</strong>
       {{ latest_update.trending_coins | join(' · ') }}
     </div>
     {% endif %}
+
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="closeBanner()" title="閉じる">✕</button>
 </div>
 {% endif %}
 
@@ -63,7 +84,7 @@
   <div class="container">
     <div class="header-brand">
       <h1>🪂 Crypto Airdrop Tracker</h1>
-      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日自動更新</p>
+      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日 08:00 JST 自動更新</p>
     </div>
     <div class="header-info">
       <span class="last-updated">最終更新: {{ now }}</span>
@@ -110,7 +131,7 @@
   <section class="hot-section">
     <h2 class="section-title">🔥 今狙うべき注目エアドロップ</h2>
     <div class="hot-grid">
-      {% for airdrop in hot_airdrops[:3] %}
+      {% for airdrop in hot_airdrops[:4] %}
       <div class="hot-card" data-status="{{ airdrop.status }}" data-difficulty="{{ airdrop.difficulty }}" data-hot="true" data-name="{{ airdrop.name | lower }}">
         <div class="hot-card-header">
           {% if airdrop.logo %}
@@ -229,7 +250,7 @@
   <!-- 更新履歴 -->
   {% if updates %}
   <section class="history-section">
-    <h2 class="section-title">📅 更新履歴</h2>
+    <h2 class="section-title">📅 更新履歴 (直近{{ updates | length }}回)</h2>
     <div class="history-list">
       {% for upd in updates %}
       <div class="history-item">
@@ -238,7 +259,7 @@
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
-          {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
+          {% if upd.email_sent %}<span class="h-email">📧 Gmail送信</span>{% endif %}
           {% if upd.added_names %}
           <span class="h-names">{{ upd.added_names | join(', ') }}</span>
           {% endif %}
@@ -254,8 +275,8 @@
 <!-- ===== フッター ===== -->
 <footer class="site-footer">
   <div class="container">
-    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
-    <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
+    <p>🪂 Crypto Airdrop Tracker — 毎日 08:00 JST 自動更新 · Gmail通知あり</p>
+    <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。暗号資産への投資は自己責任で行ってください。</p>
   </div>
 </footer>
 

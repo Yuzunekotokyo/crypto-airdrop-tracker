@@ -104,7 +104,7 @@ def run_daily_update(force_email: bool = False) -> dict:
     # メール送信 (新着あり、またはホット案件変化、または強制送信)
     should_email = force_email or diff["added"] or newly_hot
     if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
+        sent = send_daily_report(new_airdrops, scraped_new, trending, summary)
         summary["email_sent"] = sent
         updates_log[0]["email_sent"] = sent
         _save_json(UPDATES_FILE, updates_log)

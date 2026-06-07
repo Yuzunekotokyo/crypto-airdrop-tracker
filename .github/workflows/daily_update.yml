@@ -1,0 +1,70 @@
+name: Daily Airdrop Data Update
+
+on:
+  schedule:
+    # 毎日 23:00 UTC = 翌日 08:00 JST
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      force_email:
+        description: '強制的にGmailを送信する (true/false)'
+        required: false
+        default: 'false'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Python 3.11 をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 依存パッケージをインストール
+        run: pip install -r requirements.txt
+
+      - name: エアドロップデータを更新
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+        run: |
+          FORCE_EMAIL="${{ github.event.inputs.force_email || 'false' }}"
+          python - <<EOF
+          from updater import run_daily_update
+          import json
+
+          force = "$FORCE_EMAIL".lower() == "true"
+          summary = run_daily_update(force_email=force)
+          print("=== 更新サマリー ===")
+          print(json.dumps(summary, ensure_ascii=False, indent=2))
+          EOF
+
+      - name: 更新されたデータをコミット&プッシュ
+        run: |
+          git config user.name "Airdrop Tracker Bot"
+          git config user.email "actions@github.com"
+          git add data/airdrops.json data/updates.json
+          if git diff --staged --quiet; then
+            echo "データに変更なし — コミットをスキップ"
+          else
+            ADDED=$(python -c "
+          import json
+          try:
+            u = json.load(open('data/updates.json'))
+            if u: print(f'{u[0][\"added_count\"]}件追加, ホット{u[0][\"hot_count\"]}件')
+          except: print('更新完了')
+          ")
+            git commit -m "chore: 自動更新 $(date +'%Y-%m-%d') — $ADDED"
+            git push
+          fi
