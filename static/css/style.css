@@ -35,6 +35,89 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent2); }
 
+/* ===== HOT Alert Banner ===== */
+@keyframes hot-flash {
+  0%, 100% { background: linear-gradient(135deg, #7b0000, #c0392b); }
+  50% { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+.hot-alert-banner {
+  background: linear-gradient(135deg, #7b0000, #c0392b);
+  animation: hot-flash 2s ease-in-out infinite;
+  border-bottom: 3px solid #ff4757;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 110;
+  box-shadow: 0 4px 30px rgba(220,53,69,0.6);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hot-alert-inner { flex: 1; }
+
+.hot-alert-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffdd57;
+  margin-bottom: 12px;
+}
+
+.hot-alert-icon {
+  font-size: 24px;
+  animation: shake 0.8s ease-in-out infinite;
+  display: inline-block;
+}
+
+.hot-alert-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.hot-alert-item {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.hot-alert-value {
+  color: #ffdd57;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.hot-alert-cat {
+  background: rgba(255,255,255,0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+}
+
+.hot-alert-action {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  font-style: italic;
+}
+
 /* ===== Update Banner ===== */
 .update-banner {
   background: linear-gradient(135deg, #0d2137, #1a1a2e);
@@ -92,6 +175,19 @@ a:hover { color: var(--accent2); }
   background: rgba(46,213,115,0.15);
   border: 1px solid var(--green);
   color: var(--green);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+}
+
+.update-changes { font-size: 13px; color: var(--text2); margin-top: 4px; }
+
+.change-tag {
+  display: inline-block;
+  background: rgba(255,165,2,0.12);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 12px;

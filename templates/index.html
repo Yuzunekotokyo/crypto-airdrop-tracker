@@ -8,6 +8,31 @@
 </head>
 <body>
 
+<!-- ===== 新着HOT案件アラートバナー ===== -->
+{% if latest_update and latest_update.newly_hot_count is defined and latest_update.newly_hot_count > 0 %}
+<div id="hot-alert-banner" class="hot-alert-banner">
+  <div class="hot-alert-inner">
+    <div class="hot-alert-title">
+      <span class="hot-alert-icon">🚨</span>
+      <span>新着HOT案件 {{ latest_update.newly_hot_count }}件 登場！</span>
+    </div>
+    <div class="hot-alert-items">
+      {% for item in latest_update.newly_hot %}
+      <div class="hot-alert-item">
+        <strong>{{ item.name }}</strong>
+        {% if item.estimated_value_usd %}
+        <span class="hot-alert-value">~${{ "{:,}".format(item.estimated_value_usd) }}</span>
+        {% endif %}
+        <span class="hot-alert-cat">{{ item.category }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="hot-alert-action">今すぐ下の「注目エアドロップ」をチェック ↓</div>
+  </div>
+  <button class="banner-close" onclick="document.getElementById('hot-alert-banner').style.display='none'">✕</button>
+</div>
+{% endif %}
+
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
@@ -44,6 +69,14 @@
       <strong>新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if latest_update.changes %}
+    <div class="update-changes">
+      <strong>✏️ 変更詳細:</strong>
+      {% for change in latest_update.changes %}
+      <span class="change-tag">{{ change.name }}: {{ change.changes | join(' / ') }}</span>
       {% endfor %}
     </div>
     {% endif %}

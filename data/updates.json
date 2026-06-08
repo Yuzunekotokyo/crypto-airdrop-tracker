@@ -1,1 +1,81 @@
-[]
+[
+  {
+    "timestamp": "2026-06-08T00:09:37.805530+00:00",
+    "date": "2026-06-08",
+    "time_jst": "2026年06月08日 00:09",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "newly_hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "newly_hot": [
+      {
+        "name": "Hyperliquid (HYPE)",
+        "estimated_value_usd": 1000,
+        "category": "DeFi/DEX",
+        "difficulty": "medium"
+      },
+      {
+        "name": "LayerZero (ZRO)",
+        "estimated_value_usd": 500,
+        "category": "インフラ",
+        "difficulty": "medium"
+      },
+      {
+        "name": "Movement (MOVE)",
+        "estimated_value_usd": 400,
+        "category": "Layer2",
+        "difficulty": "easy"
+      },
+      {
+        "name": "Scroll (SCR)",
+        "estimated_value_usd": 300,
+        "category": "Layer2",
+        "difficulty": "easy"
+      }
+    ],
+    "top_hot_airdrops": [
+      {
+        "name": "Hyperliquid (HYPE)",
+        "estimated_value_usd": 1000,
+        "category": "DeFi/DEX",
+        "difficulty": "medium",
+        "url": "https://hyperliquid.xyz/"
+      },
+      {
+        "name": "LayerZero (ZRO)",
+        "estimated_value_usd": 500,
+        "category": "インフラ",
+        "difficulty": "medium",
+        "url": "https://layerzero.network/"
+      },
+      {
+        "name": "Movement (MOVE)",
+        "estimated_value_usd": 400,
+        "category": "Layer2",
+        "difficulty": "easy",
+        "url": "https://movementlabs.xyz/"
+      },
+      {
+        "name": "Scroll (SCR)",
+        "estimated_value_usd": 300,
+        "category": "Layer2",
+        "difficulty": "easy",
+        "url": "https://scroll.io/"
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

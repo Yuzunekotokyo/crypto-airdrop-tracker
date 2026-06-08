@@ -1,0 +1,74 @@
+name: Daily Airdrop Update & Email Notification
+
+on:
+  schedule:
+    # 毎日 08:00 JST (= 23:00 UTC 前日)
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      force_email:
+        description: '強制メール送信'
+        required: false
+        default: 'false'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily update
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT || 'tsukamoto.kei@gmail.com' }}
+        run: |
+          python -c "
+          import json, sys
+          from updater import run_daily_update
+          force = '${{ github.event.inputs.force_email }}' == 'true'
+          summary = run_daily_update(force_email=force)
+          print(json.dumps(summary, ensure_ascii=False, indent=2))
+          # 新着HOT案件があれば終了コード0 (成功)
+          sys.exit(0)
+          "
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/airdrops.json data/updates.json || true
+          git diff --staged --quiet || git commit -m "chore: daily airdrop data update $(date +'%Y-%m-%d %H:%M JST')"
+          git push || true
+
+      - name: Report update summary
+        run: |
+          python -c "
+          import json, os
+          updates_file = 'data/updates.json'
+          if os.path.exists(updates_file):
+              with open(updates_file) as f:
+                  updates = json.load(f)
+              if updates:
+                  u = updates[0]
+                  print(f'=== 更新サマリー ===')
+                  print(f'時刻: {u[\"time_jst\"]}')
+                  print(f'合計: {u[\"total_airdrops\"]}件')
+                  print(f'新着: {u[\"added_count\"]}件 {u.get(\"added_names\",[])}')
+                  print(f'変更: {u[\"changed_count\"]}件')
+                  print(f'ホット: {u[\"hot_count\"]}件')
+                  print(f'メール送信: {u[\"email_sent\"]}')
+          "

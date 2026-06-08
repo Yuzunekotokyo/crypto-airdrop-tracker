@@ -72,6 +72,38 @@ def trigger_update():
     return jsonify({"status": "ok", "summary": summary})
 
 
+@app.route("/api/pending-email")
+def pending_email():
+    """Gmail MCPでの送信用: 未送信メール内容を返す"""
+    import os
+    from config import DATA_DIR
+    pending_path = os.path.join(DATA_DIR, "pending_email.json")
+    if not os.path.exists(pending_path):
+        return jsonify({"status": "none", "message": "未送信メールなし"})
+    try:
+        with open(pending_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return jsonify({"status": "pending", **data})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route("/api/pending-email/mark-sent", methods=["POST"])
+def mark_email_sent():
+    """Gmail MCPでの送信完了後に呼び出す"""
+    from config import DATA_DIR
+    pending_path = os.path.join(DATA_DIR, "pending_email.json")
+    if os.path.exists(pending_path):
+        os.remove(pending_path)
+        updates = _load_json(UPDATES_FILE, [])
+        if updates:
+            updates[0]["email_sent"] = True
+            os.makedirs(os.path.dirname(UPDATES_FILE), exist_ok=True)
+            with open(UPDATES_FILE, "w", encoding="utf-8") as f:
+                json.dump(updates, f, ensure_ascii=False, indent=2)
+    return jsonify({"status": "ok"})
+
+
 if __name__ == "__main__":
     os.makedirs(os.path.dirname(AIRDROPS_FILE), exist_ok=True)
 
