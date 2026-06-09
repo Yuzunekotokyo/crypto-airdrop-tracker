@@ -21,26 +21,52 @@ HEADERS = {
 
 
 def _scrape_airdrops_io() -> list[dict]:
-    """airdrops.ioのトップページからアクティブエアドロップを取得"""
+    """airdrops.io からアクティブエアドロップを取得 (複数セレクタを試行)"""
     try:
         r = requests.get("https://airdrops.io/", headers=HEADERS, timeout=15)
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "lxml")
 
         items = []
-        for card in soup.select(".airdrop-item")[:30]:
-            name_el = card.select_one(".airdrop-title") or card.select_one("h3")
+        # 複数のセレクタを試す (サイト変更に対応)
+        card_selectors = [
+            ".airdrop-item", ".airdrop-card", ".airdrop-listing",
+            "article.airdrop", "[class*='airdrop-item']", "[class*='airdrop-card']",
+        ]
+        cards = []
+        for sel in card_selectors:
+            cards = soup.select(sel)
+            if cards:
+                break
+
+        if not cards:
+            # fallback: <article> タグを試す
+            cards = soup.select("article")[:30]
+
+        for card in cards[:30]:
+            name_el = (card.select_one(".airdrop-title") or card.select_one("h3")
+                       or card.select_one("h2") or card.select_one(".title"))
             link_el = card.select_one("a[href]")
-            value_el = card.select_one(".airdrop-value") or card.select_one(".value")
-            end_el = card.select_one(".airdrop-end") or card.select_one(".end-date")
+            value_el = (card.select_one(".airdrop-value") or card.select_one(".value")
+                        or card.select_one("[class*='value']") or card.select_one("[class*='reward']"))
+            end_el = (card.select_one(".airdrop-end") or card.select_one(".end-date")
+                      or card.select_one("[class*='end']") or card.select_one("[class*='date']"))
             img_el = card.select_one("img")
 
             if not name_el:
                 continue
 
+            name = name_el.get_text(strip=True)
+            if not name or len(name) < 2:
+                continue
+
+            href = link_el["href"] if link_el and link_el.get("href") else "https://airdrops.io/"
+            if href.startswith("/"):
+                href = "https://airdrops.io" + href
+
             items.append({
-                "name": name_el.get_text(strip=True),
-                "url": link_el["href"] if link_el else "https://airdrops.io/",
+                "name": name,
+                "url": href,
                 "estimated_value": value_el.get_text(strip=True) if value_el else "不明",
                 "end_date": end_el.get_text(strip=True) if end_el else "未定",
                 "logo": img_el.get("src", "") if img_el else "",
@@ -49,6 +75,27 @@ def _scrape_airdrops_io() -> list[dict]:
         return items
     except Exception as e:
         logger.warning(f"airdrops.io scrape failed: {e}")
+        return []
+
+
+def _scrape_earnifi() -> list[dict]:
+    """Earnifi / DeBank 系サイトからエアドロップを取得 (フォールバック)"""
+    try:
+        r = requests.get("https://earni.fi/", headers=HEADERS, timeout=10)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "lxml")
+        items = []
+        for card in soup.select("[class*='airdrop']")[:20]:
+            name_el = card.select_one("h3") or card.select_one("h2") or card.select_one(".name")
+            link_el = card.select_one("a[href]")
+            if not name_el:
+                continue
+            name = name_el.get_text(strip=True)
+            href = link_el["href"] if link_el else "https://earni.fi/"
+            items.append({"name": name, "url": href, "estimated_value": "不明",
+                          "end_date": "未定", "logo": "", "source": "earni.fi"})
+        return items
+    except Exception:
         return []
 
 
@@ -174,6 +221,8 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     """
     curated = _build_seed_airdrops()
     scraped = _scrape_airdrops_io()
+    if not scraped:
+        scraped = _scrape_earnifi()
 
     seen_names = {a["name"].lower() for a in curated}
     new_items = []
