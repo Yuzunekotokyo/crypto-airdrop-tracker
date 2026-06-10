@@ -85,6 +85,8 @@ a:hover { color: var(--accent2); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
+.banner-label { font-size: 12px; font-weight: 700; color: var(--text2); margin-right: 4px; }
+
 .update-new-items { font-size: 13px; color: var(--text2); }
 
 .new-tag {
@@ -98,7 +100,52 @@ a:hover { color: var(--accent2); }
   margin: 2px 4px 2px 0;
 }
 
+.update-changes { font-size: 13px; color: var(--text2); }
+
+.change-item {
+  display: inline-block;
+  background: rgba(255,165,2,0.1);
+  border: 1px solid rgba(255,165,2,0.4);
+  color: var(--yellow);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+}
+
+.update-removed { font-size: 13px; color: var(--text2); }
+
+.removed-tag {
+  display: inline-block;
+  background: rgba(255,71,87,0.1);
+  border: 1px solid rgba(255,71,87,0.4);
+  color: var(--hot2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.stat-removed { background: rgba(255,71,87,0.15); border: 1px solid var(--hot); color: var(--hot2); }
+
 .update-trending { font-size: 12px; color: var(--text2); }
+
+/* NEW バッジ (JavaScript で動的追加) */
+.badge-new {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--green), #00b894);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-right: 6px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  animation: pulse-badge 2s infinite;
+}
 
 .banner-close {
   background: none;
@@ -464,6 +511,7 @@ main { padding: 28px 0 60px; }
 
 .h-new     { color: var(--green); font-weight: 700; }
 .h-changed { color: var(--yellow); font-weight: 700; }
+.h-removed { color: var(--hot2); font-weight: 700; }
 .h-email   { color: var(--accent); }
 .h-names   { color: var(--text2); }
 

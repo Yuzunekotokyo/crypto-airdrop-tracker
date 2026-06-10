@@ -30,7 +30,7 @@ def start_scheduler():
         return sched
 
     sched.add_job(
-        run_daily_update,
+        lambda: run_daily_update(force_email=True),
         trigger=CronTrigger(hour=UPDATE_HOUR, minute=UPDATE_MINUTE, timezone="Asia/Tokyo"),
         id="daily_update",
         replace_existing=True,

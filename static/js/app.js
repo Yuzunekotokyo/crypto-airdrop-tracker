@@ -121,6 +121,35 @@ function showRefreshNotice() {
   setTimeout(() => notice.remove(), 15000);
 }
 
+function markNewAirdrops(latestDate) {
+  // テーブル行
+  document.querySelectorAll(".airdrop-row[data-added]").forEach(row => {
+    if (row.dataset.added === latestDate) {
+      const nameDiv = row.querySelector(".name-cell div");
+      if (nameDiv && !nameDiv.querySelector(".badge-new")) {
+        const badge = document.createElement("span");
+        badge.className = "badge-new";
+        badge.textContent = "NEW";
+        nameDiv.insertBefore(badge, nameDiv.firstChild);
+      }
+    }
+  });
+  // ホットカード
+  document.querySelectorAll(".hot-card[data-added]").forEach(card => {
+    if (card.dataset.added === latestDate) {
+      const header = card.querySelector(".hot-card-header");
+      if (header && !header.querySelector(".badge-new")) {
+        const badge = document.createElement("span");
+        badge.className = "badge-new";
+        badge.textContent = "NEW";
+        badge.style.cssText = "position:absolute;top:10px;left:10px;z-index:2;";
+        card.style.position = "relative";
+        card.appendChild(badge);
+      }
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   scheduleAutoRefresh();
 
@@ -128,4 +157,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".airdrop-row[title]").forEach(row => {
     row.style.cursor = "pointer";
   });
+
+  // 最新更新で追加されたエアドロップに NEW バッジを付与
+  fetch("/api/updates")
+    .then(r => r.json())
+    .then(updates => {
+      if (updates.length > 0 && updates[0].date) {
+        markNewAirdrops(updates[0].date);
+      }
+    })
+    .catch(() => {});
 });
