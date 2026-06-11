@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "timestamp": "2026-06-11T00:17:39.964628+00:00",
+    "date": "2026-06-11",
+    "time_jst": "2026年06月11日 00:17",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 7,
+    "added_names": [
+      "Monad (MON)",
+      "Berachain (BERA)",
+      "Hyperliquid (HYPE)",
+      "Story Protocol (IP)",
+      "EigenLayer (EIGEN)",
+      "Base エコシステム",
+      "Abstract (ABS)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "hot_highlights": [
+      {
+        "name": "Monad (MON)",
+        "estimated_value_usd": 2000,
+        "category": "Layer1",
+        "difficulty": "easy",
+        "url": "https://monad.xyz/",
+        "description": "EVM互換の超高速L1。10,000 TPS以上を実現。テストネット参加者向けの大型エアドロップが期待されている。"
+      },
+      {
+        "name": "Berachain (BERA)",
+        "estimated_value_usd": 1200,
+        "category": "Layer1",
+        "difficulty": "medium",
+        "url": "https://berachain.com/",
+        "description": "独自コンセンサス機構PoLを持つEVM互換L1。DeFiネイティブチェーンとして急成長中。テストネット参加者へのエアドロップ実績あり。"
+      },
+      {
+        "name": "Hyperliquid (HYPE)",
+        "estimated_value_usd": 1000,
+        "category": "DeFi/DEX",
+        "difficulty": "medium",
+        "url": "https://hyperliquid.xyz/",
+        "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。"
+      },
+      {
+        "name": "Story Protocol (IP)",
+        "estimated_value_usd": 800,
+        "category": "インフラ",
+        "difficulty": "medium",
+        "url": "https://story.foundation/",
+        "description": "IPライセンスをオンチェーン化するL1プロトコル。AIとクリエイターエコノミーに特化。"
+      },
+      {
+        "name": "EigenLayer (EIGEN)",
+        "estimated_value_usd": 800,
+        "category": "インフラ",
+        "difficulty": "hard",
+        "url": "https://eigenlayer.xyz/",
+        "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。"
+      }
+    ],
+    "email_sent": false
+  }
+]

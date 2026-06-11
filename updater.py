@@ -51,8 +51,10 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
                 diffs.append(
                     f"推定価値: ${old_a.get('estimated_value_usd',0):,} → ${new_a.get('estimated_value_usd',0):,}"
                 )
+            if old_a.get("is_hot") != new_a.get("is_hot") and new_a.get("is_hot"):
+                diffs.append("🔥 HOT案件に昇格")
             if diffs:
-                changed.append({"name": new_a["name"], "changes": diffs})
+                changed.append({"name": new_a["name"], "changes": diffs, "url": new_a.get("url", "")})
 
     return {"added": added, "removed": removed, "changed": changed}
 
@@ -60,6 +62,7 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
 def run_daily_update(force_email: bool = False) -> dict:
     """メイン更新処理。戻り値: 更新サマリーdict"""
     now = datetime.now(timezone.utc)
+    jst_now = now.astimezone()
     logger.info(f"=== 日次更新開始 {now.isoformat()} ===")
 
     old_airdrops = _load_json(AIRDROPS_FILE, [])
@@ -71,10 +74,17 @@ def run_daily_update(force_email: bool = False) -> dict:
     # 変更検出
     diff = _detect_changes(old_airdrops, new_airdrops)
 
-    # 新規ホット案件アラート
+    # 新規ホット案件アラート (即時送信)
     newly_hot = [a for a in diff["added"] if a.get("is_hot")]
     for airdrop in newly_hot:
         send_hot_alert(airdrop)
+
+    # ホット昇格案件も即時アラート
+    hot_upgraded = [c for c in diff["changed"] if "HOT案件に昇格" in str(c.get("changes", []))]
+    for change in hot_upgraded:
+        matching = next((a for a in new_airdrops if a["name"] == change["name"]), None)
+        if matching:
+            send_hot_alert(matching)
 
     # データ保存
     _save_json(AIRDROPS_FILE, new_airdrops)
@@ -83,7 +93,7 @@ def run_daily_update(force_email: bool = False) -> dict:
     summary = {
         "timestamp": now.isoformat(),
         "date": now.strftime("%Y-%m-%d"),
-        "time_jst": (now.astimezone()).strftime("%Y年%m月%d日 %H:%M"),
+        "time_jst": jst_now.strftime("%Y年%m月%d日 %H:%M"),
         "total_airdrops": len(new_airdrops),
         "added_count": len(diff["added"]),
         "removed_count": len(diff["removed"]),
@@ -93,18 +103,29 @@ def run_daily_update(force_email: bool = False) -> dict:
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
+        "hot_highlights": [
+            {
+                "name": a["name"],
+                "estimated_value_usd": a.get("estimated_value_usd", 0),
+                "category": a.get("category", ""),
+                "difficulty": a.get("difficulty", ""),
+                "url": a.get("url", ""),
+                "description": a.get("description", ""),
+            }
+            for a in new_airdrops if a.get("is_hot")
+        ][:5],
         "email_sent": False,
     }
 
     updates_log = _load_json(UPDATES_FILE, [])
     updates_log.insert(0, summary)
-    updates_log = updates_log[:30]  # 直近30件を保持
+    updates_log = updates_log[:30]
     _save_json(UPDATES_FILE, updates_log)
 
-    # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
+    # メール送信 (新着・変更あり・ホット昇格・強制送信)
+    should_email = force_email or diff["added"] or newly_hot or hot_upgraded
     if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
+        sent = send_daily_report(new_airdrops, diff, trending, summary)
         summary["email_sent"] = sent
         updates_log[0]["email_sent"] = sent
         _save_json(UPDATES_FILE, updates_log)

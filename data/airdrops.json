@@ -1,1 +1,223 @@
-[]
+[
+  {
+    "id": "monad-mon",
+    "name": "Monad (MON)",
+    "symbol": "MON",
+    "category": "Layer1",
+    "type": "テストネット",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 2000,
+    "description": "EVM互換の超高速L1。10,000 TPS以上を実現。テストネット参加者向けの大型エアドロップが期待されている。",
+    "tasks": [
+      "テストネットウォレット登録",
+      "テストトランザクション実行",
+      "Discordコミュニティ参加",
+      "テストネットdApps利用"
+    ],
+    "end_date": "2026-09-09",
+    "logo": "https://assets.coingecko.com/coins/images/35191/small/monad.jpg",
+    "url": "https://monad.xyz/",
+    "is_hot": true,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "berachain-bera",
+    "name": "Berachain (BERA)",
+    "symbol": "BERA",
+    "category": "Layer1",
+    "type": "メインネット移行",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1200,
+    "description": "独自コンセンサス機構PoLを持つEVM互換L1。DeFiネイティブチェーンとして急成長中。テストネット参加者へのエアドロップ実績あり。",
+    "tasks": [
+      "BGTをステーキング",
+      "BerachainエコシステムのdApps利用",
+      "流動性プロビジョニング"
+    ],
+    "end_date": "2026-07-26",
+    "logo": "https://assets.coingecko.com/coins/images/32638/small/bera.png",
+    "url": "https://berachain.com/",
+    "is_hot": true,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "hyperliquid-hype",
+    "name": "Hyperliquid (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "取引所トークン",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。",
+    "tasks": [
+      "Hyperliquid上での先物取引",
+      "流動性提供",
+      "紹介プログラム参加"
+    ],
+    "end_date": "2026-07-11",
+    "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "story-protocol-ip",
+    "name": "Story Protocol (IP)",
+    "symbol": "IP",
+    "category": "インフラ",
+    "type": "IPライセンス",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "IPライセンスをオンチェーン化するL1プロトコル。AIとクリエイターエコノミーに特化。",
+    "tasks": [
+      "IPアセット登録",
+      "ライセンス設定",
+      "コミュニティ参加"
+    ],
+    "end_date": "2026-08-10",
+    "logo": "https://assets.coingecko.com/coins/images/39551/small/story.jpg",
+    "url": "https://story.foundation/",
+    "is_hot": true,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "eigenlayer-eigen",
+    "name": "EigenLayer (EIGEN)",
+    "symbol": "EIGEN",
+    "category": "インフラ",
+    "type": "リステーキング",
+    "status": "active",
+    "difficulty": "hard",
+    "estimated_value_usd": 800,
+    "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。",
+    "tasks": [
+      "ETHをリステーキング",
+      "LST (stETH等) をデポジット",
+      "AVSへの参加"
+    ],
+    "end_date": "2026-10-09",
+    "logo": "https://assets.coingecko.com/coins/images/33751/small/eigen.png",
+    "url": "https://eigenlayer.xyz/",
+    "is_hot": true,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "base-ecosystem",
+    "name": "Base エコシステム",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "エコシステム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 600,
+    "description": "CoinbaseのL2 Base上の各種dAppsでのエアドロップ。Aerodrome、Virtuals Protocolなど多数のプロジェクトが参加予定。",
+    "tasks": [
+      "Base上でのDeFi利用",
+      "Aerodrome流動性提供",
+      "複数のdAppsを利用"
+    ],
+    "end_date": "2026-12-08",
+    "logo": "https://assets.coingecko.com/asset_platforms/images/131/small/base-network.png",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "abstract-abs",
+    "name": "Abstract (ABS)",
+    "symbol": "ABS",
+    "category": "Layer2",
+    "type": "コンシューマーL2",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "ZK技術を用いたコンシューマー向けL2。NFT・ゲームに特化。ウォレット作成だけでエアドロップ対象になる場合あり。",
+    "tasks": [
+      "Abstract Global Wallet作成",
+      "コンシューマーdApps利用",
+      "NFT mint参加"
+    ],
+    "end_date": "2026-07-11",
+    "logo": "https://assets.coingecko.com/coins/images/35012/small/abstract.jpg",
+    "url": "https://abs.xyz/",
+    "is_hot": true,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "layerzero-zro",
+    "name": "LayerZero (ZRO)",
+    "symbol": "ZRO",
+    "category": "インフラ",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "クロスチェーンメッセージングプロトコル。ブリッジ・DeFi利用者向けエアドロップ。",
+    "tasks": [
+      "Stargate経由でブリッジを実行",
+      "複数チェーンでのトランザクション",
+      "LayerZero対応dApps利用"
+    ],
+    "end_date": "2026-08-10",
+    "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
+    "url": "https://layerzero.network/",
+    "is_hot": false,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "movement-move",
+    "name": "Movement (MOVE)",
+    "symbol": "MOVE",
+    "category": "Layer2",
+    "type": "新規上場",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 400,
+    "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ済み。",
+    "tasks": [
+      "エコシステム利用継続",
+      "流動性提供",
+      "Discordコミュニティ参加"
+    ],
+    "end_date": "2026-07-01",
+    "logo": "https://assets.coingecko.com/coins/images/39619/small/MOVE_color.png",
+    "url": "https://movementlabs.xyz/",
+    "is_hot": false,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  },
+  {
+    "id": "scroll-scr",
+    "name": "Scroll (SCR)",
+    "symbol": "SCR",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。",
+    "tasks": [
+      "ScrollネットワークへETHブリッジ",
+      "Scroll上でのDeFi利用",
+      "複数週にわたるアクティビティ"
+    ],
+    "end_date": "2026-09-09",
+    "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
+    "url": "https://scroll.io/",
+    "is_hot": false,
+    "added_date": "2026-06-11",
+    "source": "curated"
+  }
+]
