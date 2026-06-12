@@ -22,15 +22,18 @@ def get_scheduler():
     return _scheduler
 
 
-def start_scheduler():
+def _daily_update_with_email():
     from updater import run_daily_update
+    run_daily_update(force_email=True)
 
+
+def start_scheduler():
     sched = get_scheduler()
     if sched.running:
         return sched
 
     sched.add_job(
-        run_daily_update,
+        _daily_update_with_email,
         trigger=CronTrigger(hour=UPDATE_HOUR, minute=UPDATE_MINUTE, timezone="Asia/Tokyo"),
         id="daily_update",
         replace_existing=True,
