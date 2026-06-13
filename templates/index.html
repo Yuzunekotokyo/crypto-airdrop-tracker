@@ -12,49 +12,94 @@
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
-    <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
-      <span class="update-time">{{ latest_update.time_jst }}</span>
+
+    <!-- 上段: バッジ + 時刻 + 統計チップ -->
+    <div class="update-top-row">
+      <div class="update-meta">
+        <span class="update-badge">🔄 最新更新</span>
+        <span class="update-time">{{ latest_update.time_jst }}</span>
+      </div>
+      <div class="update-stats">
+        <span class="stat-chip stat-total">
+          📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
+        </span>
+        <span class="stat-chip stat-hot">
+          🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
+        </span>
+        {% if latest_update.added_count > 0 %}
+        <span class="stat-chip stat-new">
+          🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
+        </span>
+        {% endif %}
+        {% if latest_update.newly_hot_count is defined and latest_update.newly_hot_count > 0 %}
+        <span class="stat-chip stat-hot-alert">
+          🚨 HOT昇格 <strong>{{ latest_update.newly_hot_count }}</strong> 件
+        </span>
+        {% endif %}
+        {% if latest_update.changed_count > 0 %}
+        <span class="stat-chip stat-changed">
+          ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
+        </span>
+        {% endif %}
+        {% if latest_update.email_sent %}
+        <span class="stat-chip stat-email">
+          📧 メール送信済
+        </span>
+        {% endif %}
+      </div>
     </div>
-    <div class="update-stats">
-      <span class="stat-chip stat-total">
-        📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
-      </span>
-      <span class="stat-chip stat-hot">
-        🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
-      </span>
-      {% if latest_update.added_count > 0 %}
-      <span class="stat-chip stat-new">
-        🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
-      </span>
+
+    <!-- 中段: 変更ハイライト -->
+    {% set has_changes = latest_update.added_count > 0 or latest_update.changed_count > 0 or (latest_update.newly_hot is defined and latest_update.newly_hot) %}
+    {% if has_changes %}
+    <div class="update-highlights">
+
+      {% if latest_update.newly_hot is defined and latest_update.newly_hot %}
+      <div class="highlight-block highlight-hot-alert">
+        <span class="highlight-label">🚨 HOT昇格:</span>
+        {% for name in latest_update.newly_hot %}
+        <span class="new-tag tag-hot-alert">🔥 {{ name }}</span>
+        {% endfor %}
+      </div>
       {% endif %}
-      {% if latest_update.changed_count > 0 %}
-      <span class="stat-chip stat-changed">
-        ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
-      </span>
+
+      {% if latest_update.added_names %}
+      <div class="highlight-block highlight-new">
+        <span class="highlight-label">🆕 新規追加:</span>
+        {% for name in latest_update.added_names %}
+        <span class="new-tag">{{ name }}</span>
+        {% endfor %}
+      </div>
       {% endif %}
-      {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
-      </span>
+
+      {% if latest_update.changes %}
+      <div class="highlight-block highlight-changed">
+        <span class="highlight-label">✏️ 変更:</span>
+        {% for c in latest_update.changes[:4] %}
+        <span class="change-item">
+          <strong>{{ c.name }}</strong>
+          <span class="change-detail">{{ c.changes | join(' / ') }}</span>
+        </span>
+        {% endfor %}
+        {% if latest_update.changes | length > 4 %}
+        <span class="change-more">他{{ latest_update.changes | length - 4 }}件</span>
+        {% endif %}
+      </div>
       {% endif %}
-    </div>
-    {% if latest_update.added_names %}
-    <div class="update-new-items">
-      <strong>新規追加:</strong>
-      {% for name in latest_update.added_names %}
-      <span class="new-tag">{{ name }}</span>
-      {% endfor %}
+
     </div>
     {% endif %}
+
+    <!-- 下段: トレンドコイン -->
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>
       {{ latest_update.trending_coins | join(' · ') }}
     </div>
     {% endif %}
+
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 
@@ -237,6 +282,7 @@
         <div class="history-details">
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
+          {% if upd.newly_hot_count is defined and upd.newly_hot_count > 0 %}<span class="h-hot">🔥{{ upd.newly_hot_count }} HOT昇格</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
           {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
           {% if upd.added_names %}
@@ -254,7 +300,7 @@
 <!-- ===== フッター ===== -->
 <footer class="site-footer">
   <div class="container">
-    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
+    <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新 · 📧 更新通知: tsukamoto.kei@gmail.com</p>
     <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
   </div>
 </footer>

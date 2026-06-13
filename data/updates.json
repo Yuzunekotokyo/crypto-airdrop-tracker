@@ -1,1 +1,219 @@
-[]
+[
+  {
+    "timestamp": "2026-06-13T00:14:42.322240+00:00",
+    "date": "2026-06-13",
+    "time_jst": "2026年06月13日 00:14",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "newly_hot_count": 5,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "Monad (MON)",
+      "MegaETH",
+      "Story Protocol (IP)",
+      "Kaito AI (KAITO)",
+      "Symbiotic (SYM)",
+      "Linea (LINEA)",
+      "Particle Network (PARTI)"
+    ],
+    "added_details": [
+      {
+        "id": "hyperliquid-hype",
+        "name": "Hyperliquid (HYPE)",
+        "symbol": "HYPE",
+        "category": "DeFi/DEX",
+        "type": "取引所トークン",
+        "status": "active",
+        "difficulty": "medium",
+        "estimated_value_usd": 2000,
+        "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるHYPEポイント報酬継続中。",
+        "tasks": [
+          "Hyperliquid上での先物取引",
+          "流動性提供 (HLP Vault)",
+          "紹介プログラム参加",
+          "毎日アクティブに取引"
+        ],
+        "end_date": "2026-07-13",
+        "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+        "url": "https://hyperliquid.xyz/",
+        "is_hot": true,
+        "added_date": "2026-06-13",
+        "source": "curated"
+      },
+      {
+        "id": "monad-mon",
+        "name": "Monad (MON)",
+        "symbol": "MON",
+        "category": "Layer1",
+        "type": "テストネット参加",
+        "status": "active",
+        "difficulty": "medium",
+        "estimated_value_usd": 1200,
+        "description": "EVM互換の超高速Layer1ブロックチェーン。並列処理で毎秒10,000TPS実現。テストネット参加者に大型エアドロップ予定。",
+        "tasks": [
+          "Monadテストネットに接続",
+          "テストトランザクション実行",
+          "Discordコミュニティ参加",
+          "テストネットDeFiプロトコル利用"
+        ],
+        "end_date": "2026-08-12",
+        "logo": "https://assets.coingecko.com/coins/images/39730/small/monad.jpg",
+        "url": "https://monad.xyz/",
+        "is_hot": true,
+        "added_date": "2026-06-13",
+        "source": "curated"
+      },
+      {
+        "id": "megaeth-mega",
+        "name": "MegaETH",
+        "symbol": "MEGA",
+        "category": "Layer2",
+        "type": "テストネット参加",
+        "status": "active",
+        "difficulty": "easy",
+        "estimated_value_usd": 800,
+        "description": "Ethereum L2の中で最速を目指すリアルタイムブロックチェーン。1msブロック時間。テストネット参加でポイント獲得中。",
+        "tasks": [
+          "MegaETHテストネットに参加",
+          "テストETHをブリッジ",
+          "テストネットアプリを利用",
+          "Twitterフォロー＆リツイート"
+        ],
+        "end_date": "2026-09-11",
+        "logo": "https://assets.coingecko.com/coins/images/52957/small/megaeth.jpg",
+        "url": "https://megaeth.systems/",
+        "is_hot": true,
+        "added_date": "2026-06-13",
+        "source": "curated"
+      },
+      {
+        "id": "story-ip",
+        "name": "Story Protocol (IP)",
+        "symbol": "IP",
+        "category": "インフラ",
+        "type": "エコシステム参加",
+        "status": "active",
+        "difficulty": "medium",
+        "estimated_value_usd": 600,
+        "description": "知的財産権をブロックチェーン上で管理するプロトコル。IPをNFT化して収益化。エコシステム参加者に配布予定。",
+        "tasks": [
+          "Story Protocolに資産を登録",
+          "IPNFTを作成",
+          "コミュニティタスク完了",
+          "Discordでロール取得"
+        ],
+        "end_date": "2026-08-27",
+        "logo": "https://assets.coingecko.com/coins/images/36425/small/story.jpg",
+        "url": "https://www.story.foundation/",
+        "is_hot": true,
+        "added_date": "2026-06-13",
+        "source": "curated"
+      },
+      {
+        "id": "kaito-kaito",
+        "name": "Kaito AI (KAITO)",
+        "symbol": "KAITO",
+        "category": "AI/Web3",
+        "type": "ソーシャルマイニング",
+        "status": "active",
+        "difficulty": "easy",
+        "estimated_value_usd": 500,
+        "description": "AI搭載のWeb3情報キュレーションプロトコル。Yap(投稿)でKaitoポイントを獲得し継続的なエアドロップを受け取れる。",
+        "tasks": [
+          "Kaito AIに登録",
+          "Crypto関連をTwitterで投稿 (Yap)",
+          "毎日アクティブにYap",
+          "質の高いコンテンツで高スコアを狙う"
+        ],
+        "end_date": "2026-10-11",
+        "logo": "https://assets.coingecko.com/coins/images/54458/small/kaito.jpg",
+        "url": "https://kaito.ai/",
+        "is_hot": true,
+        "added_date": "2026-06-13",
+        "source": "curated"
+      },
+      {
+        "id": "symbiotic-sym",
+        "name": "Symbiotic (SYM)",
+        "symbol": "SYM",
+        "category": "インフラ",
+        "type": "リステーキング",
+        "status": "upcoming",
+        "difficulty": "hard",
+        "estimated_value_usd": 900,
+        "description": "Ethereumリステーキングプロトコル。EigenLayerに対抗するSymbioticにステーキングしてポイント獲得中。",
+        "tasks": [
+          "ETH/LST をSymbioticにデポジット",
+          "対応Vaultに資産を預ける",
+          "ポイント蓄積期間中に継続保有"
+        ],
+        "end_date": "2026-09-21",
+        "logo": "https://assets.coingecko.com/coins/images/39632/small/symbiotic.jpg",
+        "url": "https://symbiotic.fi/",
+        "is_hot": false,
+        "added_date": "2026-06-13",
+        "source": "curated"
+      },
+      {
+        "id": "linea-linea",
+        "name": "Linea (LINEA)",
+        "symbol": "LINEA",
+        "category": "Layer2",
+        "type": "レトロアクティブ",
+        "status": "active",
+        "difficulty": "easy",
+        "estimated_value_usd": 400,
+        "description": "ConsenSys開発のZK-Rollup L2。MetaMaskと深く統合。Surge(アクティビティ)キャンペーン継続中。",
+        "tasks": [
+          "LineaネットワークへETHブリッジ",
+          "Linea上でDeFi利用",
+          "Lineaポイントを蓄積",
+          "MetaMask Swapsを利用"
+        ],
+        "end_date": "2026-07-28",
+        "logo": "https://assets.coingecko.com/coins/images/31518/small/linea.jpg",
+        "url": "https://linea.build/",
+        "is_hot": false,
+        "added_date": "2026-06-13",
+        "source": "curated"
+      },
+      {
+        "id": "particle-parti",
+        "name": "Particle Network (PARTI)",
+        "symbol": "PARTI",
+        "category": "インフラ",
+        "type": "テストネット参加",
+        "status": "upcoming",
+        "difficulty": "easy",
+        "estimated_value_usd": 300,
+        "description": "アカウント抽象化とチェーン抽象化を実現するインフラ。Universal Accountsで全チェーンを一つのウォレットで管理。",
+        "tasks": [
+          "Particle Networkに登録",
+          "Universal Account作成",
+          "テストネットタスク完了",
+          "Discordコミュニティ参加"
+        ],
+        "end_date": "2026-08-02",
+        "logo": "https://assets.coingecko.com/coins/images/37590/small/particle.jpg",
+        "url": "https://particle.network/",
+        "is_hot": false,
+        "added_date": "2026-06-13",
+        "source": "curated"
+      }
+    ],
+    "removed_names": [],
+    "changes": [],
+    "newly_hot": [
+      "Hyperliquid (HYPE)",
+      "Monad (MON)",
+      "MegaETH",
+      "Story Protocol (IP)",
+      "Kaito AI (KAITO)"
+    ],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
