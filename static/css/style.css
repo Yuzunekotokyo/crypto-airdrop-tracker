@@ -85,7 +85,11 @@ a:hover { color: var(--accent2); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
-.update-new-items { font-size: 13px; color: var(--text2); }
+.update-row-top { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+
+.update-new-items { font-size: 13px; color: var(--text2); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+
+.update-section-label { font-size: 12px; font-weight: 700; color: var(--text2); white-space: nowrap; }
 
 .new-tag {
   display: inline-block;
@@ -95,10 +99,73 @@ a:hover { color: var(--accent2); }
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 12px;
-  margin: 2px 4px 2px 0;
 }
 
+/* 変更詳細トグル */
+.update-changes-wrap { margin-top: 2px; }
+
+.changes-toggle {
+  background: rgba(255,165,2,0.12);
+  border: 1px solid rgba(255,165,2,0.4);
+  color: var(--yellow);
+  padding: 4px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.changes-toggle:hover { background: rgba(255,165,2,0.22); }
+
+.changes-detail {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.change-item {
+  background: rgba(255,165,2,0.07);
+  border-left: 3px solid rgba(255,165,2,0.5);
+  border-radius: 0 6px 6px 0;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+.change-item.change-hot { border-left-color: var(--hot); background: rgba(255,71,87,0.07); }
+
+.change-name { font-weight: 700; color: var(--text); }
+
+.change-list {
+  margin: 4px 0 0 0;
+  padding-left: 18px;
+  color: var(--text2);
+  font-size: 12px;
+}
+.change-list li { margin-bottom: 2px; }
+
+/* 変更なし */
+.stat-nochange { background: rgba(100,100,100,0.15); border: 1px solid #555; color: #888; }
+.update-nochange-msg { font-size: 12px; color: var(--text2); opacity: 0.7; }
+
+.update-bottom-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
 .update-trending { font-size: 12px; color: var(--text2); }
+
+/* NEWバッジ (テーブル行) */
+.new-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--green), #00b894);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+  letter-spacing: 0.5px;
+  animation: pulse-badge 2s infinite;
+}
+
+/* 新着行のハイライト */
+.airdrop-row.row-new { border-left: 3px solid var(--green); }
 
 .banner-close {
   background: none;

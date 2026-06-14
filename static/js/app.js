@@ -121,10 +121,16 @@ function showRefreshNotice() {
   setTimeout(() => notice.remove(), 15000);
 }
 
+function toggleChanges(btn) {
+  const detail = btn.nextElementSibling;
+  const open = detail.style.display === "none";
+  detail.style.display = open ? "block" : "none";
+  btn.textContent = btn.textContent.replace(open ? "▼" : "▲", open ? "▲" : "▼");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   scheduleAutoRefresh();
 
-  // テーブル行にツールチップ
   document.querySelectorAll(".airdrop-row[title]").forEach(row => {
     row.style.cursor = "pointer";
   });

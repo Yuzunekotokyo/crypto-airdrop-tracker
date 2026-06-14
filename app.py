@@ -34,12 +34,14 @@ def index():
     airdrops = _load_json(AIRDROPS_FILE, [])
     updates = _load_json(UPDATES_FILE, [])
     latest_update = updates[0] if updates else None
+    now_dt = datetime.now()
     return render_template(
         "index.html",
         airdrops=airdrops,
         latest_update=latest_update,
         updates=updates[:5],
-        now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
+        now=now_dt.strftime("%Y年%m月%d日 %H:%M"),
+        today=now_dt.strftime("%Y-%m-%d"),
     )
 
 

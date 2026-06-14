@@ -51,8 +51,12 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
                 diffs.append(
                     f"推定価値: ${old_a.get('estimated_value_usd',0):,} → ${new_a.get('estimated_value_usd',0):,}"
                 )
+            if not old_a.get("is_hot") and new_a.get("is_hot"):
+                diffs.append("🔥 ホット案件に昇格！")
+            elif old_a.get("is_hot") and not new_a.get("is_hot"):
+                diffs.append("ホット案件から外れました")
             if diffs:
-                changed.append({"name": new_a["name"], "changes": diffs})
+                changed.append({"name": new_a["name"], "changes": diffs, "is_hot": new_a.get("is_hot", False)})
 
     return {"added": added, "removed": removed, "changed": changed}
 
@@ -71,9 +75,14 @@ def run_daily_update(force_email: bool = False) -> dict:
     # 変更検出
     diff = _detect_changes(old_airdrops, new_airdrops)
 
-    # 新規ホット案件アラート
+    # 新規ホット案件アラート (即時送信)
     newly_hot = [a for a in diff["added"] if a.get("is_hot")]
-    for airdrop in newly_hot:
+    # ホット昇格案件も即時アラート対象
+    newly_promoted = [a for a in new_airdrops if any(
+        c["name"] == a["name"] and "🔥 ホット案件に昇格" in " ".join(c["changes"])
+        for c in diff["changed"]
+    )]
+    for airdrop in newly_hot + newly_promoted:
         send_hot_alert(airdrop)
 
     # データ保存
@@ -101,13 +110,11 @@ def run_daily_update(force_email: bool = False) -> dict:
     updates_log = updates_log[:30]  # 直近30件を保持
     _save_json(UPDATES_FILE, updates_log)
 
-    # メール送信 (新着あり、またはホット案件変化、または強制送信)
-    should_email = force_email or diff["added"] or newly_hot
-    if should_email:
-        sent = send_daily_report(new_airdrops, scraped_new, trending)
-        summary["email_sent"] = sent
-        updates_log[0]["email_sent"] = sent
-        _save_json(UPDATES_FILE, updates_log)
+    # 毎日必ずメール送信 (日次ダイジェスト)
+    sent = send_daily_report(new_airdrops, diff["added"], diff["changed"], trending)
+    summary["email_sent"] = sent
+    updates_log[0]["email_sent"] = sent
+    _save_json(UPDATES_FILE, updates_log)
 
-    logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件 ===")
+    logger.info(f"=== 日次更新完了: 追加{len(diff['added'])}件, 変更{len(diff['changed'])}件, メール送信: {sent} ===")
     return summary

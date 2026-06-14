@@ -12,49 +12,77 @@
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
-    <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
-      <span class="update-time">{{ latest_update.time_jst }}</span>
+
+    <!-- 上段: タイトル + 統計 -->
+    <div class="update-row-top">
+      <div class="update-meta">
+        <span class="update-badge">🔄 本日の更新</span>
+        <span class="update-time">{{ latest_update.time_jst }}</span>
+      </div>
+      <div class="update-stats">
+        <span class="stat-chip stat-total">📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件</span>
+        <span class="stat-chip stat-hot">🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件</span>
+        {% if latest_update.added_count > 0 %}
+        <span class="stat-chip stat-new">🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件</span>
+        {% endif %}
+        {% if latest_update.changed_count > 0 %}
+        <span class="stat-chip stat-changed">✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件</span>
+        {% endif %}
+        {% if latest_update.email_sent %}
+        <span class="stat-chip stat-email">📧 メール送信済</span>
+        {% endif %}
+        {% if latest_update.added_count == 0 and latest_update.changed_count == 0 %}
+        <span class="stat-chip stat-nochange">✓ 変更なし</span>
+        {% endif %}
+      </div>
     </div>
-    <div class="update-stats">
-      <span class="stat-chip stat-total">
-        📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
-      </span>
-      <span class="stat-chip stat-hot">
-        🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
-      </span>
-      {% if latest_update.added_count > 0 %}
-      <span class="stat-chip stat-new">
-        🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.changed_count > 0 %}
-      <span class="stat-chip stat-changed">
-        ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
-      </span>
-      {% endif %}
-    </div>
+
+    <!-- 新着案件 (ホット優先) -->
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
+      <span class="update-section-label">🆕 新規追加:</span>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
-    {% if latest_update.trending_coins %}
-    <div class="update-trending">
-      <strong>📈 トレンド:</strong>
-      {{ latest_update.trending_coins | join(' · ') }}
+
+    <!-- 変更詳細 (トグルで展開) -->
+    {% if latest_update.changes %}
+    <div class="update-changes-wrap">
+      <button class="changes-toggle" onclick="toggleChanges(this)">
+        ✏️ 変更詳細を見る ({{ latest_update.changes | length }}件) ▼
+      </button>
+      <div class="changes-detail" style="display:none;">
+        {% for c in latest_update.changes %}
+        <div class="change-item {% if c.is_hot %}change-hot{% endif %}">
+          <span class="change-name">{{ c.name }}{% if c.is_hot %} 🔥{% endif %}</span>
+          <ul class="change-list">
+            {% for ch in c.changes %}
+            <li>{{ ch }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
     </div>
     {% endif %}
+
+    <!-- トレンドコイン + 変更なしメッセージ -->
+    <div class="update-bottom-row">
+      {% if latest_update.trending_coins %}
+      <div class="update-trending">
+        <span class="update-section-label">📈 トレンド:</span>
+        {{ latest_update.trending_coins | join(' · ') }}
+      </div>
+      {% endif %}
+      {% if latest_update.added_count == 0 and latest_update.changed_count == 0 %}
+      <div class="update-nochange-msg">本日は新しい案件・変更はありませんでした</div>
+      {% endif %}
+    </div>
+
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 
@@ -182,7 +210,8 @@
         </thead>
         <tbody id="airdrop-tbody">
           {% for airdrop in airdrops %}
-          <tr class="airdrop-row {% if airdrop.is_hot %}row-hot{% endif %}"
+          {% set is_new = (airdrop.added_date == today) if airdrop.added_date else false %}
+          <tr class="airdrop-row {% if airdrop.is_hot %}row-hot{% endif %} {% if is_new %}row-new{% endif %}"
               data-status="{{ airdrop.status }}"
               data-difficulty="{{ airdrop.difficulty }}"
               data-hot="{{ 'true' if airdrop.is_hot else 'false' }}"
@@ -199,6 +228,7 @@
                   <strong>{{ airdrop.name }}</strong>
                   {% if airdrop.symbol %}<span class="symbol-tag">{{ airdrop.symbol }}</span>{% endif %}
                   {% if airdrop.is_hot %}<span class="mini-hot">🔥</span>{% endif %}
+                  {% if is_new %}<span class="new-badge">NEW</span>{% endif %}
                 </div>
               </div>
             </td>
