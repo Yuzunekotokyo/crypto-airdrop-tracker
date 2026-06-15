@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "timestamp": "2026-06-15T00:11:42.104291+00:00",
+    "date": "2026-06-15",
+    "time_jst": "2026年06月15日 00:11",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Hyperliquid Season 2 (HYPE)",
+      "Monad (MON)",
+      "MegaETH",
+      "Babylon (BBN)",
+      "Initia (INIT)",
+      "Nillion (NIL)",
+      "Eclipse",
+      "Fuel Network (FUEL)",
+      "Particle Network (PARTI)",
+      "Sonic (S)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
