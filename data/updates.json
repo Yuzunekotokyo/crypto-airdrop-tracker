@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "timestamp": "2026-06-16T00:12:11.394112+00:00",
+    "date": "2026-06-16",
+    "time_jst": "2026年06月16日 00:12",
+    "total_airdrops": 10,
+    "added_count": 8,
+    "removed_count": 4,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [
+      "Monad (MON)",
+      "MegaETH",
+      "Aztec Network",
+      "Story Protocol (IP)",
+      "Babylon (BBN)",
+      "Berachain (BERA)",
+      "Eclipse",
+      "Linea (zkEVM)"
+    ],
+    "removed_names": [
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "zkSync Era"
+    ],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  },
+  {
+    "timestamp": "2026-06-16T00:09:12.103756+00:00",
+    "date": "2026-06-16",
+    "time_jst": "2026年06月16日 00:09",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
