@@ -1,0 +1,61 @@
+name: Daily Airdrop Update
+
+on:
+  schedule:
+    # 毎日 08:00 JST (= 23:00 UTC 前日)
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      force_email:
+        description: 'メールを強制送信するか'
+        required: false
+        default: 'false'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily update
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT || 'tsukamoto.kei@gmail.com' }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+        run: |
+          FORCE=${{ github.event.inputs.force_email || 'false' }}
+          python -c "
+          from updater import run_daily_update
+          import json, sys
+          force = '$FORCE'.lower() == 'true'
+          result = run_daily_update(force_email=force)
+          print(json.dumps(result, ensure_ascii=False, indent=2))
+          "
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/airdrops.json data/updates.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: daily airdrop data update $(date +'%Y-%m-%d %H:%M JST' -d '+9 hours')"
+            git push
+          fi

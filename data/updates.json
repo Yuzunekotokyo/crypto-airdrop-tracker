@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "timestamp": "2026-06-18T00:11:13.256057+00:00",
+    "date": "2026-06-18",
+    "time_jst": "2026年06月18日 00:11",
+    "total_airdrops": 12,
+    "added_count": 12,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 7,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "Monad (MON)",
+      "Berachain (BERA)",
+      "MegaETH",
+      "Initia (INIT)",
+      "Corn Protocol (BTCN)",
+      "Abstract Chain",
+      "EigenLayer (EIGEN)",
+      "Pendle Finance (PENDLE)",
+      "Sonic (S)",
+      "Avail (AVL)",
+      "Scroll (SCR)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
