@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "timestamp": "2026-06-19T00:11:51.326758+00:00",
+    "date": "2026-06-19",
+    "time_jst": "2026年06月19日 00:11",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Base (Coinbase L2)",
+      "MetaMask (MASK)",
+      "Monad (MON)",
+      "GRVT",
+      "Polymarket (POLY)",
+      "MegaETH",
+      "Berachain Season 2",
+      "Hyperliquid (HYPE)",
+      "EigenLayer (EIGEN)",
+      "Linea (Consensys L2)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "newly_hot_names": [
+      "Base (Coinbase L2)",
+      "MetaMask (MASK)",
+      "Monad (MON)",
+      "GRVT",
+      "Polymarket (POLY)",
+      "MegaETH"
+    ],
+    "scraped_count": 0,
+    "email_sent": true,
+    "is_first_run": true,
+    "email_draft_id": "r-7952447823847302908"
+  }
+]

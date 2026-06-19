@@ -10,11 +10,14 @@
 
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
-<div id="update-banner" class="update-banner">
+<div id="update-banner" class="update-banner {% if latest_update.added_count > 0 or latest_update.hot_count > 0 %}update-banner-alert{% endif %}">
   <div class="update-banner-inner">
     <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
-      <span class="update-time">{{ latest_update.time_jst }}</span>
+      <span class="update-badge">🔄 UPDATE</span>
+      <span class="update-time">{{ latest_update.time_jst }} 更新</span>
+      {% if latest_update.added_count > 0 %}
+      <span class="update-highlight">🆕 新着{{ latest_update.added_count }}件追加!</span>
+      {% endif %}
     </div>
     <div class="update-stats">
       <span class="stat-chip stat-total">
@@ -35,26 +38,34 @@
       {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
-        📧 メール送信済
+        📧 メール通知済
       </span>
       {% endif %}
     </div>
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
+      <strong>🆕 新規追加案件:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
+    {% if latest_update.changes %}
+    <div class="update-changes">
+      <strong>✏️ 変更内容:</strong>
+      {% for ch in latest_update.changes[:3] %}
+      <span class="change-tag">{{ ch.name }}: {{ ch.changes | join(', ') }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if latest_update.trending_coins %}
     <div class="update-trending">
-      <strong>📈 トレンド:</strong>
+      <strong>📈 CoinGecko トレンド:</strong>
       {{ latest_update.trending_coins | join(' · ') }}
     </div>
     {% endif %}
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 
