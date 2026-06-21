@@ -92,6 +92,17 @@ def run_daily_update(force_email: bool = False) -> dict:
         "added_names": [a["name"] for a in diff["added"]],
         "removed_names": diff["removed"],
         "changes": diff["changed"],
+        "new_hot_airdrops": [
+            {
+                "name": a["name"],
+                "symbol": a.get("symbol", ""),
+                "estimated_value_usd": a.get("estimated_value_usd", 0),
+                "difficulty": a.get("difficulty", ""),
+                "url": a.get("url", ""),
+                "description": a.get("description", ""),
+            }
+            for a in newly_hot
+        ],
         "trending_coins": [t["name"] for t in trending[:5]],
         "email_sent": False,
     }

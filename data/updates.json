@@ -1,1 +1,59 @@
-[]
+[
+  {
+    "timestamp": "2026-06-21T00:10:09.758584+00:00",
+    "date": "2026-06-21",
+    "time_jst": "2026年06月21日 00:10",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "new_hot_airdrops": [
+      {
+        "name": "Hyperliquid (HYPE)",
+        "symbol": "HYPE",
+        "estimated_value_usd": 1000,
+        "difficulty": "medium",
+        "url": "https://hyperliquid.xyz/",
+        "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。"
+      },
+      {
+        "name": "LayerZero (ZRO)",
+        "symbol": "ZRO",
+        "estimated_value_usd": 500,
+        "difficulty": "medium",
+        "url": "https://layerzero.network/",
+        "description": "クロスチェーンメッセージングプロトコル。ブリッジ・DeFi利用者向けエアドロップ。"
+      },
+      {
+        "name": "Movement (MOVE)",
+        "symbol": "MOVE",
+        "estimated_value_usd": 400,
+        "difficulty": "easy",
+        "url": "https://movementlabs.xyz/",
+        "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ予定。"
+      },
+      {
+        "name": "Scroll (SCR)",
+        "symbol": "SCR",
+        "estimated_value_usd": 300,
+        "difficulty": "easy",
+        "url": "https://scroll.io/",
+        "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。"
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": false,
+    "email_drafted": true
+  }
+]
