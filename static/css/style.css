@@ -100,6 +100,63 @@ a:hover { color: var(--accent2); }
 
 .update-trending { font-size: 12px; color: var(--text2); }
 
+.update-changes {
+  font-size: 12px;
+  color: var(--text2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.change-item {
+  background: rgba(255,165,2,0.1);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+/* HOT新着アラートバナー */
+.update-banner--hot-alert {
+  border-bottom-color: var(--hot);
+  box-shadow: 0 2px 20px rgba(255,71,87,0.4);
+  animation: hot-banner-pulse 3s infinite;
+}
+
+@keyframes hot-banner-pulse {
+  0%, 100% { box-shadow: 0 2px 20px rgba(255,71,87,0.4); }
+  50%       { box-shadow: 0 2px 30px rgba(255,71,87,0.7); }
+}
+
+.hot-alert-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.hot-alert-badge {
+  background: linear-gradient(135deg, var(--hot), #ff9f43);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  animation: hot-badge-blink 1.5s infinite;
+}
+
+@keyframes hot-badge-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.75; }
+}
+
+.hot-alert-sub { font-size: 12px; color: var(--hot2); font-weight: 600; }
+
+.stat-removed { background: rgba(108,117,125,0.15); border: 1px solid #6c757d; color: #adb5bd; }
+
 .banner-close {
   background: none;
   border: none;

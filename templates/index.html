@@ -10,12 +10,22 @@
 
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
-<div id="update-banner" class="update-banner">
+{% set has_hot_new = latest_update.added_names and latest_update.hot_count > 0 %}
+<div id="update-banner" class="update-banner {% if has_hot_new %}update-banner--hot-alert{% endif %}">
   <div class="update-banner-inner">
+
+    {% if has_hot_new %}
+    <div class="hot-alert-row">
+      <span class="hot-alert-badge">🚨 新着HOT案件あり！</span>
+      <span class="hot-alert-sub">今すぐチェックしてください</span>
+    </div>
+    {% endif %}
+
     <div class="update-meta">
       <span class="update-badge">🔄 最新更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
     </div>
+
     <div class="update-stats">
       <span class="stat-chip stat-total">
         📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
@@ -33,12 +43,18 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
+      {% if latest_update.removed_count > 0 %}
+      <span class="stat-chip stat-removed">
+        🗑️ 終了 <strong>{{ latest_update.removed_count }}</strong> 件
+      </span>
+      {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
         📧 メール送信済
       </span>
       {% endif %}
     </div>
+
     {% if latest_update.added_names %}
     <div class="update-new-items">
       <strong>新規追加:</strong>
@@ -47,12 +63,23 @@
       {% endfor %}
     </div>
     {% endif %}
+
+    {% if latest_update.changes %}
+    <div class="update-changes">
+      <strong>変更詳細:</strong>
+      {% for ch in latest_update.changes[:3] %}
+      <span class="change-item">{{ ch.name }}: {{ ch.changes | join(' / ') }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>
       {{ latest_update.trending_coins | join(' · ') }}
     </div>
     {% endif %}
+
   </div>
   <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
 </div>
