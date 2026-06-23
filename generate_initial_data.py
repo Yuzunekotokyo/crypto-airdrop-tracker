@@ -1,90 +1,27 @@
 """
-Airdrop情報をWeb/APIから収集するモジュール。
-複数ソース (airdrops.io スクレイピング + キュレーションデータ) を組み合わせて使用。
+初回データ生成スクリプト (依存パッケージ不要版)。
+requests のみあれば動作。beautifulsoup4 はオプション。
 """
 
-import requests
-import logging
-from datetime import datetime, timedelta
+import json
+import os
+sys_imported = False
+try:
+    import sys
+    sys_imported = True
+except Exception:
+    pass
+from datetime import datetime, timedelta, timezone
 
-logger = logging.getLogger(__name__)
-
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    )
-}
-
-
-def _scrape_airdrops_io() -> list[dict]:
-    """airdrops.ioのトップページからアクティブエアドロップを取得"""
-    try:
-        from bs4 import BeautifulSoup
-        r = requests.get("https://airdrops.io/", headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "lxml")
-
-        items = []
-        for card in soup.select(".airdrop-item")[:30]:
-            name_el = card.select_one(".airdrop-title") or card.select_one("h3")
-            link_el = card.select_one("a[href]")
-            value_el = card.select_one(".airdrop-value") or card.select_one(".value")
-            end_el = card.select_one(".airdrop-end") or card.select_one(".end-date")
-            img_el = card.select_one("img")
-
-            if not name_el:
-                continue
-
-            items.append({
-                "name": name_el.get_text(strip=True),
-                "url": link_el["href"] if link_el else "https://airdrops.io/",
-                "estimated_value": value_el.get_text(strip=True) if value_el else "不明",
-                "end_date": end_el.get_text(strip=True) if end_el else "未定",
-                "logo": img_el.get("src", "") if img_el else "",
-                "source": "airdrops.io",
-            })
-        return items
-    except ImportError:
-        logger.warning("beautifulsoup4 未インストール — airdrops.io スクレイピングをスキップ")
-        return []
-    except Exception as e:
-        logger.warning(f"airdrops.io scrape failed: {e}")
-        return []
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+AIRDROPS_FILE = os.path.join(DATA_DIR, "airdrops.json")
+UPDATES_FILE = os.path.join(DATA_DIR, "updates.json")
 
 
-def _scrape_dropcatchup() -> list[dict]:
-    """追加ソースからエアドロップ情報を取得 (フォールバック)"""
-    try:
-        r = requests.get("https://airdrops.io/hot/", headers=HEADERS, timeout=12)
-        r.raise_for_status()
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(r.text, "lxml")
-        items = []
-        for card in soup.select(".airdrop-item")[:15]:
-            name_el = card.select_one(".airdrop-title") or card.select_one("h3")
-            link_el = card.select_one("a[href]")
-            if not name_el:
-                continue
-            items.append({
-                "name": name_el.get_text(strip=True),
-                "url": link_el["href"] if link_el else "https://airdrops.io/",
-                "source": "airdrops.io/hot",
-            })
-        return items
-    except Exception:
-        return []
-
-
-def _build_seed_airdrops() -> list[dict]:
-    """
-    キュレーション済み注目エアドロップシードデータ。
-    最新情報に基づき定期更新。
-    """
+def build_airdrops():
     today = datetime.utcnow()
+
     return [
-        # ===== Layer 1 / 新チェーン =====
         {
             "id": "monad-mon",
             "name": "Monad",
@@ -122,6 +59,24 @@ def _build_seed_airdrops() -> list[dict]:
             "source": "curated",
         },
         {
+            "id": "babylon-btc",
+            "name": "Babylon Chain",
+            "symbol": "BABY",
+            "category": "Bitcoin/インフラ",
+            "type": "BTCステーキング",
+            "status": "active",
+            "difficulty": "medium",
+            "estimated_value_usd": 1000,
+            "description": "BitcoinをPoSセキュリティに活用するプロトコル。BTCネイティブステーキングで報酬獲得。大型VCバック、エコシステム参加者へのエアドロップが期待される。",
+            "tasks": ["BitcoinをBabylonにステーキング", "Phase-2スタッキングへの参加", "Babylon上のBSNプロジェクト利用", "早期ステーカーTier確保"],
+            "end_date": (today + timedelta(days=150)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/40773/small/babylon.png",
+            "url": "https://babylonchain.io/",
+            "is_hot": True,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
             "id": "abstract-abs",
             "name": "Abstract Chain",
             "symbol": "ABS",
@@ -139,7 +94,6 @@ def _build_seed_airdrops() -> list[dict]:
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
-        # ===== DeFi =====
         {
             "id": "hyperliquid-hype",
             "name": "Hyperliquid エコシステム",
@@ -177,20 +131,20 @@ def _build_seed_airdrops() -> list[dict]:
             "source": "curated",
         },
         {
-            "id": "sonic-s",
-            "name": "Sonic (S) エコシステム",
-            "symbol": "S",
-            "category": "Layer1/DeFi",
-            "type": "エコシステム",
+            "id": "kaito-ai",
+            "name": "Kaito AI",
+            "symbol": "KAITO",
+            "category": "AI/SocialFi",
+            "type": "Yapper報酬",
             "status": "active",
-            "difficulty": "medium",
-            "estimated_value_usd": 1000,
-            "description": "Andre Crojneが開発した高速EVM。旧Fantomから進化。Sトークンのステーキング・DeFi利用でエコシステム各プロジェクトのポイント獲得。",
-            "tasks": ["SonicブリッジでETH/USDCをブリッジ", "Beets.fi/SonicSwap利用", "Sonicエコシステムのyield farming", "Sonic Points獲得・ランキング上位維持"],
-            "end_date": (today + timedelta(days=75)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/40143/small/sonic.png",
-            "url": "https://soniclabs.com/",
-            "is_hot": False,
+            "difficulty": "easy",
+            "estimated_value_usd": 600,
+            "description": "AI powered Web3ソーシャル分析。Twitterでの暗号通貨関連投稿によるYapperポイント獲得。上位YapperへのKAITO追加配布が継続中。",
+            "tasks": ["KaitoアカウントをXと連携", "暗号通貨・DeFiに関するX投稿", "MindShareスコアの向上", "注目プロジェクトの早期言及"],
+            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/39624/small/kaito.jpg",
+            "url": "https://kaito.ai/",
+            "is_hot": True,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
@@ -212,44 +166,24 @@ def _build_seed_airdrops() -> list[dict]:
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
-        # ===== AI × Crypto =====
         {
-            "id": "kaito-ai",
-            "name": "Kaito AI",
-            "symbol": "KAITO",
-            "category": "AI/SocialFi",
-            "type": "Yapper報酬",
+            "id": "sonic-s",
+            "name": "Sonic エコシステム",
+            "symbol": "S",
+            "category": "Layer1/DeFi",
+            "type": "エコシステム",
             "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 600,
-            "description": "AI powered Web3ソーシャル分析。Twitterでの暗号通貨関連投稿によるYapperポイント獲得。上位YapperへのKAITO追加配布が継続中。",
-            "tasks": ["KaitoアカウントをXと連携", "暗号通貨・DeFiに関するX投稿", "MindShareスコアの向上", "注目プロジェクトの早期言及"],
-            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/39624/small/kaito.jpg",
-            "url": "https://kaito.ai/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "grass-grass",
-            "name": "Grass",
-            "symbol": "GRASS",
-            "category": "AI/DePIN",
-            "type": "DePIN報酬",
-            "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 400,
-            "description": "未使用帯域幅を提供してAIトレーニングデータ収集に貢献。ブラウザ拡張機能をインストールするだけでGRASSポイントが自動獲得可能。",
-            "tasks": ["Grass拡張機能をブラウザにインストール", "ブラウザを起動したままにする (自動)", "デスクトップアプリ利用で効率UP", "紹介プログラム参加"],
-            "end_date": (today + timedelta(days=90)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/41751/small/grass.png",
-            "url": "https://getgrass.io/",
+            "difficulty": "medium",
+            "estimated_value_usd": 1000,
+            "description": "Andre Crojneが開発した高速EVM。旧Fantomから進化。Sトークンのステーキング・DeFi利用でエコシステム各プロジェクトのポイント獲得。",
+            "tasks": ["SonicブリッジでETH/USDCをブリッジ", "Beets.fi/SonicSwap利用", "Sonicエコシステムのyield farming", "Sonic Points獲得・ランキング上位維持"],
+            "end_date": (today + timedelta(days=75)).strftime("%Y-%m-%d"),
+            "logo": "https://assets.coingecko.com/coins/images/40143/small/sonic.png",
+            "url": "https://soniclabs.com/",
             "is_hot": False,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
-        # ===== インフラ / 新L2 =====
         {
             "id": "story-protocol-ip",
             "name": "Story Protocol",
@@ -295,7 +229,7 @@ def _build_seed_airdrops() -> list[dict]:
             "status": "active",
             "difficulty": "easy",
             "estimated_value_usd": 400,
-            "description": "Consensys開発のZK-Rollup L2。LXP(Linea Points)蓄積でエアドロップ権利を獲得。エコシステム内の多数のDeFiプロジェクトが独自エアドロップを計画。",
+            "description": "Consensys開発のZK-Rollup L2。LXP蓄積でエアドロップ権利を獲得。エコシステム内の多数のDeFiプロジェクトが独自エアドロップを計画。",
             "tasks": ["LineaへETHブリッジ", "Nile/Lynex/Velocore等のDEX利用", "LXP-L (流動性ポイント) 獲得", "週次Surge報酬プログラム参加"],
             "end_date": (today + timedelta(days=80)).strftime("%Y-%m-%d"),
             "logo": "https://assets.coingecko.com/coins/images/33458/small/linea.png",
@@ -304,7 +238,6 @@ def _build_seed_airdrops() -> list[dict]:
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
-        # ===== Solana エコシステム =====
         {
             "id": "kamino-kmno",
             "name": "Kamino Finance",
@@ -341,63 +274,69 @@ def _build_seed_airdrops() -> list[dict]:
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
-        # ===== Bitcoin エコシステム =====
-        {
-            "id": "babylon-btc",
-            "name": "Babylon Chain",
-            "symbol": "BABY",
-            "category": "Bitcoin/インフラ",
-            "type": "BTCステーキング",
-            "status": "active",
-            "difficulty": "medium",
-            "estimated_value_usd": 1000,
-            "description": "BitcoinをPoSセキュリティに活用するプロトコル。BTCネイティブステーキングで報酬獲得。大型VCバック、エコシステム参加者へのエアドロップが期待される。",
-            "tasks": ["BitcoinをBabylonにステーキング", "Phase-2スタッキングへの参加", "Babylon上のBSNプロジェクト利用", "早期ステーカーTier確保"],
-            "end_date": (today + timedelta(days=150)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/40773/small/babylon.png",
-            "url": "https://babylonchain.io/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
     ]
 
 
-def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
-    """
-    全ソースからエアドロップデータを収集し、変更点リストと共に返す。
-    Returns: (airdrops_list, new_items_names)
-    """
-    curated = _build_seed_airdrops()
-    scraped = _scrape_airdrops_io()
+def main():
+    os.makedirs(DATA_DIR, exist_ok=True)
 
-    seen_names = {a["name"].lower() for a in curated}
-    new_items = []
+    trending = []
+    try:
+        import requests
+        r = requests.get(
+            "https://api.coingecko.com/api/v3/search/trending",
+            headers={"accept": "application/json"},
+            timeout=10,
+        )
+        if r.ok:
+            coins = r.json().get("coins", [])
+            trending = [
+                {
+                    "name": c["item"]["name"],
+                    "symbol": c["item"]["symbol"].upper(),
+                    "rank": c["item"].get("market_cap_rank"),
+                    "score": c["item"].get("score", 0),
+                }
+                for c in coins[:5]
+            ]
+            print(f"CoinGecko トレンド取得: {[t['name'] for t in trending]}")
+    except Exception as e:
+        print(f"CoinGecko取得失敗 (スキップ): {e}")
 
-    for s in scraped:
-        if s["name"].lower() not in seen_names:
-            curated.append({
-                "id": s["name"].lower().replace(" ", "-"),
-                "name": s["name"],
-                "symbol": "",
-                "category": "その他",
-                "type": "エアドロップ",
-                "status": "active",
-                "difficulty": "easy",
-                "estimated_value_usd": 0,
-                "description": f"airdrops.ioより取得: {s.get('estimated_value', '')}",
-                "tasks": [],
-                "end_date": s.get("end_date", "未定"),
-                "logo": s.get("logo", ""),
-                "url": s.get("url", ""),
-                "is_hot": False,
-                "added_date": datetime.utcnow().strftime("%Y-%m-%d"),
-                "source": "airdrops.io",
-            })
-            new_items.append(s["name"])
-            seen_names.add(s["name"].lower())
+    airdrops = build_airdrops()
+    airdrops.sort(key=lambda x: (not x.get("is_hot"), -x.get("estimated_value_usd", 0)))
 
-    # 注目度でソート: is_hot → estimated_value_usd
-    curated.sort(key=lambda x: (not x.get("is_hot"), -x.get("estimated_value_usd", 0)))
+    with open(AIRDROPS_FILE, "w", encoding="utf-8") as f:
+        json.dump(airdrops, f, ensure_ascii=False, indent=2)
 
-    return curated, new_items
+    now = datetime.now(timezone.utc)
+    from datetime import timedelta as td
+    jst = now + td(hours=9)
+
+    hot_count = sum(1 for a in airdrops if a.get("is_hot"))
+    summary = {
+        "timestamp": now.isoformat(),
+        "date": now.strftime("%Y-%m-%d"),
+        "time_jst": jst.strftime("%Y年%m月%d日 %H:%M"),
+        "total_airdrops": len(airdrops),
+        "added_count": len(airdrops),
+        "removed_count": 0,
+        "changed_count": 0,
+        "hot_count": hot_count,
+        "added_names": [a["name"] for a in airdrops if a.get("is_hot")],
+        "removed_names": [],
+        "changes": [],
+        "trending_coins": [t["name"] for t in trending],
+        "email_sent": False,
+    }
+
+    with open(UPDATES_FILE, "w", encoding="utf-8") as f:
+        json.dump([summary], f, ensure_ascii=False, indent=2)
+
+    print(f"✅ データ生成完了: {len(airdrops)}件 (ホット: {hot_count}件)")
+    print(f"   保存先: {AIRDROPS_FILE}")
+    print(f"   更新ログ: {UPDATES_FILE}")
+
+
+if __name__ == "__main__":
+    main()

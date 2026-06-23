@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-06-23T00:14:54.203226+00:00",
+    "date": "2026-06-23",
+    "time_jst": "2026年06月23日 09:14",
+    "total_airdrops": 15,
+    "added_count": 15,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 7,
+    "added_names": [
+      "Monad",
+      "Berachain エコシステム",
+      "MegaETH",
+      "Hyperliquid エコシステム",
+      "Babylon Chain",
+      "Abstract Chain",
+      "Kaito AI"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
