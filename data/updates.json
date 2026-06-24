@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "timestamp": "2026-06-24T00:00:00+00:00",
+    "date": "2026-06-24",
+    "time_jst": "2026年06月24日 09:00",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "MetaMask ($MASK)",
+      "Polymarket ($POLY)",
+      "GRVT ($GRVT)",
+      "Base (Coinbase L2)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [
+      "Polymarket",
+      "MetaMask",
+      "Hyperliquid",
+      "Kaito",
+      "Base"
+    ],
+    "email_sent": false,
+    "update_note": "2026年6月定期更新 — データをリフレッシュし最新注目案件に入れ替え。GRVT Season 2が6/30期限の緊急案件。MetaMask・Polymarket・Baseが今最も注目度の高いエアドロップ候補。"
+  }
+]
