@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🪂 Crypto Airdrop Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f0f1a; --bg2: #16213e; --bg3: #1a1a2e;
+      --card: #1e2240; --card2: #252b4a; --border: #2e3460;
+      --text: #e8eaf6; --text2: #9fa8da;
+      --accent: #7c4dff; --accent2: #651fff;
+      --hot: #ff4757; --hot2: #ff6b81;
+      --green: #2ed573; --yellow: #ffa502; --orange: #ff6348; --blue: #1e90ff;
+      --radius: 12px; --shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    body { font-family: 'Segoe UI','Hiragino Sans','Meiryo',sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent2); }
+
+    /* Banner */
+    .update-banner { background: linear-gradient(135deg,#0d2137,#1a1a2e); border-bottom: 2px solid var(--accent); padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(124,77,255,0.3); display: flex; align-items: flex-start; gap: 12px; }
+    .update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .update-meta { display: flex; align-items: center; gap: 12px; }
+    .update-badge { background: var(--accent); color: white; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: .5px; animation: pulse-badge 2s infinite; }
+    @keyframes pulse-badge { 0%,100%{box-shadow:0 0 0 0 rgba(124,77,255,.6)}50%{box-shadow:0 0 0 6px rgba(124,77,255,0)} }
+    .update-time { color: var(--text2); font-size: 13px; }
+    .update-stats { display: flex; flex-wrap: wrap; gap: 8px; }
+    .stat-chip { font-size: 13px; padding: 3px 12px; border-radius: 20px; font-weight: 600; }
+    .stat-total  { background: rgba(30,144,255,.15); border: 1px solid #1e90ff; color: #1e90ff; }
+    .stat-hot    { background: rgba(255,71,87,.15);  border: 1px solid var(--hot); color: var(--hot2); }
+    .stat-new    { background: rgba(46,213,115,.15); border: 1px solid var(--green); color: var(--green); }
+    .stat-changed{ background: rgba(255,165,2,.15);  border: 1px solid var(--yellow); color: var(--yellow); }
+    .update-new-items { font-size: 13px; color: var(--text2); }
+    .new-tag { display: inline-block; background: rgba(46,213,115,.15); border: 1px solid var(--green); color: var(--green); padding: 2px 8px; border-radius: 12px; font-size: 12px; margin: 2px 4px 2px 0; }
+    .update-trending { font-size: 12px; color: var(--text2); }
+    .banner-close { background: none; border: none; color: var(--text2); cursor: pointer; font-size: 16px; padding: 4px 8px; border-radius: 50%; transition: background .2s; flex-shrink: 0; }
+    .banner-close:hover { background: rgba(255,255,255,.1); }
+
+    /* Urgent */
+    .urgent-alert { background: linear-gradient(135deg,#dc2626,#991b1b); border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 700; color: white; display: flex; align-items: center; gap: 8px; }
+
+    /* Header */
+    .site-header { background: linear-gradient(135deg,var(--bg3),var(--bg2)); border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .header-brand h1 { font-size: 26px; font-weight: 800; background: linear-gradient(135deg,#fff,var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .header-sub { color: var(--text2); font-size: 13px; margin-top: 4px; }
+    .last-updated { background: var(--card); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 12px; color: var(--text2); }
+
+    /* Main */
+    main { padding: 28px 0 60px; }
+    .section-title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+    .count-badge { background: var(--accent); color: white; font-size: 12px; padding: 2px 10px; border-radius: 20px; }
+
+    /* Filter */
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 28px; }
+    .filter-group { display: flex; flex-direction: column; gap: 6px; }
+    .filter-group label { font-size: 11px; color: var(--text2); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .filter-buttons { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filter-btn { background: var(--bg2); border: 1px solid var(--border); color: var(--text2); padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; transition: all .2s; }
+    .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+    .filter-btn.diff-easy   { border-color: var(--green); }
+    .filter-btn.diff-medium { border-color: var(--orange); }
+    .filter-btn.diff-hard   { border-color: var(--hot); }
+    .search-group { flex: 1; min-width: 220px; }
+    #search-input { width: 100%; background: var(--bg2); border: 1px solid var(--border); color: var(--text); padding: 8px 14px; border-radius: 8px; font-size: 14px; outline: none; transition: border-color .2s; }
+    #search-input:focus { border-color: var(--accent); }
+    #search-input::placeholder { color: var(--text2); }
+
+    /* Hot Cards */
+    .hot-section { margin-bottom: 40px; }
+    .hot-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(380px,1fr)); gap: 20px; }
+    .hot-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .2s,box-shadow .2s; position: relative; }
+    .hot-card::before { content:''; position: absolute; top:0; left:0; right:0; height: 3px; background: linear-gradient(90deg,var(--hot),var(--accent)); }
+    .hot-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,.5); }
+    .hot-card-header { padding: 18px 18px 12px; display: flex; align-items: center; gap: 12px; }
+    .airdrop-logo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; background: var(--bg2); flex-shrink: 0; }
+    .hot-card-name { font-size: 17px; font-weight: 700; }
+    .category-tag { font-size: 11px; background: rgba(124,77,255,.2); color: var(--accent); padding: 2px 8px; border-radius: 12px; font-weight: 600; }
+    .hot-badge { margin-left: auto; background: linear-gradient(135deg,var(--hot),var(--accent)); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; flex-shrink: 0; }
+    .urgent-badge { margin-left: auto; background: linear-gradient(135deg,#dc2626,#b91c1c); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; flex-shrink: 0; animation: pulse-urgent 1s infinite; }
+    @keyframes pulse-urgent { 0%,100%{opacity:1}50%{opacity:.7} }
+    .hot-card-body { padding: 0 18px 14px; }
+    .airdrop-desc { color: var(--text2); font-size: 13px; margin-bottom: 14px; line-height: 1.5; }
+    .value-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
+    .value-block { display: flex; flex-direction: column; gap: 3px; }
+    .value-label { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; }
+    .value-amount { font-size: 18px; font-weight: 800; color: var(--green); }
+    .end-date { font-size: 14px; font-weight: 600; color: var(--text); }
+    .end-date.urgent { color: var(--hot); }
+    .tasks-section { background: var(--bg2); border-radius: 8px; padding: 12px; }
+    .tasks-label { font-size: 12px; font-weight: 700; color: var(--text2); margin-bottom: 6px; }
+    .tasks-list { padding-left: 18px; }
+    .tasks-list li { font-size: 13px; color: var(--text2); margin-bottom: 4px; }
+    .hot-card-footer { padding: 12px 18px; background: var(--card2); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+
+    /* Badges */
+    .status-badge { font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+    .status-active   { background: rgba(46,213,115,.15); color: var(--green);  border: 1px solid var(--green); }
+    .status-upcoming { background: rgba(255,165,2,.15);  color: var(--yellow); border: 1px solid var(--yellow); }
+    .status-ended    { background: rgba(150,150,150,.15);color: #888;           border: 1px solid #555; }
+    .difficulty-badge { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: .5px; }
+    .difficulty-easy   { background: rgba(46,213,115,.15);  color: var(--green);  border: 1px solid var(--green); }
+    .difficulty-medium { background: rgba(255,99,72,.15);   color: var(--orange); border: 1px solid var(--orange); }
+    .difficulty-hard   { background: rgba(255,71,87,.15);   color: var(--hot);    border: 1px solid var(--hot); }
+
+    /* Buttons */
+    .btn-participate { background: linear-gradient(135deg,var(--accent),var(--accent2)); color: white !important; padding: 8px 20px; border-radius: 8px; font-size: 14px; font-weight: 700; transition: all .2s; -webkit-text-fill-color: unset; }
+    .btn-participate:hover { opacity: .85; transform: translateX(2px); }
+    .btn-sm { background: var(--accent); color: white !important; padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; transition: opacity .2s; -webkit-text-fill-color: unset; white-space: nowrap; }
+    .btn-sm:hover { opacity: .8; }
+
+    /* Table */
+    .all-section { margin-bottom: 40px; }
+    .airdrop-table-wrapper { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .airdrop-table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 14px; }
+    .airdrop-table thead tr { background: var(--bg3); border-bottom: 2px solid var(--border); }
+    .airdrop-table th { padding: 13px 14px; text-align: left; color: var(--text2); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; cursor: pointer; user-select: none; white-space: nowrap; }
+    .airdrop-table th:hover { color: var(--accent); }
+    .airdrop-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .airdrop-row { transition: background .15s; }
+    .airdrop-row:hover { background: var(--card2); }
+    .airdrop-row.row-hot { border-left: 3px solid var(--hot); }
+    .airdrop-row.hidden { display: none; }
+    .airdrop-row:last-child td { border-bottom: none; }
+    .name-cell { display: flex; align-items: center; gap: 10px; }
+    .table-logo { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .symbol-tag { display: inline-block; background: var(--bg2); color: var(--text2); font-size: 11px; padding: 1px 6px; border-radius: 4px; margin-left: 4px; }
+    .mini-hot { font-size: 12px; }
+    .category-chip { background: rgba(124,77,255,.12); color: var(--accent); border: 1px solid rgba(124,77,255,.3); padding: 3px 10px; border-radius: 20px; font-size: 12px; white-space: nowrap; }
+    .value-cell { font-weight: 700; }
+    .value-text { color: var(--green); }
+    .value-unknown { color: var(--text2); }
+    .date-cell { color: var(--text2); font-size: 13px; white-space: nowrap; }
+    .date-urgent { color: var(--hot) !important; font-weight: 700; }
+
+    /* History */
+    .history-section { margin-bottom: 40px; }
+    .history-list { display: flex; flex-direction: column; gap: 8px; }
+    .history-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .history-date { font-size: 13px; color: var(--text2); min-width: 160px; }
+    .history-details { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 13px; }
+    .h-new     { color: var(--green);  font-weight: 700; }
+    .h-changed { color: var(--yellow); font-weight: 700; }
+    .h-names   { color: var(--text2); }
+
+    /* Footer */
+    .site-footer { background: var(--bg3); border-top: 1px solid var(--border); padding: 24px 0; text-align: center; color: var(--text2); font-size: 13px; }
+    .footer-disclaimer { margin-top: 6px; font-size: 11px; opacity: .6; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hot-grid { grid-template-columns: 1fr; }
+      .filter-bar { flex-direction: column; }
+      .site-header .container { flex-direction: column; align-items: flex-start; }
+      .history-item { flex-direction: column; gap: 8px; }
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+  </style>
+</head>
+<body>
+
+<!-- Update Banner (rendered by JS) -->
+<div id="update-banner" class="update-banner" style="display:none">
+  <div class="update-banner-inner">
+    <div class="update-meta">
+      <span class="update-badge">🔄 最新更新</span>
+      <span class="update-time" id="banner-time"></span>
+    </div>
+    <div id="urgent-row" style="display:none">
+      <div class="urgent-alert">🚨 <span id="urgent-text"></span></div>
+    </div>
+    <div class="update-stats" id="banner-stats"></div>
+    <div class="update-new-items" id="banner-new"></div>
+    <div class="update-trending" id="banner-trending"></div>
+  </div>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-brand">
+      <h1>🪂 Crypto Airdrop Tracker</h1>
+      <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日自動更新</p>
+    </div>
+    <div class="header-info">
+      <span class="last-updated" id="last-updated-label">読み込み中...</span>
+    </div>
+  </div>
+</header>
+
+<!-- Main -->
+<main class="container">
+
+  <!-- Filter -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label>ステータス</label>
+      <div class="filter-buttons" id="status-filter">
+        <button class="filter-btn active" onclick="filterAirdrops('status','all',this)">すべて</button>
+        <button class="filter-btn" onclick="filterAirdrops('status','active',this)">アクティブ</button>
+        <button class="filter-btn" onclick="filterAirdrops('status','upcoming',this)">近日開始</button>
+      </div>
+    </div>
+    <div class="filter-group">
+      <label>難易度</label>
+      <div class="filter-buttons" id="difficulty-filter">
+        <button class="filter-btn active" onclick="filterAirdrops('difficulty','all',this)">すべて</button>
+        <button class="filter-btn diff-easy"   onclick="filterAirdrops('difficulty','easy',this)">EASY</button>
+        <button class="filter-btn diff-medium" onclick="filterAirdrops('difficulty','medium',this)">MEDIUM</button>
+        <button class="filter-btn diff-hard"   onclick="filterAirdrops('difficulty','hard',this)">HARD</button>
+      </div>
+    </div>
+    <div class="filter-group">
+      <label>表示</label>
+      <div class="filter-buttons">
+        <button class="filter-btn" onclick="filterHotOnly(this)">🔥 ホットのみ</button>
+      </div>
+    </div>
+    <div class="filter-group search-group">
+      <input type="text" id="search-input" placeholder="🔍 プロジェクト名で検索..." oninput="searchAirdrops(this.value)">
+    </div>
+  </div>
+
+  <!-- Hot Cards -->
+  <section class="hot-section">
+    <h2 class="section-title">🔥 今狙うべき注目エアドロップ</h2>
+    <div class="hot-grid" id="hot-grid"></div>
+  </section>
+
+  <!-- All Table -->
+  <section class="all-section">
+    <h2 class="section-title">📋 全エアドロップ一覧 <span id="visible-count" class="count-badge">-</span>件</h2>
+    <div class="airdrop-table-wrapper">
+      <table class="airdrop-table" id="airdrop-table">
+        <thead>
+          <tr>
+            <th onclick="sortTable('name')">プロジェクト ↕</th>
+            <th onclick="sortTable('category')">カテゴリ ↕</th>
+            <th>タイプ</th>
+            <th onclick="sortTable('value')">推定価値 ↕</th>
+            <th onclick="sortTable('difficulty')">難易度 ↕</th>
+            <th onclick="sortTable('status')">ステータス ↕</th>
+            <th onclick="sortTable('end_date')">期限 ↕</th>
+            <th>リンク</th>
+          </tr>
+        </thead>
+        <tbody id="airdrop-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- History -->
+  <section class="history-section">
+    <h2 class="section-title">📅 更新履歴</h2>
+    <div class="history-list" id="history-list"></div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p>🪂 Crypto Airdrop Tracker — 毎日 09:00 JST 自動更新</p>
+    <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
+  </div>
+</footer>
+
+<script>
+const AIRDROPS = [{"id":"metamask-mask","name":"MetaMask ($MASK)","symbol":"MASK","category":"ウォレット","type":"リワードポイント","status":"active","difficulty":"easy","estimated_value_usd":2000,"description":"1.4億人以上が使うWeb3ウォレット。MetaMask Rewardsポイントが$MASKトークンに転換予定。Q3-Q4 2026にTGE見込み。スワップ・ブリッジ・マルチチェーン活動でポイント獲得。","tasks":["MetaMask モバイルアプリでRewardsを有効化","MetaMask内でトークンスワップを実施","MetaMask Bridgeで複数チェーン間ブリッジ","5チェーン以上(ETH・Base・Linea・Arbitrum・Polygonなど)で利用","MetaMask Card利用またはPerps取引で追加ポイント","MetaMask Portfolio Stakingへ参加"],"end_date":"2026-12-31","logo":"https://assets.coingecko.com/coins/images/11849/small/metamask.png","url":"https://portfolio.metamask.io/rewards","is_hot":true,"added_date":"2026-06-24","source":"curated"},{"id":"polymarket-poly","name":"Polymarket ($POLY)","symbol":"POLY","category":"予測市場","type":"レトロアクティブ","status":"active","difficulty":"easy","estimated_value_usd":3000,"description":"世界最大の暗号通貨予測市場。CMOが「トークンとエアドロップは必ずある」と公言。$9B評価額で総額$1.4B規模の配布も噂。2026年後半にTGE見込み。","tasks":["Polymarket.comでアカウント作成 (MetaMask等で接続)","USDC入金してPolygonで予測市場をトレード","政治・スポーツ・クリプトなど複数カテゴリに分散参加","X(Twitter)アカウントをPolymarketに連携","polymarket.com/rewardsで指値注文を出し流動性提供","複数ウォレットは不可・ウォッシュトレード禁止"],"end_date":"2026-12-31","logo":"https://assets.coingecko.com/coins/images/34977/small/polymarket.jpg","url":"https://polymarket.com/","is_hot":true,"added_date":"2026-06-24","source":"curated"},{"id":"grvt-token","name":"GRVT ($GRVT)","symbol":"GRVT","category":"DeFi/DEX","type":"Season 2","status":"active","difficulty":"medium","estimated_value_usd":1500,"description":"ZK AppChain上のプライバシー特化ハイブリッドDEX。コミュニティへ総供給量28%を配布予定。Season 2は2026年6月30日終了、Q3 2026にTGE予定。今すぐ参加が必要。","tasks":["grvt.ioでアカウント作成・KYC完了","取引量を増やしてポイント獲得","建玉(Open Interest)維持でポイント加算","流動性提供でポイント獲得","紹介プログラムへ参加","Season 2期限: 2026年6月30日"],"end_date":"2026-06-30","logo":"https://assets.coingecko.com/coins/images/40072/small/grvt.png","url":"https://grvt.io/","is_hot":true,"added_date":"2026-06-24","source":"curated"},{"id":"base-coinbase","name":"Base (Coinbase L2)","symbol":"BASE","category":"Layer2","type":"レトロアクティブ (未確認)","status":"active","difficulty":"easy","estimated_value_usd":1000,"description":"Coinbaseが開発するEthereum L2。JPモルガン試算で$12〜34Bの時価総額見込み。トークン未発行で最大ポテンシャルの未確認エアドロップ。今のうちにオンチェーン活動を積むべし。","tasks":["Base L2へETHをブリッジ","Uniswap/Aerodrome等でスワップ","BaseのNFTを購入・Mintに参加","BaseのDeFiプロトコル (Aave等) を利用","Coinbaseウォレットまたはbase.orgで活動","継続的なマルチウィーク活動を積む"],"end_date":"未定","logo":"https://assets.coingecko.com/coins/images/32394/small/base-network-logo.png","url":"https://base.org/","is_hot":true,"added_date":"2026-06-24","source":"curated"},{"id":"layerzero-zero-l1","name":"LayerZero Zero L1","symbol":"ZRO","category":"インフラ","type":"ZROホルダー特典","status":"upcoming","difficulty":"medium","estimated_value_usd":600,"description":"LayerZeroが2026年秋に独自L1ブロックチェーン「Zero」を立ち上げ予定。Tether・DTCC・ICE・Google Cloudが支援。ZROトークンがZeroのガストークンになる見込みでZRO保有者にとって追加の恩恵。","tasks":["ZROトークンを購入・保有","LayerZero公式サイトで最新情報チェック","ZeroチェーンのTGE情報に備える (2026年秋予定)","Stargate経由でブリッジを実施し既存エコシステムに参加"],"end_date":"2026-12-31","logo":"https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg","url":"https://layerzero.network/","is_hot":false,"added_date":"2026-06-24","source":"curated"},{"id":"kaito-ai","name":"Kaito AI ($KAITO)","symbol":"KAITO","category":"AI/InfoFi","type":"Studio / Yap","status":"active","difficulty":"medium","estimated_value_usd":400,"description":"AI×情報ファイナンスプロジェクト。TGE済み(2025年)で総供給の56.6%をコミュニティに配布。2026年2月にKaito Studioを立ち上げ、継続的なドロップキャンペーン実施中。","tasks":["Kaito.aiでアカウント作成","Kaito Studioのブランドキャンペーンに参加","クリプト関連コンテンツをXで発信しYapポイント獲得","Binance HODLerエアドロップ枠にも注目"],"end_date":"未定","logo":"https://assets.coingecko.com/coins/images/38424/small/kaito.jpg","url":"https://kaito.ai/","is_hot":false,"added_date":"2026-06-24","source":"curated"},{"id":"uniswap-v4","name":"Uniswap V4","symbol":"UNI","category":"DeFi/DEX","type":"流動性提供報酬","status":"active","difficulty":"medium","estimated_value_usd":800,"description":"Uniswap V4はカスタムフック機能を持つ次世代AMM。V4への移行初期にLP提供者・アクティブユーザーへの追加UNI配布が期待される。","tasks":["Uniswap V4でLP (流動性提供) を実施","Uniswap V4のスワップを定期的に行う","UNIトークンをガバナンス投票に使用","複数チェーン(ETH・Base・Arbitrum)で活動"],"end_date":"未定","logo":"https://assets.coingecko.com/coins/images/12504/small/uniswap-uni.png","url":"https://uniswap.org/","is_hot":false,"added_date":"2026-06-24","source":"curated"},{"id":"hyperliquid-hype","name":"Hyperliquid (HYPE)","symbol":"HYPE","category":"DeFi/DEX","type":"継続エコシステム","status":"active","difficulty":"medium","estimated_value_usd":500,"description":"高速オンチェーン永久先物DEX。2024年12月にTGE済み。HYPEトークンが独自L1のネイティブガストークン。継続的な取引でポイント(Points)獲得&将来の追加配布に備える。","tasks":["Hyperliquid上での先物・スポット取引","HyperEVM上のDeFiプロトコル利用","流動性提供 (HLP Vault)","HYPEトークンのステーキング"],"end_date":"未定","logo":"https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg","url":"https://hyperliquid.xyz/","is_hot":false,"added_date":"2026-06-24","source":"curated"}];
+
+const UPDATES = [{"timestamp":"2026-06-24T00:00:00+00:00","date":"2026-06-24","time_jst":"2026年06月24日 09:00","total_airdrops":8,"added_count":8,"removed_count":0,"changed_count":0,"hot_count":3,"added_names":["MetaMask ($MASK)","Polymarket ($POLY)","GRVT ($GRVT)","Base (Coinbase L2)"],"removed_names":[],"changes":[],"trending_coins":["Polymarket","MetaMask","Hyperliquid","Kaito","Base"],"email_sent":false,"update_note":"2026年6月定期更新 — データをリフレッシュし最新注目案件に入れ替え。GRVT Season 2が6/30期限の緊急案件。MetaMask・Polymarket・Baseが今最も注目度の高いエアドロップ候補。"}];
+
+const TODAY = '2026-06-24';
+
+let activeFilters = { status: 'all', difficulty: 'all', hotOnly: false, search: '' };
+let sortState = { col: null, dir: 1 };
+
+function isUrgent(endDate) {
+  if (!endDate || endDate === '未定') return false;
+  const diff = (new Date(endDate) - new Date(TODAY)) / 86400000;
+  return diff >= 0 && diff <= 7;
+}
+
+function diffLabel(s) {
+  return s === 'easy' ? 'EASY' : s === 'medium' ? 'MEDIUM' : s === 'hard' ? 'HARD' : s.toUpperCase();
+}
+
+function statusLabel(s) {
+  return s === 'active' ? '● アクティブ' : s === 'upcoming' ? '◎ 近日開始' : '✕ 終了';
+}
+
+function renderBanner() {
+  if (!UPDATES.length) return;
+  const u = UPDATES[0];
+  const banner = document.getElementById('update-banner');
+  document.getElementById('banner-time').textContent = u.time_jst;
+  const stats = document.getElementById('banner-stats');
+  stats.innerHTML =
+    `<span class="stat-chip stat-total">📋 計 <strong>${u.total_airdrops}</strong> 件</span>` +
+    `<span class="stat-chip stat-hot">🔥 ホット <strong>${u.hot_count}</strong> 件</span>` +
+    (u.added_count > 0 ? `<span class="stat-chip stat-new">🆕 新着 <strong>${u.added_count}</strong> 件</span>` : '') +
+    (u.changed_count > 0 ? `<span class="stat-chip stat-changed">✏️ 変更 <strong>${u.changed_count}</strong> 件</span>` : '');
+  if (u.added_names && u.added_names.length) {
+    document.getElementById('banner-new').innerHTML =
+      '<strong>新規追加:</strong> ' + u.added_names.map(n => `<span class="new-tag">${n}</span>`).join('');
+  }
+  if (u.trending_coins && u.trending_coins.length) {
+    document.getElementById('banner-trending').innerHTML =
+      '<strong>📈 トレンド:</strong> ' + u.trending_coins.join(' · ');
+  }
+  // urgent check
+  const urgent = AIRDROPS.filter(a => isUrgent(a.end_date));
+  if (urgent.length) {
+    const names = urgent.map(a => `${a.name} (${a.end_date}まで)`).join('、');
+    document.getElementById('urgent-text').textContent = `緊急: ${names} — 期限まで残りわずか！`;
+    document.getElementById('urgent-row').style.display = '';
+  }
+  banner.style.display = 'flex';
+}
+
+function renderHotCards() {
+  const hot = AIRDROPS.filter(a => a.is_hot);
+  const grid = document.getElementById('hot-grid');
+  grid.innerHTML = hot.map(a => {
+    const urgent = isUrgent(a.end_date);
+    const badge = urgent
+      ? `<span class="urgent-badge">🚨 緊急</span>`
+      : `<span class="hot-badge">🔥 HOT</span>`;
+    const endClass = urgent ? 'end-date urgent' : 'end-date';
+    return `
+    <div class="hot-card" data-status="${a.status}" data-difficulty="${a.difficulty}" data-hot="true" data-name="${a.name.toLowerCase()}">
+      <div class="hot-card-header">
+        <img src="${a.logo}" alt="${a.name}" class="airdrop-logo" onerror="this.style.display='none'">
+        <div>
+          <div class="hot-card-name">${a.name}</div>
+          <span class="category-tag">${a.category}</span>
+        </div>
+        ${badge}
+      </div>
+      <div class="hot-card-body">
+        <p class="airdrop-desc">${a.description}</p>
+        <div class="value-row">
+          <div class="value-block"><span class="value-label">推定価値</span><span class="value-amount">${a.estimated_value_usd ? '~$' + a.estimated_value_usd.toLocaleString() : '未定'}</span></div>
+          <div class="value-block"><span class="value-label">難易度</span><span class="difficulty-badge difficulty-${a.difficulty}">${diffLabel(a.difficulty)}</span></div>
+          <div class="value-block"><span class="value-label">期限</span><span class="${endClass}">${a.end_date}${urgent ? ' ⚠️' : ''}</span></div>
+        </div>
+        ${a.tasks.length ? `<div class="tasks-section"><p class="tasks-label">📋 参加方法</p><ul class="tasks-list">${a.tasks.map(t => `<li>${t}</li>`).join('')}</ul></div>` : ''}
+      </div>
+      <div class="hot-card-footer">
+        <span class="status-badge status-${a.status}">${statusLabel(a.status)}</span>
+        <a href="${a.url}" target="_blank" rel="noopener" class="btn-participate">参加する →</a>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderTable() {
+  const tbody = document.getElementById('airdrop-tbody');
+  tbody.innerHTML = AIRDROPS.map(a => {
+    const urgent = isUrgent(a.end_date);
+    const dateClass = urgent ? 'date-cell date-urgent' : 'date-cell';
+    return `<tr class="airdrop-row${a.is_hot ? ' row-hot' : ''}"
+      data-status="${a.status}" data-difficulty="${a.difficulty}" data-hot="${a.is_hot}" data-name="${a.name.toLowerCase()}" data-value="${a.estimated_value_usd || 0}" data-category="${a.category.toLowerCase()}"
+      title="${a.description}">
+      <td><div class="name-cell">
+        <img src="${a.logo}" alt="${a.name}" class="table-logo" onerror="this.style.display='none'">
+        <div><strong>${a.name}</strong>${a.symbol ? `<span class="symbol-tag">${a.symbol}</span>` : ''}${a.is_hot ? '<span class="mini-hot">🔥</span>' : ''}</div>
+      </div></td>
+      <td><span class="category-chip">${a.category}</span></td>
+      <td>${a.type}</td>
+      <td class="value-cell">${a.estimated_value_usd ? `<span class="value-text">~$${a.estimated_value_usd.toLocaleString()}</span>` : '<span class="value-unknown">未定</span>'}</td>
+      <td><span class="difficulty-badge difficulty-${a.difficulty}">${diffLabel(a.difficulty)}</span></td>
+      <td><span class="status-badge status-${a.status}">${statusLabel(a.status)}</span></td>
+      <td class="${dateClass}">${a.end_date}${urgent ? ' ⚠️' : ''}</td>
+      <td><a href="${a.url}" target="_blank" rel="noopener" class="btn-sm">参加</a></td>
+    </tr>`;
+  }).join('');
+  updateCount();
+}
+
+function renderHistory() {
+  const list = document.getElementById('history-list');
+  list.innerHTML = UPDATES.map(u => `
+    <div class="history-item">
+      <div class="history-date">${u.time_jst}</div>
+      <div class="history-details">
+        <span>計${u.total_airdrops}件</span>
+        ${u.added_count > 0 ? `<span class="h-new">+${u.added_count} 追加</span>` : ''}
+        ${u.changed_count > 0 ? `<span class="h-changed">${u.changed_count} 変更</span>` : ''}
+        ${u.added_names && u.added_names.length ? `<span class="h-names">${u.added_names.join(', ')}</span>` : ''}
+        ${u.update_note ? `<span style="color:var(--text2);font-size:12px">— ${u.update_note}</span>` : ''}
+      </div>
+    </div>`).join('');
+}
+
+function updateCount() {
+  const visible = document.querySelectorAll('#airdrop-tbody .airdrop-row:not(.hidden)').length;
+  document.getElementById('visible-count').textContent = visible;
+}
+
+function applyFilters() {
+  document.querySelectorAll('#airdrop-tbody .airdrop-row').forEach(row => {
+    const ok = (activeFilters.status === 'all' || row.dataset.status === activeFilters.status) &&
+                (activeFilters.difficulty === 'all' || row.dataset.difficulty === activeFilters.difficulty) &&
+                (!activeFilters.hotOnly || row.dataset.hot === 'true') &&
+                (!activeFilters.search || row.dataset.name.includes(activeFilters.search));
+    row.classList.toggle('hidden', !ok);
+  });
+  document.querySelectorAll('.hot-card').forEach(card => {
+    const ok = (activeFilters.status === 'all' || card.dataset.status === activeFilters.status) &&
+                (activeFilters.difficulty === 'all' || card.dataset.difficulty === activeFilters.difficulty) &&
+                (!activeFilters.search || card.dataset.name.includes(activeFilters.search));
+    card.style.display = ok ? '' : 'none';
+  });
+  updateCount();
+}
+
+function filterAirdrops(type, value, btn) {
+  activeFilters[type] = value;
+  btn.closest('.filter-buttons').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function filterHotOnly(btn) {
+  activeFilters.hotOnly = !activeFilters.hotOnly;
+  btn.classList.toggle('active', activeFilters.hotOnly);
+  applyFilters();
+}
+
+function searchAirdrops(value) {
+  activeFilters.search = value.trim().toLowerCase();
+  applyFilters();
+}
+
+function sortTable(col) {
+  sortState.dir = sortState.col === col ? sortState.dir * -1 : 1;
+  sortState.col = col;
+  const tbody = document.getElementById('airdrop-tbody');
+  const rows = Array.from(tbody.querySelectorAll('.airdrop-row'));
+  rows.sort((a, b) => {
+    if (col === 'value') return (parseFloat(a.dataset.value) - parseFloat(b.dataset.value)) * sortState.dir;
+    const av = a.dataset[col] || '';
+    const bv = b.dataset[col] || '';
+    return av.localeCompare(bv, 'ja') * sortState.dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const now = new Date();
+  const jst = new Date(now.getTime() + 9*3600000);
+  document.getElementById('last-updated-label').textContent =
+    '最終更新: ' + jst.toLocaleDateString('ja-JP', {year:'numeric',month:'long',day:'numeric'});
+  renderBanner();
+  renderHotCards();
+  renderTable();
+  renderHistory();
+});
+</script>
+</body>
+</html>
