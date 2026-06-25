@@ -79,6 +79,18 @@ def run_daily_update(force_email: bool = False) -> dict:
     # データ保存
     _save_json(AIRDROPS_FILE, new_airdrops)
 
+    # 注目ハイライトメッセージ生成
+    hot_new = [a for a in diff["added"] if a.get("is_hot")]
+    top_value = max((a.get("estimated_value_usd", 0) for a in new_airdrops), default=0)
+    top_airdrop = next((a for a in new_airdrops if a.get("estimated_value_usd") == top_value), None)
+    if hot_new:
+        names = " / ".join(a["name"] for a in hot_new[:2])
+        highlight = f"🚨 注目新案件: {names} が登場！今すぐ参加を検討してください"
+    elif top_airdrop and top_value >= 1000:
+        highlight = f"💰 最高推定価値: {top_airdrop['name']} (~${top_value:,}) が引き続きホット案件トップ"
+    else:
+        highlight = ""
+
     # 更新ログ
     summary = {
         "timestamp": now.isoformat(),
@@ -93,6 +105,7 @@ def run_daily_update(force_email: bool = False) -> dict:
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
+        "highlight": highlight,
         "email_sent": False,
     }
 

@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "timestamp": "2026-06-25T08:00:00+09:00",
+    "date": "2026-06-25",
+    "time_jst": "2026年06月25日 08:00",
+    "total_airdrops": 9,
+    "added_count": 4,
+    "removed_count": 0,
+    "changed_count": 3,
+    "hot_count": 5,
+    "added_names": ["MetaMask (MASK)", "Base Token", "Polymarket (POLY)", "Kraken Ink (INK)"],
+    "removed_names": [],
+    "changes": [
+      {"name": "Hyperliquid (HYPE)", "changes": ["シーズン2に更新"]},
+      {"name": "LayerZero (ZRO)", "changes": ["継続インセンティブ確認"]},
+      {"name": "Movement (MOVE)", "changes": ["ステータス: upcoming → active"]}
+    ],
+    "trending_coins": ["MetaMask", "Polymarket", "Base", "Ink", "Hyperliquid"],
+    "email_sent": false,
+    "highlight": "🚨 注目: MetaMask MASKトークン (推定$2,000)・Base Token (推定$5,000) が2026年最大のエアドロップ候補として浮上"
+  }
+]

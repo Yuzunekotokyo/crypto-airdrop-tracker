@@ -53,6 +53,11 @@
       {{ latest_update.trending_coins | join(' · ') }}
     </div>
     {% endif %}
+    {% if latest_update.highlight %}
+    <div class="update-highlight">
+      {{ latest_update.highlight }}
+    </div>
+    {% endif %}
   </div>
   <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
 </div>
