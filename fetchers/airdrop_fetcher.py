@@ -1,13 +1,17 @@
 """
 Airdrop情報をWeb/APIから収集するモジュール。
 現在はairdrops.ioのパブリックページとCoinGeckoトレンドを組み合わせて使用。
+Claude日次Web検索により発見された案件は data/discovered_airdrops.json から読み込む。
 """
 
+import json
+import os
 import requests
 import logging
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 from fetchers.coingecko import get_trending_coins, get_new_coins
+from config import DATA_DIR
 
 logger = logging.getLogger(__name__)
 
@@ -167,6 +171,20 @@ def _build_seed_airdrops() -> list[dict]:
     ]
 
 
+def _load_discovered_airdrops() -> list[dict]:
+    """Claude日次Web検索によって発見・更新されたエアドロップを読み込む"""
+    discovered_file = os.path.join(DATA_DIR, "discovered_airdrops.json")
+    if os.path.exists(discovered_file):
+        try:
+            with open(discovered_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            logger.info(f"discovered_airdrops.json から {len(data)} 件読み込み")
+            return data
+        except Exception as e:
+            logger.warning(f"discovered_airdrops.json 読み込み失敗: {e}")
+    return []
+
+
 def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     """
     全ソースからエアドロップデータを収集し、変更点リストと共に返す。
@@ -174,6 +192,15 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     """
     curated = _build_seed_airdrops()
     scraped = _scrape_airdrops_io()
+    discovered = _load_discovered_airdrops()
+
+    # 発見済み案件をシードデータとマージ (重複排除・更新)
+    curated_ids = {a["id"]: i for i, a in enumerate(curated)}
+    for d in discovered:
+        if d["id"] in curated_ids:
+            curated[curated_ids[d["id"]]] = d  # 既存エントリを上書き更新
+        else:
+            curated.append(d)
 
     seen_names = {a["name"].lower() for a in curated}
     new_items = []

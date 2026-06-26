@@ -57,7 +57,7 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
     return {"added": added, "removed": removed, "changed": changed}
 
 
-def run_daily_update(force_email: bool = False) -> dict:
+def run_daily_update(force_email: bool = False, web_search_used: bool = False) -> dict:
     """メイン更新処理。戻り値: 更新サマリーdict"""
     now = datetime.now(timezone.utc)
     logger.info(f"=== 日次更新開始 {now.isoformat()} ===")
@@ -93,6 +93,8 @@ def run_daily_update(force_email: bool = False) -> dict:
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
+        "top_hot_names": [a["name"] for a in new_airdrops if a.get("is_hot")][:5],
+        "web_search_used": web_search_used,
         "email_sent": False,
     }
 

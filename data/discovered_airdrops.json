@@ -1,0 +1,74 @@
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 900,
+    "description": "オンチェーン予測市場の最大手。CMOがトークンとエアドロップを公式確認。USDC/Polygonで予測取引をするだけで参加可能。2026年後半TGE予定。",
+    "tasks": [
+      "Polymarketでアカウント作成 (polygon上のウォレット接続)",
+      "X(Twitter)アカウントをSettings→Connected Accountsで連携",
+      "複数カテゴリで継続的に予測取引 ($100〜$200程度)",
+      "Rewardsプログラムに参加して毎日USDCを獲得",
+      "複数ウォレットは禁止 (検出・除外対象)"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "https://assets.coingecko.com/coins/images/28291/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-06-26",
+    "source": "web_search"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "Rewardsポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 1200,
+    "description": "世界最大のウォレット (3000万MAU以上)。$MASKトークン公式確認済み、Q3-Q4 2026 TGE予定。MetaMask RewardsSeason2がまもなく開始。JPMorganがIPOを検討中。",
+    "tasks": [
+      "MetaMaskでスワップ実行 (10ドルごと8ポイント)",
+      "MetaMask Cardで支出 (1ドルごと1ポイント)",
+      "予測市場で取引 (1ドルごと2ポイント)",
+      "友人紹介 (紹介先50ポイント獲得ごとに10ポイント)",
+      "Season 1からのポイントは自動引継ぎ"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "https://assets.coingecko.com/coins/images/279/small/ethereum.png",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-06-26",
+    "source": "web_search"
+  },
+  {
+    "id": "base-coinbase",
+    "name": "Base (Coinbase L2)",
+    "symbol": "BASE",
+    "category": "Layer2",
+    "type": "エコシステム参加",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 600,
+    "description": "CoinbaseのEthereum L2。トークン未発表だが2026年最大の潜在的エアドロップ候補。エコシステム急成長中でアクティブユーザーへの配布可能性が高い。",
+    "tasks": [
+      "Base上でETHブリッジ (Coinbase公式ブリッジ経由)",
+      "Base上のDeFiプロトコル利用 (Aerodrome, BaseSwap等)",
+      "NFTのmint (Friend.techや公式コレクション)",
+      "複数月にわたる継続的なオンチェーン活動",
+      "Coinbaseアカウントとウォレット連携"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "https://assets.coingecko.com/asset_platforms/images/131/small/base.jpeg",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-06-26",
+    "source": "web_search"
+  }
+]

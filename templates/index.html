@@ -8,6 +8,22 @@
 </head>
 <body>
 
+<!-- ===== HOT速報ティッカー ===== -->
+{% set hot_airdrops_top = airdrops | selectattr("is_hot") | list %}
+{% if hot_airdrops_top %}
+<div class="hot-ticker" id="hot-ticker">
+  <span class="hot-ticker-label">🔥 HOT速報</span>
+  <span class="hot-ticker-scroll" id="ticker-content">
+    {% for a in hot_airdrops_top %}
+    ★ {{ a.name }}{% if a.estimated_value_usd %} (~${{ "{:,}".format(a.estimated_value_usd) }}){% endif %} — {{ a.description[:40] }}...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% endfor %}
+    {% for a in hot_airdrops_top %}
+    ★ {{ a.name }}{% if a.estimated_value_usd %} (~${{ "{:,}".format(a.estimated_value_usd) }}){% endif %} — {{ a.description[:40] }}...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% endfor %}
+  </span>
+</div>
+{% endif %}
+
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
@@ -15,6 +31,9 @@
     <div class="update-meta">
       <span class="update-badge">🔄 最新更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
+      {% if latest_update.get('web_search_used') %}
+      <span class="update-source-label">🌐 Web検索済</span>
+      {% endif %}
     </div>
     <div class="update-stats">
       <span class="stat-chip stat-total">
@@ -48,9 +67,15 @@
     </div>
     {% endif %}
     {% if latest_update.trending_coins %}
-    <div class="update-trending">
-      <strong>📈 トレンド:</strong>
-      {{ latest_update.trending_coins | join(' · ') }}
+    <div class="update-summary-row">
+      <span>📈 <strong>CoinGecko トレンド:</strong></span>
+      <span>{{ latest_update.trending_coins | join(' · ') }}</span>
+    </div>
+    {% endif %}
+    {% if latest_update.get('top_hot_names') %}
+    <div class="update-summary-row">
+      <span>🔥 <strong>注目案件:</strong></span>
+      <span>{{ latest_update.top_hot_names | join(' · ') }}</span>
     </div>
     {% endif %}
   </div>

@@ -113,6 +113,85 @@ a:hover { color: var(--accent2); }
 }
 .banner-close:hover { background: rgba(255,255,255,0.1); }
 
+/* ===== Hot Ticker (速報) ===== */
+.hot-ticker {
+  background: linear-gradient(90deg, #7c0000, #c0392b, #7c0000);
+  background-size: 200% 100%;
+  animation: ticker-bg 4s linear infinite;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(255,100,100,0.4);
+}
+
+@keyframes ticker-bg {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.hot-ticker-label {
+  display: inline-block;
+  background: #ff4757;
+  color: #fff;
+  padding: 0 14px;
+  margin-right: 16px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  border-radius: 0 4px 4px 0;
+}
+
+.hot-ticker-scroll {
+  display: inline-block;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== 更新バナー強化 ===== */
+.update-banner {
+  background: linear-gradient(135deg, #0a1628, #111836, #0a1628);
+  border-bottom: 2px solid var(--accent);
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 30px rgba(124,77,255,0.4);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.update-source-label {
+  display: inline-block;
+  background: rgba(46,213,115,0.2);
+  border: 1px solid var(--green);
+  color: var(--green);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.update-summary-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  font-size: 13px;
+  color: var(--text2);
+}
+
 /* ===== Header ===== */
 .site-header {
   background: linear-gradient(135deg, var(--bg3), var(--bg2));

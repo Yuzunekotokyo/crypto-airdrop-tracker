@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "timestamp": "2026-06-26T00:03:00+00:00",
+    "date": "2026-06-26",
+    "time_jst": "2026年06月26日 09:03",
+    "total_airdrops": 9,
+    "added_count": 3,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": ["Polymarket (POLY)", "MetaMask (MASK)", "Base (Coinbase L2)"],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "top_hot_names": ["Polymarket (POLY)", "MetaMask (MASK)", "Hyperliquid (HYPE)", "Base (Coinbase L2)"],
+    "web_search_used": true,
+    "email_sent": false
+  }
+]
