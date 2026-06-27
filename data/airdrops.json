@@ -1,1 +1,222 @@
-[]
+[
+  {
+    "id": "hyperevm-hype",
+    "name": "Hyperliquid EVM (HyperEVM)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "エコシステム報酬",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 2000,
+    "description": "HyperliquidのEVMチェーン拡張。DeFiポジションと取引量に基づくポイント報酬。HYPEステーキングも対応。",
+    "tasks": [
+      "HyperEVM上でのDeFi活動",
+      "Hyperliquid永久先物取引",
+      "HYPEトークンのステーキング"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "monad-monad",
+    "name": "Monad (MONAD)",
+    "symbol": "MONAD",
+    "category": "Layer1",
+    "type": "テストネット/レトロ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 1500,
+    "description": "EVM互換の並列処理L1チェーン。10,000 TPS以上の高速処理。テストネット参加者への大型エアドロップが期待される。",
+    "tasks": [
+      "テストネットでのトランザクション",
+      "Monad公式Discord参加",
+      "テストネットDeFiプロトコル利用"
+    ],
+    "end_date": "2026-09-30",
+    "logo": "https://assets.coingecko.com/coins/images/35959/small/monad.jpg",
+    "url": "https://monad.xyz/",
+    "is_hot": true,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "megaeth-meth",
+    "name": "MegaETH",
+    "symbol": "METH",
+    "category": "Layer2",
+    "type": "テストネット/レトロ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 1200,
+    "description": "リアルタイムブロックチェーン。100,000 TPS目標の高性能EVM L2。メインネット前のテストネット参加でエアドロップ期待。",
+    "tasks": [
+      "テストネット参加",
+      "MegaETHコミュニティ参加",
+      "Discordでの活動"
+    ],
+    "end_date": "2026-10-31",
+    "logo": "https://assets.coingecko.com/coins/images/40086/small/megaeth.jpg",
+    "url": "https://megaeth.systems/",
+    "is_hot": true,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "babylon-baby",
+    "name": "Babylon (BABY)",
+    "symbol": "BABY",
+    "category": "Bitcoin Staking",
+    "type": "ステーキング報酬",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "BitcoinをセキュリティソースとしてPoSチェーンを保護するプロトコル。BTCネイティブステーキングで報酬獲得。",
+    "tasks": [
+      "BTCをBabylonでステーキング",
+      "フェーズ2参加",
+      "Babylon Points蓄積"
+    ],
+    "end_date": "2026-08-31",
+    "logo": "https://assets.coingecko.com/coins/images/37724/small/babylon_logo.png",
+    "url": "https://babylonlabs.io/",
+    "is_hot": true,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "berachain-bera",
+    "name": "Berachain (BERA)",
+    "symbol": "BERA",
+    "category": "Layer1",
+    "type": "流動性マイニング",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 700,
+    "description": "Proof of Liquidity(PoL)コンセンサスのEVM L1。流動性提供者がブロック報酬を獲得。BGTトークンの配布継続中。",
+    "tasks": [
+      "BEX(DEX)で流動性提供",
+      "BGTトークンを獲得・デリゲート",
+      "Berachain DeFiエコシステム参加"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "https://assets.coingecko.com/coins/images/35455/small/bera.png",
+    "url": "https://berachain.com/",
+    "is_hot": true,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "initia-init",
+    "name": "Initia (INIT)",
+    "symbol": "INIT",
+    "category": "Layer1",
+    "type": "エコシステム報酬",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 600,
+    "description": "モジュラーL1+L2アーキテクチャ。Move/Wasm/EVM全対応。エコシステム参加者へのINIT配布を継続中。",
+    "tasks": [
+      "Initia上でのDeFi利用",
+      "Validium L2への参加",
+      "Initia Points獲得"
+    ],
+    "end_date": "2026-07-31",
+    "logo": "https://assets.coingecko.com/coins/images/37671/small/initia.jpg",
+    "url": "https://initia.xyz/",
+    "is_hot": true,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "story-ip",
+    "name": "Story Protocol (IP)",
+    "symbol": "IP",
+    "category": "インフラ/IP",
+    "type": "エコシステム報酬",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "知的財産(IP)管理に特化したブロックチェーン。AI生成コンテンツのIPライセンス管理で注目を集める。",
+    "tasks": [
+      "IPAssetの登録",
+      "Story Protocol上でのライセンス",
+      "コミュニティ参加"
+    ],
+    "end_date": "2026-09-30",
+    "logo": "https://assets.coingecko.com/coins/images/39338/small/story-protocol.jpg",
+    "url": "https://story.foundation/",
+    "is_hot": false,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "plume-plume",
+    "name": "Plume Network (PLUME)",
+    "symbol": "PLUME",
+    "category": "RWA/Layer2",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 400,
+    "description": "RWA(現実世界資産)特化のEVM L2。不動産・クレジット・コモディティのトークン化に特化。エアドロップ実施中。",
+    "tasks": [
+      "Plume上でRWA購入",
+      "PLUMEステーキング",
+      "ガバナンス参加"
+    ],
+    "end_date": "2026-08-31",
+    "logo": "https://assets.coingecko.com/coins/images/40203/small/plume.jpg",
+    "url": "https://plumenetwork.xyz/",
+    "is_hot": false,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "corn-btcn",
+    "name": "Corn Network (BTCN)",
+    "symbol": "BTCN",
+    "category": "Bitcoin Yield",
+    "type": "流動性マイニング",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 350,
+    "description": "BitcoinをネイティブガストークンとするL2。BTCBでイールドを獲得しながらエアドロップポイントを蓄積。",
+    "tasks": [
+      "BTCBをデポジット",
+      "Corn上でのDeFi利用",
+      "Kernelポイント蓄積"
+    ],
+    "end_date": "2026-07-31",
+    "logo": "https://assets.coingecko.com/coins/images/40987/small/corn.jpg",
+    "url": "https://usecorn.com/",
+    "is_hot": false,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  },
+  {
+    "id": "sonic-s",
+    "name": "Sonic (S)",
+    "symbol": "S",
+    "category": "Layer1",
+    "type": "エコシステム報酬",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "Fantomから進化した高速L1。10,000 TPS・1秒以下ファイナリティ。Sonic Gemsプログラムで報酬獲得中。",
+    "tasks": [
+      "Sonic上でのDeFi利用",
+      "SpookySwap等のDEX利用",
+      "Sonic Gems獲得"
+    ],
+    "end_date": "2026-06-30",
+    "logo": "https://assets.coingecko.com/coins/images/38004/small/sonic-s.jpg",
+    "url": "https://www.soniclabs.com/",
+    "is_hot": false,
+    "added_date": "2026-01-01",
+    "source": "curated"
+  }
+]

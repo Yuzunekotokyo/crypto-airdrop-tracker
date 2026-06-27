@@ -1,11 +1,10 @@
 """
 Airdrop情報をWeb/APIから収集するモジュール。
-現在はairdrops.ioのパブリックページとCoinGeckoトレンドを組み合わせて使用。
 """
 
 import requests
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 from bs4 import BeautifulSoup
 from fetchers.coingecko import get_trending_coins, get_new_coins
 
@@ -53,118 +52,210 @@ def _scrape_airdrops_io() -> list[dict]:
 
 
 def _build_seed_airdrops() -> list[dict]:
-    """手動管理の注目エアドロップシードデータ (定期的に更新)"""
-    today = datetime.utcnow()
+    """注目エアドロップシードデータ (2026年版 — 固定日付で変更検知可能)"""
     return [
         {
-            "id": "layerzero-zro",
-            "name": "LayerZero (ZRO)",
-            "symbol": "ZRO",
-            "category": "インフラ",
-            "type": "レトロアクティブ",
+            "id": "monad-monad",
+            "name": "Monad (MONAD)",
+            "symbol": "MONAD",
+            "category": "Layer1",
+            "type": "テストネット/レトロ",
+            "status": "upcoming",
+            "difficulty": "easy",
+            "estimated_value_usd": 1500,
+            "description": "EVM互換の並列処理L1チェーン。10,000 TPS以上の高速処理。テストネット参加者への大型エアドロップが期待される。",
+            "tasks": ["テストネットでのトランザクション", "Monad公式Discord参加", "テストネットDeFiプロトコル利用"],
+            "end_date": "2026-09-30",
+            "logo": "https://assets.coingecko.com/coins/images/35959/small/monad.jpg",
+            "url": "https://monad.xyz/",
+            "is_hot": True,
+            "added_date": "2026-01-01",
+            "source": "curated",
+        },
+        {
+            "id": "babylon-baby",
+            "name": "Babylon (BABY)",
+            "symbol": "BABY",
+            "category": "Bitcoin Staking",
+            "type": "ステーキング報酬",
             "status": "active",
             "difficulty": "medium",
-            "estimated_value_usd": 500,
-            "description": "クロスチェーンメッセージングプロトコル。ブリッジ・DeFi利用者向けエアドロップ。",
-            "tasks": ["Stargate経由でブリッジを実行", "複数チェーンでのトランザクション", "LayerZero対応dApps利用"],
-            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
-            "url": "https://layerzero.network/",
+            "estimated_value_usd": 800,
+            "description": "BitcoinをセキュリティソースとしてPoSチェーンを保護するプロトコル。BTCネイティブステーキングで報酬獲得。",
+            "tasks": ["BTCをBabylonでステーキング", "フェーズ2参加", "Babylon Points蓄積"],
+            "end_date": "2026-08-31",
+            "logo": "https://assets.coingecko.com/coins/images/37724/small/babylon_logo.png",
+            "url": "https://babylonlabs.io/",
             "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
+            "added_date": "2026-01-01",
             "source": "curated",
         },
         {
-            "id": "scroll-scr",
-            "name": "Scroll (SCR)",
-            "symbol": "SCR",
+            "id": "megaeth-meth",
+            "name": "MegaETH",
+            "symbol": "METH",
             "category": "Layer2",
-            "type": "レトロアクティブ",
-            "status": "active",
+            "type": "テストネット/レトロ",
+            "status": "upcoming",
             "difficulty": "easy",
-            "estimated_value_usd": 300,
-            "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。",
-            "tasks": ["ScrollネットワークへETHブリッジ", "Scroll上でのDeFi利用", "複数週にわたるアクティビティ"],
-            "end_date": (today + timedelta(days=90)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
-            "url": "https://scroll.io/",
+            "estimated_value_usd": 1200,
+            "description": "リアルタイムブロックチェーン。100,000 TPS目標の高性能EVM L2。メインネット前のテストネット参加でエアドロップ期待。",
+            "tasks": ["テストネット参加", "MegaETHコミュニティ参加", "Discordでの活動"],
+            "end_date": "2026-10-31",
+            "logo": "https://assets.coingecko.com/coins/images/40086/small/megaeth.jpg",
+            "url": "https://megaeth.systems/",
             "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
+            "added_date": "2026-01-01",
             "source": "curated",
         },
         {
-            "id": "zksync-era",
-            "name": "zkSync Era",
-            "symbol": "ZK",
-            "category": "Layer2",
-            "type": "レトロアクティブ",
+            "id": "initia-init",
+            "name": "Initia (INIT)",
+            "symbol": "INIT",
+            "category": "Layer1",
+            "type": "エコシステム報酬",
             "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 200,
-            "description": "Matter Labsが開発するZK-Rollup。エコシステムが急拡大中。",
-            "tasks": ["Era上でのスワップ", "Syncswap/Mute利用", "zkSync公式ブリッジ利用"],
-            "end_date": (today + timedelta(days=45)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/38043/small/ZKTokenBlack.png",
-            "url": "https://zksync.io/",
-            "is_hot": False,
-            "added_date": today.strftime("%Y-%m-%d"),
+            "difficulty": "medium",
+            "estimated_value_usd": 600,
+            "description": "モジュラーL1+L2アーキテクチャ。Move/Wasm/EVM全対応。エコシステム参加者へのINIT配布を継続中。",
+            "tasks": ["Initia上でのDeFi利用", "Validium L2への参加", "Initia Points獲得"],
+            "end_date": "2026-07-31",
+            "logo": "https://assets.coingecko.com/coins/images/37671/small/initia.jpg",
+            "url": "https://initia.xyz/",
+            "is_hot": True,
+            "added_date": "2026-01-01",
             "source": "curated",
         },
         {
-            "id": "hyperliquid-hype",
-            "name": "Hyperliquid (HYPE)",
+            "id": "hyperevm-hype",
+            "name": "Hyperliquid EVM (HyperEVM)",
             "symbol": "HYPE",
             "category": "DeFi/DEX",
-            "type": "取引所トークン",
+            "type": "エコシステム報酬",
             "status": "active",
             "difficulty": "medium",
-            "estimated_value_usd": 1000,
-            "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。",
-            "tasks": ["Hyperliquid上での先物取引", "流動性提供", "紹介プログラム参加"],
-            "end_date": (today + timedelta(days=30)).strftime("%Y-%m-%d"),
+            "estimated_value_usd": 2000,
+            "description": "HyperliquidのEVMチェーン拡張。DeFiポジションと取引量に基づくポイント報酬。HYPEステーキングも対応。",
+            "tasks": ["HyperEVM上でのDeFi活動", "Hyperliquid永久先物取引", "HYPEトークンのステーキング"],
+            "end_date": "2026-12-31",
             "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
             "url": "https://hyperliquid.xyz/",
             "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
+            "added_date": "2026-01-01",
             "source": "curated",
         },
         {
-            "id": "eigenlayer-eigen",
-            "name": "EigenLayer (EIGEN)",
-            "symbol": "EIGEN",
-            "category": "インフラ",
-            "type": "リステーキング",
+            "id": "plume-plume",
+            "name": "Plume Network (PLUME)",
+            "symbol": "PLUME",
+            "category": "RWA/Layer2",
+            "type": "レトロアクティブ",
             "status": "active",
-            "difficulty": "hard",
-            "estimated_value_usd": 800,
-            "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。",
-            "tasks": ["ETHをリステーキング", "LST (stETH等) をデポジット", "AVSへの参加"],
-            "end_date": (today + timedelta(days=120)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/33751/small/eigen.png",
-            "url": "https://eigenlayer.xyz/",
-            "is_hot": False,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "movement-move",
-            "name": "Movement (MOVE)",
-            "symbol": "MOVE",
-            "category": "Layer2",
-            "type": "新規上場",
-            "status": "upcoming",
             "difficulty": "easy",
             "estimated_value_usd": 400,
-            "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ予定。",
-            "tasks": ["テストネット参加", "Discordコミュニティ参加", "テストトランザクション実行"],
-            "end_date": (today + timedelta(days=20)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/39619/small/MOVE_color.png",
-            "url": "https://movementlabs.xyz/",
+            "description": "RWA(現実世界資産)特化のEVM L2。不動産・クレジット・コモディティのトークン化に特化。エアドロップ実施中。",
+            "tasks": ["Plume上でRWA購入", "PLUMEステーキング", "ガバナンス参加"],
+            "end_date": "2026-08-31",
+            "logo": "https://assets.coingecko.com/coins/images/40203/small/plume.jpg",
+            "url": "https://plumenetwork.xyz/",
+            "is_hot": False,
+            "added_date": "2026-01-01",
+            "source": "curated",
+        },
+        {
+            "id": "story-ip",
+            "name": "Story Protocol (IP)",
+            "symbol": "IP",
+            "category": "インフラ/IP",
+            "type": "エコシステム報酬",
+            "status": "active",
+            "difficulty": "medium",
+            "estimated_value_usd": 500,
+            "description": "知的財産(IP)管理に特化したブロックチェーン。AI生成コンテンツのIPライセンス管理で注目を集める。",
+            "tasks": ["IPAssetの登録", "Story Protocol上でのライセンス", "コミュニティ参加"],
+            "end_date": "2026-09-30",
+            "logo": "https://assets.coingecko.com/coins/images/39338/small/story-protocol.jpg",
+            "url": "https://story.foundation/",
+            "is_hot": False,
+            "added_date": "2026-01-01",
+            "source": "curated",
+        },
+        {
+            "id": "corn-btcn",
+            "name": "Corn Network (BTCN)",
+            "symbol": "BTCN",
+            "category": "Bitcoin Yield",
+            "type": "流動性マイニング",
+            "status": "active",
+            "difficulty": "easy",
+            "estimated_value_usd": 350,
+            "description": "BitcoinをネイティブガストークンとするL2。BTCBでイールドを獲得しながらエアドロップポイントを蓄積。",
+            "tasks": ["BTCBをデポジット", "Corn上でのDeFi利用", "Kernelポイント蓄積"],
+            "end_date": "2026-07-31",
+            "logo": "https://assets.coingecko.com/coins/images/40987/small/corn.jpg",
+            "url": "https://usecorn.com/",
+            "is_hot": False,
+            "added_date": "2026-01-01",
+            "source": "curated",
+        },
+        {
+            "id": "sonic-s",
+            "name": "Sonic (S)",
+            "symbol": "S",
+            "category": "Layer1",
+            "type": "エコシステム報酬",
+            "status": "active",
+            "difficulty": "easy",
+            "estimated_value_usd": 300,
+            "description": "Fantomから進化した高速L1。10,000 TPS・1秒以下ファイナリティ。Sonic Gemsプログラムで報酬獲得中。",
+            "tasks": ["Sonic上でのDeFi利用", "SpookySwap等のDEX利用", "Sonic Gems獲得"],
+            "end_date": "2026-06-30",
+            "logo": "https://assets.coingecko.com/coins/images/38004/small/sonic-s.jpg",
+            "url": "https://www.soniclabs.com/",
+            "is_hot": False,
+            "added_date": "2026-01-01",
+            "source": "curated",
+        },
+        {
+            "id": "berachain-bera",
+            "name": "Berachain (BERA)",
+            "symbol": "BERA",
+            "category": "Layer1",
+            "type": "流動性マイニング",
+            "status": "active",
+            "difficulty": "medium",
+            "estimated_value_usd": 700,
+            "description": "Proof of Liquidity(PoL)コンセンサスのEVM L1。流動性提供者がブロック報酬を獲得。BGTトークンの配布継続中。",
+            "tasks": ["BEX(DEX)で流動性提供", "BGTトークンを獲得・デリゲート", "Berachain DeFiエコシステム参加"],
+            "end_date": "2026-12-31",
+            "logo": "https://assets.coingecko.com/coins/images/35455/small/bera.png",
+            "url": "https://berachain.com/",
             "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
+            "added_date": "2026-01-01",
             "source": "curated",
         },
     ]
+
+
+def _update_hot_from_trending(airdrops: list[dict], trending_coins: list[dict]) -> list[dict]:
+    """CoinGeckoトレンドに基づいてis_hotフラグを動的更新"""
+    trending_names = {t["name"].lower() for t in trending_coins}
+    trending_symbols = {t["symbol"].lower() for t in trending_coins}
+
+    for airdrop in airdrops:
+        name_lower = airdrop.get("name", "").lower()
+        symbol_lower = airdrop.get("symbol", "").lower()
+
+        is_trending = any(
+            t in name_lower or name_lower in t
+            for t in trending_names
+        ) or symbol_lower in trending_symbols
+
+        if is_trending and not airdrop.get("is_hot"):
+            airdrop["is_hot"] = True
+            logger.info(f"トレンド検知 → hot昇格: {airdrop['name']}")
+
+    return airdrops
 
 
 def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
@@ -172,16 +263,21 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     全ソースからエアドロップデータを収集し、変更点リストと共に返す。
     Returns: (airdrops_list, new_items_names)
     """
+    trending = get_trending_coins()
     curated = _build_seed_airdrops()
+    curated = _update_hot_from_trending(curated, trending)
+
     scraped = _scrape_airdrops_io()
 
     seen_names = {a["name"].lower() for a in curated}
+    seen_ids = {a["id"] for a in curated}
     new_items = []
 
     for s in scraped:
-        if s["name"].lower() not in seen_names:
-            curated.append({
-                "id": s["name"].lower().replace(" ", "-"),
+        s_id = s["name"].lower().replace(" ", "-")
+        if s["name"].lower() not in seen_names and s_id not in seen_ids:
+            new_entry = {
+                "id": s_id,
                 "name": s["name"],
                 "symbol": "",
                 "category": "その他",
@@ -197,7 +293,8 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
                 "is_hot": False,
                 "added_date": datetime.utcnow().strftime("%Y-%m-%d"),
                 "source": "airdrops.io",
-            })
+            }
+            curated.append(new_entry)
             new_items.append(s["name"])
             seen_names.add(s["name"].lower())
 
