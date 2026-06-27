@@ -8,11 +8,43 @@
     "status": "active",
     "difficulty": "medium",
     "estimated_value_usd": 2000,
-    "description": "HyperliquidのEVMチェーン拡張。DeFiポジションと取引量に基づくポイント報酬。HYPEステーキングも対応。",
+    "description": "Hyperliquid独自L1上に構築されたEVMチェーン。DEX取引量と流動性提供に基づくポイント報酬でHYPEトークンを獲得。",
+    "basis": "2024年11月のHYPE TGEで総供給の31%をユーザーへ無料配布し平均$5,000超を実現。HyperEVMエコシステム拡大に伴い、DEXプロトコルトークン・エコシステム報酬の第2波が進行中。Hyperliquid Points(旧制度)の継続者が優遇される傾向。",
+    "value_basis": "HYPE TGE実績 (中央値 $2,000〜$8,000) を参考に、HyperEVM初期エコシステムトークンを複数獲得した場合の合算値として推定。取引量が多いほど報酬増加。",
+    "comparables": [
+      "Hyperliquid HYPE TGE (2024年11月): 平均 $5,000〜$10,000",
+      "dYdX (DYDX) エアドロップ (2021年): 平均 $2,000〜$15,000"
+    ],
+    "participation_window": "今すぐ〜2026年12月 (早期参加者ほど有利)",
+    "expected_drop": "HyperEVMエコシステムトークン: 随時 / 次回大型配布: 2026年Q3〜Q4予想",
+    "activity_guide": [
+      {
+        "action": "Hyperliquid Perpetuals (先物) 取引",
+        "volume": "週$10,000以上・月40回以上TXN",
+        "note": "累積取引量でランク決定。$100,000/月が理想"
+      },
+      {
+        "action": "HyperEVM上DEXで現物スワップ",
+        "volume": "週$1,000以上・月10回以上",
+        "note": "複数のDEX (HyperSwap等) を利用すること"
+      },
+      {
+        "action": "HYPEをステーキング",
+        "volume": "50 HYPE以上",
+        "note": "ステーキング量でバリデータ報酬も獲得"
+      },
+      {
+        "action": "流動性提供 (LP)",
+        "volume": "$2,000以上をLPに提供",
+        "note": "HYPE/USDC等の主要ペアが最も報酬効率が高い"
+      }
+    ],
+    "min_budget": 500,
     "tasks": [
-      "HyperEVM上でのDeFi活動",
-      "Hyperliquid永久先物取引",
-      "HYPEトークンのステーキング"
+      "Hyperliquid先物を週$10,000以上取引 (月40回以上)",
+      "HyperEVM上のDEXで週$1,000以上スワップ",
+      "50 HYPE以上をステーキング",
+      "$2,000以上をLP (HYPE/USDC等) に提供"
     ],
     "end_date": "2026-12-31",
     "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
@@ -26,15 +58,48 @@
     "name": "Monad (MONAD)",
     "symbol": "MONAD",
     "category": "Layer1",
-    "type": "テストネット/レトロ",
+    "type": "テストネット/レトロアクティブ",
     "status": "upcoming",
     "difficulty": "easy",
     "estimated_value_usd": 1500,
-    "description": "EVM互換の並列処理L1チェーン。10,000 TPS以上の高速処理。テストネット参加者への大型エアドロップが期待される。",
+    "description": "EVM互換の並列実行L1チェーン。理論値10,000+ TPS。Paradigm主導で$225M調達。テストネット活動でレトロアクティブエアドロップが期待される。",
+    "basis": "Paradigm・Greenoaks等から$225M調達 (業界トップクラス)。EVM互換L1として最注目プロジェクト。過去の同規模調達プロジェクト (Sui/Aptos/Arbitrum) は全てテストネット参加者へ大規模配布を実施。Monad財団もコミュニティへの配布を示唆。",
+    "value_basis": "Arbitrum ($ARB) テストネット参加者への配布実績 (平均$1,000〜$3,000) と調達規模$225Mを基準に推定。早期テストネット参加者への倍率がかかる可能性あり。",
+    "comparables": [
+      "Arbitrum (ARB) テストネット参加者: 平均 $1,000〜$3,000 (2023年3月)",
+      "Starknet (STRK) エアドロップ: 平均 $500〜$2,000 (2024年2月)",
+      "Aptos (APT) テストネット: 平均 $400〜$1,500 (2022年)"
+    ],
+    "participation_window": "今すぐ〜メインネット前 (テストネット稼働中・締切未定)",
+    "expected_drop": "メインネットローンチ前後: 2026年Q2〜Q4予想",
+    "activity_guide": [
+      {
+        "action": "テストネットTXN (送金・スワップ等)",
+        "volume": "月30回以上・連続3ヶ月以上",
+        "note": "週次アクティビティが重要。毎週少なくとも5TXN"
+      },
+      {
+        "action": "テストネットDeFiプロトコル利用",
+        "volume": "3種類以上のdApps・各10回以上",
+        "note": "Uniswap系DEX, Lending等を組み合わせる"
+      },
+      {
+        "action": "Discord/Xでのコミュニティ参加",
+        "volume": "週次チェックイン・イベント参加",
+        "note": "コミュニティスコアが配布量に影響する可能性"
+      },
+      {
+        "action": "テストネットNFTのミント",
+        "volume": "公式ミントイベントは全て参加",
+        "note": "NFT保有者向けボーナス配布の先例あり"
+      }
+    ],
+    "min_budget": 0,
     "tasks": [
-      "テストネットでのトランザクション",
-      "Monad公式Discord参加",
-      "テストネットDeFiプロトコル利用"
+      "テストネットTXNを月30回以上・3ヶ月継続",
+      "3種類以上のdApps (DEX/Lending/NFT) を各10回以上利用",
+      "Discord参加・週次チェックイン",
+      "公式NFTミントイベントに全参加"
     ],
     "end_date": "2026-09-30",
     "logo": "https://assets.coingecko.com/coins/images/35959/small/monad.jpg",
@@ -48,15 +113,48 @@
     "name": "MegaETH",
     "symbol": "METH",
     "category": "Layer2",
-    "type": "テストネット/レトロ",
+    "type": "テストネット/レトロアクティブ",
     "status": "upcoming",
     "difficulty": "easy",
     "estimated_value_usd": 1200,
-    "description": "リアルタイムブロックチェーン。100,000 TPS目標の高性能EVM L2。メインネット前のテストネット参加でエアドロップ期待。",
+    "description": "リアルタイムブロックチェーンを標榜する高性能EVM L2。100,000 TPS目標・1ms以下のレイテンシ。Vitalik Buterinも支持表明。",
+    "basis": "Dragonfly Capital主導で$20M調達。Ethereum共同創設者Vitalik Buterinがアドバイザーとして参加を表明。EVM L2として最高性能を目指すプロジェクトで、テストネット公開後に急速にコミュニティ拡大中。L2のテストネット→エアドロップパターンは確立された慣例。",
+    "value_basis": "Scroll ($SCR) テストネット参加者 (平均$300〜$800) とZKsync ($ZK) (平均$500〜$2,000) の中間値を基準。高い注目度を考慮してやや高め$1,200と推定。",
+    "comparables": [
+      "Scroll (SCR) テストネット参加者: 平均 $300〜$800 (2024年10月)",
+      "ZKsync Era (ZK) エアドロップ: 平均 $500〜$2,000 (2024年6月)",
+      "Linea (LINEA) エアドロップ: 平均 $200〜$600 (2025年)"
+    ],
+    "participation_window": "今すぐ〜メインネット前 (テストネット稼働中)",
+    "expected_drop": "メインネットローンチ時: 2026年Q3〜Q4予想",
+    "activity_guide": [
+      {
+        "action": "テストネットTXN (送金・スワップ)",
+        "volume": "月20回以上・2ヶ月以上継続",
+        "note": "ETHテストネットトークンはFaucetから無料取得可能"
+      },
+      {
+        "action": "テストネットDEXでスワップ",
+        "volume": "週5回以上・複数トークンペア",
+        "note": "単一ペアの繰り返しより多様なペアの方が評価される"
+      },
+      {
+        "action": "公式Faucet利用 & テストETH橋渡し",
+        "volume": "可能な限り毎日",
+        "note": "ブリッジ回数が評価指標に含まれる可能性"
+      },
+      {
+        "action": "テストネットNFTのミント",
+        "volume": "公式パートナーNFT全て",
+        "note": "無料ミントは必ず参加"
+      }
+    ],
+    "min_budget": 0,
     "tasks": [
-      "テストネット参加",
-      "MegaETHコミュニティ参加",
-      "Discordでの活動"
+      "テストネットTXNを月20回以上・2ヶ月継続",
+      "テストネットDEXで週5回以上スワップ (複数ペア)",
+      "公式Faucetから毎日テストETHを取得",
+      "公式パートナーNFTを全てミント"
     ],
     "end_date": "2026-10-31",
     "logo": "https://assets.coingecko.com/coins/images/40086/small/megaeth.jpg",
@@ -74,11 +172,44 @@
     "status": "active",
     "difficulty": "medium",
     "estimated_value_usd": 800,
-    "description": "BitcoinをセキュリティソースとしてPoSチェーンを保護するプロトコル。BTCネイティブステーキングで報酬獲得。",
+    "description": "BitcoinをPoSチェーンのセキュリティソースに利用するプロトコル。BTCネイティブステーキングで報酬獲得。Phase 2進行中。",
+    "basis": "Paradigm・Binance Labs等から$70M調達。BABYトークンはBinance Launchpool経由で2025年4月に上場済み。Phase 1ステーカーへの報酬配布実績あり。Phase 2ステーカーへの継続的なBABY報酬配布が公式に確認されている。",
+    "value_basis": "BABYトークンの現在価格と、0.05 BTCステーキング時の推定年間報酬 (APR 2〜5%) を12ヶ月換算。BTCステーキング量が多いほど報酬増加。BTC価格にも依存。",
+    "comparables": [
+      "Babylon Phase 1ステーカー: 推定APR 2〜5% (BABYトークン換算)",
+      "Lido (LDO) ETHステーキング: 参考APR 3〜4%",
+      "EigenLayer (EIGEN) リステーキング: 一部ユーザー$500〜$5,000相当"
+    ],
+    "participation_window": "今すぐ〜2026年8月 (Phase 2進行中)",
+    "expected_drop": "毎月継続配布中 (Phase 2ステーキング報酬)",
+    "activity_guide": [
+      {
+        "action": "BTCをBabylon Phase 2でステーキング",
+        "volume": "最低0.01 BTC (約$1,000相当) 以上",
+        "note": "0.05 BTC以上が推奨ライン。ステーキング量に比例して報酬増加"
+      },
+      {
+        "action": "ステーキング期間の維持",
+        "volume": "最低3ヶ月間アンステークしないこと",
+        "note": "長期ステーカーへの追加ボーナスが過去に実施された"
+      },
+      {
+        "action": "Babylon Pointsの蓄積",
+        "volume": "Pointsダッシュボードで継続確認",
+        "note": "将来のエアドロップにPointsが使用される可能性"
+      },
+      {
+        "action": "Finality Provider選定",
+        "volume": "実績あるFPを選ぶこと",
+        "note": "FPのパフォーマンスがステーキング報酬に影響"
+      }
+    ],
+    "min_budget": 1000,
     "tasks": [
-      "BTCをBabylonでステーキング",
-      "フェーズ2参加",
-      "Babylon Points蓄積"
+      "0.01 BTC以上 (推奨: 0.05 BTC以上) をPhase 2でステーキング",
+      "最低3ヶ月間アンステークせず継続",
+      "Babylon Pointsダッシュボードで報酬を定期確認",
+      "実績あるFinality Providerを選択"
     ],
     "end_date": "2026-08-31",
     "logo": "https://assets.coingecko.com/coins/images/37724/small/babylon_logo.png",
@@ -96,11 +227,44 @@
     "status": "active",
     "difficulty": "medium",
     "estimated_value_usd": 700,
-    "description": "Proof of Liquidity(PoL)コンセンサスのEVM L1。流動性提供者がブロック報酬を獲得。BGTトークンの配布継続中。",
+    "description": "Proof of Liquidity (PoL) コンセンサスのEVM L1。流動性提供者がブロックバリデータ報酬 (BGT) を獲得し、BERAに変換可能。",
+    "basis": "Framework Ventures等から$100M調達。2024年2月メインネットローンチ済み。BGTトークンは流動性提供で継続的に配布中。BERAはBGTをバーンして取得するトークノミクスにより、流動性提供者への報酬フローが継続。エコシステム拡大でDeFiプロジェクトも増加中。",
+    "value_basis": "BGTの市場価値とBERA変換レートから算出。$2,000のLP提供を3ヶ月維持した場合の推定BGT獲得量に基づく。プール選択とBGT委任先で報酬効率が大きく変わる。",
+    "comparables": [
+      "Berachain BGT流動性報酬: アクティブユーザー月$200〜$2,000相当",
+      "Uniswap V3 LP報酬: APR 5〜50% (ペアによる)",
+      "Curve Finance LP: APR 3〜20%"
+    ],
+    "participation_window": "今すぐ〜2026年12月 (メインネット稼働中)",
+    "expected_drop": "BGT報酬は継続配布中 / 追加エコシステムエアドロップも期待",
+    "activity_guide": [
+      {
+        "action": "BEX (Berachain DEX) でLP提供",
+        "volume": "$2,000以上をHONEY/USDC等の主要ペアに提供",
+        "note": "BGTの高いゲージを選ぶこと。Berascanでゲージ重みを確認"
+      },
+      {
+        "action": "BGTのデリゲート",
+        "volume": "獲得したBGTは全て実績あるバリデータへデリゲート",
+        "note": "デリゲート量が多いバリデータほどブロック報酬が多く、BGT報酬も増加"
+      },
+      {
+        "action": "Berachain上のDeFi利用",
+        "volume": "週$500以上スワップ・月20回以上TXN",
+        "note": "複数のプロトコル (Kodiak, Infrared等) を利用"
+      },
+      {
+        "action": "BGT→BERAのバーン",
+        "volume": "一部BGTをBERAに変換して保有",
+        "note": "BERA保有者向けの追加エアドロップの可能性"
+      }
+    ],
+    "min_budget": 2000,
     "tasks": [
-      "BEX(DEX)で流動性提供",
-      "BGTトークンを獲得・デリゲート",
-      "Berachain DeFiエコシステム参加"
+      "$2,000以上をBEX主要ペアにLP提供 (HONEY/USDC等)",
+      "獲得BGTを全て実績バリデータへデリゲート",
+      "週$500以上スワップ・月20回以上TXN",
+      "一部BGTをBERAに変換して保有"
     ],
     "end_date": "2026-12-31",
     "logo": "https://assets.coingecko.com/coins/images/35455/small/bera.png",
@@ -118,11 +282,44 @@
     "status": "active",
     "difficulty": "medium",
     "estimated_value_usd": 600,
-    "description": "モジュラーL1+L2アーキテクチャ。Move/Wasm/EVM全対応。エコシステム参加者へのINIT配布を継続中。",
+    "description": "モジュラーL1+複数L2アーキテクチャ。Move/Wasm/EVM全対応。Cosmos SDK採用。エコシステム参加者にINIT継続配布。",
+    "basis": "Delphi Ventures・Binance Labs等から$25M調達。2025年にメインネットローンチ。Omnitia (Initia上のL2) エコシステムが急拡大中。INITトークンはBinance Launchpoolで配布済み。エコシステムアクティビティに基づく追加配布プログラムが継続中。",
+    "value_basis": "INIT現在価格 × 月次アクティビティユーザーへの推定配布量。$500のDeFi利用を3ヶ月継続した場合の推定報酬。Initia Pointsプログラムの換算レートによって変動。",
+    "comparables": [
+      "Initia (INIT) TGE参加者: Binance Launchpool経由で数百ドル相当",
+      "Celestia (TIA) エアドロップ (2023年): 平均 $500〜$3,000",
+      "Cosmos (ATOM) エコシステム: 複数チェーンで年$200〜$1,000"
+    ],
+    "participation_window": "今すぐ〜2026年7月 (Pointsプログラム進行中)",
+    "expected_drop": "Initia Points換算: 四半期ごと配布予定",
+    "activity_guide": [
+      {
+        "action": "Initia DEX (InitiaDEX) でスワップ",
+        "volume": "月$500以上・週10回以上TXN",
+        "note": "INITペアを中心に取引すること"
+      },
+      {
+        "action": "Omnitia L2チェーンの利用",
+        "volume": "3チェーン以上・各5回以上TXN",
+        "note": "BlackwingやEchelon等の主要L2を使う"
+      },
+      {
+        "action": "INIT/USDC等でLP提供",
+        "volume": "$500以上をLPに提供",
+        "note": "LP提供者へのPoints倍率が高い"
+      },
+      {
+        "action": "Initia Pointsのデイリーチェックイン",
+        "volume": "毎日ログイン・ミッション完了",
+        "note": "デイリーミッションでPointsを最大化"
+      }
+    ],
+    "min_budget": 500,
     "tasks": [
-      "Initia上でのDeFi利用",
-      "Validium L2への参加",
-      "Initia Points獲得"
+      "InitiaDEXで月$500以上スワップ (週10回以上)",
+      "Omnitia L2を3チェーン以上・各5回以上利用",
+      "$500以上をLP (INIT/USDC等) に提供",
+      "毎日Initia Pointsのデイリーミッション完了"
     ],
     "end_date": "2026-07-31",
     "logo": "https://assets.coingecko.com/coins/images/37671/small/initia.jpg",
@@ -140,11 +337,37 @@
     "status": "active",
     "difficulty": "medium",
     "estimated_value_usd": 500,
-    "description": "知的財産(IP)管理に特化したブロックチェーン。AI生成コンテンツのIPライセンス管理で注目を集める。",
+    "description": "知的財産 (IP) 管理に特化したブロックチェーン。AI生成コンテンツやクリエイターIPのライセンス管理で急速に注目を集める。",
+    "basis": "a16z等から$80M調達。2025年初頭メインネットローンチ。AI×IP管理という独自ニッチで機関投資家の注目度が高い。IPトークンのエコシステム拡大に伴い、dApps開発者・クリエイター・デリゲーターへの報酬プログラムが継続。",
+    "value_basis": "IP現在価格 × IPステーキング年間報酬 (APR 5〜10%) を換算。$1,000ステーキング + 3ヶ月のエコシステム活動の合算推定値。",
+    "comparables": [
+      "Story Protocol (IP) ステーキング: APR 5〜10%推定",
+      "Filecoin (FIL) ストレージ報酬: 類似モデル"
+    ],
+    "participation_window": "今すぐ〜2026年9月",
+    "expected_drop": "エコシステム報酬: 四半期ごと配布",
+    "activity_guide": [
+      {
+        "action": "IPトークンのステーキング",
+        "volume": "$500以上相当のIPをデリゲートステーキング",
+        "note": "実績のあるバリデータへのデリゲートが重要"
+      },
+      {
+        "action": "Story上でIPAssetを登録",
+        "volume": "1件以上のIPAssetを作成・登録",
+        "note": "クリエイターとしての実績がスコアに影響"
+      },
+      {
+        "action": "IPライセンスの購入・利用",
+        "volume": "3件以上のライセンス取引",
+        "note": "プロトコル利用者へのロイヤルティ報酬あり"
+      }
+    ],
+    "min_budget": 500,
     "tasks": [
-      "IPAssetの登録",
-      "Story Protocol上でのライセンス",
-      "コミュニティ参加"
+      "$500以上のIPをバリデータへデリゲートステーキング",
+      "Story上でIPAssetを1件以上登録",
+      "3件以上のIPライセンス取引を実施"
     ],
     "end_date": "2026-09-30",
     "logo": "https://assets.coingecko.com/coins/images/39338/small/story-protocol.jpg",
@@ -162,11 +385,37 @@
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 400,
-    "description": "RWA(現実世界資産)特化のEVM L2。不動産・クレジット・コモディティのトークン化に特化。エアドロップ実施中。",
+    "description": "RWA (現実世界資産) 特化のEVM L2。不動産・クレジット・コモディティのトークン化。エアドロップ実施中。",
+    "basis": "Haun Ventures等から$20M調達。RWAは2025〜26年の最注目セクター。Plume上のRWA資産購入・ステーキング実績によるレトロアクティブエアドロップが既に第1弾実施済み。第2弾が2026年内に予定されている。",
+    "value_basis": "Plume第1弾エアドロップ実績 (平均$200〜$600) を参考に、第2弾でのアクティブユーザー報酬を$400と推定。",
+    "comparables": [
+      "Plume 第1弾エアドロップ: 平均 $200〜$600 (2025年)",
+      "Ondo Finance (ONDO): RWAセクター先行者$300〜$1,000相当"
+    ],
+    "participation_window": "今すぐ〜2026年8月",
+    "expected_drop": "第2弾エアドロップ: 2026年Q3予想",
+    "activity_guide": [
+      {
+        "action": "Plume上のRWA資産購入",
+        "volume": "$100以上のRWAトークンを購入・保有",
+        "note": "不動産・クレジット系RWAが報酬対象"
+      },
+      {
+        "action": "PLUMEのステーキング",
+        "volume": "$200以上相当のPLUMEをステーキング",
+        "note": "ステーキング期間が長いほど報酬倍率UP"
+      },
+      {
+        "action": "Plume上での取引",
+        "volume": "月5回以上TXN",
+        "note": "少量でもアクティビティの証明になる"
+      }
+    ],
+    "min_budget": 100,
     "tasks": [
-      "Plume上でRWA購入",
-      "PLUMEステーキング",
-      "ガバナンス参加"
+      "$100以上のRWAトークンをPlume上で購入・保有",
+      "$200以上のPLUMEをステーキング",
+      "月5回以上TXNを実行"
     ],
     "end_date": "2026-08-31",
     "logo": "https://assets.coingecko.com/coins/images/40203/small/plume.jpg",
@@ -184,11 +433,37 @@
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 350,
-    "description": "BitcoinをネイティブガストークンとするL2。BTCBでイールドを獲得しながらエアドロップポイントを蓄積。",
+    "description": "BitcoinBをネイティブガストークンとするL2。BTC保有者がイールドを稼ぎながらエアドロップポイントを蓄積できる。",
+    "basis": "BTC利回りL2として独自ニッチ。Kernelポイントシステムが稼働中で、BTCBデポジット量・利用期間に応じてポイント蓄積。Kernel Points→BTCNトークン変換が予定されており、TGE時のエアドロップが期待される。",
+    "value_basis": "Kernel Points発行数とBTCN想定価格から逆算。$1,000のBTCBを3ヶ月デポジットした場合の推定ポイント獲得量に基づく。",
+    "comparables": [
+      "Pendle Finance (PENDLE) BTC利回り案件: 参加者平均$200〜$800",
+      "Lombard Finance BTCステーキング: 類似モデル"
+    ],
+    "participation_window": "今すぐ〜2026年7月",
+    "expected_drop": "BTCN TGE: 2026年Q3予想",
+    "activity_guide": [
+      {
+        "action": "BTCBをCornにデポジット",
+        "volume": "$500以上のBTCB (最低0.005 BTC相当)",
+        "note": "デポジット量×期間でKernel Pointsが蓄積される"
+      },
+      {
+        "action": "Corn上でのDeFi利用",
+        "volume": "月5回以上スワップ・Lending利用",
+        "note": "DeFiアクティビティでボーナスPoints"
+      },
+      {
+        "action": "紹介プログラム参加",
+        "volume": "友人を1人以上招待",
+        "note": "紹介ボーナスでPointsが25%増加"
+      }
+    ],
+    "min_budget": 500,
     "tasks": [
-      "BTCBをデポジット",
-      "Corn上でのDeFi利用",
-      "Kernelポイント蓄積"
+      "$500以上のBTCBをCornにデポジット",
+      "月5回以上スワップ・Lending利用",
+      "紹介プログラムで1名以上招待"
     ],
     "end_date": "2026-07-31",
     "logo": "https://assets.coingecko.com/coins/images/40987/small/corn.jpg",
@@ -206,11 +481,37 @@
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 300,
-    "description": "Fantomから進化した高速L1。10,000 TPS・1秒以下ファイナリティ。Sonic Gemsプログラムで報酬獲得中。",
+    "description": "Fantomから進化した高速L1。10,000 TPS・1秒以下ファイナリティ。Sonic Gems/Arcade点数プログラムで報酬獲得中。",
+    "basis": "Andre Cronje (DeFi界の重鎮) がリード開発。Fantomから改名・アップグレード済み。Sonic Gemsプログラムが稼働中で、DeFi利用量に応じてGems付与。Gemsの一部がSトークンに変換される仕組みが公式確認済み。",
+    "value_basis": "Sonic Gemsの付与レートとS現在価格から換算。月$500のDeFi利用を3ヶ月継続した場合の推定Gems量→S変換値。",
+    "comparables": [
+      "Fantom (FTM) → Sonic (S) 移行報酬: 既存FTM保有者への1:1変換済み",
+      "Sonic Gems報酬: アクティブユーザー月$50〜$200相当"
+    ],
+    "participation_window": "今すぐ〜2026年6月",
+    "expected_drop": "Sonic Gems→S変換: 四半期ごと",
+    "activity_guide": [
+      {
+        "action": "Sonic上のDEX (SpookySwap等) でスワップ",
+        "volume": "月$500以上・週10回以上",
+        "note": "取引量でGems付与。$1,000/月が効率的なライン"
+      },
+      {
+        "action": "Sonic上でLending (Aave等)",
+        "volume": "$500以上を担保・借入",
+        "note": "TVLベースのGems付与でスワップより効率が高い場合あり"
+      },
+      {
+        "action": "Sonic Arcadeのゲーム参加",
+        "volume": "デイリーゲームに毎日参加",
+        "note": "無料でGems獲得可能。積み重ねで差がつく"
+      }
+    ],
+    "min_budget": 500,
     "tasks": [
-      "Sonic上でのDeFi利用",
-      "SpookySwap等のDEX利用",
-      "Sonic Gems獲得"
+      "Sonic DEXで月$500以上スワップ (週10回以上)",
+      "$500以上をSonic Lendingに担保・借入",
+      "Sonic Arcadeのデイリーゲームに毎日参加"
     ],
     "end_date": "2026-06-30",
     "logo": "https://assets.coingecko.com/coins/images/38004/small/sonic-s.jpg",
