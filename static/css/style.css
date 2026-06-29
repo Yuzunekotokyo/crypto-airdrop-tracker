@@ -37,45 +37,57 @@ a:hover { color: var(--accent2); }
 
 /* ===== Update Banner ===== */
 .update-banner {
-  background: linear-gradient(135deg, #0d2137, #1a1a2e);
+  background: linear-gradient(135deg, #080e1a, #111827);
   border-bottom: 2px solid var(--accent);
-  padding: 14px 20px;
+  padding: 12px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 20px rgba(124,77,255,0.3);
+  box-shadow: 0 3px 24px rgba(124,77,255,0.35);
   display: flex;
   align-items: flex-start;
   gap: 12px;
 }
 
-.update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.update-banner-inner { flex: 1; display: flex; flex-direction: column; gap: 7px; }
 
-.update-meta { display: flex; align-items: center; gap: 12px; }
+/* 1行目: バッジ・日時・チップを横並び */
+.update-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
 .update-badge {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), #9c27b0);
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 20px;
-  letter-spacing: 0.5px;
-  animation: pulse-badge 2s infinite;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  animation: pulse-badge 2.5s infinite;
+  flex-shrink: 0;
 }
 
 @keyframes pulse-badge {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(124,77,255,0.6); }
-  50% { box-shadow: 0 0 0 6px rgba(124,77,255,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124,77,255,0.7); }
+  60%       { box-shadow: 0 0 0 7px rgba(124,77,255,0); }
 }
 
-.update-time { color: var(--text2); font-size: 13px; }
+.update-time {
+  color: var(--text2);
+  font-size: 12px;
+  flex-shrink: 0;
+}
 
-.update-stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.update-stats { display: flex; flex-wrap: wrap; gap: 6px; }
 
 .stat-chip {
-  font-size: 13px;
-  padding: 3px 12px;
+  font-size: 12px;
+  padding: 3px 10px;
   border-radius: 20px;
   font-weight: 600;
 }
@@ -85,33 +97,75 @@ a:hover { color: var(--accent2); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
-.update-new-items { font-size: 13px; color: var(--text2); }
+/* 汎用ラベル */
+.update-label {
+  font-size: 12px;
+  color: var(--text2);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+/* 新着タグ行 */
+.update-new-items { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
 
 .new-tag {
   display: inline-block;
-  background: rgba(46,213,115,0.15);
-  border: 1px solid var(--green);
+  background: rgba(46,213,115,0.12);
+  border: 1px solid rgba(46,213,115,0.5);
   color: var(--green);
   padding: 2px 8px;
   border-radius: 12px;
-  font-size: 12px;
-  margin: 2px 4px 2px 0;
+  font-size: 11px;
+  font-weight: 600;
+}
+.new-tag-more {
+  background: rgba(255,165,2,0.12);
+  border-color: rgba(255,165,2,0.5);
+  color: var(--yellow);
 }
 
-.update-trending { font-size: 12px; color: var(--text2); }
+/* 変更タグ行 */
+.update-changes { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.change-tag {
+  display: inline-block;
+  background: rgba(255,165,2,0.12);
+  border: 1px solid rgba(255,165,2,0.5);
+  color: var(--yellow);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* トレンド行 */
+.update-trending { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.trending-coins  { color: #b39ddb; letter-spacing: 0.3px; }
+
+/* ヒント行 */
+.update-tip {
+  font-size: 11px;
+  color: rgba(159,168,218,0.6);
+  padding-top: 2px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
 
 .banner-close {
   background: none;
-  border: none;
+  border: 1px solid transparent;
   color: var(--text2);
   cursor: pointer;
-  font-size: 16px;
-  padding: 4px 8px;
+  font-size: 15px;
+  padding: 4px 9px;
   border-radius: 50%;
-  transition: background 0.2s;
+  transition: all 0.2s;
   flex-shrink: 0;
+  margin-top: 2px;
 }
-.banner-close:hover { background: rgba(255,255,255,0.1); }
+.banner-close:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--border);
+  color: var(--text);
+}
 
 /* ===== Header ===== */
 .site-header {

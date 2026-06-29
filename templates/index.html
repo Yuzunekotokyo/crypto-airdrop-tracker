@@ -12,49 +12,72 @@
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
+
+    <!-- 1行目: バッジ + 日時 + ステータスチップ -->
     <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
+      <span class="update-badge">🔄 本日の更新</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
+      <div class="update-stats">
+        <span class="stat-chip stat-total">
+          📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
+        </span>
+        <span class="stat-chip stat-hot">
+          🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
+        </span>
+        {% if latest_update.added_count > 0 %}
+        <span class="stat-chip stat-new">
+          🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
+        </span>
+        {% endif %}
+        {% if latest_update.changed_count > 0 %}
+        <span class="stat-chip stat-changed">
+          ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
+        </span>
+        {% endif %}
+        {% if latest_update.email_sent %}
+        <span class="stat-chip stat-email">📧 メール送信済</span>
+        {% endif %}
+      </div>
     </div>
-    <div class="update-stats">
-      <span class="stat-chip stat-total">
-        📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
-      </span>
-      <span class="stat-chip stat-hot">
-        🔥 ホット <strong>{{ latest_update.hot_count }}</strong> 件
-      </span>
-      {% if latest_update.added_count > 0 %}
-      <span class="stat-chip stat-new">
-        🆕 新着 <strong>{{ latest_update.added_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.changed_count > 0 %}
-      <span class="stat-chip stat-changed">
-        ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
-      </span>
-      {% endif %}
-      {% if latest_update.email_sent %}
-      <span class="stat-chip stat-email">
-        📧 メール送信済
-      </span>
-      {% endif %}
-    </div>
+
+    <!-- 2行目: 新着案件タグ (最大8件表示) -->
     {% if latest_update.added_names %}
     <div class="update-new-items">
-      <strong>新規追加:</strong>
-      {% for name in latest_update.added_names %}
+      <span class="update-label">🆕 新規追加:</span>
+      {% for name in latest_update.added_names[:8] %}
       <span class="new-tag">{{ name }}</span>
+      {% endfor %}
+      {% if latest_update.added_names | length > 8 %}
+      <span class="new-tag new-tag-more">+{{ latest_update.added_names | length - 8 }} 件</span>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- 3行目: 変更案件 -->
+    {% if latest_update.changes %}
+    <div class="update-changes">
+      <span class="update-label">✏️ 変更:</span>
+      {% for change in latest_update.changes[:3] %}
+      <span class="change-tag">{{ change.name }}</span>
       {% endfor %}
     </div>
     {% endif %}
+
+    <!-- 4行目: トレンドコイン -->
     {% if latest_update.trending_coins %}
     <div class="update-trending">
-      <strong>📈 トレンド:</strong>
-      {{ latest_update.trending_coins | join(' · ') }}
+      <span class="update-label">📈 CoinGeckoトレンド:</span>
+      <span class="trending-coins">{{ latest_update.trending_coins | join('  ·  ') }}</span>
     </div>
     {% endif %}
+
+    <!-- ヒント -->
+    <div class="update-tip">
+      💡 情報は毎日自動更新 · 詳細は各プロジェクトの公式サイトで必ず確認してください
+    </div>
+
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'" title="閉じる">✕</button>
 </div>
 {% endif %}
 

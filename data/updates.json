@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "timestamp": "2026-06-29T00:14:07.798737+00:00",
+    "date": "2026-06-29",
+    "time_jst": "2026年06月29日 00:14",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [
+      "MetaMask (MASK)",
+      "Polymarket (POLY)",
+      "MegaETH (MEGA)",
+      "OpenSea (SEA)",
+      "Base (Coinbase L2)",
+      "EigenLayer (EIGEN)",
+      "Espresso (ESP)",
+      "Lighter (LIT)",
+      "Backpack Exchange",
+      "LayerZero エコシステム"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
