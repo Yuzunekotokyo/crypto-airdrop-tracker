@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "timestamp": "2026-06-30T00:13:52.631677+00:00",
+    "date": "2026-06-30",
+    "time_jst": "2026年06月30日 09:00",
+    "total_airdrops": 12,
+    "added_count": 3,
+    "removed_count": 0,
+    "changed_count": 5,
+    "hot_count": 4,
+    "added_names": [
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "Base (BASE)"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "Hyperliquid (HYPE)",
+        "changes": [
+          "トップ10入り (6.0B時価総額)"
+        ]
+      },
+      {
+        "name": "Backpack (BP)",
+        "changes": [
+          "ステータス: active → ended (2026/3/23 TGE完了)"
+        ]
+      },
+      {
+        "name": "OpenSea (SEA)",
+        "changes": [
+          "ステータス: upcoming → ended (Q1 2026配布完了)"
+        ]
+      },
+      {
+        "name": "LayerZero (ZRO)",
+        "changes": [
+          "ステータス: active → ended (2024/6配布済)"
+        ]
+      },
+      {
+        "name": "zkSync Era (ZK)",
+        "changes": [
+          "ステータス: active → ended (2024/6配布済)"
+        ]
+      }
+    ],
+    "trending_coins": [
+      "United States Water Reserve",
+      "The Black Bull",
+      "Synapse",
+      "Hyperliquid",
+      "Polkadot"
+    ],
+    "email_sent": false
+  }
+]

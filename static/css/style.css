@@ -402,6 +402,7 @@ main { padding: 28px 0 60px; }
 .airdrop-row { transition: background 0.15s; }
 .airdrop-row:hover { background: var(--card2); }
 .airdrop-row.row-hot { border-left: 3px solid var(--hot); }
+.airdrop-row.row-ended { opacity: 0.45; }
 .airdrop-row.hidden { display: none; }
 .airdrop-row:last-child td { border-bottom: none; }
 
