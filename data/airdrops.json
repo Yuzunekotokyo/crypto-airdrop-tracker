@@ -1,1 +1,160 @@
-[]
+[
+  {
+    "id": "base-token",
+    "name": "Base Network Token",
+    "symbol": "BASE",
+    "category": "Layer2",
+    "type": "推測段階(未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 2000,
+    "description": "Coinbase開発のLayer2「Base」。ネットワークトークン発行を検討中と公式発言あり(2025年9月)。JPMorganは時価総額120〜340億ドルと試算。正式発表はまだだが2026年内の可能性が最も注目される大型案件。",
+    "tasks": [
+      "EthereumからBaseへETHブリッジ",
+      "Base上のDEXでスワップ",
+      "DeFiへの流動性提供",
+      "Coinbaseアカウント連携(Sybil対策として有利との観測)"
+    ],
+    "end_date": "未定 (2026年内に発表の可能性)",
+    "logo": "https://assets.coingecko.com/asset_platforms/images/131/small/base-network.png",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-07-01",
+    "source": "curated"
+  },
+  {
+    "id": "backpack-back",
+    "name": "Backpack Exchange (BACK)",
+    "symbol": "BACK",
+    "category": "取引所/Solana",
+    "type": "取引所トークン",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1500,
+    "description": "セルフカストディウォレット+規制取引所を展開するBackpack。2026年2月にTGE計画を正式発表し、供給量の25%をコミュニティに配分予定。現在Epilogueフェーズでポイント最終獲得受付中。",
+    "tasks": [
+      "Backpack Exchangeでのトレーディング",
+      "Backpack WalletでのSolana DeFi利用",
+      "Backpack Pay利用",
+      "紹介プログラム",
+      "TGE前にKYC完了が必須"
+    ],
+    "end_date": "2026-07-26",
+    "logo": "https://assets.coingecko.com/coins/images/39457/small/backpack.png",
+    "url": "https://backpack.exchange/",
+    "is_hot": true,
+    "added_date": "2026-07-01",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "最大手NFTマーケットプレイスOpenSeaのネイティブトークン。供給量の50%をコミュニティに配分。Voyages(XPクエスト)への参加度合いで配分比率が決まる。",
+    "tasks": [
+      "OS2プラットフォームでのNFT売買",
+      "週次Voyagesクエスト達成",
+      "EVM/Solanaウォレット連携",
+      "X・Discordアカウント連携"
+    ],
+    "end_date": "2026-08-10",
+    "logo": "https://assets.coingecko.com/coins/images/1/small/opensea.png",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-07-01",
+    "source": "curated"
+  },
+  {
+    "id": "grass-season2",
+    "name": "Grass Season 2",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "追加配布",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "未使用の帯域幅を提供してAI学習データ収集に貢献するDePINプロジェクト。Season2ウォレットが2026年7月中旬にローンチ予定、7月7日にトークンホルダー向け公開コールを実施。",
+    "tasks": [
+      "Grass拡張機能をインストールし帯域幅を共有",
+      "Season2ウォレットの新規登録",
+      "7月7日の公開コールに参加"
+    ],
+    "end_date": "2026-07-16",
+    "logo": "https://assets.coingecko.com/coins/images/38270/small/Grass_200x200.png",
+    "url": "https://www.grass.io/",
+    "is_hot": true,
+    "added_date": "2026-07-01",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 800,
+    "description": "急成長中の予測市場プラットフォーム。トークン発行が有力視されており、早期からの取引実績がエアドロップ対象になる可能性。",
+    "tasks": [
+      "市場での予測ポジション取引",
+      "継続的な取引アクティビティ",
+      "USDC入出金の実績"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/44802/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": false,
+    "added_date": "2026-07-01",
+    "source": "curated"
+  },
+  {
+    "id": "hyperliquid-hype-s2",
+    "name": "Hyperliquid Season 2",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "追加ポイント配布",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 600,
+    "description": "高速オンチェーン永久先物DEX。Season1配布後も取引量・流動性提供に応じた継続的なポイント/報酬プログラムが稼働中。",
+    "tasks": [
+      "Hyperliquid上での先物取引",
+      "流動性提供(HLPボールト)",
+      "紹介プログラム参加"
+    ],
+    "end_date": "2026-08-20",
+    "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": false,
+    "added_date": "2026-07-01",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "最大手Web3ウォレットMetaMaskのトークン化が期待されている。ユーザー数が非常に多いため一人あたりの配分は少なめの見込み。",
+    "tasks": [
+      "MetaMask Swaps利用",
+      "MetaMask Card利用",
+      "Portfolio機能でのアクティビティ"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/1/small/metamask.png",
+    "url": "https://metamask.io/",
+    "is_hot": false,
+    "added_date": "2026-07-01",
+    "source": "curated"
+  }
+]
