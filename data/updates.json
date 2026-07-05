@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "timestamp": "2026-07-05T00:08:50.448265+00:00",
+    "date": "2026-07-05",
+    "time_jst": "2026年07月05日 00:08",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Ink Chain (INK)",
+      "Hyperliquid Season 2 (HYPE)",
+      "Polymarket",
+      "Base (Coinbase L2)",
+      "MetaMask (MASK)",
+      "Extended (旧X10)",
+      "Abstract Chain (ABS)",
+      "Perceptron Network (PERC)",
+      "Teneo Protocol (TENEO)",
+      "Pear Protocol — Hypear Season 3"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
