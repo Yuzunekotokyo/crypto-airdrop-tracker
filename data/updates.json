@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "timestamp": "2026-07-07T00:05:18.635385+00:00",
+    "date": "2026-07-07",
+    "time_jst": "2026年07月07日 00:05",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid Season 2 (HYPE)",
+      "Backpack Exchange (BP)",
+      "Grass Season 2 (GRASS)",
+      "Polymarket (POLY)",
+      "Base Token (Coinbase)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": ["Lighter", "The Black Bull", "Monad", "Pudgy Penguins", "Hyperliquid"],
+    "email_sent": false
+  }
+]

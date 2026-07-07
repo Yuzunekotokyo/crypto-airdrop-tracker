@@ -1,1 +1,111 @@
-[]
+[
+  {
+    "id": "hyperliquid-hype-s2",
+    "name": "Hyperliquid Season 2 (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "取引所トークン ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "高速オンチェーン永久先物DEX。供給量の約38.9%が将来的な報酬用に確保されておりSeason2の原資と目される。HyperEVM開始で新たな稼働機会が拡大中。",
+    "tasks": [
+      "Hyperliquid Perpsで取引を継続",
+      "HYPEをステーキング",
+      "HyperEVMへブリッジしdApps利用"
+    ],
+    "end_date": "未定(スナップショット日未発表)",
+    "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-07-07",
+    "source": "curated"
+  },
+  {
+    "id": "backpack-bp",
+    "name": "Backpack Exchange (BP)",
+    "symbol": "BP",
+    "category": "取引所",
+    "type": "取引所トークン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "2026年3月23日にBACKPACKトークンをローンチ済み。供給量の25%がコミュニティ配分(Season4ポイント保有者へ2.4億枚、Mad Lads保有者へ1000万枚)。継続的なSeason4ポイント稼働で追加配分の可能性。",
+    "tasks": [
+      "KYC済Backpack Exchangeアカウントを作成",
+      "Backpack Walletをインストール",
+      "取引量を積みSeason4ポイントを獲得"
+    ],
+    "end_date": "継続中(ポイントは毎週金曜更新)",
+    "logo": "https://assets.coingecko.com/coins/images/39676/small/backpack.png",
+    "url": "https://backpack.exchange/bp",
+    "is_hot": true,
+    "added_date": "2026-07-07",
+    "source": "curated"
+  },
+  {
+    "id": "grass-grass-s2",
+    "name": "Grass Season 2 (GRASS)",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "レトロアクティブ Season2",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "未使用の帯域幅を提供してAI学習用データ収集に貢献するDePINプロジェクト。Season2で供給量の約17%(1.7億GRASS)を配布予定。7/22よりStage2分の請求受付開始。",
+    "tasks": [
+      "Grass拡張機能をインストールし接続を維持",
+      "公式ダッシュボードでReward Checkerを確認",
+      "7/22の請求受付開始後に公式ポータルからクレーム"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "https://assets.coingecko.com/coins/images/38366/small/grass.png",
+    "url": "https://app.getgrass.io/",
+    "is_hot": true,
+    "added_date": "2026-07-07",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ(予定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "世界最大級の予測市場プラットフォーム。2025年10月にCMOがPOLYトークンとエアドロップ計画を公式確認。供給量の5〜10%をエアドロップ参加者に配分予定。米国プラットフォーム安定化後、2026年後半のトークンイベントが有力視。",
+    "tasks": [
+      "Polymarketで予測市場に参加・取引",
+      "米国プラットフォームでの利用実績を積む",
+      "公式XやDiscordで最新情報を確認"
+    ],
+    "end_date": "未定(2026年後半の可能性)",
+    "logo": "https://assets.coingecko.com/coins/images/41482/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-07",
+    "source": "curated"
+  },
+  {
+    "id": "base-token",
+    "name": "Base Token (Coinbase)",
+    "symbol": "BASE",
+    "category": "Layer2",
+    "type": "検討中(未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Base創設者Jesse Pollak氏が2025年9月にネットワークトークンの検討を公式表明。JPMorganアナリストは時価総額120〜340億ドルと試算。Coinbaseが公開企業のため規制面のハードルは大きいが、2026年Q2〜Q4のロールアウト観測も。",
+    "tasks": [
+      "Base上でトランザクション/dApps利用実績を積む",
+      "公式発表(Jesse Pollak氏のX等)を継続的にウォッチ"
+    ],
+    "end_date": "未定(公式未発表)",
+    "logo": "https://assets.coingecko.com/coins/images/32411/small/base.png",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-07-07",
+    "source": "curated"
+  }
+]
