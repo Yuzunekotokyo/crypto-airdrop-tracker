@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "timestamp": "2026-07-08T00:05:51.936219+00:00",
+    "date": "2026-07-08",
+    "time_jst": "2026年07月08日 09:05",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 6,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "MetaMask Rewards (MASK)",
+      "Polymarket (POLY)",
+      "Hyperliquid Season 2 (HYPE)",
+      "OpenSea (SEA)",
+      "Kraken Ink (INK)",
+      "Base (未発表トークン)"
+    ],
+    "removed_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
