@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-07-09T00:04:29.537283+00:00",
+    "date": "2026-07-09",
+    "time_jst": "2026年07月09日 09:04",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Backpack Exchange",
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "Base",
+      "OpenSea",
+      "Monad (MON)",
+      "LayerZero (ZRO)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
