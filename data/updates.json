@@ -1,1 +1,60 @@
-[{"timestamp":"2026-06-24T00:00:00+00:00","date":"2026-06-24","time_jst":"2026年06月24日 09:00","total_airdrops":8,"added_count":8,"removed_count":0,"changed_count":0,"hot_count":3,"added_names":["MetaMask ($MASK)","Polymarket ($POLY)","GRVT ($GRVT)","Base (Coinbase L2)"],"removed_names":[],"changes":[],"trending_coins":["Polymarket","MetaMask","Hyperliquid","Kaito","Base"],"email_sent":false,"update_note":"2026年6月定期更新 — データをリフレッシュし最新注目案件に入れ替え。GRVT Season 2が6/30期限の緊急案件。MetaMask・Polymarket・Baseが今最も注目度の高いエアドロップ候補。"}]
+[
+  {
+    "timestamp": "2026-07-11T00:05:48.827511+00:00",
+    "date": "2026-07-11",
+    "time_jst": "2026年07月11日 00:05",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 6,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Base (Coinbase L2)",
+      "MegaETH",
+      "Backpack",
+      "MetaMask (MASK)",
+      "Axiom",
+      "N1 (旧Layer N)",
+      "Bitcoin Hyper (HYPER)"
+    ],
+    "removed_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "changes": [],
+    "trending_coins": [
+      "Zano",
+      "Cash Cat",
+      "Pudgy Penguins",
+      "LAB",
+      "Lighter"
+    ],
+    "email_sent": false
+  },
+  {
+    "timestamp": "2026-07-11T00:02:47.223089+00:00",
+    "date": "2026-07-11",
+    "time_jst": "2026年07月11日 00:02",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

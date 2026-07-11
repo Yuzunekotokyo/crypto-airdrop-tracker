@@ -14,6 +14,12 @@ def _headers():
     return h
 
 
+def _fallback_trending():
+    """CoinGecko APIに到達できない場合の代替データ (定期的に手動更新)。"""
+    names = ["Zano", "Cash Cat", "Pudgy Penguins", "LAB", "Lighter", "Virtuals Protocol", "Uniswap"]
+    return [{"id": n.lower().replace(" ", "-"), "name": n, "symbol": "", "rank": None, "thumb": "", "price_btc": 0, "score": i} for i, n in enumerate(names)]
+
+
 def get_trending_coins():
     try:
         r = requests.get(f"{BASE_URL}/search/trending", headers=_headers(), timeout=10)
@@ -32,8 +38,8 @@ def get_trending_coins():
             for c in coins[:10]
         ]
     except Exception as e:
-        logger.warning(f"CoinGecko trending fetch failed: {e}")
-        return []
+        logger.warning(f"CoinGecko trending fetch failed: {e}, using fallback")
+        return _fallback_trending()
 
 
 def get_coin_price(coin_ids: list[str]):
