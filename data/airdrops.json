@@ -1,1 +1,155 @@
-[]
+[
+  {
+    "id": "base-l2",
+    "name": "Base (Coinbase L2)",
+    "symbol": "BASE?",
+    "category": "Layer2",
+    "type": "未確定・高期待",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 600,
+    "description": "Coinbase発のEthereum L2。JPMorganアナリストは時価総額120〜340億ドル規模と試算。創業者Jesse Pollak氏はトークン発行を検討中と明言(未確定)。",
+    "tasks": [
+      "Base上でのDeFi/dApps利用実績",
+      "Baseブリッジ利用",
+      "Coinbase Wallet連携での活動"
+    ],
+    "end_date": "未定 (トークン発行は未確定)",
+    "logo": "https://assets.coingecko.com/asset_platforms/images/131/small/base-network.png",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-07-11",
+    "source": "curated-2026-07"
+  },
+  {
+    "id": "megaeth",
+    "name": "MegaETH",
+    "symbol": "MEGA",
+    "category": "Layer2",
+    "type": "メインネット稼働中",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "超高速EVM互換L2。The Fluffle NFT保有者にMEGA供給の5%以上を配布予定。メインネット実利用も評価対象。",
+    "tasks": [
+      "MegaETHメインネットでのトランザクション",
+      "The Fluffle NFT保有",
+      "エコシステムdApps利用"
+    ],
+    "end_date": "2026-09-09",
+    "logo": "https://assets.coingecko.com/coins/images/39619/small/megaeth.png",
+    "url": "https://megaeth.com/",
+    "is_hot": true,
+    "added_date": "2026-07-11",
+    "source": "curated-2026-07"
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack",
+    "symbol": "BACK?",
+    "category": "取引所/ウォレット",
+    "type": "TGE計画発表済み",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 400,
+    "description": "自己管理型ウォレット・規制取引所・Mad Lads NFTを展開。$37M調達済み、2026年2月にTGE計画を正式発表しており実現濃厚。",
+    "tasks": [
+      "Backpack取引所での取引実績",
+      "Backpackウォレット利用",
+      "Mad Lads等エコシステム参加"
+    ],
+    "end_date": "未定 (TGE計画発表済み)",
+    "logo": "https://assets.coingecko.com/coins/images/39456/small/backpack.png",
+    "url": "https://backpack.exchange/",
+    "is_hot": true,
+    "added_date": "2026-07-11",
+    "source": "curated-2026-07"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "エアドロップ濃厚",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 350,
+    "description": "世界最大級のウォレット(月間利用者3000万人超)。ConsensysのCEOが2026年にMASKトークン発行を公式に確認済み。史上最大規模の配布になる可能性。",
+    "tasks": [
+      "MetaMaskウォレットを継続利用",
+      "MetaMask Rewardsポイント収集",
+      "MetaMask Card/Swap利用"
+    ],
+    "end_date": "未定 (2026年内ローンチ見込み)",
+    "logo": "https://assets.coingecko.com/coins/images/263/small/MetaMask-icon-fox.svg",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-07-11",
+    "source": "curated-2026-07"
+  },
+  {
+    "id": "axiom-dex",
+    "name": "Axiom",
+    "symbol": "AXIOM?",
+    "category": "DeFi/DEX",
+    "type": "インセンティブ・テストネット",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 350,
+    "description": "Solana / Hyperliquid上で動くプライバシー重視の分散型取引所。現在インセンティブ付きテストネットを実施中。",
+    "tasks": [
+      "テストネットでの取引",
+      "流動性提供",
+      "紹介プログラム参加"
+    ],
+    "end_date": "2026-08-25",
+    "logo": "",
+    "url": "https://axiom.trade/",
+    "is_hot": false,
+    "added_date": "2026-07-11",
+    "source": "curated-2026-07"
+  },
+  {
+    "id": "n1-layern",
+    "name": "N1 (旧Layer N)",
+    "symbol": "N1?",
+    "category": "インフラ",
+    "type": "未確定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 250,
+    "description": "旧Layer N。公式なエアドロップ確約はまだないが、テストネット・エコシステムキャンペーンへの早期参加が有利とされる。",
+    "tasks": [
+      "テストネット参加",
+      "エコシステムキャンペーン参加",
+      "コミュニティ活動"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://n1.xyz/",
+    "is_hot": false,
+    "added_date": "2026-07-11",
+    "source": "curated-2026-07"
+  },
+  {
+    "id": "bitcoin-hyper",
+    "name": "Bitcoin Hyper (HYPER)",
+    "symbol": "HYPER",
+    "category": "Solanaエコシステム",
+    "type": "ステーキング",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "Solanaエコシステムで注目のプロジェクト。HYPERのステーキングで報酬機会。",
+    "tasks": [
+      "HYPERをステーキング",
+      "コミュニティ参加"
+    ],
+    "end_date": "2026-08-10",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-07-11",
+    "source": "curated-2026-07"
+  }
+]
