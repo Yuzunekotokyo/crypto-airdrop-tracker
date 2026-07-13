@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-07-13T00:05:47.959709+00:00",
+    "date": "2026-07-13",
+    "time_jst": "2026年07月13日 09:05",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Base (BASE)",
+      "Ink (INK) — Kraken L2",
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "LayerZero (ZRO) — 次期シーズン",
+      "OpenSea (SEA) — 追加配布枠"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
