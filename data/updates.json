@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "timestamp": "2026-07-15T00:05:27.645125+00:00",
+    "date": "2026-07-15",
+    "time_jst": "2026年07月15日 00:05",
+    "total_airdrops": 4,
+    "added_count": 4,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Base",
+      "Zama (fhEVM)",
+      "Bitcoin Hyper (HYPER)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
