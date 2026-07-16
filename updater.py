@@ -48,9 +48,11 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
             if old_a.get("status") != new_a.get("status"):
                 diffs.append(f"ステータス: {old_a.get('status')} → {new_a.get('status')}")
             if old_a.get("estimated_value_usd") != new_a.get("estimated_value_usd"):
-                diffs.append(
-                    f"推定価値: ${old_a.get('estimated_value_usd',0):,} → ${new_a.get('estimated_value_usd',0):,}"
-                )
+                old_val = old_a.get("estimated_value_usd")
+                new_val = new_a.get("estimated_value_usd")
+                old_label = f"${old_val:,}" if old_val else "未定"
+                new_label = f"${new_val:,}" if new_val else "未定"
+                diffs.append(f"推定価値: {old_label} → {new_label}")
             if diffs:
                 changed.append({"name": new_a["name"], "changes": diffs})
 

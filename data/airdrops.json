@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": null,
+    "description": "Consensys公式ウォレット。MASKトークンの配布(供給の15%)が開始済み。2026年3月1日以前のスワップ/ブリッジ/DeFi利用実績があるウォレットが対象。claim期間は開始から90日間。",
+    "tasks": [
+      "mskfndt.info でウォレットの対象確認",
+      "対象ならその場でclaim",
+      "Rewardsプログラム(Season2)でのポイント継続獲得"
+    ],
+    "end_date": "2026-09-29",
+    "logo": "https://assets.coingecko.com/coins/images/28861/small/metamask.png",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-07-16",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": null,
+    "description": "NYSE運営元ICEから20億ドルの出資を受けた最大手予測市場。POLYトークンとエアドロップは確定済みだが、スナップショット日・詳細条件は未発表。複数カテゴリでの継続的な取引が有利とされる。",
+    "tasks": [
+      "政治・スポーツ・経済など複数カテゴリで取引",
+      "数週間〜数ヶ月にわたり継続的に利用",
+      "X(Twitter)アカウントをリンク"
+    ],
+    "end_date": "未定(スナップショット未発表)",
+    "logo": "https://assets.coingecko.com/coins/images/47421/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-16",
+    "source": "curated"
+  },
+  {
+    "id": "base-coinbase-l2",
+    "name": "Base",
+    "symbol": "—",
+    "category": "Layer2",
+    "type": "潜在的エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": null,
+    "description": "Coinbase運営のL2。トークン未発行だが日次取引高が最大級で、現在最も多くファーマーが活動しているチェーンの一つ。スワップ・ブリッジ・NFTミント・レンディング利用が対象になり得る。",
+    "tasks": [
+      "Base上でスワップ/ブリッジを実行",
+      "Base上のdAppでレンディング・NFTミント",
+      "継続的なオンチェーン活動を維持"
+    ],
+    "end_date": "未定(トークン未発行)",
+    "logo": "https://assets.coingecko.com/asset_platforms/images/131/small/base-network.png",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-07-16",
+    "source": "curated"
+  },
+  {
+    "id": "grass-season2",
+    "name": "Grass Network Season 2",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "ポイントプログラム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": null,
+    "description": "未使用の帯域幅を提供してAI学習データ収集に貢献するDePINプロジェクト。2026年7月7日のコミュニティコールでSeason 2ロードマップを発表、7月中旬にウォレット機能(パスキー/メールOTP対応)がリリース予定。",
+    "tasks": [
+      "Grassアプリ/拡張機能をインストールし帯域幅を共有",
+      "新ウォレット機能でアカウントを準備",
+      "公式コミュニティコールをフォロー"
+    ],
+    "end_date": "未定(Season2詳細待ち)",
+    "logo": "https://assets.coingecko.com/coins/images/38556/small/grass.png",
+    "url": "https://www.getgrass.io/",
+    "is_hot": true,
+    "added_date": "2026-07-16",
+    "source": "curated"
+  },
+  {
+    "id": "backpack-bp-season4",
+    "name": "Backpack (BP) Season 4",
+    "symbol": "BP",
+    "category": "取引所",
+    "type": "ポイントプログラム",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": null,
+    "description": "2026年3月にTGE済み(供給の25%をコミュニティに配布)。現在進行中のSeason 4ポイントプログラムが将来の追加配布・エピローグ再配分の対象になる見込み。",
+    "tasks": [
+      "Backpack取引所でSeason 4ポイントを獲得",
+      "現物/デリバティブ取引を継続",
+      "Mad Ladsホルダーは追加優遇あり"
+    ],
+    "end_date": "2026-10-14",
+    "logo": "https://assets.coingecko.com/coins/images/39824/small/backpack.png",
+    "url": "https://backpack.exchange/",
+    "is_hot": false,
+    "added_date": "2026-07-16",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": null,
+    "description": "最大手NFTマーケットプレイス。当初2026年3月30日ローンチ予定だったが市場環境を理由に延期中で新日程は未発表。Treasure ChestのVoyage達成や売買実績が対象。",
+    "tasks": [
+      "Treasure ChestのVoyageを達成",
+      "OpenSea上でNFT/トークンの売買を継続",
+      "公式発表を継続的にチェック"
+    ],
+    "end_date": "未定(ローンチ延期中)",
+    "logo": "https://assets.coingecko.com/markets/images/302/small/opensea.png",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-07-16",
+    "source": "curated"
+  }
+]

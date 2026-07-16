@@ -140,8 +140,9 @@ def send_hot_alert(airdrop: dict) -> bool:
         return False
 
     name = airdrop.get("name", "不明")
-    value = airdrop.get("estimated_value_usd", 0)
-    subject = f"🚨 [HOT Airdrop] {name} — 推定${value:,}の新案件が登場！"
+    value = airdrop.get("estimated_value_usd") or 0
+    value_label = f"~${value:,}" if airdrop.get("estimated_value_usd") else "未定"
+    subject = f"🚨 [HOT Airdrop] {name} — 新案件が登場！"
 
     html = f"""
 <!DOCTYPE html><html><head><meta charset="UTF-8"></head>
@@ -151,7 +152,7 @@ def send_hot_alert(airdrop: dict) -> bool:
   </div>
   <div style="background:white;padding:20px;border:1px solid #dee2e6;border-top:none;border-radius:0 0 8px 8px;">
     <h3>{name} ({airdrop.get('symbol','')})</h3>
-    <p><strong>推定価値:</strong> ~${value:,}</p>
+    <p><strong>推定価値:</strong> {value_label}</p>
     <p><strong>カテゴリ:</strong> {airdrop.get('category','')}</p>
     <p><strong>難易度:</strong> {airdrop.get('difficulty','').upper()}</p>
     <p><strong>概要:</strong> {airdrop.get('description','')}</p>
