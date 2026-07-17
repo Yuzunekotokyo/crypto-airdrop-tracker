@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "取引所トークン",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "世界最大の予測市場プラットフォーム。CMOのMatthew Modabber氏が「トークンとエアドロップは実施する」と公式に明言。ICEから約20億ドルの出資を受け評価額は約150億ドル。米国展開が完了した後、2026年後半のトークン発表が有力視されているが、配布ルール・時期は未確定。",
+    "tasks": [
+      "Polymarketで取引実績を積む",
+      "対応地域でアカウント開設・KYC",
+      "公式X/Discordで発表を注視"
+    ],
+    "end_date": "未定(2026年後半予想)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-17",
+    "source": "curated-2026-07-17"
+  },
+  {
+    "id": "base-network-token",
+    "name": "Base Network Token",
+    "symbol": "TBD",
+    "category": "Layer2",
+    "type": "ネットワークトークン",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CoinbaseのL2チェーン「Base」が2025年9月にネットワークトークン発行の検討を正式表明(従来の「トークンは発行しない」方針から転換)。2026年Q2〜Q4のローンチが観測筋の予想で、Polymarket上の予測市場では年内ローンチ確率が約69%。トークノミクス・配布詳細は未発表。",
+    "tasks": [
+      "Base上でDEX/DeFiの利用実績を積む",
+      "Base公式Blog/Xで発表を注視",
+      "対応dAppsでのアクティビティを継続"
+    ],
+    "end_date": "未定(2026年Q2-Q4予想)",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-07-17",
+    "source": "curated-2026-07-17"
+  },
+  {
+    "id": "endmatch",
+    "name": "EndMatch",
+    "symbol": "",
+    "category": "その他",
+    "type": "Galxeキャンペーン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "2026年7月中旬に登場したばかりの新しいエアドロップ案件。配布量が総供給量の15%と通常より大きい割当が特徴で注目度が高い。USD換算額・詳細タスクは現時点で未確定のため、参加前に必ず公式ページで最新情報を確認すること。",
+    "tasks": [
+      "Galxe公式キャンペーンページでタスクを確認",
+      "X/Telegramをフォロー",
+      "公式サイトの追加タスクを完了"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://www.galxe.com/",
+    "is_hot": true,
+    "added_date": "2026-07-17",
+    "source": "curated-2026-07-17"
+  },
+  {
+    "id": "prismax-pix",
+    "name": "PrismaX (PIX)",
+    "symbol": "PIX",
+    "category": "AI/ロボティクス",
+    "type": "ポイント→TGE",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ロボットの遠隔操作でAI学習データを収集する分散型ロボティクスプラットフォーム。a16z crypto CSX 等から1,100万ドルを調達済み。貯めたPrisma PointsはTGE後に$PIXへ変換予定 (時期未確定)。",
+    "tasks": [
+      "Solanaウォレットを接続 (初回1,000ポイント)",
+      "毎日ログインで+10ポイント",
+      "遠隔操作タスク・クイズに参加"
+    ],
+    "end_date": "TGE時期未定",
+    "logo": "",
+    "url": "https://airdrops.io/prismax/",
+    "is_hot": false,
+    "added_date": "2026-07-17",
+    "source": "curated-2026-07-17"
+  }
+]
