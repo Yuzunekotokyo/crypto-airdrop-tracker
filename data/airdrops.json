@@ -1,1 +1,130 @@
-[]
+[
+  {
+    "id": "grass-season2",
+    "name": "Grass Airdrop Season 2",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "リテンションクレーム (USDC建て)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "帯域幅シェアで貯めたNetwork Points (2024年10月〜2026年6月が対象期間) に応じてクレームできるSeason 2。規制対応のためGRASSトークンではなくUSDCで配布 (総額約$300万規模)。クレームウィンドウは2026年7月22日開始〜2027年1月22日まで。",
+    "tasks": [
+      "対象期間のNetwork Pointsを公式サイトで確認",
+      "7/22のクレームウィンドウ開始を待つ",
+      "公式サイト (app.getgrass.io) でウォレット接続しUSDCをクレーム"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "https://assets.coingecko.com/coins/images/38078/small/Grass_symbol_500px.png",
+    "url": "https://app.getgrass.io/",
+    "is_hot": true,
+    "added_date": "2026-07-18",
+    "source": "web-search-2026-07-18"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ (時期未確定)",
+    "status": "upcoming",
+    "difficulty": "hard",
+    "estimated_value_usd": 1500,
+    "description": "PolymarketのCMOが「トークンとエアドロップは必ず行う」と公式表明済み。総額$1.4B規模とも噂されるが、配布条件・スナップショット時期は未発表。米国本土展開の完了後、2026年後半のローンチが有力視されている。",
+    "tasks": [
+      "Polymarketで継続的に予測市場取引を行う",
+      "取引ボリューム・アカウント保有期間を蓄積する",
+      "公式X/Discordで正式アナウンスを注視する"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/47265/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-18",
+    "source": "web-search-2026-07-18"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFTマーケットプレイス",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "コミュニティに50%配分予定のSEAトークン。当初Q1 2026予定だったTGEは弱気相場を理由に延期発表 (2026年3月17日、CEO Devin Finzer)。XP・チェストレベルのスナップショットは実施済みで、正式ローンチを待つ段階。",
+    "tasks": [
+      "OpenSea OS2上でのXP蓄積 (継続キャンペーンがあれば)",
+      "対象ウォレットでの取引・保有を継続",
+      "公式アナウンスでTGE時期を確認"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/2661/small/opensea.png",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-07-18",
+    "source": "web-search-2026-07-18"
+  },
+  {
+    "id": "layerzero-zro",
+    "name": "LayerZero (ZRO)",
+    "symbol": "ZRO",
+    "category": "インフラ",
+    "type": "レトロアクティブ / エコシステム拡大中",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "クロスチェーンメッセージングの基盤プロトコル。2026年2月11日に独自レイヤー1「Zero」を発表しエコシステムを拡大中。ブリッジ・DeFi利用実績が今後の追加インセンティブ対象になる可能性。",
+    "tasks": [
+      "Stargate等でのブリッジ実行",
+      "複数チェーンでのトランザクション実績を積む",
+      "LayerZero対応dAppsの継続利用"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
+    "url": "https://layerzero.network/",
+    "is_hot": true,
+    "added_date": "2026-07-18",
+    "source": "web-search-2026-07-18"
+  },
+  {
+    "id": "base-network-token",
+    "name": "Base ネットワークトークン (未確定)",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "検討段階 (未確約)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "CoinbaseのJesse Pollakが2025年9月にBaseトークンの検討を認めたが、正式発表・トークノミクスは未公開。2026年Q2〜Q4のローンチが噂されるが確約ではないため過度な期待は禁物。",
+    "tasks": [
+      "Base上でのDEX/DeFi利用実績を積む",
+      "オンチェーンアクティビティを継続する",
+      "公式発表を待つ (未確定案件)"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/38040/small/logo-cbi.png",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-07-18",
+    "source": "web-search-2026-07-18"
+  },
+  {
+    "id": "monad-mon",
+    "name": "Monad (MON)",
+    "symbol": "MON",
+    "category": "Layer1",
+    "type": "レトロアクティブ (受付終了)",
+    "status": "ended",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "2025年11月24日にメインネットローンチ。MONエアドロップ第1弾のクレーム受付は2025年10月14日〜11月3日で終了済み。新規クレームは不可 (参考情報として掲載)。",
+    "tasks": [],
+    "end_date": "2025-11-03",
+    "logo": "https://assets.coingecko.com/coins/images/38680/small/monad.png",
+    "url": "https://www.monad.xyz/",
+    "is_hot": false,
+    "added_date": "2026-07-18",
+    "source": "web-search-2026-07-18"
+  }
+]
