@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-07-19T00:04:34.600424+00:00",
+    "date": "2026-07-19",
+    "time_jst": "2026年07月19日 00:04",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Hyperliquid Season 2",
+      "OpenSea (SEA)",
+      "Abstract",
+      "USD.AI",
+      "Backpack Exchange (BP)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
