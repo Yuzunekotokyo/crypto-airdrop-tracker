@@ -1,1 +1,199 @@
-[]
+[
+  {
+    "id": "hyperliquid-hype",
+    "name": "Hyperliquid (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "取引所トークン",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。",
+    "tasks": [
+      "Hyperliquid上での先物取引",
+      "流動性提供",
+      "紹介プログラム参加"
+    ],
+    "end_date": "2026-08-19",
+    "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-07-20",
+    "source": "curated"
+  },
+  {
+    "id": "layerzero-zro",
+    "name": "LayerZero (ZRO)",
+    "symbol": "ZRO",
+    "category": "インフラ",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "クロスチェーンメッセージングプロトコル。Season2の活動が継続中で追加配布への布石とみられる。",
+    "tasks": [
+      "Stargate経由でブリッジを実行",
+      "複数チェーンでのトランザクション",
+      "LayerZero対応dAppsの利用"
+    ],
+    "end_date": "2026-09-18",
+    "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
+    "url": "https://layerzero.network/",
+    "is_hot": true,
+    "added_date": "2026-07-20",
+    "source": "curated"
+  },
+  {
+    "id": "movement-move",
+    "name": "Movement (MOVE)",
+    "symbol": "MOVE",
+    "category": "Layer2",
+    "type": "新規上場",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 400,
+    "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ予定。",
+    "tasks": [
+      "テストネット参加",
+      "Discordコミュニティ参加",
+      "テストトランザクション実行"
+    ],
+    "end_date": "2026-08-09",
+    "logo": "https://assets.coingecko.com/coins/images/39619/small/MOVE_color.png",
+    "url": "https://movementlabs.xyz/",
+    "is_hot": true,
+    "added_date": "2026-07-20",
+    "source": "curated"
+  },
+  {
+    "id": "scroll-scr",
+    "name": "Scroll (SCR)",
+    "symbol": "SCR",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。",
+    "tasks": [
+      "ScrollネットワークへETHブリッジ",
+      "Scroll上でのDeFi利用",
+      "複数週にわたるアクティビティ"
+    ],
+    "end_date": "2026-10-18",
+    "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
+    "url": "https://scroll.io/",
+    "is_hot": true,
+    "added_date": "2026-07-20",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "予測市場最大手。CMOのMatthew Modabber氏がポッドキャストでトークン発行とエアドロップの実施を公式に認めた最新の注目案件。配布基準・時期は未発表(米国プラットフォーム再始動後、2026年後半が有力視)。推定価値は未定。",
+    "tasks": [
+      "政治・スポーツ・経済など複数カテゴリで継続的に取引",
+      "流動性提供",
+      "X(旧Twitter)アカウントを連携したままにする"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-20",
+    "source": "web-research"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット/インフラ",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ConsenSys CEOのJoseph Lubin氏が$MASKトークン発行を確認済み。MetaMask Rewardsプログラム(Season1はLINEAトークンを3000万ドル以上配布)のSeason2ポイントが配布基準になる見込み。ローンチは2026年Q3〜Q4、Consensys IPOと連動する可能性。",
+    "tasks": [
+      "MetaMask Rewardsプログラムに参加してポイント獲得",
+      "MetaMaskウォレットでのスワップ/ブリッジ利用",
+      "Linea等の対応チェーンでの継続利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://rewards.metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-07-20",
+    "source": "web-research"
+  },
+  {
+    "id": "eigenlayer-eigen",
+    "name": "EigenLayer (EIGEN)",
+    "symbol": "EIGEN",
+    "category": "インフラ",
+    "type": "リステーキング",
+    "status": "active",
+    "difficulty": "hard",
+    "estimated_value_usd": 800,
+    "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。",
+    "tasks": [
+      "ETHをリステーキング",
+      "LST (stETH等) をデポジット",
+      "AVSへの参加"
+    ],
+    "end_date": "2026-11-17",
+    "logo": "https://assets.coingecko.com/coins/images/33751/small/eigen.png",
+    "url": "https://eigenlayer.xyz/",
+    "is_hot": false,
+    "added_date": "2026-07-20",
+    "source": "curated"
+  },
+  {
+    "id": "zksync-era",
+    "name": "zkSync Era",
+    "symbol": "ZK",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "Matter Labsが開発するZK-Rollup。エコシステムが急拡大中。",
+    "tasks": [
+      "Era上でのスワップ",
+      "Syncswap/Mute利用",
+      "zkSync公式ブリッジ利用"
+    ],
+    "end_date": "2026-09-03",
+    "logo": "https://assets.coingecko.com/coins/images/38043/small/ZKTokenBlack.png",
+    "url": "https://zksync.io/",
+    "is_hot": false,
+    "added_date": "2026-07-20",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "取引所トークン",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "NFT最大手マーケットプレイス。SEAトークンは既に発表済みだが、2026年3月30日予定だったローンチが延期され新日程は未発表。",
+    "tasks": [
+      "OpenSea OS2でのNFT取引",
+      "プラットフォーム利用継続"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-07-20",
+    "source": "web-research"
+  }
+]

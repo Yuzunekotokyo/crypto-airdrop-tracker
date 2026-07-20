@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "timestamp": "2026-07-20T00:30:00+00:00",
+    "date": "2026-07-20",
+    "time_jst": "2026年07月20日 09:30",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era",
+      "OpenSea (SEA)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [
+      "Pudgy Penguins",
+      "ADI",
+      "Cash Cat"
+    ],
+    "email_sent": true,
+    "notable_new": [
+      "Polymarket (POLY)",
+      "MetaMask (MASK)"
+    ]
+  }
+]
