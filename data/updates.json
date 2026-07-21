@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-07-21T00:05:47+00:00",
+    "date": "2026-07-21",
+    "time_jst": "2026年07月21日 09:05",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [
+      "Grass (GRASS)",
+      "Hyperliquid Season 2 (HYPE)",
+      "LayerZero Season 2 (ZRO)",
+      "Polymarket (POLY・噂)",
+      "OpenSea (SEA)",
+      "Abstract XPプログラム",
+      "Base ネイティブトークン (未確定)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": ["Pump.fun", "Lorenzo Protocol", "Pudgy Penguins", "DeXe", "Lighter (LIT)"],
+    "email_sent": false,
+    "email_draft_created": true,
+    "note": "初回データ投入。実際のWeb調査 (CoinGecko/Airdrops.io/各プロジェクト公式・報道) に基づき、2026年7月21日時点の注目エアドロップ候補を掲載。Gmail送信用の認証情報 (.env) が未設定のため、自動メールはGmail下書きとして作成済み。"
+  }
+]
