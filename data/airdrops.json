@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "id": "grass-season2",
+    "name": "Grass (GRASS) Season 2",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "リワード請求 (Claim受付中)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "帯域共有型DePINプロジェクト。Season 2のUSDC請求ウィンドウが本日2026年7月22日13:00(EST)に開始。2024年10月〜2026年6月のネットワークポイントに応じて報酬額が変動 (総額約$300万相当)。2027年1月22日までに請求しないと権利消滅。",
+    "tasks": [
+      "Grassダッシュボードにアクセスしウォレット接続",
+      "パスキー/メールOTPで新規非カストディアルウォレットを設定",
+      "2027年1月22日までに請求を完了"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://www.grass.io/",
+    "is_hot": true,
+    "added_date": "2026-07-22",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "コミュニティ配布 (未実施)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "NFTマーケットプレイス最大手。CEOが供給の50%をコミュニティ (OG・報酬参加者) に配布すると表明。当初Q1 2026予定だったが2026年7月時点で正式なスナップショット日・配点基準は未発表。",
+    "tasks": [
+      "OpenSeaでのNFT売買を継続",
+      "Voyages(デイリークエスト)をこなす",
+      "Treasure Chestのレベルを上げる",
+      "複数ウォレットをリンク"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-07-22",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-token",
+    "name": "Polymarket",
+    "symbol": "未定",
+    "category": "予測市場",
+    "type": "コミュニティ配布 (予定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "世界最大の予測市場プラットフォーム。CMOが『トークンとエアドロップは実施される』と公式に言及済み。配布基準・時期は未発表 (2026年後半が有力視)。",
+    "tasks": [
+      "実際にPolymarketで予測市場に参加・取引する",
+      "幅広いカテゴリのイベント市場を利用",
+      "公式Xアカウントで続報を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-22",
+    "source": "curated"
+  },
+  {
+    "id": "spicenet-points",
+    "name": "Spicenet",
+    "symbol": "未定",
+    "category": "インフラ/クロスチェーン",
+    "type": "ポイントファーミング",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クロスチェーン向け新興プロトコル。PortalでクエストやチェックインをこなしSpice Pointsを貯める。トークン化・エアドロップは公式未確定。フィッシングサイトが多数報告されているため参加前に公式リンクを要検証。",
+    "tasks": [
+      "公式に確認済みのリンクからのみPortalへアクセス",
+      "デイリーチェックイン",
+      "紹介プログラムでボーナスポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdrops.io/spicenet/",
+    "is_hot": false,
+    "added_date": "2026-07-22",
+    "source": "curated"
+  },
+  {
+    "id": "base-speculative",
+    "name": "Base (Coinbase L2)",
+    "symbol": "未定",
+    "category": "Layer2",
+    "type": "トークン未確定 (投機的)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Coinbase運営のEthereum L2。独自トークン発行の検討は表明されているが、2026年7月時点で公式な発表・スケジュールは無し。『Base公式クレームサイト』を名乗るものは全て詐欺なので絶対にアクセスしないこと。",
+    "tasks": [
+      "Base上のdAppsを日常的に利用しオンチェーン活動履歴を積む",
+      "公式発表 (base.org) のみを情報源にする"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://www.base.org/",
+    "is_hot": false,
+    "added_date": "2026-07-22",
+    "source": "curated"
+  }
+]

@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "timestamp": "2026-07-22T00:05:47.460738+00:00",
+    "date": "2026-07-22",
+    "time_jst": "2026年07月22日 09:05",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Grass (GRASS) Season 2",
+      "OpenSea (SEA)",
+      "Polymarket",
+      "Spicenet",
+      "Base (Coinbase L2)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
