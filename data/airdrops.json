@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "id": "orbinum-network-orb",
+    "name": "Orbinum Network (ORB)",
+    "symbol": "ORB",
+    "category": "プライバシー/インフラ",
+    "type": "テストネットポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 350,
+    "description": "秘匿トランザクション対応のプライバシーチェーン。Season 1「Genesis Community」が2026年3月13日開始、2,000万ORBの報酬プールをクエスト・週次ストリーク・紹介・テストネット操作(シールド送金等)のポイントで山分け。無料テストネットトークンのみで参加可能。",
+    "tasks": [
+      "Orbinum Hubでウォレット/X/Discord/Telegramを連携",
+      "Quest Board (Social/Weekly/Refer/Learn) を完了",
+      "テストネットでシールド送金・非シールド化・選択的開示を実行",
+      "紹介プログラムでORBクレジット獲得"
+    ],
+    "end_date": "未定 (メインネット稼働14日前にスナップショット)",
+    "logo": "",
+    "url": "https://app.orbinum.network/",
+    "is_hot": true,
+    "added_date": "2026-07-23",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場/DeFi",
+    "type": "レトロアクティブ (発表済・日程未定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "世界最大級の予測市場プラットフォーム。CMOのMatthew Modabberが2025年10月にトークン発行とエアドロップ実施を公式確認済み。2026年5月に米国事業を本格展開したが、配布時期・対象条件はまだ未公開。取引量が大きいほど有利になる可能性が高い。",
+    "tasks": [
+      "Polymarketで実際に予測市場に参加・取引",
+      "継続的な取引履歴を積む",
+      "公式アナウンスを注視 (配布条件は未公開)"
+    ],
+    "end_date": "未定 (トークン発行日未発表)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-23",
+    "source": "curated"
+  },
+  {
+    "id": "fogo-flames-s2",
+    "name": "Fogo (FOGO) — Flames Season 2",
+    "symbol": "FOGO",
+    "category": "Layer1/トレーディング",
+    "type": "シーズンポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 150,
+    "description": "SVM互換の高速トレーディング特化Layer1。Season 1クレーム(平均6,700FOGO/ウォレット)は2026年4月15日で終了済みだが、2億FOGOを配分するFlames Season 2が進行中。週次(月〜日UTC)でFlamesを稼ぎ毎週水曜にリーダーボード反映。",
+    "tasks": [
+      "Flames Season 2ポータルに参加",
+      "対象dApp上で週次アクティビティを実施",
+      "リーダーボード上位を維持"
+    ],
+    "end_date": "シーズン2進行中 (終了日未定)",
+    "logo": "",
+    "url": "https://fogo.io/",
+    "is_hot": false,
+    "added_date": "2026-07-23",
+    "source": "curated"
+  },
+  {
+    "id": "spicenet",
+    "name": "Spicenet",
+    "symbol": "",
+    "category": "DeFi/インフラ",
+    "type": "ポイントファーミング",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Celestia上に構築されたソブリンapp-rollup。DeFiアプリ向け統合流動性レイヤーを提供。Spice Portalが稼働中でSpice Pointsを付与中だが、正式なトークン/エアドロップはまだ未発表。Hack VC・Magnus Capitalなどから3.4M資金調達済み。",
+    "tasks": [
+      "Spicenet PortalでウォレットとXアカウントを連携",
+      "公式Xをフォロー・ソーシャルクエスト完了",
+      "「Create Spicy Content」でSNS投稿を提出",
+      "友人紹介 (1,000pt到達で200ptボーナス)"
+    ],
+    "end_date": "未定 (トークン化未確定)",
+    "logo": "",
+    "url": "https://spicenet.io/",
+    "is_hot": false,
+    "added_date": "2026-07-23",
+    "source": "curated"
+  }
+]

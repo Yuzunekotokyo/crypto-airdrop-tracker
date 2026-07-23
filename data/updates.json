@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "timestamp": "2026-07-23T00:05:32.950937+00:00",
+    "date": "2026-07-23",
+    "time_jst": "2026年07月23日 00:05",
+    "total_airdrops": 4,
+    "added_count": 4,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Orbinum Network (ORB)",
+      "Polymarket (POLY)",
+      "Fogo (FOGO) — Flames Season 2",
+      "Spicenet"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
