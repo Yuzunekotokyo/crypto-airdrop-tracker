@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-07-24T00:06:12.575125+00:00",
+    "date": "2026-07-24",
+    "time_jst": "2026年07月24日 00:06",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Grass Network (GRASS)",
+      "Orbinum Network (ORB)",
+      "Monetrix",
+      "Katana Network (KAT)",
+      "Polymarket (POLY)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [
+      "Zama (ZAMA)",
+      "KAITO",
+      "ADI"
+    ],
+    "email_sent": false
+  }
+]

@@ -1,1 +1,113 @@
-[]
+[
+  {
+    "id": "grass-network",
+    "name": "Grass Network (GRASS)",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "ポイント制/リワード",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "遊休インターネット帯域幅を共有してAI学習用データ収集に貢献するDePINプロジェクト。Season 2の報酬 (総額300万ドル相当のUSDC) のクレーム受付が2026年7月22日に開始し、2027年1月22日まで6か月間継続。さらに供給の17%にあたる約1.7億GRASSトークンのエアドロップも2026年後半に予定 (詳細未発表)。",
+    "tasks": [
+      "Grass拡張機能/アプリをインストールしてノードを稼働",
+      "Uptime PointsとNetwork Pointsを蓄積",
+      "USDC報酬をSeason 2ポータルでクレーム"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://airdrops.io/grass/",
+    "is_hot": true,
+    "added_date": "2026-07-24",
+    "source": "curated-2026-07-24"
+  },
+  {
+    "id": "orbinum-network",
+    "name": "Orbinum Network (ORB)",
+    "symbol": "ORB",
+    "category": "プライバシー/インフラ",
+    "type": "テストネット参加",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "プライベート送金を扱うL1ネットワーク。2026年3月13日開始のSeason 1「Genesis Community」で、クエスト・週次ログインストリーク・リファラル・テストネット操作 (シールド送金/アンシールド等) に応じてORBクレジットを付与。コミュニティプールは1,500万ORB、アンバサダープールは500万ORBで、合計2,000万ORBがSeason 1参加者に配分予定。スナップショットはメインネット開始14日前 (日程未定)。",
+    "tasks": [
+      "Orbinumポータルでウォレット接続",
+      "テストネットでシールド/プライベート送金を実行",
+      "週次ログインストリークを維持",
+      "リファラルで友人を招待"
+    ],
+    "end_date": "スナップショット日未定 (メインネット開始14日前)",
+    "logo": "",
+    "url": "https://airdrops.io/orbinum/",
+    "is_hot": true,
+    "added_date": "2026-07-24",
+    "source": "curated-2026-07-24"
+  },
+  {
+    "id": "monetrix",
+    "name": "Monetrix",
+    "symbol": "",
+    "category": "DeFi/イールドファーミング",
+    "type": "ポイント制 (トークン未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "2026年7月にMerkl上で初のYieldMaxxingキャンペーンを開始したばかりの新規DeFiプロジェクト。ポイント付与は行われているが、トークン配布や配布時期は2026年7月24日時点で未確定。情報の少ない新興案件のため、公式チャンネルでの継続的な情報確認を推奨。",
+    "tasks": [
+      "Merkl経由でMonetrixのYieldMaxxingキャンペーンに参加",
+      "指定プールに流動性を提供",
+      "公式X (Twitter) で最新情報を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": true,
+    "added_date": "2026-07-24",
+    "source": "curated-2026-07-24"
+  },
+  {
+    "id": "katana-network",
+    "name": "Katana Network (KAT)",
+    "symbol": "KAT",
+    "category": "DeFi/Layer2",
+    "type": "ステーキング報酬 (TGE済み)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "DeFi向け流動性レイヤー2。2026年3月18日にKATトークンのTGEが完了済み。供給100億KATのうち20%を流動性マイニング、15% (35億KAT) をコミュニティエアドロップとして段階的に配分中。先着3.5億KATのプレステークは60日間で35%リターン+vKATボーナスを提供。",
+    "tasks": [
+      "Katana公式サイトでウォレット接続",
+      "最低100 KATをプレステーク",
+      "Questsセクションでオンチェーンクエストを達成"
+    ],
+    "end_date": "プレステーク枠終了まで (先着順、日程未定)",
+    "logo": "",
+    "url": "https://airdrops.io/katana-network/",
+    "is_hot": false,
+    "added_date": "2026-07-24",
+    "source": "curated-2026-07-24"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ (未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "分散型予測市場プラットフォーム。POLYトークンの正式なローンチ日・配布ルールは2026年7月24日時点で未発表。コミュニティ予想では2026年後半とされるが未確定。継続的な少額取引・X連携・Rewardsプログラム参加が有利とされる一方、複数ウォレットでの水増し取引はウォッシュトレードとして除外される可能性が高い。",
+    "tasks": [
+      "複数カテゴリの市場で継続的に取引",
+      "設定画面でXアカウントを連携",
+      "Rewardsプログラムに参加してUSDCを獲得しつつ実績を積む"
+    ],
+    "end_date": "未定 (公式発表待ち)",
+    "logo": "",
+    "url": "https://airdrops.io/polymarket/",
+    "is_hot": false,
+    "added_date": "2026-07-24",
+    "source": "curated-2026-07-24"
+  }
+]
