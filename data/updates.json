@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-07-25T00:06:27.970691+00:00",
+    "date": "2026-07-25",
+    "time_jst": "2026年07月25日 00:06",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid Season 2 (HYPE)",
+      "Grass (GRASS) Season 2",
+      "Polymarket (POLY)",
+      "Hyperlynx (LYNX)",
+      "Katana Network (KAT)",
+      "Spicenet"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
