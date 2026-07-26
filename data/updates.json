@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-07-26T00:05:50.007915+00:00",
+    "date": "2026-07-26",
+    "time_jst": "2026年07月26日 09:05",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Polymarket (POLY・未確定)",
+      "Grass Season 2 (USDC配布)",
+      "Base (Coinbase L2・噂)",
+      "Katana Network (KAT)",
+      "OpenSea (噂)",
+      "xStocks",
+      "Aether (帯域幅DePIN)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
