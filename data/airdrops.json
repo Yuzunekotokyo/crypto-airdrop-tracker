@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 1500,
+    "description": "評価額$15Bに達した世界最大の予測市場プラットフォーム。CMOが2025年10月にトークン発行とエアドロップ実施を公式に確認済み。供給量の5〜10%がエアドロップに割当予定だが、スナップショット日・配布条件は2026年7月時点で未発表。",
+    "tasks": [
+      "USDCで予測市場に参加・取引",
+      "継続的な取引ボリュームを積み上げる",
+      "公式Xとアナウンスを定期チェック"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/44870/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-27",
+    "source": "curated"
+  },
+  {
+    "id": "hyperliquid-hype-s2",
+    "name": "Hyperliquid Season 2",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイント報酬",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "高速オンチェーン永久先物DEX。独自L1上で動作し、Season 1で最大級のエアドロップを実施済み。Season 2のポイントプログラムが継続中で、取引量に応じた追加報酬が期待されている。",
+    "tasks": [
+      "Hyperliquid上での先物取引",
+      "流動性提供 (HLP)",
+      "紹介プログラム参加"
+    ],
+    "end_date": "2026-09-10",
+    "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-07-27",
+    "source": "curated"
+  },
+  {
+    "id": "megaeth-mega",
+    "name": "MegaETH (MEGA)",
+    "symbol": "MEGA",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 600,
+    "description": "$107M超を調達した超高速リアルタイムEVM互換L2。2026年2月9日にメインネットが稼働開始。トークン配布時期は未発表だが、オンチェーン活動の実績が引き続き重要視されている。",
+    "tasks": [
+      "MegaETHメインネットへブリッジ",
+      "対応dAppsでのスワップ・取引",
+      "継続的なオンチェーンアクティビティ"
+    ],
+    "end_date": "2026-09-25",
+    "logo": "https://assets.coingecko.com/coins/images/39306/small/megaeth.png",
+    "url": "https://megaeth.com/",
+    "is_hot": true,
+    "added_date": "2026-07-27",
+    "source": "curated"
+  },
+  {
+    "id": "grass-season2",
+    "name": "Grass Season 2",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 80,
+    "description": "未使用の帯域幅を共有してAI学習データ収集に貢献するDePINプロジェクト。Season 2のUSDC報酬クレームが2026年7月22日に開始済み(受付は6ヶ月間)。Epoch1〜19の期間のネットワークポイント・稼働ポイントに応じて配分。",
+    "tasks": [
+      "Grassアプリをインストールし帯域幅を共有",
+      "公式アプリ内ウォレット(パスキー/メールOTP)を作成",
+      "対象期間のポイント実績を確認しUSDCをクレーム"
+    ],
+    "end_date": "2027-01-23",
+    "logo": "https://assets.coingecko.com/coins/images/38254/small/Grass_200.png",
+    "url": "https://www.grass.io/",
+    "is_hot": true,
+    "added_date": "2026-07-27",
+    "source": "curated"
+  },
+  {
+    "id": "katana-network",
+    "name": "Katana Network (KAT)",
+    "symbol": "KAT",
+    "category": "DeFi/Layer2",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "Polygon Labsが後援するDeFi特化型L2。断片化した流動性を統合し持続的な利回りを提供。総供給100億KATのうち15%をPOLステーカー等へのエアドロップに割当予定。",
+    "tasks": [
+      "Katana上でのオンチェーン活動",
+      "対応dAppsの利用",
+      "KAT事前ステーク・クエスト参加"
+    ],
+    "end_date": "2026-10-10",
+    "logo": "https://assets.coingecko.com/coins/images/39619/small/katana.png",
+    "url": "https://airdrops.io/katana-network/",
+    "is_hot": false,
+    "added_date": "2026-07-27",
+    "source": "curated"
+  },
+  {
+    "id": "xstocks",
+    "name": "xStocks (xPoints)",
+    "symbol": "xStocks",
+    "category": "RWA/トークン化株式",
+    "type": "ポイント報酬",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "Kraken傘下(旧Backed Finance)によるトークン化株式プラットフォーム(Solana上)。NVDAx・AAPLx等が1:1裏付け。正式なトークン/エアドロップ未発表だが、xPointsプログラムで参加実績を計測中。",
+    "tasks": [
+      "xStocks対応DEXでの取引",
+      "xPointsプログラムに参加",
+      "対象銘柄の保有・取引実績を積む"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/39955/small/xstocks.png",
+    "url": "https://airdrops.io/xstocks/",
+    "is_hot": false,
+    "added_date": "2026-07-27",
+    "source": "curated"
+  }
+]
