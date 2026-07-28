@@ -39,6 +39,9 @@
       </span>
       {% endif %}
     </div>
+    {% if latest_update.note %}
+    <div class="update-note">📝 {{ latest_update.note }}</div>
+    {% endif %}
     {% if latest_update.added_names %}
     <div class="update-new-items">
       <strong>新規追加:</strong>

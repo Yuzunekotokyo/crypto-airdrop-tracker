@@ -85,6 +85,8 @@ a:hover { color: var(--accent2); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
+.update-note { font-size: 13px; color: var(--text); background: rgba(124,77,255,0.12); border-left: 3px solid var(--accent); padding: 6px 10px; border-radius: 4px; }
+
 .update-new-items { font-size: 13px; color: var(--text2); }
 
 .new-tag {
