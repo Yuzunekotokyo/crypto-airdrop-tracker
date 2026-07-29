@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": "hyperliquid-hype-s2",
+    "name": "Hyperliquid Season 2 (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイント制配布",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "オンチェーン永久先物DEX。Season 2は供給の38.888%を対象としたポイントプログラムで、ポイントはHYPEに1:1で変換。HyperEVM (2/18ローンチ) 上の活動も対象に追加。",
+    "tasks": [
+      "Hyperliquidでの先物取引・出来高積み上げ",
+      "HYPEのネイティブステーキング",
+      "HyperEVM上のdApp利用"
+    ],
+    "end_date": "進行中 (毎月第1水曜にベスティング)",
+    "logo": "",
+    "url": "https://app.hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-07-29",
+    "source": "web-research"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "取引所トークン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 800,
+    "description": "Polygonベースの予測市場プラットフォーム。CMOが公式にトークン・エアドロップの実施を明言済みだがスナップショット日は未発表のため、まだ参加ウィンドウが開いている。供給の5〜10%がアクティブユーザーに配分予定。",
+    "tasks": [
+      "USDCで様々なカテゴリの予測市場に参加",
+      "数週間〜数ヶ月にわたり継続的に取引",
+      "artificialな出来高稼ぎを避け実需の取引を優先"
+    ],
+    "end_date": "未定 (2026年後半予想)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-07-29",
+    "source": "web-research"
+  },
+  {
+    "id": "aiw3-genesis",
+    "name": "AIW3 (AIW3)",
+    "symbol": "AIW3",
+    "category": "AIトレーディング",
+    "type": "ジェネシスエアドロップ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "AI駆動のトレーディング戦略プラットフォーム。ジェネシススナップショットは7/28実施済み、資格確認ツールが本日7/29に公開。TGE・請求開始は8/3予定。ポイント残高・ウォレットバインド・Sybil対策チェックが条件。",
+    "tasks": [
+      "ウォレットをAIW3プラットフォームにバインド",
+      "プラットフォーム上での取引・利用実績を積む",
+      "7/29公開の資格チェッカーで対象確認",
+      "8/3のTGEで請求"
+    ],
+    "end_date": "2026-08-03",
+    "logo": "",
+    "url": "https://app.galxe.com/quest/ck3c8enjXPDnduV3AiQoie/GCC72tfZoR",
+    "is_hot": true,
+    "added_date": "2026-07-29",
+    "source": "web-research"
+  },
+  {
+    "id": "grass-season2",
+    "name": "Grass Season 2",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "ポイント制配布",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "帯域幅シェア型DePINネットワーク。Season 2は供給の17% (1.7億トークン) を配分予定で、7/23より請求が開始済み。ネイティブGrassウォレットの作成が請求の前提条件。",
+    "tasks": [
+      "Grassデスクトップアプリ/拡張機能で帯域幅を共有",
+      "ネイティブGrassウォレットを作成",
+      "ポイントに応じてUSDC/トークンを請求 (7/23〜受付中)"
+    ],
+    "end_date": "進行中 (Season2配布中)",
+    "logo": "",
+    "url": "https://www.getgrass.io/",
+    "is_hot": true,
+    "added_date": "2026-07-29",
+    "source": "web-research"
+  },
+  {
+    "id": "megaeth-mega",
+    "name": "MegaETH (MEGA) — 次シーズン待ち",
+    "symbol": "MEGA",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "hard",
+    "estimated_value_usd": 400,
+    "description": "100k TPS級のリアルタイムEVM L2。Fluffle NFT保有者への5%配布は実施済み、メインネットSeason1 (4/28-6/23) も終了。次シーズンのポイントプログラム発表を待つ段階。",
+    "tasks": [
+      "公式Discord/Xで次シーズン発表を注視",
+      "メインネット上でのdApp利用実績を積む"
+    ],
+    "end_date": "未定 (次シーズン発表待ち)",
+    "logo": "",
+    "url": "https://www.megaeth.com/",
+    "is_hot": false,
+    "added_date": "2026-07-29",
+    "source": "web-research"
+  },
+  {
+    "id": "kodiak-finance",
+    "name": "Kodiak Finance (Berachain)",
+    "symbol": "KODI",
+    "category": "DeFi/DEX",
+    "type": "未発表トークン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "Berachain上のリーディングDEX。V3集中流動性が稼働中でBGTエミッションを獲得可能。KODIトークン自体は未発表のため、理想的なファーミング初期ウィンドウ。",
+    "tasks": [
+      "Berachain上でKodiak V3に流動性提供 (WBERA/HONEY等)",
+      "Kodiak Islandボールトを利用しBGTを自動獲得",
+      "$500以上のトレードでチャレンジポイント積立"
+    ],
+    "end_date": "未定 (トークン未発表)",
+    "logo": "",
+    "url": "https://www.kodiak.finance/",
+    "is_hot": false,
+    "added_date": "2026-07-29",
+    "source": "web-research"
+  }
+]
