@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-07-30T00:05:57.343883+00:00",
+    "date": "2026-07-30",
+    "time_jst": "2026年07月30日 00:05",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid Season 2 (HYPE)",
+      "Polymarket (POLY)",
+      "MetaMask Rewards (MASK)",
+      "Grass (GRASS)",
+      "Particle Network (PARTI)",
+      "Base"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
