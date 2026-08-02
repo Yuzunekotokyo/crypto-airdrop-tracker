@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-08-02T00:04:42.437166+00:00",
+    "date": "2026-08-02",
+    "time_jst": "2026年08月02日 00:04",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid Season 2 (HYPE)",
+      "Backpack Exchange",
+      "Polymarket (POLY)",
+      "N1 Chain",
+      "MetaMask (MASK)",
+      "Base Token"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
