@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-08-03T00:07:21.361580+00:00",
+    "date": "2026-08-03",
+    "time_jst": "2026年08月03日 00:07",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Base",
+      "Polymarket",
+      "MetaMask",
+      "N1 Chain",
+      "Little Pepe (LILPEPE)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "notes": "ウェブ検索で収集した2026年8月時点の最新情報に基づき、既にローンチ済みの旧シードデータ(LayerZero/Scroll/zkSync/Hyperliquid/EigenLayer/Movement)を入れ替え"
+  }
+]
