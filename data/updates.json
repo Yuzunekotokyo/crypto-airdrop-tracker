@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-08-04T00:05:32+00:00",
+    "date": "2026-08-04",
+    "time_jst": "2026年08月04日 09:05",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE) — Season 2",
+      "Backpack Exchange (BACK)",
+      "MetaMask Rewards (MASK)",
+      "Polymarket (POLY)",
+      "Abstract (ABS)",
+      "Multipli (ORB)",
+      "N1 Chain",
+      "LayerZero (ZRO) — Season 2観測中"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": ["Bitcoin", "Cash Cat", "Ethena"],
+    "email_sent": false
+  }
+]
