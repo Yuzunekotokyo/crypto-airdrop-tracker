@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-08-05T00:04:09.949976+00:00",
+    "date": "2026-08-05",
+    "time_jst": "2026年08月05日 09:04",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "Base",
+      "EigenLayer (EIGEN)",
+      "LayerZero (ZRO)",
+      "Grass",
+      "Teneo"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
