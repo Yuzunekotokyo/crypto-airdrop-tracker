@@ -53,6 +53,14 @@
       {{ latest_update.trending_coins | join(' · ') }}
     </div>
     {% endif %}
+    {% if latest_update.sources %}
+    <div class="update-sources">
+      <strong>🔗 情報ソース:</strong>
+      {% for src in latest_update.sources %}
+      <a href="{{ src }}" target="_blank" rel="noopener" class="source-link">[{{ loop.index }}]</a>
+      {% endfor %}
+    </div>
+    {% endif %}
   </div>
   <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
 </div>

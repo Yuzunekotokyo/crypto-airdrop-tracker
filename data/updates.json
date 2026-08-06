@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "timestamp": "2026-08-06T00:05:35.964664+00:00",
+    "date": "2026-08-06",
+    "time_jst": "2026年08月06日 00:05",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "MetaMask ($MASK)",
+      "Polymarket (POLY)",
+      "Backpack Exchange",
+      "Variational (Omni Points)",
+      "Base"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "sources": [
+      "https://www.gate.com/blog/most-anticipated-crypto-airdrops-2026-base-metamask-polymarket-token-launch",
+      "https://blog.mexc.com/token-reviews/metamask-mask-airdrop-guide-2026-how-to-position-for-the-biggest-potential-token-event-in-crypto-history/",
+      "https://cryptonews.com/cryptocurrency/polymarket-airdrop/",
+      "https://blog.mexc.com/news/backpack-exchange-airdrop-2026-how-to-farm-season-4-points-toward-the-confirmed-25-community-token-allocation/",
+      "https://www.dlnews.com/articles/defi/five-upcoming-crypto-airdrops-to-watch-for-in-2026/"
+    ]
+  }
+]

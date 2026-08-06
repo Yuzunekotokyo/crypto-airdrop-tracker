@@ -100,6 +100,14 @@ a:hover { color: var(--accent2); }
 
 .update-trending { font-size: 12px; color: var(--text2); }
 
+.update-sources { font-size: 12px; color: var(--text2); }
+.source-link {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 4px;
+}
+.source-link:hover { text-decoration: underline; }
+
 .banner-close {
   background: none;
   border: none;

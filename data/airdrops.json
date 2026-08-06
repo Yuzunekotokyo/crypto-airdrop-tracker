@@ -1,1 +1,116 @@
-[]
+[
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask ($MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 2000,
+    "description": "Consensys CEOのJoseph Lubin氏が「予想より早く」登場することを公式に示唆したネイティブトークン。Season 1ポイントプログラムが進行中で、Q3〜Q4 2026にスナップショットが行われる可能性が高い。ユーザー基盤の大きさから「史上最大級のエアドロップ」との呼び声も。",
+    "tasks": [
+      "MetaMaskウォレットを日常的に利用",
+      "MetaMask Cardで決済を行う",
+      "Season 1ポイントプログラムに参加",
+      "Snapsやステーキング機能を利用"
+    ],
+    "end_date": "2026年Q3-Q4予定(未確定)",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-08-06",
+    "source": "web_research"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "PolymarketのCMOが「トークンとエアドロップは確実に実施される」とポッドキャストで公式表明。供給量の5〜10%がアクティブトレーダー・コミュニティ向けに配分される見込み。スナップショット日程・配分基準は未発表。",
+    "tasks": [
+      "Polymarketで予測市場に参加",
+      "多様なマーケットで取引する",
+      "継続的に取引量を積み上げる",
+      "勝利益を再投資する"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-08-06",
+    "source": "web_research"
+  },
+  {
+    "id": "backpack-exchange",
+    "name": "Backpack Exchange",
+    "symbol": "BACK",
+    "category": "取引所",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "2026年2月にTGE計画を正式発表し、供給量の25%をコミュニティに配分することを確約。Season 4ポイントプログラムが進行中(2025年11月20日開始)。現物・無期限先物取引、Auto Lend、ウォレット利用、紹介で獲得可能。",
+    "tasks": [
+      "Backpack Exchangeで現物・無期限先物を取引",
+      "Auto Lendをオンにする",
+      "Backpack WalletでSolana DeFiを利用",
+      "友人を紹介する(リファラル)"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": true,
+    "added_date": "2026-08-06",
+    "source": "web_research"
+  },
+  {
+    "id": "variational-omni",
+    "name": "Variational (Omni Points)",
+    "symbol": "-",
+    "category": "DeFi/デリバティブ",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "hard",
+    "estimated_value_usd": 350,
+    "description": "Arbitrum上のデリバティブプロトコル。2025年12月17日開始のOmni Pointsプログラムで、テストネット・メインネット双方の取引タスクに対して毎週ポイントが付与されている。現在進行形でファーミング可能な数少ない案件。",
+    "tasks": [
+      "Arbitrum上でVariationalのOmni Pointsプログラムに参加",
+      "テストネット・メインネットで取引タスクを実行",
+      "毎週配布されるポイントを継続的に獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-08-06",
+    "source": "web_research"
+  },
+  {
+    "id": "base-network",
+    "name": "Base",
+    "symbol": "-",
+    "category": "Layer2",
+    "type": "レトロアクティブ(検討中)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 600,
+    "description": "Coinbase運営のL2。ネットワークトークンの検討開始をアナウンス(2026年Q2〜Q4での展開の可能性)。上場企業の子会社であるためSECコンプライアンス上のハードルがあり、実現性は不確実。",
+    "tasks": [
+      "BaseネットワークへETHをブリッジ",
+      "Base上のdAppsを利用",
+      "Coinbase Walletと連携",
+      "Base上でDeFi取引を行う"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-08-06",
+    "source": "web_research"
+  }
+]
