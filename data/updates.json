@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-08-07T00:07:04.938602+00:00",
+    "date": "2026-08-07",
+    "time_jst": "2026年08月07日 09:07",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Base (Coinbase L2)",
+      "Grass Stage 2 Claim",
+      "Variational (Omni Points)",
+      "MintCasino ($MNTD)",
+      "K25.ai"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "note": "初回データ投入: Web検索により2026年8月時点の実在エアドロップ情報へ更新(旧サンプルデータのLayerZero/Scroll/zkSync等は配布済のため削除)"
+  }
+]
