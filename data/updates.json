@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-08-08T00:04:27+00:00",
+    "date": "2026-08-08",
+    "time_jst": "2026年08月08日 09:04",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "HOT Protocol",
+      "Aster (ASTER)",
+      "Polymarket (POLY)",
+      "Base",
+      "Pengu Clash",
+      "Monad (MON)",
+      "Lighter (LIT)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
