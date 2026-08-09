@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "timestamp": "2026-08-09T00:08:01.112076+00:00",
+    "date": "2026-08-09",
+    "time_jst": "2026年08月09日 09:08",
+    "total_airdrops": 11,
+    "added_count": 4,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Polymarket (POLY)",
+      "OpenSea (SEA)",
+      "Fuel Network (FUEL)",
+      "Base ネットワークトークン"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

@@ -9,6 +9,7 @@ import json
 import logging
 import os
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR
 from fetchers.airdrop_fetcher import fetch_all_airdrops
@@ -79,17 +80,18 @@ def run_daily_update(force_email: bool = False) -> dict:
     # データ保存
     _save_json(AIRDROPS_FILE, new_airdrops)
 
-    # 更新ログ
+    # 更新ログ (終了済み案件の新規登録は「新着」として表示しない)
+    added_names = [a["name"] for a in diff["added"] if a.get("status") != "ended"]
     summary = {
         "timestamp": now.isoformat(),
         "date": now.strftime("%Y-%m-%d"),
-        "time_jst": (now.astimezone()).strftime("%Y年%m月%d日 %H:%M"),
+        "time_jst": now.astimezone(ZoneInfo("Asia/Tokyo")).strftime("%Y年%m月%d日 %H:%M"),
         "total_airdrops": len(new_airdrops),
-        "added_count": len(diff["added"]),
+        "added_count": len(added_names),
         "removed_count": len(diff["removed"]),
         "changed_count": len(diff["changed"]),
         "hot_count": sum(1 for a in new_airdrops if a.get("is_hot")),
-        "added_names": [a["name"] for a in diff["added"]],
+        "added_names": added_names,
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
