@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "timestamp": "2026-08-10T08:00:00+00:00",
+    "date": "2026-08-10",
+    "time_jst": "2026年08月10日 08:00",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": ["Polymarket", "OpenSea", "MetaMask", "Variational", "Grass", "Base", "Monad"],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

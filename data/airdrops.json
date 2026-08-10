@@ -1,1 +1,151 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "取引所トークン",
+    "status": "upcoming",
+    "difficulty": "hard",
+    "estimated_value_usd": 3000,
+    "description": "世界最大の予測市場プラットフォーム。CMOが「トークンとエアドロップは必ず実施する」と明言。供給の5〜10%をエアドロップに充当予定で、総額最大14億ドル規模との試算も。2026年後半のトークン公開が有力視されている。",
+    "tasks": [
+      "実際の予測市場でトレードを行う (出来高が重要)",
+      "設定画面でXアカウントを連携する",
+      "Rewardsプログラムに継続的に参加する"
+    ],
+    "end_date": "未定 (2026年後半見込み)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-08-10",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1500,
+    "description": "NFTマーケットプレイス最大手がマルチチェーン取引プラットフォームへ転換。供給の50%をコミュニティに配分予定。当初2026年Q1配布予定だったが弱気相場を理由に延期中、新日程は未発表。",
+    "tasks": [
+      "OpenSeaでのOG利用実績を積む",
+      "OpenSea Rewardsプログラムに参加する",
+      "継続的な取引・出品アクティビティ"
+    ],
+    "end_date": "未定 (延期中)",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-08-10",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask",
+    "symbol": "MASK",
+    "category": "ウォレット/インフラ",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 2000,
+    "description": "最大手Web3ウォレット。2026年3月15日に第一弾のMASKエアドロップが実施済み。継続中のMetaMask Rewardsプログラムのポイントが今後(2026年Q3〜Q4見込み)の追加配布判定に使われる見通し。",
+    "tasks": [
+      "MetaMask Rewardsプログラムでポイントを貯める",
+      "スワップ機能を利用する",
+      "友人紹介プログラムに参加する"
+    ],
+    "end_date": "継続中 (次回配布 2026年Q3-Q4見込み)",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-08-10",
+    "source": "curated"
+  },
+  {
+    "id": "variational-var",
+    "name": "Variational",
+    "symbol": "VAR",
+    "category": "DeFi/デリバティブ",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 600,
+    "description": "Arbitrum上のデリバティブ取引プロトコル「Omni」。供給の50%をコミュニティに配分確定済み。2025年12月17日開始のOmni Pointsプログラムが2026年Q3末まで継続中、毎週金曜0時UTCにポイント付与。",
+    "tasks": [
+      "omni.variational.io でゼロ手数料パーペチュアル取引",
+      "取引量を積み上げてOmni Pointsを稼ぐ",
+      "紹介プログラムを活用する"
+    ],
+    "end_date": "2026-09-30",
+    "logo": "",
+    "url": "https://omni.variational.io/",
+    "is_hot": true,
+    "added_date": "2026-08-10",
+    "source": "curated"
+  },
+  {
+    "id": "grass-grass",
+    "name": "Grass",
+    "symbol": "GRASS",
+    "category": "DePIN/AI",
+    "type": "帯域幅シェア",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 250,
+    "description": "未使用インターネット帯域幅をAI学習データ収集に提供して報酬を得るSolana上のDePINプロトコル。Stage 2エアドロップの請求受付が開始済み(2026年7月22日〜)。今回はGRASSではなくUSDCで支払われる点に注意。",
+    "tasks": [
+      "Grassの拡張機能/デスクトップクライアントを導入する",
+      "バックグラウンドで帯域幅シェアを継続する",
+      "Stage 2 Rewards Checkerで請求資格を確認・請求する"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://grass.io/",
+    "is_hot": true,
+    "added_date": "2026-08-10",
+    "source": "curated"
+  },
+  {
+    "id": "base-base",
+    "name": "Base",
+    "symbol": "—",
+    "category": "Layer2",
+    "type": "投機的 (未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Coinbase運営のLayer2。公式トークン・エアドロップは2026年8月時点で未発表・未確定 (関連を装う勧誘は全て詐欺)。Polymarketの予測市場では2026年内のトークン発行確率69%。発行の場合コミュニティ配分は20〜25%規模と噂されている。",
+    "tasks": [
+      "Base上のDeFi (Aerodrome, Uniswap v4, Aave, Morpho等) を利用する",
+      "公式発表を注視する (非公式の事前配布・プレセールには要注意)"
+    ],
+    "end_date": "未定 (公式未発表)",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-08-10",
+    "source": "curated"
+  },
+  {
+    "id": "monad-mon",
+    "name": "Monad",
+    "symbol": "MON",
+    "category": "Layer1",
+    "type": "レトロアクティブ (終了)",
+    "status": "ended",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "EVM互換の高速Layer1。MONエアドロップは2025年10月14日に請求開始、2025年11月3日に請求期限終了済み。約28.9万ウォレットに配布され、現在メインネットが稼働中。新規参加者は今後のエコシステム活動が対象。",
+    "tasks": [],
+    "end_date": "終了済み (2025-11-03)",
+    "logo": "",
+    "url": "https://www.monad.xyz/",
+    "is_hot": false,
+    "added_date": "2026-08-10",
+    "source": "curated"
+  }
+]
