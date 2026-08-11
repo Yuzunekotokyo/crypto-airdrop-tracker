@@ -1,1 +1,139 @@
-[]
+[
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ConsenSysのJoseph Lubin氏が2025年9月に$MASKトークンを正式発表。利用者3000万人超で史上最大級の配布になる可能性。一部で配布開始の報道があるが、公式な配布条件・スケジュールは未確定 (最有力視される時期は2026年Q3〜Q4)。",
+    "tasks": [
+      "2026年3月1日以前からMetaMaskをアクティブ利用",
+      "スワップ/ブリッジの実行",
+      "DeFiプロトコルとの連携",
+      "ETH/ERC-20トークンの保有"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-08-11",
+    "source": "curated",
+    "caution": "非公式のクレーム/請求サイトへの接続やシードフレーズ入力は絶対に行わないこと。公式サイト・公式X以外の情報は要注意。"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "ポイント制",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "PolymarketのCMOが2025年10月にトークン発行とエアドロップ実施を公式に確認。スナップショット日程・配分方式は未発表だが、コミュニティ予想は2026年後半。",
+    "tasks": [
+      "継続的な取引 (一括の大口取引より週次の少額継続が有利とされる)",
+      "複数カテゴリ (政治/スポーツ/暗号) の市場で取引を分散",
+      "Xアカウントの連携",
+      "polymarket.com/rewardsで指値注文による流動性提供"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-08-11",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFTマーケットプレイス",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "OpenSea 2.0のネイティブトークン。コミュニティ配分50%を公約。当初2026年Q1予定だったTGEはCEO Devin Finzer氏が2026年3月に延期を認め、新日程は未定。",
+    "tasks": [
+      "OpenSea上での取引・Treasure Chest (XP) の獲得",
+      "過去の利用実績 (レベル・XPが配分に影響)",
+      "KYC不要 (米国ユーザーも対象)"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-08-11",
+    "source": "curated"
+  },
+  {
+    "id": "base-token",
+    "name": "Base ネイティブトークン (未発表)",
+    "symbol": "?",
+    "category": "Layer2",
+    "type": "噂・検討段階",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CoinbaseのL2「Base」。2025年9月にJesse Pollak氏がトークン発行の検討を示唆し、従来の「トークン発行予定なし」から方針転換。2026年Q2〜Q4に準備が進む可能性。公式な発行決定・配布条件はまだ発表されていない。",
+    "tasks": [
+      "Baseメインネットでの継続利用 (スワップ/ブリッジ)",
+      "DeFiプールへの流動性提供",
+      "NFTの作成・収集",
+      "Baseアプリ内でのUSDC保有・投稿活動"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-08-11",
+    "source": "curated"
+  },
+  {
+    "id": "backpack-bp",
+    "name": "Backpack Exchange",
+    "symbol": "BP",
+    "category": "取引所",
+    "type": "ポイント制 (Season 4進行中)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Solana系ウォレット/取引所Backpack。トークン供給の25%をコミュニティに配分予定(24%がポイント保有者、1%がMad Lads NFT保有者向け)。Season 4は2025年11月20日開始で現在も進行中。",
+    "tasks": [
+      "Backpack Exchangeでの取引",
+      "Backpack Wallet経由でのSolana DeFi活動",
+      "Backpack Payでの送金",
+      "アクティブトレーダーの紹介"
+    ],
+    "end_date": "未定 (Season 4進行中)",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": true,
+    "added_date": "2026-08-11",
+    "source": "curated"
+  },
+  {
+    "id": "variational-var",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/デリバティブ",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Coinbase・Dragonfly Capital・Bain Capital Crypto等が出資するP2P型デリバティブ取引プロトコル。$VARトークンの詳細とコミュニティ配分計画を公表済み。",
+    "tasks": [
+      "Variational上でのパーペチュアル/オプション取引",
+      "流動性提供",
+      "コミュニティ活動への参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": false,
+    "added_date": "2026-08-11",
+    "source": "curated"
+  }
+]
