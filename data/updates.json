@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-08-14T00:06:36.967707+00:00",
+    "date": "2026-08-14",
+    "time_jst": "2026年08月14日 00:06",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "MetaMask (MASK)",
+      "Hyperliquid Season 2 (HYPE)",
+      "Plume Network (PLUME)",
+      "Polymarket (POLY)",
+      "Base Token",
+      "Backpack (BACK)",
+      "Grass Network (GRASS)",
+      "Monad (MON)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

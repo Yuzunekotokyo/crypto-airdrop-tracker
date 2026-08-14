@@ -1,1 +1,179 @@
-[]
+[
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット/インフラ",
+    "type": "ポイント制レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 2000,
+    "description": "世界最大級のウォレットが独自トークンMASKを発表予定。Rewardsプログラムでスワップ・ブリッジ・エコシステム利用に応じてポイントが貯まり、ウォレットあたり250〜15,000MASKの配布が見込まれる。TGEは2026年Q3〜Q4、ConsenSysのIPOに合わせる観測も。",
+    "tasks": [
+      "MetaMask Rewardsを有効化",
+      "対応チェーンでスワップ・ブリッジを実施",
+      "Season 1のポイントを引き継いでSeason 2に参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://blog.mexc.com/token-reviews/metamask-mask-airdrop-guide-2026-how-to-position-for-the-biggest-potential-token-event-in-crypto-history/",
+    "is_hot": true,
+    "added_date": "2026-08-14",
+    "source": "web-research"
+  },
+  {
+    "id": "hyperliquid-season2",
+    "name": "Hyperliquid Season 2 (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "高速オンチェーン永久先物DEX。Season 2は供給量38.888%という大型プールが対象。HYPEステーキングで1トークンあたり1日8ポイント、HyperEVM(2026年2月ローンチ)へのブリッジ・DeFi利用もポイント対象。スナップショット時期は非公開。",
+    "tasks": [
+      "HYPEをステーキング",
+      "Hyperliquid上での先物取引・流動性提供",
+      "HyperEVMへ5HYPE以上をブリッジしDeFi利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-08-14",
+    "source": "web-research"
+  },
+  {
+    "id": "plume-network-plume",
+    "name": "Plume Network (PLUME)",
+    "symbol": "PLUME",
+    "category": "RWA/Layer2",
+    "type": "Season2クレーム中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "現実資産(RWA)向けL2。Season 2エアドロップのクレームが2026年8月現在オープン中。1億5000万トークンのプールから、1万ポイント以上のウォレットに配布。MEXCでも上場記念キャンペーン実施中。",
+    "tasks": [
+      "公式サイトでポイント残高(1万pt以上)を確認",
+      "クレームポータルでウォレット接続しクレーム実行",
+      "MEXCのPLUME/USDT取引でボーナス獲得"
+    ],
+    "end_date": "2026-08-31",
+    "logo": "",
+    "url": "https://www.mexc.com/token-airdrop/plume-network/354",
+    "is_hot": true,
+    "added_date": "2026-08-14",
+    "source": "web-research"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ(未発表)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "同社CMOがトークン発行とエアドロップ実施を公言済みだが、日程・供給量・詳細ルールは未公開(2026年8月時点)。供給量の5〜10%が取引実績のあるユーザーに配分される見込み。",
+    "tasks": [
+      "Polygon対応ウォレットを接続",
+      "政治・スポーツ・暗号など複数カテゴリで継続的に取引",
+      "X(旧Twitter)アカウントをプロフィールに連携"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptonews.com/cryptocurrency/polymarket-airdrop/",
+    "is_hot": true,
+    "added_date": "2026-08-14",
+    "source": "web-research"
+  },
+  {
+    "id": "base-token",
+    "name": "Base Token",
+    "symbol": "BASE",
+    "category": "Layer2",
+    "type": "予想トークン(未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Coinbase運営のL2、Baseがネットワークトークン発行を検討中と公式表明。他L2並みに供給量の20〜25%をコミュニティに配分した場合、24〜85億ドル規模となり史上最大級のエアドロップになる可能性。Polymarketの予測市場では2026年内のトークン発行確率69%。",
+    "tasks": [
+      "Base上でのトランザクション実績を積む",
+      "Base対応dAppsを継続利用",
+      "公式アナウンスを注視"
+    ],
+    "end_date": "2026年内(未確定)",
+    "logo": "",
+    "url": "https://blog.mexc.com/base-network-token-farming-guide-2026-how-to-build-on-chain-history-before-coinbases-l2-potentially-distributes/",
+    "is_hot": true,
+    "added_date": "2026-08-14",
+    "source": "web-research"
+  },
+  {
+    "id": "backpack-back",
+    "name": "Backpack (BACK)",
+    "symbol": "BACK",
+    "category": "取引所/ウォレット",
+    "type": "ポイント制(Season4進行中)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "規制対応取引所Backpackがコミュニティ配分25%を公式に確約。Season 4ポイントプログラムが進行中で、取引・レンディング・Backpack Pay送金・紹介活動でポイント獲得。Sybil対策としてEpilogue再分配も実施予定。",
+    "tasks": [
+      "Backpack Exchangeで取引",
+      "Backpack WalletでSolana DeFiを利用",
+      "Backpack Payで送金",
+      "アクティブユーザーを紹介"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://blog.mexc.com/news/backpack-exchange-airdrop-2026-how-to-farm-season-4-points-toward-the-confirmed-25-community-token-allocation/",
+    "is_hot": true,
+    "added_date": "2026-08-14",
+    "source": "web-research"
+  },
+  {
+    "id": "grass-network-grass",
+    "name": "Grass Network (GRASS)",
+    "symbol": "GRASS",
+    "category": "DePIN/インフラ",
+    "type": "Season2クレーム中(USDC建て)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 50,
+    "description": "帯域幅シェア型DePINネットワーク。Season 2クレームが2026年7月22日に開始し、300万ドル相当のUSDCプールをEpoch1〜19のポイント保有者へ分配中。少額ユーザーは数ドル程度との報告もあり、過度な期待は禁物。",
+    "tasks": [
+      "クレームポータルでウォレット接続",
+      "Network/Uptimeポイントの残高を確認",
+      "2027年1月22日の締切前にクレーム"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://www.coingabbar.com/en/crypto-currency-news/grass-airdrop-season-2-claim-date-eligibility-deadline-2026",
+    "is_hot": false,
+    "added_date": "2026-08-14",
+    "source": "web-research"
+  },
+  {
+    "id": "monad-mon",
+    "name": "Monad (MON)",
+    "symbol": "MON",
+    "category": "Layer1",
+    "type": "将来ラウンド(第1弾は終了)",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "高スループット(10,000TPS超)のEVM互換L1。第1弾エアドロップは2025年10月にクレーム終了済み(28.9万ウォレットに配布)。メインネットは稼働中で、今後の追加ラウンドに備えたアプリ利用実績の蓄積が推奨される。",
+    "tasks": [
+      "Monadメインネット上のdAppsを利用",
+      "コミュニティ活動への継続参加",
+      "今後の公式アナウンスを注視"
+    ],
+    "end_date": "継続中",
+    "logo": "",
+    "url": "https://atomicwallet.io/academy/articles/how-to-claim-monad-airdrop",
+    "is_hot": false,
+    "added_date": "2026-08-14",
+    "source": "web-research"
+  }
+]
