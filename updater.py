@@ -9,8 +9,11 @@ import json
 import logging
 import os
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR
+
+JST = ZoneInfo("Asia/Tokyo")
 from fetchers.airdrop_fetcher import fetch_all_airdrops
 from fetchers.coingecko import get_trending_coins
 from notifier.gmail import send_daily_report, send_hot_alert
@@ -83,7 +86,7 @@ def run_daily_update(force_email: bool = False) -> dict:
     summary = {
         "timestamp": now.isoformat(),
         "date": now.strftime("%Y-%m-%d"),
-        "time_jst": (now.astimezone()).strftime("%Y年%m月%d日 %H:%M"),
+        "time_jst": now.astimezone(JST).strftime("%Y年%m月%d日 %H:%M"),
         "total_airdrops": len(new_airdrops),
         "added_count": len(diff["added"]),
         "removed_count": len(diff["removed"]),
