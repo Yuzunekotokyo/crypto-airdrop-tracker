@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-08-16T00:03:52.200434+00:00",
+    "date": "2026-08-16",
+    "time_jst": "2026年08月16日 00:03",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 7,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "Lighter (LIT)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
