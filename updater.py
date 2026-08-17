@@ -8,7 +8,9 @@
 import json
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+
+JST = timezone(timedelta(hours=9))
 
 from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR
 from fetchers.airdrop_fetcher import fetch_all_airdrops
@@ -83,7 +85,7 @@ def run_daily_update(force_email: bool = False) -> dict:
     summary = {
         "timestamp": now.isoformat(),
         "date": now.strftime("%Y-%m-%d"),
-        "time_jst": (now.astimezone()).strftime("%Y年%m月%d日 %H:%M"),
+        "time_jst": (now.astimezone(JST)).strftime("%Y年%m月%d日 %H:%M"),
         "total_airdrops": len(new_airdrops),
         "added_count": len(diff["added"]),
         "removed_count": len(diff["removed"]),

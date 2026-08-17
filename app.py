@@ -11,7 +11,7 @@ from flask import Flask, jsonify, render_template, request
 
 from config import AIRDROPS_FILE, UPDATES_FILE
 from scheduler import start_scheduler
-from updater import run_daily_update
+from updater import JST, run_daily_update
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -39,7 +39,7 @@ def index():
         airdrops=airdrops,
         latest_update=latest_update,
         updates=updates[:5],
-        now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
+        now=datetime.now(JST).strftime("%Y年%m月%d日 %H:%M"),
     )
 
 
