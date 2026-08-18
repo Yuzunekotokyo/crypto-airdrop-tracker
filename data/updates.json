@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "timestamp": "2026-08-18T00:15:00+00:00",
+    "date": "2026-08-18",
+    "time_jst": "2026年08月18日 09:15",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Plume (PLUME) Season 2",
+      "Push Chain (PC)",
+      "Polymarket (POLY)",
+      "Grass (GRASS) Season 2",
+      "OpenSea (SEA)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": ["Pudgy Penguins", "Pump.fun", "Ethereum"],
+    "email_sent": true
+  }
+]

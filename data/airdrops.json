@@ -1,1 +1,114 @@
-[]
+[
+  {
+    "id": "plume-plume-s2",
+    "name": "Plume (PLUME) Season 2",
+    "symbol": "PLUME",
+    "category": "RWA/Layer2",
+    "type": "ポイント配布",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 250,
+    "description": "実物資産(RWA)特化のL2。Season 2で貯めたPlume Pointsのクレーム(請求)受付中。報道によると請求期限は2026年8月末頃とみられ、期限が近いため早めの確認が必須。",
+    "tasks": [
+      "公式サイトでウォレットを接続し請求資格を確認",
+      "Season 1/2で獲得したPlume Pointsを確認",
+      "対象であれば速やかにクレームを実行(期限切れ注意)"
+    ],
+    "end_date": "2026-08-31",
+    "logo": "",
+    "url": "https://plume.org/",
+    "is_hot": true,
+    "added_date": "2026-08-18",
+    "source": "web-research"
+  },
+  {
+    "id": "pushchain-pc",
+    "name": "Push Chain (PC)",
+    "symbol": "PC",
+    "category": "インフラ/クロスチェーン",
+    "type": "テストネット/ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "EVM/非EVM問わず単一デプロイでマルチチェーン展開できるL1。ネイティブ$PCはまだテストネット段階。ポイント制で、SNSタスクや旧$PUSHトークンのステーキングでブーストが可能。",
+    "tasks": [
+      "Push Chain公式エアドロップポータルでウォレット接続・資格確認",
+      "X(旧Twitter)フォロワー50人以上でSNSタスク解放、デイリーチェックイン",
+      "Push系devnetアプリの利用",
+      "(保有者向け)旧$PUSHトークンをステーキングしてポイント倍率アップ"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://push.org/",
+    "is_hot": true,
+    "added_date": "2026-08-18",
+    "source": "web-research"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "DeFi/予測市場",
+    "type": "レトロアクティブ(予定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "予測市場最大手。トークン発行とエアドロップの実施をCMOが公式に示唆済みだが、正式な配布時期・条件は未発表(2026年後半が有力との観測)。継続的な取引実績・X連携・Rewards参加が有力な適格条件と見られている。",
+    "tasks": [
+      "複数カテゴリで継続的に取引(累計$100〜200程度が目安との観測)",
+      "Settings → Connected AccountsでXアカウントを連携",
+      "Rewardsプログラムに参加してUSDCを獲得しつつ実績を積む",
+      "複数ウォレットでのウォッシュトレードは対象外リスクが高いため厳禁"
+    ],
+    "end_date": "未定(2026年後半との観測)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-08-18",
+    "source": "web-research"
+  },
+  {
+    "id": "grass-grass-s2",
+    "name": "Grass (GRASS) Season 2",
+    "symbol": "GRASS",
+    "category": "DePIN/インフラ",
+    "type": "USDCリワード+トークン配布(噂)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "分散型ウェブスクレイピングDePINプロジェクト。Season2 USDCリワード請求受付中(2026/7/22〜2027/1/22)。長期参加者向けに約1.7億GRASSの追加配布が2026年後半に行われるとの観測もあるが未確定。",
+    "tasks": [
+      "Grassアプリ/ブラウザ拡張機能でNetwork/Uptime Pointsを蓄積",
+      "公式サイトでSeason2 USDCリワードを請求",
+      "2027年1月22日までに必ず請求(未請求分は没収される)"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://grass.io/",
+    "is_hot": false,
+    "added_date": "2026-08-18",
+    "source": "web-research"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "NFT最大手マーケットプレイス。供給の半分をコミュニティに配布予定と表明済みだが、当初予定のQ1 2026から遅延しており、本稿時点で正式なTGE日程は未発表。過去のOpenSea NFT取引履歴やOS2リワード期間のXPが評価対象になる見込み。",
+    "tasks": [
+      "過去のOpenSea NFT取引履歴があれば遡及認定の可能性あり",
+      "OS2リワード期間中にXPを獲得",
+      "OpenSea 2.0のウェイトリストに登録"
+    ],
+    "end_date": "未定(発表待ち)",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-08-18",
+    "source": "web-research"
+  }
+]
