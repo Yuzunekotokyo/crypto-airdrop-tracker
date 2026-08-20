@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "将来のトークン配布 (未確定)",
+    "status": "upcoming",
+    "difficulty": "hard",
+    "estimated_value_usd": 1200,
+    "description": "世界最大の予測市場プラットフォーム。CMOが2025年10月にトークン/エアドロップの存在を公式に認め、2026年2月にUSPTOへ$POLY商標を出願。スナップショット日・供給量は未発表だが最大級の注目案件。",
+    "tasks": [
+      "Polymarketで実際に予測市場に参加(取引量を積む)",
+      "米国版Polymarket US展開に注目",
+      "公式アナウンスを継続的にチェック(現時点で公式スナップショット未発表)"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/49141/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-08-20",
+    "source": "web-research"
+  },
+  {
+    "id": "plume-season2",
+    "name": "Plume Network Season 2 (PLUME)",
+    "symbol": "PLUME",
+    "category": "RWA/DeFi",
+    "type": "レトロアクティブ (クレーム受付中)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 250,
+    "description": "RWA(実世界資産)特化のモジュラーL2。Season2は1.5億PLUMEを配布、Plume Points(ステーキング/LP/取引量/紹介で獲得)保有者は即時クレーム可能でベスティングなし。",
+    "tasks": [
+      "Plume公式サイトでウォレット接続しPoint残高を確認",
+      "即時クレーム or ステーキングで追加ボーナス選択",
+      "対象はSeason2登録済みユーザーのみ"
+    ],
+    "end_date": "2026-08-31",
+    "logo": "https://assets.coingecko.com/coins/images/38903/small/PLUME.png",
+    "url": "https://www.plumenetwork.xyz/airdrop",
+    "is_hot": true,
+    "added_date": "2026-08-20",
+    "source": "web-research"
+  },
+  {
+    "id": "grass-season2",
+    "name": "Grass Season 2 (GRASS)",
+    "symbol": "GRASS",
+    "category": "DePIN/AI",
+    "type": "ポイント・ファーミング",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 180,
+    "description": "未使用インターネット帯域をAI学習データ収集に提供するDePINプロジェクト。Season2は前回のほぼ倍となる1.7億GRASS(供給の17%)を配布予定、H2 2026分配見込み。",
+    "tasks": [
+      "Grassアプリ/拡張機能をインストール",
+      "デイリーの安定稼働率(アップタイム)を維持",
+      "アクティブユーザーを紹介してボーナス獲得"
+    ],
+    "end_date": "2026-10-19",
+    "logo": "https://assets.coingecko.com/coins/images/39118/small/grass.jpg",
+    "url": "https://www.grass.io/",
+    "is_hot": true,
+    "added_date": "2026-08-20",
+    "source": "web-research"
+  },
+  {
+    "id": "base-token-speculation",
+    "name": "Base (投機的トークン期待)",
+    "symbol": "—",
+    "category": "Layer2",
+    "type": "将来のトークン配布 (未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Coinbase開発のEthereum L2。公式トークン・エアドロップは未発表だが、2026年もLayerZero・OpenSea・Polymarketと並び最有力の期待案件として言及され続けている。",
+    "tasks": [
+      "Base上でのDeFi/DEX利用実績を積む",
+      "Base上のdApps(Aerodrome等)を継続利用",
+      "公式アナウンスを注視"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/33345/small/base.jpg",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-08-20",
+    "source": "web-research"
+  },
+  {
+    "id": "yakkamon",
+    "name": "Yakkamon",
+    "symbol": "—",
+    "category": "GameFi",
+    "type": "早期登録型",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Roninチェーン上のクリーチャー収集・放置育成ゲーム。Season0の事前登録が早期アクセス権を左右する。2026年Q4に早期アクセス開始予定。",
+    "tasks": [
+      "公式サイトでSeason0事前登録",
+      "Discordコミュニティに参加",
+      "早期アクセス開始を待つ"
+    ],
+    "end_date": "2026-12-18",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-08-20",
+    "source": "web-research"
+  },
+  {
+    "id": "axis-robotics",
+    "name": "Axis Robotics",
+    "symbol": "—",
+    "category": "AI/ロボティクス",
+    "type": "タスク参加型",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "フィジカルAI向けデータインフラ企業。ブラウザ上のシミュレーテッドロボットアームを操作してロボティクスモデルの学習データを提供するだけで参加可能。",
+    "tasks": [
+      "ブラウザ上のハブでロボットアームタスクを実施",
+      "アカウント連携",
+      "継続的なタスク完了で獲得ポイント増加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-08-20",
+    "source": "web-research"
+  }
+]
