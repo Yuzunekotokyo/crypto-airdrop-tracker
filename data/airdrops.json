@@ -1,1 +1,135 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ(未上場)",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 750,
+    "description": "世界最大級の予測市場プラットフォーム。CMOのMatthew Modabber氏が2025年10月に「トークンとエアドロップは必ず行う」と公式表明。米国事業の再開完了後にローンチ予定で、供給の5〜10%がエアドロップに充当される見込み(2026年8月時点でトークンは未ローンチ)。",
+    "tasks": [
+      "Polymarketで予測市場に取引参加する",
+      "複数カテゴリの市場で取引し多様性を確保する",
+      "継続的な取引アクティビティを維持する",
+      "利益を再投資する",
+      "Xアカウントとウォレットを連携する"
+    ],
+    "end_date": "未定(2026年後半以降ローンチ見込み)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-08-21",
+    "source": "curated-research-2026-08"
+  },
+  {
+    "id": "base-network-token",
+    "name": "Base ネットワークトークン",
+    "symbol": "TBD",
+    "category": "Layer2",
+    "type": "ネイティブトークン検討中",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 600,
+    "description": "Coinbase開発のEthereum L2。ネットワークトークンの発行を公式に検討中と表明している。正式発表はまだないが、早期からのオンチェーン活動実績が有利に働く可能性がある。",
+    "tasks": [
+      "Base上でトランザクションを実行する",
+      "Base関連dAppsを利用する",
+      "ブリッジ利用実績を積む"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-08-21",
+    "source": "curated-research-2026-08"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "追加配布の可能性",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "NFTマーケットプレイス最大手。SEAトークンは既に存在するが、次回配布の具体的な日程は2026年8月時点で未発表。プラットフォーム利用実績が今後の追加配布判断に影響する可能性がある。",
+    "tasks": [
+      "OpenSeaでNFTの売買を行う",
+      "新バージョン(OS2)を利用する",
+      "ウォレット連携とアクティビティを維持する"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-08-21",
+    "source": "curated-research-2026-08"
+  },
+  {
+    "id": "plume-network",
+    "name": "Plume Network",
+    "symbol": "PLUME",
+    "category": "RWA(現実資産)",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 350,
+    "description": "現実資産(RWA)のトークン化に特化したL2チェーン。RWA分野の主要インフラとしてエコシステムが拡大中。",
+    "tasks": [
+      "Plumeエコシステムのdappを利用する",
+      "RWAプロダクトとの連携操作を行う",
+      "テストネット/メインネット双方で活動する"
+    ],
+    "end_date": "継続中",
+    "logo": "",
+    "url": "https://plumenetwork.xyz/",
+    "is_hot": false,
+    "added_date": "2026-08-21",
+    "source": "curated-research-2026-08"
+  },
+  {
+    "id": "grass-network",
+    "name": "Grass",
+    "symbol": "GRASS",
+    "category": "DePIN/データ",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 250,
+    "description": "未使用の帯域幅を提供してAI学習データ収集に貢献する分散型ネットワーク。ポイント蓄積が将来のトークン配布に直結する仕組み。",
+    "tasks": [
+      "Grass拡張機能をインストールし常時起動する",
+      "リファラルプログラムに参加する",
+      "ポイントランキング上位を目指す"
+    ],
+    "end_date": "継続中",
+    "logo": "",
+    "url": "https://www.grass.io/",
+    "is_hot": false,
+    "added_date": "2026-08-21",
+    "source": "curated-research-2026-08"
+  },
+  {
+    "id": "push-chain",
+    "name": "Push Chain",
+    "symbol": "PUSH",
+    "category": "インフラ/通知",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "チェーン横断の通知・メッセージングインフラ。ポイントプログラムを実施中で、将来のトークン化が見込まれる。",
+    "tasks": [
+      "Push Chain上でウォレットアクティビティを実行する",
+      "対応dAppsと連携する"
+    ],
+    "end_date": "継続中",
+    "logo": "",
+    "url": "https://push.org/",
+    "is_hot": false,
+    "added_date": "2026-08-21",
+    "source": "curated-research-2026-08"
+  }
+]
