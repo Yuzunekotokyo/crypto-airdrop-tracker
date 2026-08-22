@@ -1,1 +1,63 @@
-[]
+[
+  {
+    "timestamp": "2026-08-22T08:00:00+00:00",
+    "date": "2026-08-22",
+    "time_jst": "2026年08月22日 17:00",
+    "total_airdrops": 8,
+    "added_count": 2,
+    "removed_count": 0,
+    "changed_count": 6,
+    "hot_count": 3,
+    "added_names": [
+      "FLOP (Flop Labs)",
+      "HertzFlow"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "EigenLayer (EIGEN)",
+        "changes": [
+          "ステータス: active → upcoming"
+        ]
+      },
+      {
+        "name": "Hyperliquid (HYPE)",
+        "changes": [
+          "ステータス: active → ended"
+        ]
+      },
+      {
+        "name": "LayerZero (ZRO)",
+        "changes": [
+          "ステータス: active → ended"
+        ]
+      },
+      {
+        "name": "Movement (MOVE)",
+        "changes": [
+          "ステータス: upcoming → ended"
+        ]
+      },
+      {
+        "name": "Scroll (SCR)",
+        "changes": [
+          "ステータス: active → ended"
+        ]
+      },
+      {
+        "name": "zkSync Era",
+        "changes": [
+          "ステータス: active → ended"
+        ]
+      }
+    ],
+    "trending_coins": [
+      "FLOP",
+      "HertzFlow",
+      "ADI",
+      "Ergo",
+      "Bullballs Coin"
+    ],
+    "email_sent": true
+  }
+]
