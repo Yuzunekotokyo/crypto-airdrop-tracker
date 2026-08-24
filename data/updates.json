@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "timestamp": "2026-08-24T00:04:35+00:00",
+    "date": "2026-08-24",
+    "time_jst": "2026年08月24日 09:04",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": ["Push Chain", "Grass", "Plume Network", "Monad", "MegaETH"],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

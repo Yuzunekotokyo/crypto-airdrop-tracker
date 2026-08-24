@@ -1,1 +1,107 @@
-[]
+[
+  {
+    "id": "push-chain-pc",
+    "name": "Push Chain",
+    "symbol": "PC",
+    "category": "インフラ/マルチチェーン",
+    "type": "ポイント制エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "任意のチェーンからアプリを一度デプロイするだけで全チェーンのユーザーに届けられる「ユニバーサル実行レイヤー」。$PC供給量の10%がポイントプログラムに割当済みで、Season 3は新規参入者にも広く開放中。",
+    "tasks": [
+      "公式ポータル(portal.push.org)でウォレット接続・認証",
+      "X / Discordをフォロー&連携",
+      "毎日ポータルでチェックイン(連続ログインでボーナス、6時間毎に無料$PC請求可)",
+      "週替わりのアプリクエスト(プレイ/予測型タスク)に参加",
+      "PUSHトークン保有者は30日ロックのステーキングで最大1.2倍ブースト"
+    ],
+    "end_date": "未定(Season 3進行中)",
+    "logo": "",
+    "url": "https://portal.push.org/",
+    "is_hot": true,
+    "added_date": "2026-08-24",
+    "source": "web-research"
+  },
+  {
+    "id": "grass-grass",
+    "name": "Grass",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "ポイント制エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "未使用の通信帯域幅を共有してAI学習データ収集に貢献するDePINプロジェクト。稼働時間・帯域幅提供量・紹介実績に応じてGrass Pointsを獲得し、GRASSトークンへ変換可能。Season 2/3が進行中で、QoS(サービス品質)基準は1エポックあたり100時間以上の累積稼働が目安。",
+    "tasks": [
+      "Grassブラウザ拡張機能 or デスクトップアプリをインストール",
+      "バックグラウンドで稼働させポイントを蓄積",
+      "Solanaウォレットを連携してメッセージ署名で認証",
+      "紹介プログラムでボーナス獲得"
+    ],
+    "end_date": "未定(申請ポータル開設後90日間のクレーム期間)",
+    "logo": "",
+    "url": "https://www.grass.io/",
+    "is_hot": true,
+    "added_date": "2026-08-24",
+    "source": "web-research"
+  },
+  {
+    "id": "plume-network-plume",
+    "name": "Plume Network",
+    "symbol": "PLUME",
+    "category": "RWA(実物資産)",
+    "type": "レトロアクティブ(Season 2)",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 50,
+    "description": "機関投資家向け実物資産(RWA)をオンチェーン化するL2。Season 2のポイント集計は2026年3月31日で終了済み、クレーム受付は2026年8月中で締切間近。10,000PP以上保有ウォレットが対象で、配分額は少額(目安$3〜$50程度)。ガス代と請求額の見合いを要確認。",
+    "tasks": [
+      "登録期間(4/29〜5/27)にクレームポータルで登録済みか確認",
+      "対象ウォレットでPlume公式サイトから請求手続き",
+      "ガス代 > 受取額になっていないか事前チェック"
+    ],
+    "end_date": "2026-08-31(クレーム締切間近)",
+    "logo": "",
+    "url": "https://plume.org/",
+    "is_hot": false,
+    "added_date": "2026-08-24",
+    "source": "web-research"
+  },
+  {
+    "id": "monad-mon",
+    "name": "Monad",
+    "symbol": "MON",
+    "category": "Layer1",
+    "type": "レトロアクティブ(配布完了)",
+    "status": "ended",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "高速並列実行EVM互換L1。第一弾エアドロップは2025年10月14日〜11月3日にクレーム受付、2025年11月24日のメインネット開始と同時に約22.5万ウォレットへ配布完了。新規参加での獲得機会は現状なし。",
+    "tasks": [],
+    "end_date": "配布終了(2025-11-24)",
+    "logo": "",
+    "url": "https://www.monad.xyz/",
+    "is_hot": false,
+    "added_date": "2026-08-24",
+    "source": "web-research"
+  },
+  {
+    "id": "megaeth-mega",
+    "name": "MegaETH",
+    "symbol": "MEGA",
+    "category": "Layer2",
+    "type": "ポイント制(終了)",
+    "status": "ended",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "リアルタイム実行を謳う高速L2。ポイントプログラム「Terminal」Season 1は本来2026年6月23日終了予定だったが、5月21日に前倒しで終了。報酬はUSDmで付与、請求期限は2026年6月10日で既に終了。",
+    "tasks": [],
+    "end_date": "配布終了(2026-06-10)",
+    "logo": "",
+    "url": "https://www.megaeth.com/",
+    "is_hot": false,
+    "added_date": "2026-08-24",
+    "source": "web-research"
+  }
+]
