@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-08-25T00:04:48.451496+00:00",
+    "date": "2026-08-25",
+    "time_jst": "2026年08月25日 00:04",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Push Chain (PC)",
+      "AIW3",
+      "mint.io (MNTD)",
+      "Propr (PROPR)",
+      "Yakkamon",
+      "Orbinum (ORB)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
