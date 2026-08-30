@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "世界最大の予測市場プラットフォーム。CMOがトークン発行とエアドロップ実施を公式に明言済みだが、スナップショット時期・条件は未発表。",
+    "tasks": [
+      "継続的に複数カテゴリで取引する",
+      "X (Twitter) アカウントを連携する",
+      "Rewardsプログラムに参加する"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/finance/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-08-30",
+    "source": "curated"
+  },
+  {
+    "id": "grass-season2",
+    "name": "Grass Season 2 (GRASS)",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "未使用の帯域幅を提供してAIデータ収集に貢献するDePINプロジェクト。約1.7億GRASS (供給の17%) を配布予定のSeason 2が2026年後半に見込まれている (未確定)。Stage 2報酬 (USDC建て) は2027年1月22日まで請求可能。",
+    "tasks": [
+      "Grass拡張機能/アプリをインストールして稼働させる",
+      "帯域幅シェアでポイントを継続的に獲得する",
+      "Stage 2報酬(USDC)を期限内に請求する"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "https://assets.coingecko.com/coins/images/38078/small/Grass_200x200.png",
+    "url": "https://www.getgrass.io/",
+    "is_hot": true,
+    "added_date": "2026-08-30",
+    "source": "curated"
+  },
+  {
+    "id": "push-chain-pc",
+    "name": "Push Chain (PC)",
+    "symbol": "PC",
+    "category": "インフラ",
+    "type": "テストネット",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Push Protocol (旧EPNS) チームによるチェーン抽象化L1。EVM/非EVMを問わず単一デプロイでアプリを展開可能。$PCは現時点でテストネットのみ、トークン正式発表前。",
+    "tasks": [
+      "テストネットに参加してトランザクションを実行",
+      "対応dAppsを利用する",
+      "公式Discord/コミュニティに参加する"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/14769/small/epns.png",
+    "url": "https://push.org/",
+    "is_hot": false,
+    "added_date": "2026-08-30",
+    "source": "curated"
+  },
+  {
+    "id": "plume-season2",
+    "name": "Plume Network Season 2 (PLUME)",
+    "symbol": "PLUME",
+    "category": "RWA",
+    "type": "クレーム中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "RWA (実物資産) 特化L1。Season 2で1.5億PLUMEを配布中、ベスティングなしで即時クレーム可能。ただしポイント登録は2026年5月27日で締切済みのため新規参加者は対象外。",
+    "tasks": [
+      "(登録済みユーザーのみ) 公式サイトでPLUMEをクレーム",
+      "ガス代分のPLUME/ETHを用意"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/38200/small/plume.png",
+    "url": "https://plume.org/",
+    "is_hot": false,
+    "added_date": "2026-08-30",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "hard",
+    "estimated_value_usd": 0,
+    "description": "大手NFTマーケットプレイス。SEA (OS2) トークンをQ1 2026にローンチ予定と発表していたが市場環境により延期中。配分は主に2025年以前の過去利用実績ベースで、現時点からの新規ファーミングは対象外の可能性が高い。",
+    "tasks": [
+      "(過去にOpenSeaを利用したウォレットのみ対象の可能性)",
+      "公式アナウンスとスナップショット情報を継続確認"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/58743/small/opensea.png",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-08-30",
+    "source": "curated"
+  }
+]
