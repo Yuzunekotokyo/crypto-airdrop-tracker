@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "CMOがトークン発行とエアドロップ実施を公式に認めた予測市場最大手。配布条件は未発表だが、継続的な取引実績が有力な条件になる見込み。",
+    "tasks": [
+      "複数カテゴリ(政治・スポーツ・経済等)で継続的に取引する",
+      "X(Twitter)アカウントを連携する",
+      "Rewardsプログラムに参加し利益を再投資する"
+    ],
+    "end_date": "2026年後半予定 (米国正式ローンチ後)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-08-31",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 400,
+    "description": "最大手NFTマーケットプレイス。2026年Q1にSEAトークンを発行し、OGユーザーとOS2でのXPクエスト参加者に段階配布中。",
+    "tasks": [
+      "OS2プラットフォームでのNFT売買・スイープ",
+      "Voyagesプログラムのクエストを完了しXPを獲得",
+      "既存ウォレットでの過去の取引実績確認"
+    ],
+    "end_date": "順次配布中 (新規ファーミングは対象外)",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-08-31",
+    "source": "curated"
+  },
+  {
+    "id": "backpack-token",
+    "name": "Backpack (BACKPACK)",
+    "symbol": "BACKPACK",
+    "category": "取引所/Solana",
+    "type": "ポイントプログラム",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 350,
+    "description": "Solana系の規制準拠型取引所。供給の25%をコミュニティ配布するTGE計画を発表済み。Mad Ladsホルダーにも1%配分。",
+    "tasks": [
+      "現物・無期限先物のトレーディングでポイント獲得",
+      "レンディング・紹介プログラムに参加",
+      "Mad Lads NFTを保有する"
+    ],
+    "end_date": "シーズン継続中 (次回スナップショット未定)",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": true,
+    "added_date": "2026-08-31",
+    "source": "curated"
+  },
+  {
+    "id": "aster-aster",
+    "name": "Aster (ASTER)",
+    "symbol": "ASTER",
+    "category": "DeFi/Perp DEX",
+    "type": "トレーディングマイニング",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "オンチェーン無期限先物DEX。供給の53.5%をコミュニティ配分する多段階ポイントプログラムを継続実施中。",
+    "tasks": [
+      "Asterで先物取引を行い出来高を積み上げる",
+      "ポジション保有・流動性提供でポイント加算",
+      "紹介プログラムで追加ポイント獲得"
+    ],
+    "end_date": "2026-11-28 (ベスティング分クレーム期限)",
+    "logo": "",
+    "url": "https://asterdex.com/",
+    "is_hot": true,
+    "added_date": "2026-08-31",
+    "source": "curated"
+  },
+  {
+    "id": "grass-season2",
+    "name": "Grass Season 2",
+    "symbol": "GRASS",
+    "category": "DePIN/AI",
+    "type": "報酬クレーム(USDC)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "未使用の通信帯域を提供するDePINプロジェクト。Season2は300万ドル相当のUSDC報酬プールが7/22よりクレーム開始済み、今すぐ請求可能。",
+    "tasks": [
+      "Grassブラウザ拡張機能をインストールし稼働させる",
+      "公式サイトでウォレットを接続し対象エポックの報酬を確認",
+      "2027年1月22日の請求期限までにクレームを実行"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://www.grass.io/",
+    "is_hot": true,
+    "added_date": "2026-08-31",
+    "source": "curated"
+  },
+  {
+    "id": "base-token",
+    "name": "Base ネットワークトークン",
+    "symbol": "—",
+    "category": "Layer2",
+    "type": "未確認 (投機的)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Coinbase開発のL2。開発者が「ネットワークトークンを検討中」と発言したのみで、正式な発行・配布計画は未確定。投機段階のため過度な期待は禁物。",
+    "tasks": [
+      "Base上でのブリッジ・スワップ・NFT等の継続的なオンチェーン活動",
+      "複数のdAppsを利用する",
+      "onchainscore.xyz等でスコアを確認する"
+    ],
+    "end_date": "未定 (2026年Q2〜Q4に検討との観測)",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-08-31",
+    "source": "curated"
+  }
+]
