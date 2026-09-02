@@ -33,6 +33,11 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
+      {% if latest_update.removed_count > 0 %}
+      <span class="stat-chip stat-removed">
+        🗑️ 削除 <strong>{{ latest_update.removed_count }}</strong> 件
+      </span>
+      {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
         📧 メール送信済
@@ -44,6 +49,14 @@
       <strong>新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if latest_update.removed_names %}
+    <div class="update-new-items">
+      <strong>終了・入れ替え:</strong>
+      {% for name in latest_update.removed_names %}
+      <span class="removed-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
@@ -238,6 +251,7 @@
           <span>計{{ upd.total_airdrops }}件</span>
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
+          {% if upd.removed_count > 0 %}<span class="h-removed">-{{ upd.removed_count }} 削除</span>{% endif %}
           {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
           {% if upd.added_names %}
           <span class="h-names">{{ upd.added_names | join(', ') }}</span>

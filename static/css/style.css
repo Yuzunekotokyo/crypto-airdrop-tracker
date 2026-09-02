@@ -83,9 +83,22 @@ a:hover { color: var(--accent2); }
 .stat-hot    { background: rgba(255,71,87,0.15);  border: 1px solid var(--hot); color: var(--hot2); }
 .stat-new    { background: rgba(46,213,115,0.15); border: 1px solid var(--green); color: var(--green); }
 .stat-changed{ background: rgba(255,165,2,0.15);  border: 1px solid var(--yellow); color: var(--yellow); }
+.stat-removed{ background: rgba(255,99,72,0.15);  border: 1px solid var(--orange); color: var(--orange); }
 .stat-email  { background: rgba(124,77,255,0.15); border: 1px solid var(--accent); color: var(--accent); }
 
 .update-new-items { font-size: 13px; color: var(--text2); }
+
+.removed-tag {
+  display: inline-block;
+  background: rgba(255,99,72,0.12);
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 2px 4px 2px 0;
+  text-decoration: line-through;
+}
 
 .new-tag {
   display: inline-block;
@@ -464,6 +477,7 @@ main { padding: 28px 0 60px; }
 
 .h-new     { color: var(--green); font-weight: 700; }
 .h-changed { color: var(--yellow); font-weight: 700; }
+.h-removed { color: var(--orange); font-weight: 700; }
 .h-email   { color: var(--accent); }
 .h-names   { color: var(--text2); }
 
