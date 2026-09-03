@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "timestamp": "2026-09-03T00:04:42.843102+00:00",
+    "date": "2026-09-03",
+    "time_jst": "2026年09月03日 09:04",
+    "total_airdrops": 3,
+    "added_count": 3,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "Base ネイティブトークン (未確定)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

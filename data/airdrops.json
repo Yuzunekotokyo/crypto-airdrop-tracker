@@ -1,1 +1,69 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "予測市場最大手PolymarketがCMO自ら『トークンとエアドロップは実施する』と公式表明。スナップショット日・供給量は未発表だが、供給の5〜10%が対象になる見込み。政治・スポーツ・暗号など複数カテゴリでの継続的な取引実績が条件になるとみられる。",
+    "tasks": [
+      "Polygon対応ウォレット(MetaMask等)を用意しMATICでガス代を確保",
+      "複数カテゴリの予測市場で$100〜$200程度の継続的な取引を行う",
+      "同一人物による複数ウォレットのウォッシュトレードは対象外になるため避ける",
+      "X(Twitter)アカウントをプロフィールに連携"
+    ],
+    "end_date": "未定 (スナップショット日未発表)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-09-03",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "ポイント→エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Consensys CEOのJoseph LubinがMASKトークンの近日投入を示唆し、MetaMask公式Xも示唆する投稿を行い注目度が急上昇。MetaMask Rewardsプログラムで貯まるポイントがLinea関連トークンや手数料割引、将来のエアドロップに変換される設計。",
+    "tasks": [
+      "MetaMaskウォレット内のスワップ機能を利用してポイントを貯める",
+      "MetaMask Rewardsプログラムに登録",
+      "対応dApps・カードなどのMetaMaskエコシステム機能を利用"
+    ],
+    "end_date": "未定 (トークン発行時期未確定)",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-09-03",
+    "source": "curated"
+  },
+  {
+    "id": "base-network-token",
+    "name": "Base ネイティブトークン (未確定)",
+    "symbol": "—",
+    "category": "Layer2",
+    "type": "投機的",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Coinbase傘下のBaseが独自トークンの検討を明らかにし、2026年Q2〜Q4での投入可能性が報じられている。ただし正式なトークン発行・エアドロップはまだ公式発表されておらず、あくまで投機段階の情報である点に注意。",
+    "tasks": [
+      "Base メインネット上でのブリッジ・スワップなど定期的な利用実績を積む",
+      "Base上のDeFiプロトコルへの流動性提供",
+      "Base上でのNFTミント等のオンチェーン活動"
+    ],
+    "end_date": "未定 (トークン自体が未確定)",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-09-03",
+    "source": "curated"
+  }
+]
