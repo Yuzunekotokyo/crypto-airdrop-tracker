@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-09-04T00:04:59.246254+00:00",
+    "date": "2026-09-04",
+    "time_jst": "2026年09月04日 09:04",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "Base App / Baseエコシステム",
+      "EigenLayer (EIGEN)",
+      "OpenSea (SEA)",
+      "新興Perps DEXポイントプログラム (Lighter/EdgeX/Aster/Paradex)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
