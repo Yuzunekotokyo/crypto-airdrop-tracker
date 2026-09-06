@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-09-06T00:04:27.233911+00:00",
+    "date": "2026-09-06",
+    "time_jst": "2026年09月06日 09:04",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Polymarket (POLY)",
+      "GIWA",
+      "Fuel Network",
+      "ZetaChain",
+      "Zeko",
+      "Linea (Future Airdrop / Ignition)",
+      "Monad (MON)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
