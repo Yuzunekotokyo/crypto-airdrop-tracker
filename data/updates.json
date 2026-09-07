@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-09-07T00:05:51.816596+00:00",
+    "date": "2026-09-07",
+    "time_jst": "2026年09月07日 00:05",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE) — HyperEVM Season 2",
+      "Polymarket (POLY)",
+      "OpenSea (SEA)",
+      "Grass (GRASS)",
+      "Abstract",
+      "Base"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

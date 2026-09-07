@@ -1,1 +1,137 @@
-[]
+[
+  {
+    "id": "hyperliquid-hyperevm",
+    "name": "Hyperliquid (HYPE) — HyperEVM Season 2",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイント制シーズン2",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1200,
+    "description": "2026年2月にHyperEVMがローンチ済みだが、まだ利用者が少なく「最大の穴場」と評価されている。HYPEステーキングは1日8pt/枚、取引・流動性提供・Vault預入でシーズン2ポイントが加算。スナップショット日は未定。",
+    "tasks": [
+      "HYPEを5枚以上HyperEVMへブリッジ",
+      "HyperEVM上のDeFiアプリを利用",
+      "HYPEをステーキング",
+      "Vaultへのusdc預入"
+    ],
+    "end_date": "未定 (シーズン2進行中)",
+    "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-09-07",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "新規トークン(未発表)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 600,
+    "description": "CMOがトークン発行とエアドロップ実施を公式に認めたが時期・条件は未発表。米国向け正式展開が完了した後になる見込みで、大型案件として注目度が高い。",
+    "tasks": [
+      "政治・スポーツ・暗号など複数カテゴリで継続的に取引",
+      "Xアカウントをプロフィールに連携",
+      "同一ユーザーで複数ウォレットを作らない",
+      "Rewardsプログラムに参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-09-07",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "新規トークン(延期中)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "2026年3月30日に予定されていたTGEは直前で延期され新時期は未発表。供給の50%をコミュニティに配分予定で、OG(古参ユーザー)と新規アクティブ参加者の両方を評価する方針。",
+    "tasks": [
+      "OpenSea 2.0にウォレット接続(ETH/Solana/Abstract対応)",
+      "NFTの売買を継続的に行う(保有だけでは対象外)",
+      "KYCは不要"
+    ],
+    "end_date": "未定(延期中)",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-09-07",
+    "source": "curated"
+  },
+  {
+    "id": "grass-network",
+    "name": "Grass (GRASS)",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "シーズン2配布(進行中)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "帯域幅シェア型DePINネットワーク。2026年7月22日よりSeason 2のUSDC報酬請求(2024年10月〜2026年6月分)が開始済み。さらに供給の約17%(約1.7億GRASS)の追加トークン配布が2026年後半に予定されており、直近で最も動きが大きい案件。",
+    "tasks": [
+      "Grass拡張機能/アプリで帯域幅を共有",
+      "新ウォレット(パスキー/メールOTP)でUSDC報酬を請求",
+      "追加トークン配布に備え継続利用"
+    ],
+    "end_date": "2027-01-22 (USDC請求期限)",
+    "logo": "https://assets.coingecko.com/coins/images/51536/small/grass.jpg",
+    "url": "https://www.grass.io/",
+    "is_hot": true,
+    "added_date": "2026-09-07",
+    "source": "curated"
+  },
+  {
+    "id": "abstract-chain",
+    "name": "Abstract",
+    "symbol": "",
+    "category": "Layer2/ゲーミング",
+    "type": "XPポイント制(未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Pudgy Penguins運営元が手掛けるL2。TGEやトークン化は未発表でXPは現時点で報酬確約はないが、旧Frame対象者やPudgy Penguins保有者が優遇されるとの噂がある。",
+    "tasks": [
+      "ETHをAbstractへブリッジ",
+      "Abstract上でスワップ",
+      "ドメインをミント",
+      "バッジ/週次XPクエストを継続"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://abs.xyz/",
+    "is_hot": false,
+    "added_date": "2026-09-07",
+    "source": "curated"
+  },
+  {
+    "id": "base-coinbase-l2",
+    "name": "Base",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "投機的(未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Coinbaseの Jesse Pollak氏がネイティブトークンの「探索初期段階」であることを認めたのみで、正式な発行やトークノミクスは未発表。継続的な利用がもし配布があった場合に有利と目される。",
+    "tasks": [
+      "Baseへ資金をブリッジ",
+      "Base上でトランザクションを継続実行",
+      "Baseエコシステムのdappsを利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-09-07",
+    "source": "curated"
+  }
+]
