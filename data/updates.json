@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "timestamp": "2026-09-08T00:05:05+00:00",
+    "date": "2026-09-08",
+    "time_jst": "2026年09月08日 09:05",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Hyperliquid Season 2 (HYPE)",
+      "Base Network トークン (未確定)",
+      "Soneium / Startale STARポイント",
+      "MetaMask (MASK) ※未確定・要注意"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
