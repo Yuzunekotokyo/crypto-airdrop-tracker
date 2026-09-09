@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット/インフラ",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 1500,
+    "description": "世界最大級のWeb3ウォレット。ConsenSys CEOが「予想より早い」ローンチを示唆。MetaMask Rewardsプログラムのポイントが将来のMASKトークン配布の基準になる見込み(Q3〜Q4 2026想定、未確定)。",
+    "tasks": [
+      "MetaMask RewardsにオプトインしSeason 2に参加",
+      "スワップ・パーペチュアル取引・ブリッジでポイント獲得",
+      "一回の大口取引より継続的な利用を優先"
+    ],
+    "end_date": "2026-12-28",
+    "logo": "https://assets.coingecko.com/coins/images/22133/small/MetaMask-icon-fox.svg",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-09-09",
+    "source": "curated"
+  },
+  {
+    "id": "n1-layer-n",
+    "name": "N1 (旧Layer N)",
+    "symbol": "",
+    "category": "インフラ/Layer1",
+    "type": "ポイントファーミング",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 400,
+    "description": "トレーディング特化の新Layer1。01.xyz(旧01 Exchange)でのパーペチュアル取引がポイント直結。フェーズ1ポイントプログラムは2026年Q3末で終了予定 — 残り期間わずかで急ぎ推奨。",
+    "tasks": [
+      "01.xyzでパーペチュアル取引を実行",
+      "週次配布ポイントを蓄積",
+      "テストネット・ソーシャルタスクに参加"
+    ],
+    "end_date": "2026-09-30",
+    "logo": "",
+    "url": "https://01.xyz/",
+    "is_hot": true,
+    "added_date": "2026-09-09",
+    "source": "curated"
+  },
+  {
+    "id": "base-token",
+    "name": "Base (未確定トークン)",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "新規上場(未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CoinbaseがインキュベートするOP StackベースのL2。2025年9月にJesse Pollak氏がネットワークトークン検討を公式表明。Polymarketでは2026年内ローンチ確率69%。公式トークンはまだ未発表・詐欺サイトに注意。",
+    "tasks": [
+      "Base上でのオンチェーン活動履歴を積む",
+      "Base生態系dApps利用",
+      "公式チャンネル(base.org)以外の“エアドロップ”は詐欺と認識"
+    ],
+    "end_date": "2026-12-28",
+    "logo": "https://assets.coingecko.com/asset_platforms/images/131/small/base-network.png",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-09-09",
+    "source": "curated"
+  },
+  {
+    "id": "hertzflow",
+    "name": "HertzFlow",
+    "symbol": "",
+    "category": "DeFi",
+    "type": "ポイントファーミング(Merits)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 250,
+    "description": "TGE・エアドロップ実施を公式確認済み。Season 1は「Merits」ポイント制で、流動性デポジットの規模と保有期間に応じて付与。90日間継続保有で10倍ブースト。",
+    "tasks": [
+      "$10以上をプールにデポジット",
+      "90日間出金せず保有して10倍ブーストを獲得",
+      "早期入金でMerits最大化"
+    ],
+    "end_date": "未定 (TGE時期未発表)",
+    "logo": "",
+    "url": "https://hertzflow.gitbook.io/hertzflow-docs/rewards/season-1-genesis-vault",
+    "is_hot": false,
+    "added_date": "2026-09-09",
+    "source": "curated"
+  },
+  {
+    "id": "grvt",
+    "name": "GRVT",
+    "symbol": "GRVT",
+    "category": "DeFi/DEX",
+    "type": "取引所ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "オンチェーン無期限先物取引所。Rewards Season 2.0が進行中で、取引量・流動性提供に応じてポイント配布。",
+    "tasks": [
+      "GRVTで先物取引を実行",
+      "Season 2.0リワードページでポイント確認",
+      "紹介プログラムに参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://grvt.io/",
+    "is_hot": false,
+    "added_date": "2026-09-09",
+    "source": "curated"
+  }
+]
