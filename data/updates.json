@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-09-10T00:10:00+00:00",
+    "date": "2026-09-10",
+    "time_jst": "2026年09月10日 09:10",
+    "total_airdrops": 10,
+    "added_count": 3,
+    "removed_count": 0,
+    "changed_count": 5,
+    "hot_count": 3,
+    "added_names": [
+      "MetaMask (MASK)",
+      "Polymarket (POLY)",
+      "Base (Coinbase L2)"
+    ],
+    "removed_names": [],
+    "changes": [
+      {"name": "LayerZero (ZRO)", "changes": ["ステータス: active → ended (2024年6月に配布完了)"]},
+      {"name": "Scroll (SCR)", "changes": ["ステータス: active → ended (2024年10月に配布完了)"]},
+      {"name": "zkSync Era", "changes": ["ステータス: active → ended (2024年6月に配布完了)"]},
+      {"name": "EigenLayer (EIGEN)", "changes": ["ステータス: active → ended (2024年に配布完了)"]},
+      {"name": "Movement (MOVE)", "changes": ["ステータス: upcoming → ended (2024年12月に配布完了)"]}
+    ],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
