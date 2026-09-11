@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "timestamp": "2026-09-11T08:00:00+09:00",
+    "date": "2026-09-11",
+    "time_jst": "2026年09月11日 08:00",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Midnight (NIGHT)",
+      "Polymarket (POLY)",
+      "Hyperliquid Season 2 (HYPE)",
+      "Aster (ASTER) Stage 6 ベスティング受取",
+      "Abstract Chain (XP)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

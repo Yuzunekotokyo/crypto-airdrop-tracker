@@ -1,1 +1,113 @@
-[]
+[
+  {
+    "id": "midnight-night",
+    "name": "Midnight (NIGHT)",
+    "symbol": "NIGHT",
+    "category": "プライバシー/Cardano",
+    "type": "レトロアクティブ(受取中)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 250,
+    "description": "Cardano関連のプライバシー特化サイドチェーン。Glacier Drop/Scavenger Mineの対象者向けに、4段階に分かれた最終受け取りフェーズが進行中。2026年9月6日から最終(第4)フェーズが開始し、12月4日が受け取り最終期限。",
+    "tasks": [
+      "対象ウォレットで公式クレームサイトにアクセスして受給資格を確認",
+      "4トランシェに分かれた解放分を各フェーズで受領",
+      "最終フェーズ(2026/9/6〜12/4)を逃さず受け取る"
+    ],
+    "end_date": "2026-12-04",
+    "logo": "",
+    "url": "https://midnight.network/",
+    "is_hot": true,
+    "added_date": "2026-09-11",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ(未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "世界最大の分散型予測市場プラットフォーム。CMOがX上でトークン発行とエアドロップ実施を公式に確認済み(2025年10月)。米国向けアプリの本格展開が優先されており、スナップショット時期・配布条件はまだ未発表。",
+    "tasks": [
+      "Polymarketで予測市場に参加(取引・ベット)",
+      "米国向け正式アプリでの利用実績を作る",
+      "ウォレットを接続してオンチェーン活動を残す"
+    ],
+    "end_date": "未定(2026年後半予想)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-09-11",
+    "source": "curated"
+  },
+  {
+    "id": "hyperliquid-hype-s2",
+    "name": "Hyperliquid Season 2 (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイントプログラム",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "高速オンチェーン永久先物DEX。Season 2ポイントは全体供給の38.888%が割当予定。2026年2月に開始したHyperEVM層はまだ利用者が少なく、現時点で最も狙い目の高効率エリア。",
+    "tasks": [
+      "Perps/Spot取引でポイントを継続的に獲得",
+      "HYPEをステーキング(1トークンあたり1日8ポイント)",
+      "HyperEVM上のdAppsを積極利用",
+      "$10,000取引達成後にリファラルコードを発行"
+    ],
+    "end_date": "未定(スナップショット時期未確定)",
+    "logo": "",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-09-11",
+    "source": "curated"
+  },
+  {
+    "id": "aster-stage6-claim",
+    "name": "Aster (ASTER) Stage 6 ベスティング受取",
+    "symbol": "ASTER",
+    "category": "DeFi/Perps",
+    "type": "クレーム受付",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "Stage 6 Convergence(2026/2/2〜3/29実施)で100%ベスティングを選択した対象者向けの受取期間が2026年10月28日に開始予定。50%即時受取分は既に5月28日で締切済み。",
+    "tasks": [
+      "Stage 6対象ウォレットで公式ポータルの受給資格を確認",
+      "10/28の受取開始に備えてウォレット接続を準備",
+      "11/28の締切までに忘れずクレーム"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://www.asterdex.com/",
+    "is_hot": false,
+    "added_date": "2026-09-11",
+    "source": "curated"
+  },
+  {
+    "id": "abstract-xp",
+    "name": "Abstract Chain (XP)",
+    "symbol": "-",
+    "category": "コンシューマー/L2",
+    "type": "XPファーミング",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Pudgy Penguins関連チームが手掛けるコンシューマー向けL2。週次で貯まるXP・バッジ・マルチプライヤーが将来のトークン配布に反映される見込みだが、TGE時期は2026年9月時点でまだ未確定。",
+    "tasks": [
+      "Abstract上のdApps・ゲームを利用してXP獲得",
+      "デイリーログインでXP継続獲得",
+      "$PENGU保有でXPブーストを適用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://abs.xyz/",
+    "is_hot": false,
+    "added_date": "2026-09-11",
+    "source": "curated"
+  }
+]
