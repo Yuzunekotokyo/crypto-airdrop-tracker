@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-09-12T00:04:22+00:00",
+    "date": "2026-09-12",
+    "time_jst": "2026年09月12日 09:04",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "MetaMask (MASK)",
+      "Polymarket (POLY)",
+      "Base",
+      "OpenSea",
+      "Hyperliquid Season 2",
+      "Aster",
+      "Lighter",
+      "Grass"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true,
+    "note": "初回リアルデータ投入: Web検索による2026年9月時点の最新エアドロップ情報に更新。旧シードデータ(LayerZero/Scroll/zkSync/EigenLayer/Movement等、いずれも配布済み)を削除。"
+  }
+]
