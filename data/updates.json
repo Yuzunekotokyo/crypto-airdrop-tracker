@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "timestamp": "2026-09-13T00:04:27.808258+00:00",
+    "date": "2026-09-13",
+    "time_jst": "2026年09月13日 00:04",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "OpenSea (SEA)",
+      "Polymarket (POLY)",
+      "Base (未発行トークン)",
+      "OpenLedger (OPEN)",
+      "Monad (MON)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

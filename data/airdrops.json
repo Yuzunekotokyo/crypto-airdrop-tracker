@@ -1,1 +1,108 @@
-[]
+[
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "最大手NFTマーケットプレイス。供給量の50%をコミュニティに割当。OS2のXPシステム(Voyages/Treasure Chest)と過去の取引履歴でスコアリング。最終報酬フェーズが9/15開始予定で配布が目前に迫っている最重要案件。",
+    "tasks": [
+      "OpenSea 2.0でNFT取引を行う",
+      "Treasure Chest/Voyagesに参加してXPを獲得",
+      "ウォレットをOS2にリンクして待機リスト登録"
+    ],
+    "end_date": "2026-09-23",
+    "logo": "https://assets.coingecko.com/coins/images/2680/small/opensea.png",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-09-13",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ (未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "世界最大の予測市場プラットフォーム。CMOが「トークンとエアドロップは実施する」と公式に言及済みだが、日程・配布基準は未発表。継続的な取引実績が重要と見られる。",
+    "tasks": [
+      "複数カテゴリで継続的に予測市場に参加",
+      "X(Twitter)アカウントを連携",
+      "Rewardsプログラムに参加"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/48312/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-09-13",
+    "source": "curated"
+  },
+  {
+    "id": "base-token",
+    "name": "Base (未発行トークン)",
+    "symbol": "BASE",
+    "category": "Layer2",
+    "type": "検討中",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Coinbase運営のEthereum L2、L2 DeFi TVLの約46.6%を占める最大手。ネットワークトークン発行をCoinbaseが検討中と公式に言及。予測市場では2026年末までの発行確率が高いとされる。公式のクレーム窓口はまだ存在せずエアドロップを騙る詐欺サイトに注意。",
+    "tasks": [
+      "Baseチェーン上でオンチェーン活動履歴を積む",
+      "Base上のdAppsを継続的に利用",
+      "公式アナウンス以外のクレームサイトには絶対アクセスしない"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/33081/small/base.png",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-09-13",
+    "source": "curated"
+  },
+  {
+    "id": "openledger-open",
+    "name": "OpenLedger (OPEN)",
+    "symbol": "OPEN",
+    "category": "AI/データ",
+    "type": "テストネット参加型",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "AIデータ提供・学習に特化したブロックチェーン。テストネット参加やノード運用を通じたポイント制エアドロップキャンペーンを実施中。",
+    "tasks": [
+      "テストネットに参加",
+      "データセット提供/検証タスクをこなす",
+      "コミュニティ(Discord等)での活動"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://openledger.xyz/",
+    "is_hot": false,
+    "added_date": "2026-09-13",
+    "source": "curated"
+  },
+  {
+    "id": "monad-mon",
+    "name": "Monad (MON)",
+    "symbol": "MON",
+    "category": "Layer1",
+    "type": "レトロアクティブ",
+    "status": "ended",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "高速並列EVM互換L1。2025年11月にメインネット稼働とMONトークンのエアドロップ配布が完了済み(約7.6万ウォレットに配布)。新規クレームは終了。",
+    "tasks": [],
+    "end_date": "2025-11-03",
+    "logo": "https://assets.coingecko.com/coins/images/31258/small/monad.png",
+    "url": "https://monad.xyz/",
+    "is_hot": false,
+    "added_date": "2026-09-13",
+    "source": "curated"
+  }
+]
