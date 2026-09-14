@@ -51,6 +51,10 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
                 diffs.append(
                     f"推定価値: ${old_a.get('estimated_value_usd',0):,} → ${new_a.get('estimated_value_usd',0):,}"
                 )
+            if old_a.get("description") != new_a.get("description"):
+                diffs.append("最新情報に基づき詳細説明を更新")
+            if old_a.get("tasks") != new_a.get("tasks"):
+                diffs.append("参加方法(タスク)を更新")
             if diffs:
                 changed.append({"name": new_a["name"], "changes": diffs})
 

@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-09-14T00:05:07.395532+00:00",
+    "date": "2026-09-14",
+    "time_jst": "2026年09月14日 00:05",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE) Season 2",
+      "LayerZero (ZRO)",
+      "Scroll (SCR)",
+      "Polymarket (POLY)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era",
+      "Movement (MOVE)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
