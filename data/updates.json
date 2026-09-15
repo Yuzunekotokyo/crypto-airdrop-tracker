@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-09-15T00:03:21.476600+00:00",
+    "date": "2026-09-15",
+    "time_jst": "2026年09月15日 00:03",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "Backpack Exchange",
+      "Polymarket",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
