@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-09-16T00:05:05.152432+00:00",
+    "date": "2026-09-16",
+    "time_jst": "2026年09月16日 09:05",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "MetaMask (MASK)",
+      "Base (Coinbase L2)",
+      "Polymarket (POLY)",
+      "Aster (ASTER)",
+      "Lighter Season 3",
+      "EdgeX"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
