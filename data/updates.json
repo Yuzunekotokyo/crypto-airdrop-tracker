@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "timestamp": "2026-09-17T00:04:36.331572+00:00",
+    "date": "2026-09-17",
+    "time_jst": "2026年09月17日 09:04",
+    "total_airdrops": 4,
+    "added_count": 4,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Hyperliquid Season 2 (HYPE)",
+      "Grass Season 2 (GRASS)",
+      "Lighter (無期限DEX)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
