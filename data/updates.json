@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-09-18T00:04:40.836767+00:00",
+    "date": "2026-09-18",
+    "time_jst": "2026年09月18日 00:04",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "MetaMask (MASK)",
+      "Hyperliquid Season 2 (HYPE)",
+      "Polymarket (POLY)",
+      "Ritual",
+      "HertzFlow",
+      "Sweep (SWEEP)",
+      "Monad (MON)",
+      "Base"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
