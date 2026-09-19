@@ -1,1 +1,130 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1200,
+    "description": "業界最大級の予測市場プラットフォーム。トークン未発表だが$POLYと将来のエアドロップを示唆する報道が相次ぎ、2026年最注目案件の一つ。",
+    "tasks": [
+      "予測市場でのベット取引を実行",
+      "USDC入金でウォレットを稼働",
+      "複数マーケットへの継続的な参加"
+    ],
+    "end_date": "2026-12-18",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-09-19",
+    "source": "curated"
+  },
+  {
+    "id": "kraken-ink",
+    "name": "Kraken Ink (INK)",
+    "symbol": "INK",
+    "category": "Layer2",
+    "type": "ポイントプログラム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 350,
+    "description": "Kraken発のLayer2チェーン。Ink Pointsプログラム シーズン2が進行中で、2026年内のTGEが見込まれる「二重取り」案件。",
+    "tasks": [
+      "Ink Points シーズン2に参加",
+      "Kraken Pro でのアクティビティ",
+      "Ink上でのDeFiプロトコル利用"
+    ],
+    "end_date": "2026-12-03",
+    "logo": "",
+    "url": "https://inkonchain.com/",
+    "is_hot": true,
+    "added_date": "2026-09-19",
+    "source": "curated"
+  },
+  {
+    "id": "yakkamon-nft",
+    "name": "Yakkamon",
+    "symbol": "",
+    "category": "ゲーム/NFT",
+    "type": "NFTエアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 250,
+    "description": "Roninチェーン上のモンスター育成ゲーム。Season 0の上位トレーナー5,000名にNFT付与、さらに10,000体のフリーミントを9月中旬に実施予定。",
+    "tasks": [
+      "Roninウォレットを準備",
+      "Season 0でランキング上位を目指す",
+      "9月中旬のフリーミントに参加"
+    ],
+    "end_date": "2026-09-29",
+    "logo": "",
+    "url": "https://yakkamon.com/",
+    "is_hot": true,
+    "added_date": "2026-09-19",
+    "source": "curated"
+  },
+  {
+    "id": "startale-fiesta",
+    "name": "Startale Summer Fiesta",
+    "symbol": "",
+    "category": "インフラ",
+    "type": "ポイントプログラム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "Astar/Soneiumエコシステムのキャンペーン。サマーフィエスタが9月まで継続中で、オンチェーン活動に応じたポイント獲得が可能。",
+    "tasks": [
+      "Soneium上でのdApps利用",
+      "キャンペーンクエストの達成",
+      "コミュニティタスクへの参加"
+    ],
+    "end_date": "2026-10-04",
+    "logo": "",
+    "url": "https://startale.com/",
+    "is_hot": false,
+    "added_date": "2026-09-19",
+    "source": "curated"
+  },
+  {
+    "id": "megaeth-mega",
+    "name": "MegaETH (MEGA)",
+    "symbol": "MEGA",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "completed",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "2026年4月30日にTGE済み。Fluffle NFT保有者にはMEGA供給量の5%以上が配布された。新規の獲得機会は終了。",
+    "tasks": [
+      "配布は終了済み"
+    ],
+    "end_date": "2026-04-30",
+    "logo": "",
+    "url": "https://megaeth.com/",
+    "is_hot": false,
+    "added_date": "2026-09-19",
+    "source": "curated"
+  },
+  {
+    "id": "monad-mon",
+    "name": "Monad (MON)",
+    "symbol": "MON",
+    "category": "Layer1",
+    "type": "レトロアクティブ",
+    "status": "completed",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "1.88億ドル規模のトークンセールに先立ちエアドロップを実施済み。配分の少なさにコミュニティから反発があったが、配布自体は完了。",
+    "tasks": [
+      "配布は終了済み"
+    ],
+    "end_date": "2026-06-01",
+    "logo": "",
+    "url": "https://monad.xyz/",
+    "is_hot": false,
+    "added_date": "2026-09-19",
+    "source": "curated"
+  }
+]
