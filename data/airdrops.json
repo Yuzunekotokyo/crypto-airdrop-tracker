@@ -1,1 +1,138 @@
-[]
+[
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 1500,
+    "description": "ConsenSys CEOのJoseph Lubin氏が「予想より早く」登場すると明言。3000万ユーザーを抱える世界最大のウォレットのトークンで、2024〜2026年のアクティブウォレットがスナップショット対象とされる見込み。ConsenSysのIPOに合わせた2026年Q3〜Q4ローンチが有力視されている。",
+    "tasks": [
+      "MetaMaskウォレットを日常的に使用する",
+      "MetaMask Rewardsプログラムでポイントを貯める",
+      "Swaps/Bridge機能を利用する",
+      "Linea上でのアクティビティも対象になる可能性が高い"
+    ],
+    "end_date": "未定（2026年Q3〜Q4が有力）",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-09-20",
+    "source": "curated"
+  },
+  {
+    "id": "hyperliquid-season2",
+    "name": "Hyperliquid Season 2 (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイント/ステーキング",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "コミュニティ報酬ウォレットに4億2800万枚以上のHYPEが未配布のまま残存。2026年2月にローンチしたHyperEVMへの参加でSeason 2スナップショットのウェイトが上昇する。",
+    "tasks": [
+      "Perps/Spotで取引しポイントを獲得する",
+      "HYPEをステーキングしバリデーターに委任する",
+      "HyperEVM上のDeFiアプリを利用する(5 HYPE以上をブリッジ)",
+      "$10k取引量達成後に紹介コードを発行する"
+    ],
+    "end_date": "未定（継続中のシーズン）",
+    "logo": "",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-09-20",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 800,
+    "description": "CMOが「トークンとエアドロップは確実に実施する」と公式表明済み。スナップショット日・配布率は未発表だが、供給の5〜10%程度がアクティブトレーダー向けに配分される見込み。米国事業の本格再開後のローンチが濃厚。",
+    "tasks": [
+      "実際に予測市場で取引する",
+      "複数カテゴリの市場に継続的に参加する",
+      "X(Twitter)アカウントを連携する",
+      "スナップショット発表前から活動実績を積んでおく"
+    ],
+    "end_date": "未定（米国事業再開後を想定）",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-09-20",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 400,
+    "description": "2026年3月にCEOがローンチ延期を発表(新日程は未発表)。供給の50%をコミュニティに配分し、初回クレームで全体の約25%を配布する計画自体は維持されている。OGユーザーとRewardsプログラム参加者が対象。",
+    "tasks": [
+      "OpenSea Rewardsプログラムに参加する",
+      "OGユーザー資格を確認する(過去の取引実績)",
+      "延期中の手数料優遇期間を活用して取引を続ける",
+      "公式Xで再開発表をチェックする"
+    ],
+    "end_date": "延期中（新日程未発表）",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-09-20",
+    "source": "curated"
+  },
+  {
+    "id": "backpack-bp",
+    "name": "Backpack (BP)",
+    "symbol": "BP",
+    "category": "取引所/ウォレット",
+    "type": "配布済み+ステーキング継続",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "2026年3月23日にBPトークンがSolana上でTGE済み。供給の25%(2億4000万枚)がポイント保有者に、1000万枚がMad Lads NFT保有者に配布済み。現在はステーキングでBackpack Participant Programの特典・将来的な株式転換オプションを狙うフェーズ。",
+    "tasks": [
+      "BPをステーキングしParticipant Programの特典を獲得する",
+      "Backpack取引所の継続利用でSeason 4ポイントを蓄積する",
+      "Mad Lads NFT保有で追加特典を得る"
+    ],
+    "end_date": "ステーキング継続中",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": false,
+    "added_date": "2026-09-20",
+    "source": "curated"
+  },
+  {
+    "id": "base-network-token",
+    "name": "Base ネットワークトークン (未発表)",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "投機的/未確定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CoinbaseがBase向けネットワークトークンを検討中と報道。JPMorganは時価総額120億〜340億ドルと試算しているが、公式発表・スナップショット基準は一切未確定の段階。",
+    "tasks": [
+      "Base上でのトランザクション実績を積んでおく",
+      "Base関連dAppsの利用を継続する",
+      "公式発表を注視する(現時点で確定タスクなし)"
+    ],
+    "end_date": "未定（トークン自体が未確定）",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-09-20",
+    "source": "curated"
+  }
+]

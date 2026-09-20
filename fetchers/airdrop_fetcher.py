@@ -5,7 +5,7 @@ Airdrop情報をWeb/APIから収集するモジュール。
 
 import requests
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 from bs4 import BeautifulSoup
 from fetchers.coingecko import get_trending_coins, get_new_coins
 
@@ -53,114 +53,164 @@ def _scrape_airdrops_io() -> list[dict]:
 
 
 def _build_seed_airdrops() -> list[dict]:
-    """手動管理の注目エアドロップシードデータ (定期的に更新)"""
+    """手動管理の注目エアドロップシードデータ (毎日のリサーチに基づき更新)"""
     today = datetime.utcnow()
     return [
         {
-            "id": "layerzero-zro",
-            "name": "LayerZero (ZRO)",
-            "symbol": "ZRO",
-            "category": "インフラ",
+            "id": "metamask-mask",
+            "name": "MetaMask (MASK)",
+            "symbol": "MASK",
+            "category": "ウォレット",
             "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "medium",
-            "estimated_value_usd": 500,
-            "description": "クロスチェーンメッセージングプロトコル。ブリッジ・DeFi利用者向けエアドロップ。",
-            "tasks": ["Stargate経由でブリッジを実行", "複数チェーンでのトランザクション", "LayerZero対応dApps利用"],
-            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
-            "url": "https://layerzero.network/",
+            "status": "upcoming",
+            "difficulty": "easy",
+            "estimated_value_usd": 1500,
+            "description": (
+                "ConsenSys CEOのJoseph Lubin氏が「予想より早く」登場すると明言。3000万ユーザーを抱える"
+                "世界最大のウォレットのトークンで、2024〜2026年のアクティブウォレットがスナップショット"
+                "対象とされる見込み。ConsenSysのIPOに合わせた2026年Q3〜Q4ローンチが有力視されている。"
+            ),
+            "tasks": [
+                "MetaMaskウォレットを日常的に使用する",
+                "MetaMask Rewardsプログラムでポイントを貯める",
+                "Swaps/Bridge機能を利用する",
+                "Linea上でのアクティビティも対象になる可能性が高い",
+            ],
+            "end_date": "未定（2026年Q3〜Q4が有力）",
+            "logo": "",
+            "url": "https://metamask.io/",
             "is_hot": True,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
         {
-            "id": "scroll-scr",
-            "name": "Scroll (SCR)",
-            "symbol": "SCR",
-            "category": "Layer2",
+            "id": "polymarket-poly",
+            "name": "Polymarket (POLY)",
+            "symbol": "POLY",
+            "category": "予測市場",
             "type": "レトロアクティブ",
-            "status": "active",
+            "status": "upcoming",
             "difficulty": "easy",
-            "estimated_value_usd": 300,
-            "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。",
-            "tasks": ["ScrollネットワークへETHブリッジ", "Scroll上でのDeFi利用", "複数週にわたるアクティビティ"],
-            "end_date": (today + timedelta(days=90)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
-            "url": "https://scroll.io/",
+            "estimated_value_usd": 800,
+            "description": (
+                "CMOが「トークンとエアドロップは確実に実施する」と公式表明済み。スナップショット日・"
+                "配布率は未発表だが、供給の5〜10%程度がアクティブトレーダー向けに配分される見込み。"
+                "米国事業の本格再開後のローンチが濃厚。"
+            ),
+            "tasks": [
+                "実際に予測市場で取引する",
+                "複数カテゴリの市場に継続的に参加する",
+                "X(Twitter)アカウントを連携する",
+                "スナップショット発表前から活動実績を積んでおく",
+            ],
+            "end_date": "未定（米国事業再開後を想定）",
+            "logo": "",
+            "url": "https://polymarket.com/",
             "is_hot": True,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
         {
-            "id": "zksync-era",
-            "name": "zkSync Era",
-            "symbol": "ZK",
-            "category": "Layer2",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 200,
-            "description": "Matter Labsが開発するZK-Rollup。エコシステムが急拡大中。",
-            "tasks": ["Era上でのスワップ", "Syncswap/Mute利用", "zkSync公式ブリッジ利用"],
-            "end_date": (today + timedelta(days=45)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/38043/small/ZKTokenBlack.png",
-            "url": "https://zksync.io/",
-            "is_hot": False,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "hyperliquid-hype",
-            "name": "Hyperliquid (HYPE)",
+            "id": "hyperliquid-season2",
+            "name": "Hyperliquid Season 2 (HYPE)",
             "symbol": "HYPE",
             "category": "DeFi/DEX",
-            "type": "取引所トークン",
+            "type": "ポイント/ステーキング",
             "status": "active",
             "difficulty": "medium",
             "estimated_value_usd": 1000,
-            "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。",
-            "tasks": ["Hyperliquid上での先物取引", "流動性提供", "紹介プログラム参加"],
-            "end_date": (today + timedelta(days=30)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+            "description": (
+                "コミュニティ報酬ウォレットに4億2800万枚以上のHYPEが未配布のまま残存。2026年2月に"
+                "ローンチしたHyperEVMへの参加でSeason 2スナップショットのウェイトが上昇する。"
+            ),
+            "tasks": [
+                "Perps/Spotで取引しポイントを獲得する",
+                "HYPEをステーキングしバリデーターに委任する",
+                "HyperEVM上のDeFiアプリを利用する(5 HYPE以上をブリッジ)",
+                "$10k取引量達成後に紹介コードを発行する",
+            ],
+            "end_date": "未定（継続中のシーズン）",
+            "logo": "",
             "url": "https://hyperliquid.xyz/",
             "is_hot": True,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
         {
-            "id": "eigenlayer-eigen",
-            "name": "EigenLayer (EIGEN)",
-            "symbol": "EIGEN",
-            "category": "インフラ",
-            "type": "リステーキング",
-            "status": "active",
-            "difficulty": "hard",
-            "estimated_value_usd": 800,
-            "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。",
-            "tasks": ["ETHをリステーキング", "LST (stETH等) をデポジット", "AVSへの参加"],
-            "end_date": (today + timedelta(days=120)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/33751/small/eigen.png",
-            "url": "https://eigenlayer.xyz/",
+            "id": "base-network-token",
+            "name": "Base ネットワークトークン (未発表)",
+            "symbol": "",
+            "category": "Layer2",
+            "type": "投機的/未確定",
+            "status": "upcoming",
+            "difficulty": "medium",
+            "estimated_value_usd": 0,
+            "description": (
+                "CoinbaseがBase向けネットワークトークンを検討中と報道。JPMorganは時価総額120億〜340億"
+                "ドルと試算しているが、公式発表・スナップショット基準は一切未確定の段階。"
+            ),
+            "tasks": [
+                "Base上でのトランザクション実績を積んでおく",
+                "Base関連dAppsの利用を継続する",
+                "公式発表を注視する(現時点で確定タスクなし)",
+            ],
+            "end_date": "未定（トークン自体が未確定）",
+            "logo": "",
+            "url": "https://base.org/",
             "is_hot": False,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },
         {
-            "id": "movement-move",
-            "name": "Movement (MOVE)",
-            "symbol": "MOVE",
-            "category": "Layer2",
-            "type": "新規上場",
+            "id": "opensea-sea",
+            "name": "OpenSea (SEA)",
+            "symbol": "SEA",
+            "category": "NFT",
+            "type": "レトロアクティブ",
             "status": "upcoming",
             "difficulty": "easy",
             "estimated_value_usd": 400,
-            "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ予定。",
-            "tasks": ["テストネット参加", "Discordコミュニティ参加", "テストトランザクション実行"],
-            "end_date": (today + timedelta(days=20)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/39619/small/MOVE_color.png",
-            "url": "https://movementlabs.xyz/",
-            "is_hot": True,
+            "description": (
+                "2026年3月にCEOがローンチ延期を発表(新日程は未発表)。供給の50%をコミュニティに配分し、"
+                "初回クレームで全体の約25%を配布する計画自体は維持されている。OGユーザーとRewards"
+                "プログラム参加者が対象。"
+            ),
+            "tasks": [
+                "OpenSea Rewardsプログラムに参加する",
+                "OGユーザー資格を確認する(過去の取引実績)",
+                "延期中の手数料優遇期間を活用して取引を続ける",
+                "公式Xで再開発表をチェックする",
+            ],
+            "end_date": "延期中（新日程未発表）",
+            "logo": "",
+            "url": "https://opensea.io/",
+            "is_hot": False,
+            "added_date": today.strftime("%Y-%m-%d"),
+            "source": "curated",
+        },
+        {
+            "id": "backpack-bp",
+            "name": "Backpack (BP)",
+            "symbol": "BP",
+            "category": "取引所/ウォレット",
+            "type": "配布済み+ステーキング継続",
+            "status": "active",
+            "difficulty": "easy",
+            "estimated_value_usd": 150,
+            "description": (
+                "2026年3月23日にBPトークンがSolana上でTGE済み。供給の25%(2億4000万枚)がポイント"
+                "保有者に、1000万枚がMad Lads NFT保有者に配布済み。現在はステーキングでBackpack "
+                "Participant Programの特典・将来的な株式転換オプションを狙うフェーズ。"
+            ),
+            "tasks": [
+                "BPをステーキングしParticipant Programの特典を獲得する",
+                "Backpack取引所の継続利用でSeason 4ポイントを蓄積する",
+                "Mad Lads NFT保有で追加特典を得る",
+            ],
+            "end_date": "ステーキング継続中",
+            "logo": "",
+            "url": "https://backpack.exchange/",
+            "is_hot": False,
             "added_date": today.strftime("%Y-%m-%d"),
             "source": "curated",
         },

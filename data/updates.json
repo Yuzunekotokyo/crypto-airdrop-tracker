@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-09-20T00:06:07.303948+00:00",
+    "date": "2026-09-20",
+    "time_jst": "2026年09月20日 09:06",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "MetaMask (MASK)",
+      "Hyperliquid Season 2 (HYPE)",
+      "Polymarket (POLY)",
+      "OpenSea (SEA)",
+      "Backpack (BP)",
+      "Base ネットワークトークン (未発表)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
