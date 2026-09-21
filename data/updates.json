@@ -1,1 +1,85 @@
-[]
+[
+  {
+    "timestamp": "2026-09-21T00:05:27.240415+00:00",
+    "date": "2026-09-21",
+    "time_jst": "2026年09月21日 00:05",
+    "total_airdrops": 8,
+    "added_count": 2,
+    "removed_count": 0,
+    "changed_count": 6,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Abstract"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "Hyperliquid Season 3 (HYPE)",
+        "changes": [
+          "ステータス: active → upcoming",
+          "推定価値: $1,000 → $1,500"
+        ]
+      },
+      {
+        "name": "LayerZero (ZRO)",
+        "changes": [
+          "ステータス: active → ended",
+          "推定価値: $500 → $0"
+        ]
+      },
+      {
+        "name": "Scroll (SCR)",
+        "changes": [
+          "ステータス: active → ended",
+          "推定価値: $300 → $0"
+        ]
+      },
+      {
+        "name": "zkSync Era",
+        "changes": [
+          "ステータス: active → ended",
+          "推定価値: $200 → $0"
+        ]
+      },
+      {
+        "name": "EigenLayer (EIGEN)",
+        "changes": [
+          "ステータス: active → ended",
+          "推定価値: $800 → $0"
+        ]
+      },
+      {
+        "name": "Movement (MOVE)",
+        "changes": [
+          "ステータス: upcoming → ended",
+          "推定価値: $400 → $0"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": true
+  },
+  {
+    "timestamp": "2026-09-21T00:02:40.049455+00:00",
+    "date": "2026-09-21",
+    "time_jst": "2026年09月21日 00:02",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "zkSync Era"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
