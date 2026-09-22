@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "id": "openledger-open",
+    "name": "OpenLedger (OPEN)",
+    "symbol": "OPEN",
+    "category": "AI/DePIN",
+    "type": "テストネット報酬",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "AIデータ・モデル向けブロックチェーン。2026年9月8日にOPENトークンのエアドロップ配布が開始し、現在クレーム受付中。",
+    "tasks": [
+      "ノード運転 (Chrome拡張機能/Androidアプリ)",
+      "デイリーログインでストリークボーナス獲得",
+      "#OpnUp ソーシャルタスク参加"
+    ],
+    "end_date": "配布中 (Epoch制)",
+    "logo": "",
+    "url": "https://openledger.xyz/",
+    "is_hot": true,
+    "added_date": "2026-09-22",
+    "source": "curated"
+  },
+  {
+    "id": "aster-dex-aster-stage6",
+    "name": "Aster (ASTER) Stage 6",
+    "symbol": "ASTER",
+    "category": "DeFi/DEX",
+    "type": "取引所トークン",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "パーペチュアル/マルチチェーンDEX。Stage6 (Convergence) で100%ベスト請求を選択した参加者向けの請求ウィンドウが2026年10月28日〜11月28日に開催予定。",
+    "tasks": [
+      "Asterでの取引量を積む",
+      "リファラルプログラム参加",
+      "請求ウィンドウ前にウォレット・ポイント要件を確認"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://www.asterdex.com/en/airdrop",
+    "is_hot": true,
+    "added_date": "2026-09-22",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "大手NFTマーケットプレイス。供給量の50%をコミュニティに配分予定でQ1 2026ローンチが公式に目標として示されているが、正式なTGE日は未確定。Voyagesプログラムでの取引・出品・入札によるXP獲得が鍵。",
+    "tasks": [
+      "Voyagesプログラムのミッション達成",
+      "NFTの取引・出品・入札でXP獲得",
+      "過去のSeaportプロトコル利用実績を確認"
+    ],
+    "end_date": "TGE時期未確定 (Q1 2026目標)",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-09-22",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "予測市場プラットフォーム。トークン発行とエアドロップの方向性は経営陣が公式に言及済みだが、配布メカニズムと日程は未発表。米国向け展開の進捗待ち。",
+    "tasks": [
+      "Polygon対応ウォレット準備 (MATIC少額)",
+      "複数カテゴリで継続的な取引アクティビティ",
+      "Xアカウントを連携設定"
+    ],
+    "end_date": "未定 (公式発表待ち)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": false,
+    "added_date": "2026-09-22",
+    "source": "curated"
+  }
+]
