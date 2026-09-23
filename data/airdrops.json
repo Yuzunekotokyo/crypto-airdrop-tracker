@@ -1,1 +1,135 @@
-[]
+[
+  {
+    "id": "base-token",
+    "name": "Base (未発表トークン)",
+    "symbol": "BASE?",
+    "category": "Layer2",
+    "type": "レトロアクティブ (噂/未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CoinbaseのL2「Base」。CEOブライアン・アームストロング氏がトークン発行の検討を認め、2026年Q2〜Q4のリリース観測も。JPMorganはネットワーク評価額120〜340億ドルと試算し「史上最大級のトークンローンチ」になる可能性。公式な配布計画・スナップショットはまだ未確定。",
+    "tasks": [
+      "Base Appをダウンロードしウォレット作成",
+      "ETHをBaseにブリッジ",
+      "Aerodrome/Aaveなど主要DeFiを利用",
+      "Farcaster等ソーシャルdAppsに参加",
+      "Builder Rewardsプログラムへの開発貢献"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/asset_platforms/images/131/small/base-network.png",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-09-23",
+    "source": "curated-research-2026-09-23"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット/インフラ",
+    "type": "レトロアクティブ (発行確定・詳細未定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "ConsenSys CEOジョセフ・ルービン氏がMASKトークンの発行を明言。配布基準・スナップショット日は未公表だが、MetaMask Rewardsプログラム(Linea上のポイント)の実績が有力な判定基準と見られている。",
+    "tasks": [
+      "MetaMask内蔵スワップ機能を定期利用",
+      "MetaMask Bridgeで複数チェーン間送金",
+      "Linea上でのアクティビティを重視",
+      "Rewardsプログラムにオプトインしポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "https://assets.coingecko.com/coins/images/1085/small/metamask-fox.svg",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-09-23",
+    "source": "curated-research-2026-09-23"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ (発行確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "2025年10月にPOLYトークン発行とエアドロップ実施を正式表明。供給量の5〜10%がエアドロップに充当される見込み。米国での正式サービス開始(2026年5月)後、2026年後半のローンチが有力視されている。",
+    "tasks": [
+      "Polymarketで実際に予測市場に参加",
+      "取引量・ポジション保有を継続",
+      "米国版ローンチ後のアクティビティも評価対象の可能性"
+    ],
+    "end_date": "未定 (2026年後半予想)",
+    "logo": "https://assets.coingecko.com/markets/images/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-09-23",
+    "source": "curated-research-2026-09-23"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "レトロアクティブ (発行確定・延期中)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "供給量の50%をコミュニティに配分すると発表済み。当初2026年3月30日ローンチ予定だったが弱気相場を理由に延期、新日程は未発表。初回クレームで全体の約25%を配布予定。",
+    "tasks": [
+      "OpenSea/OS2で早期からの取引・出品実績を作る",
+      "報酬プログラムへの参加",
+      "延期中のため継続的な利用実績の蓄積が重要"
+    ],
+    "end_date": "未定 (延期中)",
+    "logo": "https://assets.coingecko.com/coins/images/1071/small/opensea.png",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-09-23",
+    "source": "curated-research-2026-09-23"
+  },
+  {
+    "id": "hyperliquid-hype-season2",
+    "name": "Hyperliquid Season 2 (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイント → 追加配布",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "2024年11月のGenesisで供給量の31%超を配布済み。Season 2として供給量の38.888%が今後の配布用に確保されており、ポイントは1:1でHYPEに転換予定。2026年2月18日開始のHyperEVMは利用者がまだ少なく、狙い目のポイント獲得先。",
+    "tasks": [
+      "Perps/Spot取引でポイント獲得",
+      "HYPEをステーキング (1トークンあたり1日8ポイント)",
+      "HyperEVM上のdAppsを利用 (穴場)"
+    ],
+    "end_date": "未定 (Season2転換イベント未公表)",
+    "logo": "https://assets.coingecko.com/coins/images/50882/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-09-23",
+    "source": "curated-research-2026-09-23"
+  },
+  {
+    "id": "backpack-bp",
+    "name": "Backpack (BP)",
+    "symbol": "BP",
+    "category": "取引所",
+    "type": "エアドロップ (配布済み)",
+    "status": "ended",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "2026年3月にTGE、Solana上でBPトークンをローンチ済み。供給10億枚のうち25% (約2.5億枚) を即時配布 (うちPointsプログラム参加者に2.4億枚、Mad Lads NFT保有者に1000万枚)。運営・投資家への初期配分なし。新規の獲得機会は終了。",
+    "tasks": [
+      "(配布済み) 当時Backpack PointsまたはMad Lads NFT保有者が対象だった"
+    ],
+    "end_date": "2026-03-23 (配布完了)",
+    "logo": "https://assets.coingecko.com/coins/images/38771/small/backpack.jpg",
+    "url": "https://backpack.exchange/",
+    "is_hot": false,
+    "added_date": "2026-09-23",
+    "source": "curated-research-2026-09-23"
+  }
+]
