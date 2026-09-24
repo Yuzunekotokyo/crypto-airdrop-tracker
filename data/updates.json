@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-09-24T00:08:09+00:00",
+    "date": "2026-09-24",
+    "time_jst": "2026年09月24日 09:08",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Hyperliquid Season 2 (HYPE)",
+      "Beldex / Humanity 交換クレジット (Kraken)",
+      "Polymarket (POLY)",
+      "OpenSea (SEA / OS2)",
+      "Arcium (ARX)",
+      "USD.AI (CHIP) Season 2"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

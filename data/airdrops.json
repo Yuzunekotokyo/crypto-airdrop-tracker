@@ -1,1 +1,135 @@
-[]
+[
+  {
+    "id": "hyperliquid-season2-hype",
+    "name": "Hyperliquid Season 2 (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイント/取引所トークン",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "高速オンチェーン永久先物DEX。Season 2はトレーディング・ステーキング・HyperEVM連携でポイントを積み上げる方式。KYC不要。",
+    "tasks": [
+      "Perps/Spotで取引を実施 (Perps⇄Spot Transferで資金移動後に発注)",
+      "HYPEをステーキングしバリデータへ委任、トレーディング口座にリンク",
+      "HyperEVM (2026/2/18ローンチ) へ5 HYPE以上ブリッジしDeFi利用",
+      "$10,000取引達成後に紹介コードを発行して手数料還元"
+    ],
+    "end_date": "未定 (スナップショット時期は非公開)",
+    "logo": "",
+    "url": "https://app.hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-09-24",
+    "source": "curated-research-2026-09-24"
+  },
+  {
+    "id": "kraken-beldex-humanity-credit",
+    "name": "Beldex / Humanity 交換クレジット (Kraken)",
+    "symbol": "BDX/HP",
+    "category": "取引所クレジット",
+    "type": "出金期限あり (要対応)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Krakenで旧Beldex/Humanity保有者に交換用トークンが既に付与済み。出金オプションの締切が迫っているため未対応なら至急確認を。",
+    "tasks": [
+      "Krakenアカウントにログインし付与済みクレジットを確認",
+      "2026年9月25日 14:00 UTC までに出金/選択手続きを完了"
+    ],
+    "end_date": "2026-09-25",
+    "logo": "",
+    "url": "https://www.kraken.com/",
+    "is_hot": true,
+    "added_date": "2026-09-24",
+    "source": "curated-research-2026-09-24"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ (見込み)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "CMOが「トークンとエアドロップを実施する」と公式表明済み。スナップショット日・配分ルールは未発表だが、供給の5〜10%が対象になる見込み。",
+    "tasks": [
+      "少額でも継続的に取引を行う (単発の大口入金より有利とされる)",
+      "複数マーケットで取引し多様性を出す",
+      "勝利金を再投資する",
+      "Xアカウントを連携する"
+    ],
+    "end_date": "未定 (2026年内のTGE見込み)",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-09-24",
+    "source": "curated-research-2026-09-24"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA / OS2)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "XPポイント",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "NFTマーケットプレイスOS2の独自トークン。供給の50%がコミュニティ向け。過去の利用実績とVoyagesプログラムのXPが配分に考慮される。",
+    "tasks": [
+      "OS2で売買・入札・スイープを実施しXPを獲得",
+      "Voyagesプログラムのウェーブ別タスクを完了",
+      "対象NFTを保有してXPをブースト"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-09-24",
+    "source": "curated-research-2026-09-24"
+  },
+  {
+    "id": "arcium-arx",
+    "name": "Arcium (ARX)",
+    "symbol": "ARX",
+    "category": "インフラ (秘密計算)",
+    "type": "RTG (レトロアクティブ配布)",
+    "status": "active",
+    "difficulty": "hard",
+    "estimated_value_usd": 400,
+    "description": "Solana上の秘密計算(MPC)ネットワーク。2026年6月22日にTGE済み。貢献者向けRTGポータルでの追加配布ウェーブが継続中。",
+    "tasks": [
+      "Arcium RTGポータル (Magna) でウォレットの割当を確認",
+      "過去のDiscord/コントリビューション履歴が対象",
+      "Binance Alphaのポイント条件を満たせば取引所経由でも請求可"
+    ],
+    "end_date": "継続的な配布ウェーブ (期限未定)",
+    "logo": "",
+    "url": "https://arcium.com/",
+    "is_hot": false,
+    "added_date": "2026-09-24",
+    "source": "curated-research-2026-09-24"
+  },
+  {
+    "id": "usdai-chip",
+    "name": "USD.AI (CHIP) Season 2",
+    "symbol": "CHIP",
+    "category": "RWA/AI",
+    "type": "ポイント (Season 2)",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "AIハードウェア担保のRWAステーブルコインプロトコル。Season 1のCHIP請求は開始済み (2026/5/30締切)、Season 2のポイント獲得は継続中。",
+    "tasks": [
+      "sUSDai / autoUSDai をミント・ステークしてポイント獲得",
+      "Alloポイントをウォレットに紐付け",
+      "コミュニティ/紹介タスクに参加"
+    ],
+    "end_date": "Season 1請求は2026-05-30締切、Season 2は継続中",
+    "logo": "",
+    "url": "https://usd.ai/",
+    "is_hot": false,
+    "added_date": "2026-09-24",
+    "source": "curated-research-2026-09-24"
+  }
+]
