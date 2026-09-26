@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "timestamp": "2026-09-26T00:09:25.623468+00:00",
+    "date": "2026-09-26",
+    "time_jst": "2026年09月26日 09:09",
+    "total_airdrops": 4,
+    "added_count": 4,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Canopy (CNPY)",
+      "ZeroFi Protocol",
+      "Base (Coinbase L2)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
