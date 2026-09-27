@@ -33,6 +33,11 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
+      {% if latest_update.removed_count > 0 %}
+      <span class="stat-chip stat-removed">
+        🗑️ 終了 <strong>{{ latest_update.removed_count }}</strong> 件
+      </span>
+      {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
         📧 メール送信済
@@ -44,6 +49,14 @@
       <strong>新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if latest_update.removed_names %}
+    <div class="update-new-items">
+      <strong>終了/削除:</strong>
+      {% for name in latest_update.removed_names %}
+      <span class="new-tag removed-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}

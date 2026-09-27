@@ -6,6 +6,9 @@ import json
 import logging
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
+
+JST = ZoneInfo("Asia/Tokyo")
 
 from flask import Flask, jsonify, render_template, request
 
@@ -39,7 +42,7 @@ def index():
         airdrops=airdrops,
         latest_update=latest_update,
         updates=updates[:5],
-        now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
+        now=datetime.now(JST).strftime("%Y年%m月%d日 %H:%M"),
     )
 
 
