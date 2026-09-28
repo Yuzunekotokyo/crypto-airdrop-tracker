@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "timestamp": "2026-09-28T00:09:42.438215+00:00",
+    "date": "2026-09-28",
+    "time_jst": "2026年09月28日 00:09",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Base",
+      "OpenSea (SEA)",
+      "MetaMask (MASK)",
+      "Polymarket (POLY)",
+      "Backpack (BACKPACK)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "id": "base-token",
+    "name": "Base",
+    "symbol": "BASE(未定)",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 2000,
+    "description": "Coinbase開発のL2「Base」がネイティブトークン発行を検討中とJesse Pollak氏(Base創設者)が公表。JPMorganの試算では時価総額120〜340億ドル規模になる可能性があり、コミュニティ配分が20〜25%なら1人あたり$500〜$5,000超の価値になるとの見方も。上場企業Coinbase発のため規制面の扱いが焦点。",
+    "tasks": [
+      "Base上のdApps利用",
+      "Baseへのブリッジ実行",
+      "各種プロトコルとの継続的なインタラクション"
+    ],
+    "end_date": "未定 (2026年Q2〜Q4に発表の可能性)",
+    "logo": "https://assets.coingecko.com/asset_platforms/images/131/small/base-network.png",
+    "url": "https://base.org/",
+    "is_hot": true,
+    "added_date": "2026-09-28",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "OpenSeaがSEAトークンのTGEを正式発表済み。供給量の50%をコミュニティに配分し、初回クレームで全体の約25%を放出予定。長期利用者(OG)と「Voyages」ポイントプログラムの現行参加者の双方を個別に評価する方式。",
+    "tasks": [
+      "OpenSea「Voyages」ポイントプログラムに参加",
+      "NFTの売買・出品を継続的に実施",
+      "過去のOpenSea利用実績を保持(2025年以前の利用者は評価対象)"
+    ],
+    "end_date": "配布中 (2026年Q1にTGE済み、追加配布継続中)",
+    "logo": "https://assets.coingecko.com/coins/images/19556/small/opensea.png",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-09-28",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Consensys CEO Joseph Lubin氏が「予想より早く」登場すると公言。2024〜2026年のウォレット利用実績に基づき、アクティビティスコアに応じて1ウォレットあたり250〜15,000 MASKが配布されると噂されている(未公式)。時期はConsensysのIPOに絡めた2026年Q3〜Q4が有力視。",
+    "tasks": [
+      "MetaMask経由でスワップ・ブリッジを実行",
+      "MetaMask Rewardsプログラムへ参加してポイント蓄積",
+      "パープス取引など対応dAppsの利用"
+    ],
+    "end_date": "未定 (2026年Q3〜Q4予想)",
+    "logo": "https://assets.coingecko.com/coins/images/22990/small/metamask.png",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-09-28",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 400,
+    "description": "CMOのMatthew Modabber氏が「トークンとエアドロップは実施する」と公式に明言。正式な時期・基準は未発表だが、コミュニティ予想では2026年後半が有力。継続的な取引実績と複数カテゴリでの参加が評価される見込み。",
+    "tasks": [
+      "予測市場での継続的な取引",
+      "複数カテゴリ(政治・スポーツ等)での参加",
+      "X(Twitter)アカウントとの連携"
+    ],
+    "end_date": "未定 (2026年後半予想)",
+    "logo": "https://assets.coingecko.com/coins/images/38753/small/polymarket.png",
+    "url": "https://polymarket.com/",
+    "is_hot": false,
+    "added_date": "2026-09-28",
+    "source": "curated"
+  },
+  {
+    "id": "backpack-token",
+    "name": "Backpack (BACKPACK)",
+    "symbol": "BACKPACK",
+    "category": "取引所",
+    "type": "取引所トークン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "2026年3月23日にTGE実施済み。供給量の25%をコミュニティに配分(ポイント保有者24%・Mad Ladsホルダー1%)。現在はSeason 4のポイントファーミングが進行中で、継続的な取引で追加配分の対象になる可能性。",
+    "tasks": [
+      "Backpack取引所での現物・先物取引でポイント獲得(毎週金曜集計)",
+      "本人確認(KYC)を完了",
+      "Mad Lads NFT保有者はウォレット連携を確認"
+    ],
+    "end_date": "Season進行中",
+    "logo": "https://assets.coingecko.com/coins/images/39676/small/backpack.png",
+    "url": "https://backpack.exchange/",
+    "is_hot": false,
+    "added_date": "2026-09-28",
+    "source": "curated"
+  }
+]
