@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "timestamp": "2026-09-30T00:06:56.935159+00:00",
+    "date": "2026-09-30",
+    "time_jst": "2026年09月30日 00:06",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Variational (VAR)",
+      "Nado (INK)",
+      "Concrete (CT)",
+      "BULK",
+      "Polymarket",
+      "Base",
+      "Backpack",
+      "OpenSea (SEA)",
+      "HertzFlow",
+      "LayerZero (追加配布の可能性)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

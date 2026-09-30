@@ -1,1 +1,213 @@
-[]
+[
+  {
+    "id": "variational-var",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/デリバティブ",
+    "type": "ポイント→TGE",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "オンチェーンデリバティブDEX。2026年Q4にTGE予定、総供給の32%をポイント保有者へGenesis Airdrop(TGE時100%アンロック)。毎週150,000ポイント配布。",
+    "tasks": [
+      "Variationalで取引しポイントを獲得",
+      "利用規約に署名 (1ポイント以上が対象)",
+      "毎週金曜0:00 UTCのポイント配布を確認"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "nado-ink",
+    "name": "Nado (INK)",
+    "symbol": "INK",
+    "category": "DeFi/DEX",
+    "type": "ポイント→TGE",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "Kraken系Ink上のDEX。ポイントはTGE時に$INKへ変換予定 (Q3〜Q4見込み、日程未公表)。週$100,000のトレーダー報酬プールあり。",
+    "tasks": [
+      "Nadoで取引",
+      "Rewardsページから週次報酬を請求",
+      "ポイントを積み上げる"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://airdrops.io/ink-chain/",
+    "is_hot": true,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "concrete-ct",
+    "name": "Concrete (CT)",
+    "symbol": "CT",
+    "category": "DeFi/利回り",
+    "type": "ソーシャル+利用",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "2026年9月にCTトークンとTGE計画を正式発表。Social Bagsキャンペーンでポイント獲得可能。",
+    "tasks": [
+      "SNSフォロー・Discord参加",
+      "投稿シェアでBags獲得",
+      "Concreteのvaultを利用"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://www.bitrue.com/blog/concrete-airdrop-guide",
+    "is_hot": true,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "bulk",
+    "name": "BULK",
+    "symbol": "BULK",
+    "category": "DeFi/パッシブ",
+    "type": "ポイント(AURA)",
+    "status": "active",
+    "difficulty": "hard",
+    "estimated_value_usd": 600,
+    "description": "供給の30%をユーザーへ配布。メインネットは2026-09-05にローンチしSeason1事前入金は終了、現在は招待制。",
+    "tasks": [
+      "招待コードを入手",
+      "メインネットで資産を預ける (AURAは預入期間で加重)",
+      "SOLステーキング 約5.1% APY"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://airdrops.io/blog/best-crypto-airdrops/",
+    "is_hot": false,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "推測(トークン方向性確認済)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "トークン/エアドロップの方向性は公表済みだが、配布条件は未公表。",
+    "tasks": [
+      "Polymarketで継続的に取引",
+      "複数市場に参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": false,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "base-token",
+    "name": "Base",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "推測(未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "Coinbase発L2。ネットワークトークンを検討中と公言。確定情報はなし。",
+    "tasks": [
+      "Base上でDeFi/NFT/ブリッジを継続利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack",
+    "symbol": "",
+    "category": "取引所/ウォレット",
+    "type": "ポイント→TGE",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 400,
+    "description": "TGE計画公表済み(2026-02-09): 25%をコミュニティへ、うち24%がポイント保有者、1%がMad Lads保有者。ポイントはシーズン制。",
+    "tasks": [
+      "Backpackで取引・利用しポイントを獲得",
+      "Mad Lads保有でボーナス"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": false,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケットプレイス",
+    "type": "推測(未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "有力な期待銘柄。詳細は未公表のため、OpenSea利用実績を積むのが定石。",
+    "tasks": [
+      "OpenSeaでNFT売買",
+      "継続的な利用実績を作る"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "hertzflow",
+    "name": "HertzFlow",
+    "symbol": "",
+    "category": "DeFi/デリバティブ",
+    "type": "ポイント(Merits)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "TGEとエアドロップが確定。Season1のMerits(ポイント)でTGE時の配分が決まる。",
+    "tasks": [
+      "HertzFlowを利用しMeritsを獲得"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  },
+  {
+    "id": "layerzero-zro",
+    "name": "LayerZero (追加配布の可能性)",
+    "symbol": "ZRO",
+    "category": "インフラ",
+    "type": "推測(未確定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 200,
+    "description": "有力な期待銘柄の一つ。追加ラウンドは未確定のため要注意。",
+    "tasks": [
+      "LayerZero対応ブリッジ/dApps利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://layerzero.network/",
+    "is_hot": false,
+    "added_date": "2026-09-30",
+    "source": "curated"
+  }
+]
