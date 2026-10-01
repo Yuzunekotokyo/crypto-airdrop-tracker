@@ -1,1 +1,214 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "ポイント/利用実績",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "世界最大の予測市場。CMOがトークンとエアドロップを公式に確認済みだが、TGE日・スナップショット・資格条件は未発表。",
+    "tasks": [
+      "予測市場で継続的に取引",
+      "複数カテゴリの市場に参加",
+      "流動性提供・ボリュームを積む"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "リワード/ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 800,
+    "description": "MetaMaskのネイティブトークン。Rewardsプログラムのポイントが対象。※一部メディアが『請求開始』と報じる請求サイトは公式未確認でフィッシングの恐れあり。必ずMetaMask公式発表を確認。",
+    "tasks": [
+      "MetaMask Rewardsにオプトイン",
+      "スワップ・ブリッジ・Linea利用",
+      "公式告知以外のクレームサイトは使わない"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack",
+    "symbol": "",
+    "category": "取引所/ウォレット",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 600,
+    "description": "TGE計画を2026年2月に公表済み。供給の25%をコミュニティへ(ポイント保有者24%、Mad Lads 1%)。",
+    "tasks": [
+      "Backpack取引所で取引",
+      "ポイントを獲得",
+      "Mad Lads NFT保有(1%枠)"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": true,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "grvt",
+    "name": "GRVT",
+    "symbol": "GRVT",
+    "category": "DeFi/DEX",
+    "type": "ポイント/トランシェ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "7/21にTGE済み。Season 2配分は1B供給の18%で、トランシェ配布が継続中。",
+    "tasks": [
+      "配布状況を公式で確認",
+      "取引・流動性提供で追加ポイント"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://grvt.io/",
+    "is_hot": false,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "plume-s2",
+    "name": "Plume (Season 2)",
+    "symbol": "PLUME",
+    "category": "RWA",
+    "type": "シーズン制",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 250,
+    "description": "Season 2が継続中(期限未定)。RWA関連の利用でポイントを獲得。",
+    "tasks": [
+      "Plume上でRWA資産を保有・運用",
+      "アプリ利用でポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://plume.org/",
+    "is_hot": false,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "apyx",
+    "name": "Apyx (APYX)",
+    "symbol": "APYX",
+    "category": "DeFi",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 200,
+    "description": "Pipsキャンペーンを10月末まで延長(ブースト付き)。apxUSD保有やCurve/Pendleでの流動性提供でPips獲得。ガバナンストークン未発行。",
+    "tasks": [
+      "apxUSDを保有",
+      "Curve/Pendleで流動性提供",
+      "Pipsを蓄積"
+    ],
+    "end_date": "2026-10-31",
+    "logo": "",
+    "url": "https://apyx.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "concrete-ct",
+    "name": "Concrete (CT)",
+    "symbol": "CT",
+    "category": "DeFi",
+    "type": "ポイント/Binance Alpha",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "9/30よりBinance AlphaでCT取引開始。Alphaポイントによるクレームの対象となる可能性あり。",
+    "tasks": [
+      "Binance Alphaポイントを確認",
+      "公式のクレーム条件を確認"
+    ],
+    "end_date": "2026-10-15",
+    "logo": "",
+    "url": "https://www.concrete.xyz/",
+    "is_hot": false,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "sonic-s",
+    "name": "Sonic (S) 未請求分",
+    "symbol": "S",
+    "category": "Layer1",
+    "type": "請求期限",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "未請求のSトークン約3,269万枚が10/15にバーン。対象者は期限前に請求が必要。",
+    "tasks": [
+      "対象ウォレットで請求可否を確認(公式サイトのみ)"
+    ],
+    "end_date": "2026-10-15",
+    "logo": "",
+    "url": "https://www.soniclabs.com/",
+    "is_hot": false,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "grass-s2",
+    "name": "Grass (Stage 2)",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "ステージ制",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "Stage 2はGRASSではなくUSDCで支払われる形式。直近の期限なし。",
+    "tasks": [
+      "Grassノード/拡張を継続稼働"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://www.getgrass.io/",
+    "is_hot": false,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  },
+  {
+    "id": "base-token",
+    "name": "Base (検討中)",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "未確定",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Jesse Pollak氏がトークンを検討中と発表。ただし米SECの規制面から確定ではない。実績作り(Base上の利用)が主な備え。",
+    "tasks": [
+      "Base上でdApps利用",
+      "公式発表を待つ"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-10-01",
+    "source": "curated"
+  }
+]

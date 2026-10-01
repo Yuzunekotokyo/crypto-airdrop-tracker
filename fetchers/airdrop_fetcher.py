@@ -3,6 +3,8 @@ Airdrop情報をWeb/APIから収集するモジュール。
 現在はairdrops.ioのパブリックページとCoinGeckoトレンドを組み合わせて使用。
 """
 
+import json
+import os
 import requests
 import logging
 from datetime import datetime, timedelta
@@ -167,12 +169,24 @@ def _build_seed_airdrops() -> list[dict]:
     ]
 
 
+CURATED_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "curated.json")
+
+
+def load_curated() -> dict:
+    """data/curated.json (手動/日次リサーチで更新) を読み込む"""
+    try:
+        with open(CURATED_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {"highlights": [], "airdrops": []}
+
+
 def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
     """
     全ソースからエアドロップデータを収集し、変更点リストと共に返す。
     Returns: (airdrops_list, new_items_names)
     """
-    curated = _build_seed_airdrops()
+    curated = load_curated()["airdrops"] or _build_seed_airdrops()
     scraped = _scrape_airdrops_io()
 
     seen_names = {a["name"].lower() for a in curated}

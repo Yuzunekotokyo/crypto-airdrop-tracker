@@ -11,7 +11,7 @@ import os
 from datetime import datetime, timezone
 
 from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR
-from fetchers.airdrop_fetcher import fetch_all_airdrops
+from fetchers.airdrop_fetcher import fetch_all_airdrops, load_curated
 from fetchers.coingecko import get_trending_coins
 from notifier.gmail import send_daily_report, send_hot_alert
 
@@ -93,6 +93,7 @@ def run_daily_update(force_email: bool = False) -> dict:
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
+        "highlights": load_curated().get("highlights", []),
         "email_sent": False,
     }
 

@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "timestamp": "2026-10-01T00:07:08.102170+00:00",
+    "date": "2026-10-01",
+    "time_jst": "2026年10月01日 00:07",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "MetaMask (MASK)",
+      "Backpack",
+      "GRVT",
+      "Plume (Season 2)",
+      "Apyx (APYX)",
+      "Concrete (CT)",
+      "Sonic (S) 未請求分",
+      "Grass (Stage 2)",
+      "Base (検討中)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "highlights": [
+      "🆕 Concrete (CT): 9/30にBinance Alphaで取引開始 — Alphaポイントでのクレーム条件を要確認",
+      "⏰ Sonic (S): 未請求分3,269万枚が10/15にバーン — 対象者は期限前に請求を",
+      "🔄 Apyx: Pipsキャンペーンが10月末まで延長(ブースト付き)",
+      "🔄 GRVT: 7/21 TGE後もSeason 2トランシェ配布継続 / Plume Season 2・Grass Stage 2(USDC払い)継続中",
+      "⚠️ MetaMask (MASK): 『請求開始』と報じる非公式サイトあり。公式発表以外のクレームサイトはフィッシングの可能性大",
+      "👀 Polymarket / Backpack / Base: 続報なし。Polymarketは引き続きTGE日・資格条件が未発表",
+      "🧹 サイト内容を最新情報に刷新 (旧データ LayerZero/Scroll/zkSync/EigenLayer/Hyperliquid/Movement はTGE済みのため削除)"
+    ],
+    "email_sent": false
+  }
+]
