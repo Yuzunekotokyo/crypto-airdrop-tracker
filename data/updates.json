@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-10-02T00:06:07.850672+00:00",
+    "date": "2026-10-02",
+    "time_jst": "2026年10月02日 00:06",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Arc Network (ARC)",
+      "Canopy (CNPY)",
+      "Backpack",
+      "Ekiden",
+      "MetaMask",
+      "Base",
+      "Concrete (CT)",
+      "Apyx (APYX)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

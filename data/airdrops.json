@@ -1,1 +1,191 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "公式確認済み",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 1000,
+    "description": "トークンとエアドロップを公式が確認済み。スナップショット未実施で参加窓は開いたまま。米国版再ローンチ後(2026年後半見込み)にTGE予定。",
+    "tasks": [
+      "予測市場で継続的に取引",
+      "複数カテゴリーで取引・流動性提供",
+      "取引量と利用期間を積み上げる"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  },
+  {
+    "id": "arc-network",
+    "name": "Arc Network (ARC)",
+    "symbol": "ARC",
+    "category": "Layer1",
+    "type": "未確認(期待先行)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "CircleのステーブルコインL1。2026/9/16にメインネット開始、BlackRock/Visa等がバリデータ。エアドロップは未発表だがテストネット・Arc House実績が対象候補。",
+    "tasks": [
+      "Arc上でUSDC送金・dApp利用",
+      "Arc Housesでポイント獲得",
+      "主要ウォレットで継続利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://www.arc.network/",
+    "is_hot": true,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  },
+  {
+    "id": "canopy-cnpy",
+    "name": "Canopy (CNPY)",
+    "symbol": "CNPY",
+    "category": "インフラ",
+    "type": "ポイント変換",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 400,
+    "description": "$CNPYが確認済み。ポイントがトークンに変換され、供給の50%がコミュニティ/利用者へ。",
+    "tasks": [
+      "Canopyのポイントプログラムに参加",
+      "プロダクトを継続利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://www.canopynetwork.org/",
+    "is_hot": true,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack",
+    "symbol": "",
+    "category": "取引所",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 600,
+    "description": "Solana発の規制準拠取引所。トークンの25%をコミュニティへ、うち24%がポイント保有者向けと報じられ、実施可能性が高い。",
+    "tasks": [
+      "Backpackで取引",
+      "ポイントを貯める"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": false,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ポイント報酬",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "メインネットに合わせた報酬プログラムを確認済み。取引でポイント獲得。トップテストネットトレーダーに招待制の早期アクセス。",
+    "tasks": [
+      "テストネットで取引ボリュームを積む",
+      "招待枠を狙う"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://ekiden.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  },
+  {
+    "id": "metamask",
+    "name": "MetaMask",
+    "symbol": "",
+    "category": "ウォレット",
+    "type": "未確認(公式示唆)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "ConsenSys幹部がネイティブトークン発行を公言。ユーザー活動が配布に影響する見込み。",
+    "tasks": [
+      "MetaMaskでスワップ/ブリッジ/パーペチュアル利用",
+      "MetaMask Rewardsに参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": false,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  },
+  {
+    "id": "base",
+    "name": "Base",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "未確認(期待先行)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 400,
+    "description": "Coinbase発L2。トークン発行は未確定だが期待が高い。",
+    "tasks": [
+      "Base上でDeFi/アプリを継続利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  },
+  {
+    "id": "concrete-ct",
+    "name": "Concrete (CT)",
+    "symbol": "CT",
+    "category": "DeFi",
+    "type": "TGE予定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "2026年9月にネイティブトークンCTとTGE計画を公式発表。",
+    "tasks": [
+      "Concreteの利用履歴・ポイントを確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://concrete.xyz/",
+    "is_hot": false,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  },
+  {
+    "id": "apyx-pips",
+    "name": "Apyx (APYX)",
+    "symbol": "APYX",
+    "category": "DeFi",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 200,
+    "description": "Pipsキャンペーンを2026/2月から実施中。apxUSD保有またはCurve/Pendleで流動性提供でPips獲得、2026年10月までブースト延長。",
+    "tasks": [
+      "apxUSDを保有",
+      "Curve/Pendleで流動性提供"
+    ],
+    "end_date": "2026-10-31",
+    "logo": "",
+    "url": "https://apyx.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-02",
+    "source": "curated"
+  }
+]
