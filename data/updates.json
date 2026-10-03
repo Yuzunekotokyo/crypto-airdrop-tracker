@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-10-03T00:06:27.296837+00:00",
+    "date": "2026-10-03",
+    "time_jst": "2026年10月03日 00:06",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Extended (EXT)",
+      "MetaMask Rewards (MASK/LINEA)",
+      "Nado (INK)",
+      "Apyx Pips Campaign",
+      "Pheasant (PNT)",
+      "Sonic 未請求トークン(焼却前)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
