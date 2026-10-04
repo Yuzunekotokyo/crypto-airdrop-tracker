@@ -47,6 +47,18 @@
       {% endfor %}
     </div>
     {% endif %}
+    {% if latest_update.removed_names %}
+    <div class="update-new-items">
+      <strong>終了・削除:</strong>
+      {% for name in latest_update.removed_names %}<span class="new-tag">{{ name }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    {% if latest_update.changes %}
+    <div class="update-new-items">
+      <strong>変更点:</strong>
+      {% for c in latest_update.changes %}<span class="new-tag">{{ c.name }}: {{ c.changes | join(' / ') }}</span>{% endfor %}
+    </div>
+    {% endif %}
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>

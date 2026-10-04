@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-10-04T00:06:27.188404+00:00",
+    "date": "2026-10-04",
+    "time_jst": "2026年10月04日 00:06",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "Backpack (BACK)",
+      "MetaMask (MASK)",
+      "Base (未確定)",
+      "Ekiden",
+      "OpenSea Foundation (SEA)",
+      "Kraken Ink (INK)",
+      "Concrete",
+      "Lisk (LSK)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
