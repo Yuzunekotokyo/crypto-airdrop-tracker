@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "timestamp": "2026-10-06T00:06:21.047628+00:00",
+    "date": "2026-10-06",
+    "time_jst": "2026年10月06日 00:06",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "OpenSea (SEA)",
+      "MetaMask Rewards",
+      "Ekiden (EKI)",
+      "Ink (INK) via Kraken Drops",
+      "World Liberty Financial (WLFI) ステーキング",
+      "Kraken Sweepstakes",
+      "TastyCo ($TASTY)",
+      "JoinCare ($JC)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

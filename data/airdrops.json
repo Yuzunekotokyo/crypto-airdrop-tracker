@@ -1,1 +1,191 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "トークン配布(公式確認済)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1500,
+    "description": "予測市場最大手。CMOがPOLYトークンとエアドロップを公式に確認済み。取引量が最大のシグナル。",
+    "tasks": [
+      "KYC完了",
+      "複数カテゴリで継続的に取引",
+      "流動性提供",
+      "複数ウォレットは避ける(Sybil検知)"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "トークン配布(公式確認済)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 800,
+    "description": "総供給の50%をコミュニティへ配分。エアドロップ請求にKYC不要。NFT取引・出品・入札が対象。",
+    "tasks": [
+      "NFTの取引",
+      "NFTの出品",
+      "入札"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-rewards",
+    "name": "MetaMask Rewards",
+    "symbol": "",
+    "category": "ウォレット",
+    "type": "ポイント/将来トークン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "MetaMask Rewards実施中。スワップ等の利用とタスクでポイント獲得、将来のトークン配分が示唆されている。",
+    "tasks": [
+      "MetaMask内でスワップ",
+      "タスク完了でポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden (EKI)",
+    "symbol": "EKI",
+    "category": "DeFi/DEX",
+    "type": "ポイント(TGE前)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 400,
+    "description": "Aptos上の取引所。テストネット/メインネットの取引でXPを獲得、TGEでトークン配分の可能性(公式発表は未確認)。",
+    "tasks": [
+      "取引でXP獲得",
+      "ROI・ドローダウンも評価対象"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://ekiden.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  },
+  {
+    "id": "kraken-ink",
+    "name": "Ink (INK) via Kraken Drops",
+    "symbol": "INK",
+    "category": "Layer2",
+    "type": "トークン配布",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "Kraken発のL2 Ink。KrakenDropsで配布予定。Inkチェーン上の活動が配分に考慮される。",
+    "tasks": [
+      "Kraken Dropsに登録",
+      "Inkチェーン上でアクティビティ"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://inkonchain.com/",
+    "is_hot": false,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  },
+  {
+    "id": "wlfi-staking",
+    "name": "World Liberty Financial (WLFI) ステーキング",
+    "symbol": "WLFI",
+    "category": "DeFi",
+    "type": "ステーキング報酬",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "10/2開始。解放済みWLFIを180日以上ロックしUSD1を獲得。初期報酬プール$1.25M。90日ごとにSnapshot投票が必要。",
+    "tasks": [
+      "解放済みWLFIをEthereumでステーク",
+      "90日ごとにSnapshot投票"
+    ],
+    "end_date": "2027-04-04",
+    "logo": "",
+    "url": "https://worldlibertyfinancial.com/",
+    "is_hot": false,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  },
+  {
+    "id": "kraken-sweepstakes",
+    "name": "Kraken Sweepstakes",
+    "symbol": "",
+    "category": "取引所",
+    "type": "キャンペーン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "10/3追加の新着キャンペーン(airdropalert掲載)。詳細は公式ページを確認。",
+    "tasks": [
+      "公式ページの条件を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  },
+  {
+    "id": "tastyco-tasty",
+    "name": "TastyCo ($TASTY)",
+    "symbol": "TASTY",
+    "category": "その他",
+    "type": "エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "10/2追加の新着エアドロップ(airdropalert掲載)。未検証のため参加前に詐欺でないか要確認。",
+    "tasks": [
+      "公式ページの条件を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  },
+  {
+    "id": "joincare-jc",
+    "name": "JoinCare ($JC)",
+    "symbol": "JC",
+    "category": "その他",
+    "type": "エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "10/1追加の新着エアドロップ(airdropalert掲載)。未検証のため要注意。",
+    "tasks": [
+      "公式ページの条件を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-06",
+    "source": "curated"
+  }
+]
