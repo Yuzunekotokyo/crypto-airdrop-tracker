@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "timestamp": "2026-10-07T00:06:34.430591+00:00",
+    "date": "2026-10-07",
+    "time_jst": "2026年10月07日 00:06",
+    "total_airdrops": 4,
+    "added_count": 4,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Polymarket (POLY)",
+      "MetaMask Rewards (MASK)",
+      "Ink / Kraken Drops (INK)",
+      "OpenSea (SEA)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
