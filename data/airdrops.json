@@ -1,1 +1,149 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "トークン確定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "CMOがトークンとエアドロップを公式に確認済み。米国版の再開を優先中で時期は未定。取引量が基準になると推測されるが未確認。",
+    "tasks": [
+      "Polymarketで継続的に取引",
+      "複数カテゴリのマーケットに参加",
+      "公式発表の確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-08",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "トークン確定",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "コミュニティ配分約50%の計画。過去・現在のマーケットプレイス利用実績が対象。ローンチ時期は遅延中で未確定。",
+    "tasks": [
+      "OpenSeaでNFT売買を継続",
+      "OpenSea Rewards等の公式プログラムに参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-10-08",
+    "source": "curated"
+  },
+  {
+    "id": "kraken-ink",
+    "name": "Kraken Ink (INK)",
+    "symbol": "INK",
+    "category": "Layer2",
+    "type": "取引所配布",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "KrakenがKraken Drops経由でINK配布を表明。Inkチェーン上の活動も評価対象とされる(詳細は未確認)。",
+    "tasks": [
+      "Kraken Dropsに登録",
+      "Inkチェーン上でのアクティビティ"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://inkonchain.com/",
+    "is_hot": true,
+    "added_date": "2026-10-08",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "LINEAで3000万ドル相当の報酬プログラムを実施中。MASKトークンの条件は非公式情報のみ(取引量ベースとの噂)。",
+    "tasks": [
+      "MetaMask内でスワップ/パーペチュアル取引",
+      "Lineaネットワーク利用",
+      "公式Rewardsに参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": false,
+    "added_date": "2026-10-08",
+    "source": "curated"
+  },
+  {
+    "id": "apyx-pips",
+    "name": "Apyx (APYX)",
+    "symbol": "APYX",
+    "category": "DeFi",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 200,
+    "description": "トークン未発行。Pipsキャンペーンが10月まで延長され報酬ブースト中。",
+    "tasks": [
+      "Apyxにデポジット",
+      "Pips獲得活動を継続"
+    ],
+    "end_date": "2026-10-31",
+    "logo": "",
+    "url": "https://apyx.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-08",
+    "source": "curated"
+  },
+  {
+    "id": "tastyco",
+    "name": "TastyCo",
+    "symbol": "",
+    "category": "その他",
+    "type": "エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "airdrops.ioで確認済みと掲載。詳細は公式で要確認。",
+    "tasks": [
+      "公式サイトの手順に従う"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-10-08",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden / eCash.com",
+    "symbol": "",
+    "category": "その他",
+    "type": "エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Cryptorankで2026-10-02時点で確認済みと掲載。掲載情報に古い項目あり、公式で要確認。",
+    "tasks": [
+      "公式サイトの手順に従う"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting",
+    "is_hot": false,
+    "added_date": "2026-10-08",
+    "source": "curated"
+  }
+]

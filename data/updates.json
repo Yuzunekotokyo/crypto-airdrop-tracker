@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-10-08T00:07:04.934191+00:00",
+    "date": "2026-10-08",
+    "time_jst": "2026年10月08日 00:07",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Polymarket (POLY)",
+      "OpenSea (SEA)",
+      "Kraken Ink (INK)",
+      "MetaMask (MASK)",
+      "Apyx (APYX)",
+      "TastyCo",
+      "Ekiden / eCash.com"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
