@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "トークン/エアドロップ予告",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "CMOがPOLYトークンとエアドロップを示唆済み(米国再開後に注力)。公式未発表のため偽の請求リンクに注意。",
+    "tasks": [
+      "予測市場で継続的に取引",
+      "複数マーケットに参加",
+      "公式発表を確認"
+    ],
+    "end_date": "2027-01-07",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-09",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-token",
+    "name": "MetaMask (ポイント)",
+    "symbol": "",
+    "category": "ウォレット",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "MetaMaskのポイントが稼働中。ネイティブトークン発行が見込まれるが配布詳細は未確定。",
+    "tasks": [
+      "MetaMaskでスワップ/ブリッジ",
+      "MUSD/Card等の機能利用",
+      "ポイントを貯める"
+    ],
+    "end_date": "2027-02-06",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-10-09",
+    "source": "curated"
+  },
+  {
+    "id": "kraken-ink",
+    "name": "Kraken Ink (INK)",
+    "symbol": "INK",
+    "category": "L2",
+    "type": "Kraken Drops",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 400,
+    "description": "KrakenのL2 Ink。INKはKraken Dropsで配布予定と報じられ、Ink PointsとKraken Pro利用が対象。",
+    "tasks": [
+      "Ink Pointsを獲得",
+      "Kraken Proで取引",
+      "Ink上のDeFi利用"
+    ],
+    "end_date": "2027-01-07",
+    "logo": "",
+    "url": "https://inkonchain.com/",
+    "is_hot": false,
+    "added_date": "2026-10-09",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ポイント制",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "メインネットローンチに合わせたリワード計画を公表。取引でポイント獲得、テストネット上位トレーダーが先行アクセス。",
+    "tasks": [
+      "テストネットで取引",
+      "メインネット後にポイント獲得"
+    ],
+    "end_date": "2026-12-08",
+    "logo": "",
+    "url": "https://ekiden.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-09",
+    "source": "curated"
+  },
+  {
+    "id": "apyx",
+    "name": "Apyx (Pips)",
+    "symbol": "APYX",
+    "category": "DeFi",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "Pipsキャンペーンが2026年10月まで延長され、ブースト報酬あり。トークンは未発行。",
+    "tasks": [
+      "Apyxに入金/ステーキング",
+      "Pipsを獲得"
+    ],
+    "end_date": "2026-10-30",
+    "logo": "",
+    "url": "https://apyx.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-09",
+    "source": "curated"
+  }
+]
