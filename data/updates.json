@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-10-10T00:06:51.510517+00:00",
+    "date": "2026-10-10",
+    "time_jst": "2026年10月10日 (自動更新)",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Pharos (PROS)",
+      "Sonic (S)",
+      "Grass (Stage 2)",
+      "Concrete (CT)",
+      "Push Chain (PC)",
+      "Polymarket",
+      "DAC Quantum Chain (DACT)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]
