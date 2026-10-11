@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "timestamp": "2026-10-11T00:06:49.820119+00:00",
+    "date": "2026-10-11",
+    "time_jst": "2026年10月11日 00:06 UTC",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Sonic (S) 最終請求",
+      "Pharos (PROS) 請求期限",
+      "Ekiden",
+      "Grass (Stage 2) USDC報酬",
+      "Aster DEX 取引エアドロップ",
+      "eCash.com (ECX)",
+      "Titan (Canton)",
+      "Brownian ($BRO)",
+      "Ink (Kraken L2)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "highlights": [
+      "Sonic(S) 未請求分約3,269万Sが10/15に焼却(残り4日)",
+      "Pharos(PROS) 請求ポータルが10/25閉鎖",
+      "Ekiden: メインネット取引でポイント→エアドロ(Confirmed)",
+      "旧シード(LayerZero/Scroll/zkSync等)は古いため削除"
+    ]
+  }
+]
