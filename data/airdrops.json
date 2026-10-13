@@ -1,1 +1,226 @@
-[]
+[
+  {
+    "id": "mint-mntd",
+    "name": "MINT (MNTD)",
+    "symbol": "MNTD",
+    "category": "GameFi/ベット",
+    "type": "ポイント/リーダーボード",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Season 1: 125,000 MNTD をXPリーダーボード上位に配布。TGEは2026/10/20 (Robinhood Chain)。スナップショットはTGE直前。",
+    "tasks": [
+      "MINTのカジノ/スポーツブックで合計$50以上ベット",
+      "XPを貯めてリーダーボード入り",
+      "公式発表のスナップショット日を確認"
+    ],
+    "end_date": "2026-10-20",
+    "logo": "",
+    "url": "https://usethebitcoin.com/airdrop/mint-airdrop-guide",
+    "is_hot": true,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "variational-var",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/Perp DEX",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "総供給の32%をポイント比例で配布予定。TGEは2026年Q4予定。",
+    "tasks": [
+      "Variationalで取引・ポイント獲得",
+      "公式のポイント条件を確認"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "sonic-s-claim",
+    "name": "Sonic (S) 未請求分",
+    "symbol": "S",
+    "category": "Layer1",
+    "type": "請求期限",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "約3,269万Sが未請求。10/15までに請求しないとバーン。対象者は急ぎ請求を。",
+    "tasks": [
+      "Sonic公式ポータルで請求"
+    ],
+    "end_date": "2026-10-15",
+    "logo": "",
+    "url": "https://airdrops.io/latest/",
+    "is_hot": true,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "perptools-perp",
+    "name": "PERPTools (PERP)",
+    "symbol": "PERP",
+    "category": "DeFi/ツール",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Season 2は10/2開始。Season 1ポイントはアーカイブ済みでTGE時に反映の可能性。TGEは2026年Q4後半予定。",
+    "tasks": [
+      "Season 2でポイントを獲得"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://usethebitcoin.com/airdrop/perptools/",
+    "is_hot": false,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack Exchange",
+    "symbol": "",
+    "category": "取引所",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "コミュニティに総供給の25% (ポイント保有者24%、Mad Lads NFT 1%)。Season 4ポイントを獲得中。TGE日は未確認。",
+    "tasks": [
+      "Backpackで取引・ポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": false,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "brownian-bro",
+    "name": "Brownian (BRO)",
+    "symbol": "BRO",
+    "category": "その他",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ポイントはTGEで変換。TGEは遅くとも2026年Q4目標 (市況次第)。変換方式は未公開。",
+    "tasks": [
+      "公式でポイントを獲得"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://airdrops.io/latest/",
+    "is_hot": false,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "dawn-network",
+    "name": "Dawn Network",
+    "symbol": "",
+    "category": "インフラ",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Season 1「Bytes」キャンペーンは2026/9/22〜12/22。トークン発行日は未確認。",
+    "tasks": [
+      "Bytesを貯める"
+    ],
+    "end_date": "2026-12-22",
+    "logo": "",
+    "url": "https://www.coingabbar.com/en/dawn-airdrop-season-1-ending-soon-tge-date-token-launch-2027",
+    "is_hot": false,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "ink-kraken",
+    "name": "Ink (Kraken L2)",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "KrakenのL2。Kraken Pro利用でInk Pointsを獲得。TGEは2026年中の見込み。",
+    "tasks": [
+      "Kraken Proで取引",
+      "Ink上でDeFi利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://inkonchain.com/",
+    "is_hot": false,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "meteora-met-claim",
+    "name": "Meteora (MET) Season 2 LP",
+    "symbol": "MET",
+    "category": "DeFi/DEX",
+    "type": "請求期限",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Season 2 LP報酬の請求は10/21まで。",
+    "tasks": [
+      "Meteora公式で請求"
+    ],
+    "end_date": "2026-10-21",
+    "logo": "",
+    "url": "https://airdrops.io/latest/",
+    "is_hot": false,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "pharos-pros-claim",
+    "name": "Pharos (PROS) 請求",
+    "symbol": "PROS",
+    "category": "Layer1",
+    "type": "請求期限",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "請求ポータルは10/25に閉鎖。未請求分は財団に戻り猶予なし。",
+    "tasks": [
+      "Pharos公式ポータルで請求"
+    ],
+    "end_date": "2026-10-25",
+    "logo": "",
+    "url": "https://cryptoticker.io/en/pharos-airdrop-claim-deadline",
+    "is_hot": false,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  },
+  {
+    "id": "usdai-flatiron",
+    "name": "USD.AI Flatiron Season 2",
+    "symbol": "",
+    "category": "DeFi",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Flatiron Season 2は10/14終了。",
+    "tasks": [
+      "USD.AIにデポジット"
+    ],
+    "end_date": "2026-10-14",
+    "logo": "",
+    "url": "https://airdrops.io/latest/",
+    "is_hot": false,
+    "added_date": "2026-10-13",
+    "source": "curated"
+  }
+]

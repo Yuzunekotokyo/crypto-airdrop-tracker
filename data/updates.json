@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "timestamp": "2026-10-13T00:00:00+00:00",
+    "date": "2026-10-13",
+    "time_jst": "2026年10月13日 09:00",
+    "total_airdrops": 11,
+    "added_count": 11,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "MINT (MNTD)",
+      "Variational (VAR)",
+      "Sonic (S) 未請求分",
+      "PERPTools (PERP)",
+      "Backpack Exchange",
+      "Brownian (BRO)",
+      "Dawn Network",
+      "Ink (Kraken L2)",
+      "Meteora (MET) Season 2 LP",
+      "Pharos (PROS) 請求",
+      "USD.AI Flatiron Season 2"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true,
+    "notes": [
+      "古い2024年案件(LayerZero/Scroll/zkSync/Hyperliquid/EigenLayer/Movement)を全削除し、2026年10月の最新情報に入れ替え",
+      "MINT: TGE 10/20確定 / Sonic 10/15 未請求バーン / Meteora 10/21 / Pharos 10/25 請求期限"
+    ]
+  }
+]
