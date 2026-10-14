@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "timestamp": "2026-10-14T00:07:03.602408+00:00",
+    "date": "2026-10-14",
+    "time_jst": "2026年10月14日 00:07",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Variational (VAR)",
+      "Polymarket",
+      "Ink (INK) / Kraken Drops",
+      "Meteora Season 2 Claim",
+      "Extended (EXT)",
+      "PERPTools (PERP)",
+      "Dawn Network",
+      "Apyx (APYX)",
+      "MINT",
+      "TastyCo (TASTY)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true
+  }
+]

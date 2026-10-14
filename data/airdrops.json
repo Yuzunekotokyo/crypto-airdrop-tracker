@@ -1,1 +1,207 @@
-[]
+[
+  {
+    "id": "variational-var",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "Perp DEX。VAR総供給の32%をポイント比例でエアドロップ予定。TGEは2026年Q4予定、FDV評価は約15〜18億ドルと報道。毎週150,000ポイント配布中。",
+    "tasks": [
+      "Variationalで取引しポイント獲得",
+      "週次ポイントを継続的に積み上げ"
+    ],
+    "end_date": "2026年Q4 (TGE予定)",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket",
+    "name": "Polymarket",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "未確定(公式言及あり)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 1000,
+    "description": "CMOがトークンとエアドロップの計画を公言。まずは米国向け再ローンチを優先中で、詳細は未発表。",
+    "tasks": [
+      "Polymarketで継続的に予測取引",
+      "複数マーケットへ参加",
+      "流動性提供"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "kraken-ink",
+    "name": "Ink (INK) / Kraken Drops",
+    "symbol": "INK",
+    "category": "Layer2",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "KrakenのL2「Ink」。$INKはKraken Dropsで配布予定と公式言及。Ink PointsとKraken Proの利用実績に連動。",
+    "tasks": [
+      "Ink上のdApps利用でInk Points獲得",
+      "Kraken Proで取引"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://inkonchain.com/",
+    "is_hot": true,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "meteora-s2",
+    "name": "Meteora Season 2 Claim",
+    "symbol": "MET",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "Season 2のクレーム受付中。期限は2026年10月21日。対象ウォレットは期限前に請求が必要。",
+    "tasks": [
+      "公式サイトで対象ウォレットを接続し請求"
+    ],
+    "end_date": "2026-10-21",
+    "logo": "",
+    "url": "https://meteora.ag/",
+    "is_hot": true,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "extended-ext",
+    "name": "Extended (EXT)",
+    "symbol": "EXT",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 600,
+    "description": "Perp DEX。EXT供給の30%を初期ポイント保有者へ配分。最終ポイント上限7,000万、週最大60万ポイント配布。TGE日未発表。",
+    "tasks": [
+      "Extendedで取引",
+      "ポイント獲得を継続"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://extended.exchange/",
+    "is_hot": false,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "perptools",
+    "name": "PERPTools (PERP)",
+    "symbol": "PERP",
+    "category": "ツール",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "Season 2実施中。ポイントはTGE時にPERPへ比例変換予定。TGE目標は2026年Q4後半。供給量・配分は未発表。",
+    "tasks": [
+      "Season 2のタスクでポイント獲得"
+    ],
+    "end_date": "2026年Q4後半 (TGE目標)",
+    "logo": "",
+    "url": "https://usethebitcoin.com/airdrop/perptools/",
+    "is_hot": false,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "dawn-network",
+    "name": "Dawn Network",
+    "symbol": "",
+    "category": "インフラ",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "Season 1 Bytesは9/22〜12/22。10/12時点でTGE日は未確認(2027年の可能性も報じられている)。",
+    "tasks": [
+      "ノード/拡張機能を稼働しBytesを獲得"
+    ],
+    "end_date": "2026-12-22",
+    "logo": "",
+    "url": "https://www.coingabbar.com/en/dawn-airdrop-season-1-ending-soon-tge-date-token-launch-2027",
+    "is_hot": false,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "apyx",
+    "name": "Apyx (APYX)",
+    "symbol": "APYX",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "Pipsキャンペーンが2026年10月までブースト延長中。ガバナンストークンAPYXは未ローンチ。",
+    "tasks": [
+      "Pipsを獲得する預入/利用"
+    ],
+    "end_date": "2026年10月 (ブースト期間)",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "mint-tge",
+    "name": "MINT",
+    "symbol": "MINT",
+    "category": "その他",
+    "type": "TGE",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "一部アグリゲータが2026年10月20日のTGEを掲載(公式未確認のため要確認)。",
+    "tasks": [
+      "公式発表を確認"
+    ],
+    "end_date": "2026-10-20",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  },
+  {
+    "id": "tastyco",
+    "name": "TastyCo (TASTY)",
+    "symbol": "TASTY",
+    "category": "その他",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 50,
+    "description": "TGE前にポイントを集めた初期ユーザーへ合計10万ドル相当のTASTYをエアドロップ予定(小規模)。",
+    "tasks": [
+      "ポイント獲得タスクを実施"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-14",
+    "source": "curated"
+  }
+]
