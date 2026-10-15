@@ -1,1 +1,277 @@
-[]
+[
+  {
+    "id": "mint-mntd",
+    "name": "MINT (MNTD)",
+    "symbol": "MNTD",
+    "category": "ギャンブル/ゲーム",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 50,
+    "description": "Season1エアドロ総額$125,000相当のMNTD。累計$50以上のウェイジャリングでXP獲得。TGE日は情報源で9月/Q4/10月20日と食い違い。",
+    "tasks": [
+      "MINTアカウント作成",
+      "対象ゲームで累計$50以上ベット",
+      "XP獲得(クエスト/紹介)"
+    ],
+    "end_date": "2026-10-20",
+    "logo": "",
+    "url": "https://airdrops.io/mint-io/",
+    "is_hot": true,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": "TGE日が情報源で不一致。資金リスクあり(実資金ベット必須)"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "トレードエアドロップ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "2025年10月にCMOがトークン&エアドロップを明言。2026-10-14時点でTGE/スナップショットは未発表。CEOがTOKEN2049(10/7)で再言及し思惑が再燃。",
+    "tasks": [
+      "Polymarketで継続的に取引",
+      "複数カテゴリの市場に参加",
+      "公式発表を要監視"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": "未確定・TGE日未発表"
+  },
+  {
+    "id": "tastyco-tasty",
+    "name": "TastyCo (TASTY)",
+    "symbol": "TASTY",
+    "category": "コンシューマー",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "TGE前にポイントを貯めた初期ユーザー向けに$100,000相当の$TASTYエアドロップを確認(AirdropBuzz)。TGE日は未発表。",
+    "tasks": [
+      "TastyCoでポイント獲得タスクを実行"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdropbuzz.com/latest-airdrops",
+    "is_hot": true,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": "TGE日未発表"
+  },
+  {
+    "id": "meteora-s2",
+    "name": "Meteora LP Stimulus Season 2 (MET)",
+    "symbol": "MET",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Season2のクレーム期限は10/21(CryptoTicker週間まとめ)。期限切れ前に請求。",
+    "tasks": [
+      "対象ウォレットでクレームページから請求"
+    ],
+    "end_date": "2026-10-21",
+    "logo": "",
+    "url": "https://docs.meteora.ag/protocol/met/s2-airdrop-terms",
+    "is_hot": true,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": "Meteora旧情報と食い違いあり。公式確認必須"
+  },
+  {
+    "id": "jupiter-jup",
+    "name": "Jupiter (JUP) 追加配布",
+    "symbol": "JUP",
+    "category": "DeFi/DEX",
+    "type": "ロイヤリティ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "CryptoRankで10/13時点に『confirmed』表示。詳細は公式で確認。",
+    "tasks": [
+      "Jupiter利用/ステーク"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CryptoRankで10/14時点に『confirmed』表示。",
+    "tasks": [
+      "公式サイトでタスク確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "ecash-com",
+    "name": "eCash.com",
+    "symbol": "",
+    "category": "決済",
+    "type": "エアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "CryptoRankで10/14時点に『confirmed』表示。",
+    "tasks": [
+      "公式サイトでタスク確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "pharos-pros",
+    "name": "Pharos (PROS)",
+    "symbol": "PROS",
+    "category": "Layer1",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クレームポータルは10/25に閉鎖。未請求分はPharos財団に戻る。",
+    "tasks": [
+      "対象ウォレットで請求"
+    ],
+    "end_date": "2026-10-25",
+    "logo": "",
+    "url": "https://pharos.xyz/",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "questflow-s3",
+    "name": "Questflow Trader Arena Season 3",
+    "symbol": "",
+    "category": "AI/エージェント",
+    "type": "キャンペーン",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Season3は8/24〜10/24開催(掲載サイト情報)。",
+    "tasks": [
+      "Trader Arenaに参加"
+    ],
+    "end_date": "2026-10-24",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "near-allocation",
+    "name": "NEAR 配布",
+    "symbol": "NEAR",
+    "category": "Layer1",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "AirdropBuzzで配布ライブ表示(10/9更新)。詳細は公式確認。",
+    "tasks": [
+      "公式サイトで対象確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdropbuzz.com/latest-airdrops",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "midnight-night",
+    "name": "Midnight (NIGHT)",
+    "symbol": "NIGHT",
+    "category": "プライバシー",
+    "type": "解凍",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "解凍(thawing)は2026-12-04まで、その後90日の猶予。",
+    "tasks": [
+      "解凍スケジュールに沿って請求"
+    ],
+    "end_date": "2026-12-04",
+    "logo": "",
+    "url": "https://midnight.network/",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "grass-stage2",
+    "name": "Grass Stage 2",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Stage2のクレームは2027-01-22まで。",
+    "tasks": [
+      "Grassウォレットで請求"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://www.getgrass.io/",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "sonic-s-burn",
+    "name": "Sonic (S) 未請求分バーン",
+    "symbol": "S",
+    "category": "Layer1",
+    "type": "クレーム",
+    "status": "ended",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "10/15に未請求S約3,269万枚がバーンされ請求受付終了。",
+    "tasks": [],
+    "end_date": "2026-10-15",
+    "logo": "",
+    "url": "https://www.soniclabs.com/",
+    "is_hot": false,
+    "added_date": "2026-10-15",
+    "source": "curated",
+    "note": ""
+  }
+]

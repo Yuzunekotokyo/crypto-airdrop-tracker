@@ -492,3 +492,8 @@ main { padding: 28px 0 60px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+.update-highlights { margin: 4px 0 0 18px; padding: 0; font-size: 14px; line-height: 1.6; }
+.update-highlights li { margin-bottom: 2px; }
+.removed-tag { text-decoration: line-through; opacity: .75; }
+.airdrop-note { font-size: 12px; color: #f5a623; margin: 6px 0 0; }
