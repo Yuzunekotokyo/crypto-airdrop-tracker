@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "timestamp": "2026-10-16T00:00:00+00:00",
+    "date": "2026-10-16",
+    "time_jst": "2026年10月16日 09:00",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Variational (VAR)",
+      "Extended (EXT)",
+      "PERPTools ($PERP)",
+      "TastyCo ($TASTY)",
+      "Pharos (PROS) クレーム",
+      "Meteora (MET) Season2 LP",
+      "Grass Stage 2 (USDC)",
+      "Derive (DRV) Binance Alpha",
+      "Polymarket (噂)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "notes": [
+      "古いシード(LayerZero/Scroll/zkSync/Hyperliquid/EigenLayer/Movement)は配布済みのため削除し、最新情報に全面入替",
+      "要注意: Pharos 10/25期限・Meteora 10/21期限",
+      "新規注目: Variational(VAR, 供給32%)・Extended(EXT, 30%)のTGE待ち"
+    ]
+  }
+]

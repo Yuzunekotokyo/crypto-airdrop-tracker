@@ -47,6 +47,12 @@
       {% endfor %}
     </div>
     {% endif %}
+    {% if latest_update.notes %}
+    <div class="update-new-items">
+      <strong>📝 今日の更新内容:</strong>
+      <ul>{% for n in latest_update.notes %}<li>{{ n }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>

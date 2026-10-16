@@ -1,1 +1,183 @@
-[]
+[
+  {
+    "id": "variational-var",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/DEX",
+    "type": "ポイント→TGE",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "Perp DEX。2026年Q4にTGE予定、総供給の32%をジェネシスエアドロップ配布(報道ベース)。毎週150,000ポイント配布中。",
+    "tasks": [
+      "アカウント作成してポイント獲得",
+      "取引・流動性提供"
+    ],
+    "end_date": "2026Q4(TGE)",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  },
+  {
+    "id": "extended-ext",
+    "name": "Extended (EXT)",
+    "symbol": "EXT",
+    "category": "DeFi/DEX",
+    "type": "ポイント→TGE",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "Perp DEX。供給の30%をポイント保有者へ配布予定(確認済み)。TGE日は未発表。",
+    "tasks": [
+      "ポイントプログラムで取引"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://extended.exchange/",
+    "is_hot": true,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  },
+  {
+    "id": "perptools-perp",
+    "name": "PERPTools ($PERP)",
+    "symbol": "PERP",
+    "category": "DeFi/DEX",
+    "type": "ポイント→TGE",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "エアドロ確認済み。Season2が10/2開始でポイントがリセット。TGEは2026年Q4後半予定。供給/配分は未開示。",
+    "tasks": [
+      "Season 2ポイントを獲得"
+    ],
+    "end_date": "2026Q4後半(TGE)",
+    "logo": "",
+    "url": "https://usethebitcoin.com/airdrop/perptools/",
+    "is_hot": false,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  },
+  {
+    "id": "tastyco-tasty",
+    "name": "TastyCo ($TASTY)",
+    "symbol": "TASTY",
+    "category": "その他",
+    "type": "ポイント→TGE",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "TGE前にポイントを貯めた初期ユーザー向けに$100,000相当の$TASTYを配布予定。",
+    "tasks": [
+      "ポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  },
+  {
+    "id": "pharos-pros",
+    "name": "Pharos (PROS) クレーム",
+    "symbol": "PROS",
+    "category": "Layer1",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "【期限間近】クレーム期限は2026-10-25。未請求分はFoundationへ返却、猶予なし。",
+    "tasks": [
+      "公式サイトで請求"
+    ],
+    "end_date": "2026-10-25",
+    "logo": "",
+    "url": "https://cryptoticker.io/en/pharos-airdrop-claim-deadline",
+    "is_hot": true,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  },
+  {
+    "id": "meteora-met",
+    "name": "Meteora (MET) Season2 LP",
+    "symbol": "MET",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 150,
+    "description": "Season 2 LP向けクレーム窓は10/21に終了(CryptoTicker)。",
+    "tasks": [
+      "公式でクレーム"
+    ],
+    "end_date": "2026-10-21",
+    "logo": "",
+    "url": "https://cryptoticker.io/en/crypto-airdrops-week-42-2026-deadlines/",
+    "is_hot": true,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  },
+  {
+    "id": "grass-stage2",
+    "name": "Grass Stage 2 (USDC)",
+    "symbol": "GRASS",
+    "category": "インフラ",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "Stage 2報酬はUSDC。2027-01-22までクレーム可能。",
+    "tasks": [
+      "公式でクレーム"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://www.coingabbar.com/en/crypto-ongoing-airdrops",
+    "is_hot": false,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  },
+  {
+    "id": "derive-drv-alpha",
+    "name": "Derive (DRV) Binance Alpha",
+    "symbol": "DRV",
+    "category": "DeFi/DEX",
+    "type": "取引所キャンペーン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 30,
+    "description": "Binance Alphaで70トークンのエアドロ(10/14報道)。Alphaポイント245以上必要、クレームに15pt消費。",
+    "tasks": [
+      "Binance Alphaポイント確保"
+    ],
+    "end_date": "早い者勝ち",
+    "logo": "",
+    "url": "https://www.tokenpost.com/news/business/31689",
+    "is_hot": false,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket",
+    "name": "Polymarket (噂)",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "未確認",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "公式はエアドロ/TGE計画を否定も、TOKEN2049(10/7)でのCEO発言で憶測拡大。未確認情報。",
+    "tasks": [
+      "公式発表を待つ"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptobriefing.com/polymarket-weighs-equity-or-token-launch",
+    "is_hot": false,
+    "added_date": "2026-10-16",
+    "source": "curated"
+  }
+]
