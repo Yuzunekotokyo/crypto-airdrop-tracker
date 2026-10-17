@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-10-17T00:06:41.492886+00:00",
+    "date": "2026-10-17",
+    "time_jst": "2026年10月17日 00:06",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Meteora (Season 2 Claim)",
+      "Pharos (Claim Portal)",
+      "Polymarket (POLY)",
+      "Questflow Trader Arena Season 3",
+      "Ekiden",
+      "Brownian",
+      "Apyx (Pips Campaign)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

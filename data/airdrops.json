@@ -1,1 +1,146 @@
-[]
+[
+  {
+    "id": "meteora-s2",
+    "name": "Meteora (Season 2 Claim)",
+    "symbol": "MET",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Season 2のクレームが10/21予定。対象ウォレットは公式で確認。(推定価値は未公表)",
+    "tasks": [
+      "公式サイトで対象確認",
+      "10/21のクレーム開始に備える"
+    ],
+    "end_date": "2026-10-21",
+    "logo": "",
+    "url": "https://meteora.ag/",
+    "is_hot": true,
+    "added_date": "2026-10-17",
+    "source": "curated"
+  },
+  {
+    "id": "pharos-claim",
+    "name": "Pharos (Claim Portal)",
+    "symbol": "PHAR",
+    "category": "Layer1",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クレームポータルが10/25に終了。未請求なら期限前に確認。(推定価値は未公表)",
+    "tasks": [
+      "公式クレームポータルで資格確認",
+      "期限(10/25)までに請求"
+    ],
+    "end_date": "2026-10-25",
+    "logo": "",
+    "url": "https://pharosnetwork.xyz/",
+    "is_hot": true,
+    "added_date": "2026-10-17",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-token",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "ポイント/未確定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "トークン・エアドロップ示唆あり。ただし公式の日程は未確認で、米国再開が優先との情報。",
+    "tasks": [
+      "Polymarketでの継続的な取引・流動性提供"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-17",
+    "source": "curated"
+  },
+  {
+    "id": "questflow-arena-s3",
+    "name": "Questflow Trader Arena Season 3",
+    "symbol": "",
+    "category": "AI/DeFi",
+    "type": "キャンペーン",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Base上のトレーディング大会。10/24まで。資金リスクあり。",
+    "tasks": [
+      "Base上でArenaに参加",
+      "期間中の取引・ポイント獲得"
+    ],
+    "end_date": "2026-10-24",
+    "logo": "",
+    "url": "https://questflow.ai/",
+    "is_hot": false,
+    "added_date": "2026-10-17",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "メインネット連動のリワードプログラムを確認済み。取引でポイントを獲得。",
+    "tasks": [
+      "メインネット開始後に取引",
+      "ポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://ekiden.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-17",
+    "source": "curated"
+  },
+  {
+    "id": "brownian",
+    "name": "Brownian",
+    "symbol": "",
+    "category": "DeFi",
+    "type": "TGE予定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "TGEは遅くとも2026年Q4目標(市況次第)。",
+    "tasks": [
+      "公式告知のフォロー"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "",
+    "is_hot": false,
+    "added_date": "2026-10-17",
+    "source": "curated"
+  },
+  {
+    "id": "apyx-pips",
+    "name": "Apyx (Pips Campaign)",
+    "symbol": "",
+    "category": "DeFi",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Pipsキャンペーンのブースト報酬が10月中継続。",
+    "tasks": [
+      "Apyxへ入金してPips獲得"
+    ],
+    "end_date": "2026-10-31",
+    "logo": "",
+    "url": "https://apyx.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-17",
+    "source": "curated"
+  }
+]
