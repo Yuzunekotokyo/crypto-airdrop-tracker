@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-10-18T00:10:28.588220+00:00",
+    "date": "2026-10-18",
+    "time_jst": "2026年10月18日 00:10",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Meteora (MET)",
+      "Pharos (PROS)",
+      "Ekiden",
+      "Questflow Trader Arena S3",
+      "TastyCo ($TASTY)",
+      "Polymarket (POLY)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
