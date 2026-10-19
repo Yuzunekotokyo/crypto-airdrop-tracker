@@ -1,1 +1,148 @@
-[]
+[
+  {
+    "id": "meteora-met",
+    "name": "Meteora (MET)",
+    "symbol": "MET",
+    "category": "DeFi/DEX",
+    "type": "LP報酬クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "LP Stimulus Season 2のクレーム受付中。約2,000万MET(供給量の約2%)。ポイント10万以上かつ10MET以上が対象。期限は2026-10-21で、まもなく締切。手数料用にSOLが必要。",
+    "tasks": [
+      "対象ウォレットで公式クレームページを確認",
+      "Solanaトランザクションでクレーム実行",
+      "公式URL以外にウォレットを接続しない"
+    ],
+    "end_date": "2026-10-21",
+    "logo": "",
+    "url": "https://meteora.ag/",
+    "is_hot": true,
+    "added_date": "2026-10-19",
+    "source": "curated"
+  },
+  {
+    "id": "pharos-pros",
+    "name": "Pharos (PROS)",
+    "symbol": "PROS",
+    "category": "Layer1",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クレームポータルが2026-10-25に閉鎖。未請求分はPharos Foundationに戻る。",
+    "tasks": [
+      "公式ポータルで資格確認",
+      "期限までにクレーム"
+    ],
+    "end_date": "2026-10-25",
+    "logo": "",
+    "url": "https://pharos.xyz/",
+    "is_hot": true,
+    "added_date": "2026-10-19",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket",
+    "name": "Polymarket",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "取引量ベース(未確定仕様)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CMOが「トークンとエアドロップがある」と公言。詳細・スナップショット日は未発表。",
+    "tasks": [
+      "Polymarketでの取引・取引量の積み上げ",
+      "多様な市場への参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-19",
+    "source": "curated"
+  },
+  {
+    "id": "jupiter-jup",
+    "name": "Jupiter (JUP)",
+    "symbol": "JUP",
+    "category": "DeFi/DEX",
+    "type": "ステーキング/取引",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "トラッカー上でconfirmed表示(10/16時点)。ステーキングと取引が対象。詳細は公式で要確認。",
+    "tasks": [
+      "JUPのステーキング",
+      "Jupiterでのスワップ"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://jup.ag/",
+    "is_hot": false,
+    "added_date": "2026-10-19",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "10/18にconfirmed掲載。取引とメインネット利用でポイント獲得。情報は未検証。",
+    "tasks": [
+      "取引",
+      "メインネットでの利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://ekiden.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-19",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "ポイント(未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "SEAトークンは期待されているが公式確定は未確認。ポイントプログラム報告あり。",
+    "tasks": [
+      "OpenSeaでの売買・利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-10-19",
+    "source": "curated"
+  },
+  {
+    "id": "metamask",
+    "name": "MetaMask",
+    "symbol": "",
+    "category": "ウォレット",
+    "type": "ポイント(未確定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ポイントプログラム稼働中との報告。トークン確定は未確認。",
+    "tasks": [
+      "MetaMaskのスワップ・Perps等を利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": false,
+    "added_date": "2026-10-19",
+    "source": "curated"
+  }
+]

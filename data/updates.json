@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-10-19T00:10:47.562637+00:00",
+    "date": "2026-10-19",
+    "time_jst": "2026年10月19日 00:10",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Meteora (MET)",
+      "Pharos (PROS)",
+      "Polymarket",
+      "Jupiter (JUP)",
+      "Ekiden",
+      "OpenSea (SEA)",
+      "MetaMask"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
