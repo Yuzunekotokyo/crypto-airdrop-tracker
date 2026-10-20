@@ -1,1 +1,106 @@
-[]
+[
+  {
+    "id": "meteora-met",
+    "name": "Meteora (MET)",
+    "symbol": "MET",
+    "category": "DeFi/DEX",
+    "type": "LPエアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "LP Stimulus Season 2。2,000万MET(総供給の約2%)。ポイント100,000以上かつ10MET以上の割当が条件。受取期限が目前。",
+    "tasks": [
+      "公式キャンペーンページで資格確認",
+      "期限(10/21)までにClaim"
+    ],
+    "end_date": "2026-10-21",
+    "logo": "",
+    "url": "https://meteora.ag/",
+    "is_hot": true,
+    "added_date": "2026-10-20",
+    "source": "web検索(2026-10-20)"
+  },
+  {
+    "id": "pharos-pros",
+    "name": "Pharos (PROS)",
+    "symbol": "PROS",
+    "category": "Layer1",
+    "type": "テストネット/キャンペーン",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "テストネット参加者、Stake Before the Stakeキャンペーン参加者、Discordロール保持者、OKX Walletユーザーが対象。未請求分は財団に返却。",
+    "tasks": [
+      "公式エアドロップページで資格確認",
+      "期限(10/25)までにClaim"
+    ],
+    "end_date": "2026-10-25",
+    "logo": "",
+    "url": "https://pharos.xyz/",
+    "is_hot": true,
+    "added_date": "2026-10-20",
+    "source": "web検索(2026-10-20)"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "メインネットローンチ連動のポイント報酬プログラムをConfirmed(10/19)。取引でポイント獲得、アーリーアクセスはテストネット上位トレーダー招待制。トークンエアドロップ自体は未確定。",
+    "tasks": [
+      "テストネットで取引",
+      "招待コード/アーリーアクセス獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting/ekiden-activity1207",
+    "is_hot": false,
+    "added_date": "2026-10-20",
+    "source": "web検索(2026-10-20)"
+  },
+  {
+    "id": "ecash-ecx",
+    "name": "eCash.com (ECX)",
+    "symbol": "ECX",
+    "category": "インフラ",
+    "type": "エアドロップ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "CryptoRank上でConfirmed(10/19)。Alphaフェーズ開始に伴い$pECX取得がタスク。報酬日はTBA。",
+    "tasks": [
+      "$pECX取得(公式案内を確認)"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting/ecash-drivechains-activity1307",
+    "is_hot": false,
+    "added_date": "2026-10-20",
+    "source": "web検索(2026-10-20)"
+  },
+  {
+    "id": "fhenix",
+    "name": "Fhenix",
+    "symbol": "",
+    "category": "インフラ",
+    "type": "テストネット",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "CryptoRank上のステータスはPotential(未確定)。Redactテストネット(Sepolia)でtest eUSDCを暗号化するタスク。ガス代不要で低コスト。",
+    "tasks": [
+      "Sepoliaでfaucetからテスト資産取得",
+      "Redactで暗号化操作"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting/fhenix-activity211",
+    "is_hot": false,
+    "added_date": "2026-10-20",
+    "source": "web検索(2026-10-20)"
+  }
+]

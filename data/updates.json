@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "timestamp": "2026-10-20T00:00:00+00:00",
+    "date": "2026-10-20",
+    "time_jst": "2026年10月20日",
+    "total_airdrops": 5,
+    "added_count": 5,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 2,
+    "added_names": [
+      "Meteora (MET)",
+      "Pharos (PROS)",
+      "Ekiden",
+      "eCash.com (ECX)",
+      "Fhenix"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "highlights": [
+      "⏰ Meteora(MET) 2,000万MET: Claim期限 10/21(明日)",
+      "⏰ Pharos(PROS): Claim期限 10/25",
+      "🆕 Ekiden: ポイントプログラム確定(10/19)、テストネット取引で参加可",
+      "🆕 eCash(ECX): Confirmed(10/19)、報酬日TBA",
+      "🆕 Fhenix: テストネットタスク(未確定・低コスト)",
+      "🗑 旧シードデータ(LayerZero/Scroll等の古い案件)を最新情報に差し替え"
+    ],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
