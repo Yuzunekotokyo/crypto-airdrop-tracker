@@ -492,3 +492,5 @@ main { padding: 28px 0 60px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+.update-highlights{margin:10px 0 0;padding-left:20px;font-size:14px;line-height:1.7}

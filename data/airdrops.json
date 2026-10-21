@@ -1,1 +1,151 @@
-[]
+[
+  {
+    "symbol": "POLY",
+    "tasks": [
+      "実際の取引を継続 (取引量・市場数・期間が評価されると予想)",
+      "複数カテゴリの市場に参加",
+      "公式発表を随時確認 (スナップショット未告知)"
+    ],
+    "logo": "",
+    "is_hot": true,
+    "added_date": "2026-10-21",
+    "source": "curated",
+    "estimated_value_usd": 1000,
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "category": "予測市場",
+    "type": "ポイント/取引量",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "description": "CMOがトークンとエアドロップを公式に認めた最大級の本命。米国再ローンチ後に実施見込みで、配布条件・日程は未公開。",
+    "end_date": "未定",
+    "url": "https://polymarket.com/"
+  },
+  {
+    "symbol": "SEA",
+    "tasks": [
+      "OpenSea/Seaportでの取引・利用履歴を維持",
+      "公式発表の確認"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-21",
+    "source": "curated",
+    "estimated_value_usd": 500,
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "category": "NFT",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "description": "SEAトークン計画は供給の50%をコミュニティ配分と説明。当初2026年Q1予定が延期され、新しい日程は未確認。",
+    "end_date": "未定",
+    "url": "https://opensea.io/"
+  },
+  {
+    "symbol": "",
+    "tasks": [
+      "テストネットで取引・XP獲得",
+      "紹介プログラム参加",
+      "メインネット開始後のポイント獲得"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-21",
+    "source": "curated",
+    "estimated_value_usd": 300,
+    "id": "ekiden-points",
+    "name": "Ekiden (ポイント)",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "description": "オーダーブック型デリバティブDEX。メインネットと連動したポイントプログラムを予告。早期アクセスはテストネット上位トレーダーへの招待制。シード調達$2M。",
+    "end_date": "未定",
+    "url": "https://ekiden.fi/"
+  },
+  {
+    "symbol": "MASK",
+    "tasks": [
+      "MetaMaskでスワップ・ブリッジ・Perps等を利用",
+      "ポイントプログラムの状況を確認"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-21",
+    "source": "curated",
+    "estimated_value_usd": 300,
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "category": "ウォレット",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "description": "MetaMaskポイントプログラム経由のトークン配布が噂される。公式の日程は未確認(流出情報は『プロトタイプ』と説明)。",
+    "end_date": "未定",
+    "url": "https://metamask.io/"
+  },
+  {
+    "symbol": "PROS",
+    "tasks": [
+      "claim.pharos.xyz で資格を確認",
+      "期限(10/25)までに請求"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-21",
+    "source": "curated",
+    "estimated_value_usd": 200,
+    "id": "pharos-pros",
+    "name": "Pharos (PROS)",
+    "category": "Layer1",
+    "type": "クレーム期限",
+    "status": "active",
+    "difficulty": "easy",
+    "description": "エアドロ受取期限が2026-10-25 (180日窓)。対象: テストネット参加者・Stake Before the Stake・Discordロール・OKX Walletキャンペーン。未請求分は財団へ返却。偽サイト(claim.pharos.sbs等)に注意。",
+    "end_date": "2026-10-25",
+    "url": "https://claim.pharos.xyz/"
+  },
+  {
+    "symbol": "DUSD",
+    "tasks": [
+      "10/26以降に公式サイトで資格確認",
+      "StandXで使ったウォレットから請求 (BNB Chain/Solana)",
+      "資金を2027-01-31までに引き出す"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-21",
+    "source": "curated",
+    "estimated_value_usd": 100,
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "description": "StandXはTGE中止・事業終了を発表。代わりにロックアップ無しのDUSDを配布。資格チェッカー 10/26、請求 11/1〜12/31。ポジション自動決済 2027-01-15、出金期限 2027-01-31。",
+    "end_date": "2026-12-31",
+    "url": "https://standx.com/"
+  },
+  {
+    "symbol": "ZRO",
+    "tasks": [
+      "連携dAppでクロスチェーン取引を実行"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-21",
+    "source": "curated",
+    "estimated_value_usd": 100,
+    "id": "layerzero-points",
+    "name": "LayerZero パートナーアプリ",
+    "category": "インフラ",
+    "type": "パートナーポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "description": "ZROは既に上場済み。コミュニティ向け配分が残っており、LayerZero連携アプリごとのポイント施策が継続中 (情報は要検証)。",
+    "end_date": "未定",
+    "url": "https://layerzero.network/"
+  }
+]

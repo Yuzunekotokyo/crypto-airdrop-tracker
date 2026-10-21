@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "timestamp": "2026-10-21T00:12:38.301338+00:00",
+    "date": "2026-10-21",
+    "time_jst": "2026年10月21日 00:12",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 1,
+    "added_names": [
+      "Polymarket (POLY)",
+      "OpenSea (SEA)",
+      "Ekiden (ポイント)",
+      "MetaMask (MASK)",
+      "Pharos (PROS)",
+      "StandX (DUSD)",
+      "LayerZero パートナーアプリ"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": true,
+    "highlights": [
+      "🔥 新規注目: Polymarket (POLY) — CMOがトークン&エアドロ実施を公式に認めた本命案件(配布条件は未公開、取引継続が有利と見られる)",
+      "⏰ 期限間近: Pharos (PROS) の受取期限は 10/25。偽サイトに注意し claim.pharos.xyz から請求",
+      "📅 StandX: TGE中止・事業終了。ロック無しDUSD配布(チェッカー10/26、請求11/1〜12/31)、出金期限は2027-01-31",
+      "🆕 追加: Ekiden(ポイント予告)、OpenSea SEA(延期中)、MetaMask MASK(噂段階)、LayerZeroパートナーアプリ",
+      "🗑 削除: 既にトークン配布済みの古い案件(Scroll・zkSync・Hyperliquid・EigenLayer・Movement)を一覧から除外",
+      "ℹ️ Meteora S2 LP Stimulus は本日10/21で請求終了、Sonic(S)は10/15で請求終了"
+    ]
+  }
+]
