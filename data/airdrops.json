@@ -1,1 +1,120 @@
-[]
+[
+  {
+    "symbol": "AXIS",
+    "category": "AI/ロボティクス",
+    "type": "ポイント/TGE予定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "tasks": [
+      "Axisのタスク/ポイント活動に参加",
+      "公式発表(TGE日)を確認"
+    ],
+    "logo": "",
+    "is_hot": true,
+    "added_date": "2026-10-22",
+    "source": "curated",
+    "id": "axis-robotics",
+    "name": "Axis Robotics (AXIS)",
+    "description": "ロボティクスAI。供給量の10%を2シーズンでエアドロップ予定。TGE日・配布日は未発表(未確定情報あり)。ポイントはTGEでの転換が保証されていない点に注意。",
+    "end_date": "未定",
+    "url": "https://cryptorank.io/drophunting/axis-ai-activity1105"
+  },
+  {
+    "symbol": "PROS",
+    "category": "Layer1",
+    "type": "クレーム受付",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "tasks": [
+      "公式クレームポータルで請求"
+    ],
+    "logo": "",
+    "is_hot": true,
+    "added_date": "2026-10-22",
+    "source": "curated",
+    "id": "pharos-pros",
+    "name": "Pharos (PROS)",
+    "description": "Pharosのクレームポータルが10/25に閉鎖。未請求分はPharos Foundationへ返還。",
+    "end_date": "2026-10-25",
+    "url": "https://pharos.xyz/"
+  },
+  {
+    "symbol": "DUSD",
+    "category": "DeFi/DEX",
+    "type": "清算配当",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "tasks": [
+      "10/26に適格性を確認",
+      "11/1以降にクレーム"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-22",
+    "source": "curated",
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "description": "StandXが終了し残余資産をDUSDで分配。適格性ページは10/26公開、請求は11/1 00:00 UTC〜12/31。",
+    "end_date": "2026-12-31",
+    "url": "https://standx.com/"
+  },
+  {
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "クレーム受付",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "tasks": [
+      "Grass公式サイトで請求"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-22",
+    "source": "curated",
+    "id": "grass-stage2",
+    "name": "Grass (stage 2)",
+    "description": "Grassステージ2の請求(USDC配布)が受付中。期限は2027-01-22。",
+    "end_date": "2027-01-22",
+    "url": "https://www.getgrass.io/"
+  },
+  {
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "エアドロップ確認済",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "tasks": [],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-22",
+    "source": "curated",
+    "id": "ekiden",
+    "name": "Ekiden",
+    "description": "CryptoRank上で10/21にエアドロップ確認済みと掲載。詳細情報は限定的なので公式発表を確認。",
+    "end_date": "未定",
+    "url": "https://cryptorank.io/drophunting"
+  },
+  {
+    "symbol": "",
+    "category": "その他",
+    "type": "エアドロップ確認済",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "tasks": [],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-10-22",
+    "source": "curated",
+    "id": "alphea",
+    "name": "ALPHEA",
+    "description": "CryptoRank上で10/20にエアドロップ確認済みと掲載。詳細情報は限定的。",
+    "end_date": "未定",
+    "url": "https://cryptorank.io/drophunting"
+  }
+]
