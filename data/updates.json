@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "timestamp": "2026-10-23T00:11:05.379659+00:00",
+    "date": "2026-10-23",
+    "time_jst": "2026年10月23日 00:11",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Hyperliquid (HYPE)",
+      "Polymarket",
+      "LayerZero (ZRO)",
+      "Ekiden",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "EigenLayer (EIGEN)",
+      "Jumper ($JUMP)",
+      "zkSync Era",
+      "Pharos"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
