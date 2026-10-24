@@ -1,0 +1,205 @@
+[
+  {
+    "id": "genlayer",
+    "name": "GenLayer (GEN)",
+    "symbol": "GEN",
+    "category": "インフラ",
+    "type": "ポイント/スナップショット",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "登録締切が迫る。10/25の最終スナップショットで資格判定、登録は10/26まで。TGE日程は未確定。",
+    "tasks": [
+      "対象のDiscordロールを取得、または150+ GenLayer Pointsを獲得",
+      "コントリビューションまたはDiscord XPを確保",
+      "10/26までに登録"
+    ],
+    "end_date": "2026-10-26",
+    "logo": "",
+    "url": "https://www.genlayer.com/",
+    "is_hot": true,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "variational",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/DEX",
+    "type": "ポイント/TGE",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "2026年Q4にTGE予定。総供給の32%をジェネシスエアドロップに配分。ポイントは毎週15万pt配布。",
+    "tasks": [
+      "Variationalでの取引でポイントを獲得",
+      "TGEまで継続的に参加"
+    ],
+    "end_date": "2026年Q4(TGE)",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket",
+    "name": "Polymarket",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "トークン確定",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "CMOがトークン/エアドロップを公式に認めたが、米国再ローンチを優先中で詳細未公開。",
+    "tasks": [
+      "Polymarketでの利用実績を積む(詳細発表待ち)"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ポイント/メインネット",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "メインネット連動のリワードプログラム。取引でポイントを獲得しエアドロップに反映。",
+    "tasks": [
+      "メインネット開始後に取引してポイントを獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://ekiden.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "flop-labs",
+    "name": "Flop Labs",
+    "symbol": "",
+    "category": "その他",
+    "type": "テストネット",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "BitMEX創業者Arthur Hayesが数週間以内にテストネットとエアドロップを予告。現時点でFLOPトークンは存在せず、存在を主張するものは詐欺。",
+    "tasks": [
+      "公式のテストネット告知を待つ"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://x.com/CryptoHayes",
+    "is_hot": false,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "tastyco",
+    "name": "TastyCo (TASTY)",
+    "symbol": "TASTY",
+    "category": "その他",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "TGE前にポイントを貯めた初期ユーザー向けに$100,000相当の$TASTYを配布予定(未確認情報含む)。",
+    "tasks": [
+      "TGE前にポイントを獲得"
+    ],
+    "end_date": "未定(TGE前)",
+    "logo": "",
+    "url": "https://tasty.co/",
+    "is_hot": false,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "pharos",
+    "name": "Pharos",
+    "symbol": "",
+    "category": "Layer1",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クレーム期限は10/25。期限後の未請求分はPharos Foundationに返還。",
+    "tasks": [
+      "対象ウォレットで10/25までにクレーム"
+    ],
+    "end_date": "2026-10-25",
+    "logo": "",
+    "url": "https://pharosnetwork.xyz/",
+    "is_hot": false,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "alphea-ai",
+    "name": "Alphea AI",
+    "symbol": "",
+    "category": "AI",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ポイントプログラム稼働中。ポイント変換率・総配分・変換時期は未公表。",
+    "tasks": [
+      "プラットフォームを利用してポイントを獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://alphea.ai/",
+    "is_hot": false,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "トークン確定",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "公式にSEAトークンが存在するが、新しいローンチ日は未発表。",
+    "tasks": [
+      "OpenSeaでの取引・利用を継続"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  },
+  {
+    "id": "base",
+    "name": "Base",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "投機的",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ネットワークトークンを公に検討中(未確定)。有力な将来候補だが日程なし。",
+    "tasks": [
+      "Base上でのオンチェーン活動を継続"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-10-24",
+    "source": "curated"
+  }
+]

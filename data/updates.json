@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "timestamp": "2026-10-24T00:13:51.003811+00:00",
+    "date": "2026-10-24",
+    "time_jst": "2026年10月24日 00:13",
+    "total_airdrops": 10,
+    "added_count": 10,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "GenLayer (GEN)",
+      "Variational (VAR)",
+      "Polymarket",
+      "Ekiden",
+      "Flop Labs",
+      "TastyCo (TASTY)",
+      "Pharos",
+      "Alphea AI",
+      "OpenSea (SEA)",
+      "Base"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "highlights": [
+      "データを最新リサーチで刷新(旧シードデータを置換)",
+      "🔥 GenLayer: 登録締切10/26・スナップショット10/25 — 直近の最優先案件",
+      "🔥 Variational: Q4 TGE予定、総供給32%をジェネシスエアドロップに配分",
+      "🔥 Polymarket: トークン/エアドロップ公式確認(詳細未公開)",
+      "Pharos クレーム期限10/25。Meteora(10/21)・Teneo S4(10/22)は終了のため除外"
+    ]
+  }
+]

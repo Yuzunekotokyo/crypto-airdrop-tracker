@@ -47,6 +47,17 @@
       {% endfor %}
     </div>
     {% endif %}
+    {% if latest_update.highlights %}
+    <ul class="update-highlights">
+      {% for h in latest_update.highlights %}<li>{{ h }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% if latest_update.removed_names %}
+    <div class="update-new-items"><strong>削除:</strong> {{ latest_update.removed_names | join(', ') }}</div>
+    {% endif %}
+    {% for c in latest_update.changes or [] %}
+    <div class="update-new-items"><strong>変更:</strong> {{ c.name }} — {{ c.changes | join(' / ') }}</div>
+    {% endfor %}
     {% if latest_update.trending_coins %}
     <div class="update-trending">
       <strong>📈 トレンド:</strong>
