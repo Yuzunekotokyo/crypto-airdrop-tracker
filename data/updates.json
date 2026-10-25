@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-10-25T00:10:43.365832+00:00",
+    "date": "2026-10-25",
+    "time_jst": "2026年10月25日 00:10",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 1,
+    "added_names": [
+      "Pharos Network (PROS)",
+      "Hyperliquid (HYPE)",
+      "EigenLayer (EIGEN)",
+      "LayerZero (ZRO)",
+      "Movement (MOVE)",
+      "Scroll (SCR)",
+      "zkSync Era",
+      "Grass Season 2 (USDC)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
