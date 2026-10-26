@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "timestamp": "2026-10-26T00:00:00+00:00",
+    "date": "2026-10-26",
+    "time_jst": "2026年10月26日",
+    "total_airdrops": 9,
+    "added_count": 9,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 1,
+    "added_names": [
+      "Nullmask (MASK)",
+      "Soneium (投機的)",
+      "StandX (DUSD)",
+      "Grass (Stage 2 / USDC)",
+      "Concrete (CT)",
+      "Apyx (APYX)",
+      "Pharos (PROS)",
+      "Meteora (MET) Season 2 LP",
+      "Sonic (S) 未請求分"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "highlights": [
+      "🔥 Nullmask: Points Season One開始(10/19〜90日)。シーズン前の利用もレトロ加算の記載",
+      "📅 StandX: 対象確認10/26開始、請求は11/1〜12/31",
+      "❌ 終了: Pharos(10/25)、Meteora S2 LP(10/21)、Sonic未請求分(10/15バーン)",
+      "📝 旧データ(2024年時点のサンプル)を最新情報に入れ替え。価値は未確定のため$0表記"
+    ]
+  }
+]
