@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "timestamp": "2026-10-27T00:11:38.238342+00:00",
+    "date": "2026-10-27",
+    "time_jst": "2026年10月27日 00:11",
+    "total_airdrops": 10,
+    "added_count": 4,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 6,
+    "added_names": [
+      "Aster (Stage 6)",
+      "StandX (DUSD)",
+      "Grass (Stage 2)",
+      "Extended (XTEN) ※未検証"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

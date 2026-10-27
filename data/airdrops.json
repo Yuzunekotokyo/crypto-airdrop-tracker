@@ -1,1 +1,216 @@
-[]
+[
+  {
+    "id": "hyperliquid-hype",
+    "name": "Hyperliquid (HYPE)",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "取引所トークン",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。",
+    "tasks": [
+      "Hyperliquid上での先物取引",
+      "流動性提供",
+      "紹介プログラム参加"
+    ],
+    "end_date": "2026-11-26",
+    "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-10-27",
+    "source": "curated"
+  },
+  {
+    "id": "layerzero-zro",
+    "name": "LayerZero (ZRO)",
+    "symbol": "ZRO",
+    "category": "インフラ",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "クロスチェーンメッセージングプロトコル。ブリッジ・DeFi利用者向けエアドロップ。",
+    "tasks": [
+      "Stargate経由でブリッジを実行",
+      "複数チェーンでのトランザクション",
+      "LayerZero対応dApps利用"
+    ],
+    "end_date": "2026-12-26",
+    "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
+    "url": "https://layerzero.network/",
+    "is_hot": true,
+    "added_date": "2026-10-27",
+    "source": "curated"
+  },
+  {
+    "id": "movement-move",
+    "name": "Movement (MOVE)",
+    "symbol": "MOVE",
+    "category": "Layer2",
+    "type": "新規上場",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 400,
+    "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ予定。",
+    "tasks": [
+      "テストネット参加",
+      "Discordコミュニティ参加",
+      "テストトランザクション実行"
+    ],
+    "end_date": "2026-11-16",
+    "logo": "https://assets.coingecko.com/coins/images/39619/small/MOVE_color.png",
+    "url": "https://movementlabs.xyz/",
+    "is_hot": true,
+    "added_date": "2026-10-27",
+    "source": "curated"
+  },
+  {
+    "id": "scroll-scr",
+    "name": "Scroll (SCR)",
+    "symbol": "SCR",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。",
+    "tasks": [
+      "ScrollネットワークへETHブリッジ",
+      "Scroll上でのDeFi利用",
+      "複数週にわたるアクティビティ"
+    ],
+    "end_date": "2027-01-25",
+    "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
+    "url": "https://scroll.io/",
+    "is_hot": true,
+    "added_date": "2026-10-27",
+    "source": "curated"
+  },
+  {
+    "id": "aster-stage6",
+    "name": "Aster (Stage 6)",
+    "symbol": "ASTER",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "パーペチュアルDEX。Stage 6のベスト済みエアドロップのクレーム期間が10/28〜11/28の予定 (cryptoticker報道)。",
+    "tasks": [
+      "過去のポイント/取引実績のあるウォレットで資格確認",
+      "公式クレームページから請求 (偽サイト注意)"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://www.asterdex.com/",
+    "is_hot": true,
+    "added_date": "2026-10-27",
+    "source": "cryptoticker"
+  },
+  {
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "symbol": "DUSD",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "11/1にクレーム開始予定。チェッカーページは既に公開済み (cryptoticker報道)。",
+    "tasks": [
+      "公式チェッカーでウォレットの資格を確認",
+      "11/1以降に公式ページからクレーム"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://standx.com/",
+    "is_hot": true,
+    "added_date": "2026-10-27",
+    "source": "cryptoticker"
+  },
+  {
+    "id": "eigenlayer-eigen",
+    "name": "EigenLayer (EIGEN)",
+    "symbol": "EIGEN",
+    "category": "インフラ",
+    "type": "リステーキング",
+    "status": "active",
+    "difficulty": "hard",
+    "estimated_value_usd": 800,
+    "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。",
+    "tasks": [
+      "ETHをリステーキング",
+      "LST (stETH等) をデポジット",
+      "AVSへの参加"
+    ],
+    "end_date": "2027-02-24",
+    "logo": "https://assets.coingecko.com/coins/images/33751/small/eigen.png",
+    "url": "https://eigenlayer.xyz/",
+    "is_hot": false,
+    "added_date": "2026-10-27",
+    "source": "curated"
+  },
+  {
+    "id": "zksync-era",
+    "name": "zkSync Era",
+    "symbol": "ZK",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "Matter Labsが開発するZK-Rollup。エコシステムが急拡大中。",
+    "tasks": [
+      "Era上でのスワップ",
+      "Syncswap/Mute利用",
+      "zkSync公式ブリッジ利用"
+    ],
+    "end_date": "2026-12-11",
+    "logo": "https://assets.coingecko.com/coins/images/38043/small/ZKTokenBlack.png",
+    "url": "https://zksync.io/",
+    "is_hot": false,
+    "added_date": "2026-10-27",
+    "source": "curated"
+  },
+  {
+    "id": "grass-stage2",
+    "name": "Grass (Stage 2)",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Stage 2報酬 (USDC払い) のクレーム期限は2027-01-22 (cryptoticker報道)。",
+    "tasks": [
+      "対象ウォレットで公式サイトからクレーム"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://www.grass.io/",
+    "is_hot": false,
+    "added_date": "2026-10-27",
+    "source": "cryptoticker"
+  },
+  {
+    "id": "extended-xten",
+    "name": "Extended (XTEN) ※未検証",
+    "symbol": "XTEN",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "パーペチュアルDEX。アグリゲーターサイトで稼働中と掲載されているが公式確認なし。ウォレット接続前に詐欺リスクを要確認。",
+    "tasks": [
+      "公式情報を確認してから取引/ポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-27",
+    "source": "airdropalert"
+  }
+]
