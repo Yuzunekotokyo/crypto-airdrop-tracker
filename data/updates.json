@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-10-28T00:11:58.075584+00:00",
+    "date": "2026-10-28",
+    "time_jst": "2026年10月28日 00:11",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Aster (Stage 6 Convergence)",
+      "StandX (DUSD)",
+      "The Hood (HOOD)",
+      "Polymarket",
+      "Grass (Stage 2 / USDC)",
+      "Ekiden",
+      "TastyCo ($TASTY)",
+      "Jumper ($JUMP)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

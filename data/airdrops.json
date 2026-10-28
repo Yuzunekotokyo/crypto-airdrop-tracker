@@ -1,1 +1,169 @@
-[]
+[
+  {
+    "id": "aster-stage6",
+    "name": "Aster (Stage 6 Convergence)",
+    "symbol": "ASTER",
+    "category": "DeFi/DEX",
+    "type": "ポイント報酬",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Stage 6のクレームが2026-10-28 12:00 UTCに開始。2億ASTERを配布。",
+    "tasks": [
+      "クレームページで資格確認",
+      "12:00 UTC以降にクレーム"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://www.asterdex.com/",
+    "is_hot": true,
+    "added_date": "2026-10-28",
+    "source": "curated"
+  },
+  {
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "symbol": "DUSD",
+    "category": "DeFi/DEX",
+    "type": "ポイント報酬",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "チェッカーは10/26公開済み。クレーム期間は11/1〜12/31。",
+    "tasks": [
+      "チェッカーで資格確認",
+      "11/1以降にクレーム"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://standx.com/",
+    "is_hot": true,
+    "added_date": "2026-10-28",
+    "source": "curated"
+  },
+  {
+    "id": "the-hood",
+    "name": "The Hood (HOOD)",
+    "symbol": "HOOD",
+    "category": "ミニアプリ",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Mini AppでのHOODクレームは10/31に終了。未請求なら急ぐ。",
+    "tasks": [
+      "Mini Appを開く",
+      "HOODをクレーム"
+    ],
+    "end_date": "2026-10-31",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": true,
+    "added_date": "2026-10-28",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket",
+    "name": "Polymarket",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "未確定(確定言及あり)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CMOがトークンとエアドロップを確認。日付未定、米国再開が優先。",
+    "tasks": [
+      "Polymarketで継続的に取引",
+      "複数市場に参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-28",
+    "source": "curated"
+  },
+  {
+    "id": "grass-s2",
+    "name": "Grass (Stage 2 / USDC)",
+    "symbol": "GRASS",
+    "category": "DePIN",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Stage 2はUSDCで支払い。2027-01-22までクレーム可能。",
+    "tasks": [
+      "資格確認",
+      "クレーム"
+    ],
+    "end_date": "2027-01-22",
+    "logo": "",
+    "url": "https://www.grass.io/",
+    "is_hot": false,
+    "added_date": "2026-10-28",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ポイント報酬",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "メインネット連動のポイント制度が確定。取引活動でポイント獲得。",
+    "tasks": [
+      "メインネットで取引",
+      "ポイントを貯める"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-10-28",
+    "source": "curated"
+  },
+  {
+    "id": "tastyco",
+    "name": "TastyCo ($TASTY)",
+    "symbol": "TASTY",
+    "category": "その他",
+    "type": "ポイント報酬",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "TGE前にポイントを貯めた早期ユーザーへ総額10万ドルの$TASTYを配布予定。",
+    "tasks": [
+      "ポイント収集"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-10-28",
+    "source": "curated"
+  },
+  {
+    "id": "jumper-jump",
+    "name": "Jumper ($JUMP)",
+    "symbol": "JUMP",
+    "category": "インフラ",
+    "type": "XP報酬",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "TGEを示唆。Perps早期アクセスはXP上位2,500人に拡大。日付未定。",
+    "tasks": [
+      "XPを貯める",
+      "Perps利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://jumper.exchange/",
+    "is_hot": false,
+    "added_date": "2026-10-28",
+    "source": "curated"
+  }
+]
