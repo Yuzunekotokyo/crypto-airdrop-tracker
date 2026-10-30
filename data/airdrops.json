@@ -1,1 +1,107 @@
-[]
+[
+  {
+    "id": "hyperliquid-season2",
+    "name": "Hyperliquid (HYPE) シーズン2",
+    "symbol": "HYPE",
+    "category": "DeFi/DEX",
+    "type": "ポイント/追加配布",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "追加配布は公式未確認（総供給の約42%が将来配布枠）。HyperEVMのDEX・stHYPEでポイント稼ぎが話題。",
+    "tasks": [
+      "Hyperliquidで継続的に取引",
+      "HyperEVM上のDEXで流動性提供",
+      "stHYPEを保有"
+    ],
+    "end_date": "2026-11-29",
+    "logo": "",
+    "url": "https://hyperliquid.xyz/",
+    "is_hot": true,
+    "added_date": "2026-10-30",
+    "source": "curated"
+  },
+  {
+    "id": "jupiter-jup",
+    "name": "Jupiter (JUP)",
+    "symbol": "JUP",
+    "category": "DeFi/DEX",
+    "type": "ステーキング/取引",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "トラッカー上で10/28配布予定と掲載（未検証・要公式確認）。公式サイトで資格確認を。",
+    "tasks": [
+      "JUPステーキング",
+      "Jupiter上でスワップ"
+    ],
+    "end_date": "2026-11-06",
+    "logo": "",
+    "url": "https://jup.ag/",
+    "is_hot": false,
+    "added_date": "2026-10-30",
+    "source": "curated"
+  },
+  {
+    "id": "metric-points",
+    "name": "Metric",
+    "symbol": "",
+    "category": "DeFi",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "ポイント制の潜在的エアドロップ（未確認）。メインネット利用・流動性提供でポイント獲得。",
+    "tasks": [
+      "メインネット利用",
+      "流動性提供"
+    ],
+    "end_date": "2026-12-29",
+    "logo": "",
+    "url": "https://airdropalert.com/farm/",
+    "is_hot": false,
+    "added_date": "2026-10-30",
+    "source": "curated"
+  },
+  {
+    "id": "predict-fun",
+    "name": "predict.fun",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "潜在的エアドロップ候補（検証中・未確認）。予測市場での取引が対象と推測。",
+    "tasks": [
+      "予測市場で取引"
+    ],
+    "end_date": "2026-12-29",
+    "logo": "",
+    "url": "https://predict.fun/",
+    "is_hot": false,
+    "added_date": "2026-10-30",
+    "source": "curated"
+  },
+  {
+    "id": "base-token",
+    "name": "Base",
+    "symbol": "",
+    "category": "Layer2",
+    "type": "投機的",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "トークン未発表のL2。エアドロップは推測のみで公式確認なし。",
+    "tasks": [
+      "Base上でdApp利用",
+      "継続的なオンチェーン活動"
+    ],
+    "end_date": "2027-01-28",
+    "logo": "",
+    "url": "https://base.org/",
+    "is_hot": false,
+    "added_date": "2026-10-30",
+    "source": "curated"
+  }
+]
