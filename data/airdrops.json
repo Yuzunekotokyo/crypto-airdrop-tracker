@@ -1,1 +1,171 @@
-[]
+[
+  {
+    "id": "variational-var",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "P2P型パープDEX。公式トークノミクスで供給量の32%をポイント保有者へのジェネシスエアドロップに配分。TGEは2026年Q4予定。",
+    "tasks": [
+      "Variationalで取引しポイント獲得",
+      "取引量の継続",
+      "公式発表のTGE日程を確認"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-10-31",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-token",
+    "name": "Polymarket",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "未確定",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 1000,
+    "description": "CMOが「トークンとエアドロップはある」と発言。時期は未発表。",
+    "tasks": [
+      "Polymarketで継続的に取引",
+      "複数カテゴリの市場に参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-10-31",
+    "source": "curated"
+  },
+  {
+    "id": "lighter-lit",
+    "name": "Lighter (LIT)",
+    "symbol": "LIT",
+    "category": "DeFi/DEX",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "オンチェーンパープDEX。ポイントプログラム連動でLITのTGE/エアドロップが年末見込み (報道ベース、要公式確認)。",
+    "tasks": [
+      "Lighterで取引しポイント獲得",
+      "流動性提供"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://lighter.xyz/",
+    "is_hot": true,
+    "added_date": "2026-10-31",
+    "source": "curated"
+  },
+  {
+    "id": "aster-stage6",
+    "name": "Aster (ASTER) Stage 6",
+    "symbol": "ASTER",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "Stage 6の完全ベスト済み配分のクレーム受付中 (10/28〜11/28)。対象者は期限内に請求を。",
+    "tasks": [
+      "公式クレームページで対象ウォレットを確認",
+      "期限内に請求"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://www.asterdex.com/",
+    "is_hot": true,
+    "added_date": "2026-10-31",
+    "source": "curated"
+  },
+  {
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "symbol": "DUSD",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "チェッカーページは10/26公開済み。クレームは11/1〜12/31。",
+    "tasks": [
+      "チェッカーで資格確認",
+      "11/1以降にクレーム"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://standx.com/",
+    "is_hot": true,
+    "added_date": "2026-10-31",
+    "source": "curated"
+  },
+  {
+    "id": "bulk-trade",
+    "name": "BULK",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "トレード大会",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "エアドロップ確定。Season 1のトレード大会が10/10〜12/5開催中。",
+    "tasks": [
+      "Season 1トレード大会に参加",
+      "取引量・ポイントを積み上げ"
+    ],
+    "end_date": "2026-12-05",
+    "logo": "",
+    "url": "https://bulk.trade/",
+    "is_hot": false,
+    "added_date": "2026-10-31",
+    "source": "curated"
+  },
+  {
+    "id": "apyx",
+    "name": "Apyx",
+    "symbol": "",
+    "category": "DeFi",
+    "type": "ポイント",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "配分確定済み。9月にSeason 2配分を6%→9%へ増加、10/13予定だったTGEは延期。",
+    "tasks": [
+      "Season 2のポイント獲得を継続",
+      "TGE再発表を待つ"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://apyx.fi/",
+    "is_hot": false,
+    "added_date": "2026-10-31",
+    "source": "curated"
+  },
+  {
+    "id": "concrete-ct",
+    "name": "Concrete (CT)",
+    "symbol": "CT",
+    "category": "DeFi",
+    "type": "TGE予定",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "9月にネイティブトークンCTとTGE計画を公表。日付は未確認。",
+    "tasks": [
+      "Concreteボールトへ入金",
+      "ポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://concrete.xyz/",
+    "is_hot": false,
+    "added_date": "2026-10-31",
+    "source": "curated"
+  }
+]

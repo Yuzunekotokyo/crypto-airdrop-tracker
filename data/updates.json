@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-10-31T00:11:10.199845+00:00",
+    "date": "2026-10-31",
+    "time_jst": "2026年10月31日 00:11",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [
+      "Variational (VAR)",
+      "Polymarket",
+      "Lighter (LIT)",
+      "Aster (ASTER) Stage 6",
+      "StandX (DUSD)",
+      "BULK",
+      "Apyx",
+      "Concrete (CT)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
