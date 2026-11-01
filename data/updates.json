@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "timestamp": "2026-11-01T00:12:09.931075+00:00",
+    "date": "2026-11-01",
+    "time_jst": "2026年11月01日 00:12",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Variational (VAR)",
+      "Aster (ASTER) Stage 6",
+      "StandX (DUSD)",
+      "Ink (INK) by Kraken",
+      "XDP Genesis Airdrop",
+      "BULK Season 1",
+      "Predict (PREDICT)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
