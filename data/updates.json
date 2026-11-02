@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-11-02T00:11:31.186462+00:00",
+    "date": "2026-11-02",
+    "time_jst": "2026年11月02日 00:11",
+    "total_airdrops": 7,
+    "added_count": 7,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Variational (VAR)",
+      "Aster (Stage 6)",
+      "StandX (DUSD)",
+      "MetaMask Rewards",
+      "BULK (Season 1)",
+      "XDP Genesis Airdrop",
+      "Sophon (メインネット終了)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "note": "今回の更新: 旧シードデータ(LayerZero/Scroll/zkSync/Hyperliquid/EigenLayer/Movement等)を最新の11月案件に全面入替。最新ニュース: Aster Stage6・StandXクレーム開始、MetaMaskオプトイン期限11/12、Sophon停止11/30。"
+  }
+]

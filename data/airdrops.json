@@ -1,1 +1,150 @@
-[]
+[
+  {
+    "id": "variational-var",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/DEX",
+    "type": "ポイント → TGE",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "VARトークン総供給の32%をポイント保有者のジェネシスエアドロップに配分。TGEは2026年Q4目標 (正確な日付は未確認)。",
+    "tasks": [
+      "ポイントプログラムで取引",
+      "TGE告知を監視"
+    ],
+    "end_date": "未定 (Q4 2026目標)",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-11-02",
+    "source": "web"
+  },
+  {
+    "id": "aster-stage6",
+    "name": "Aster (Stage 6)",
+    "symbol": "ASTER",
+    "category": "DeFi/DEX",
+    "type": "ポイント配布",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "Perp DEX。Stage 6 のクレーム期間。ソースにより開始日が異なる (10/28 12:00 UTC〜11/28 説 / 11/4 開始説)。",
+    "tasks": [
+      "チェッカーで割当を確認",
+      "公式サイトからクレーム",
+      "ベスティング条件を確認"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://www.asterdex.com/",
+    "is_hot": true,
+    "added_date": "2026-11-02",
+    "source": "cryptoticker / web"
+  },
+  {
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "symbol": "DUSD",
+    "category": "DeFi/DEX",
+    "type": "ポイント配布",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "StandX のエアドロップ。11/1〜12/31 がクレーム期間 (公式発表ベース)。",
+    "tasks": [
+      "チェッカーページでポイント確認",
+      "クレーム期間内に請求"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://standx.com/",
+    "is_hot": true,
+    "added_date": "2026-11-02",
+    "source": "cryptoticker / web"
+  },
+  {
+    "id": "metamask-rewards",
+    "name": "MetaMask Rewards",
+    "symbol": "",
+    "category": "ウォレット",
+    "type": "リワード",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "MetaMask のリワード。オプトイン期限が 2026-11-12。スワップ/ブリッジ利用が対象。",
+    "tasks": [
+      "オプトインを完了 (期限 11/12)",
+      "スワップ・ブリッジを利用"
+    ],
+    "end_date": "2026-11-12",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-11-02",
+    "source": "web"
+  },
+  {
+    "id": "bulk-season1",
+    "name": "BULK (Season 1)",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "シーズン制ポイント",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "Season 1 は 10/10〜12/05。ステーキングや Discord ロール等の追加ルートあり。",
+    "tasks": [
+      "取引でポイント獲得",
+      "ステーキング",
+      "Discordロール取得"
+    ],
+    "end_date": "2026-12-05",
+    "logo": "",
+    "url": "https://bulk.trade/",
+    "is_hot": false,
+    "added_date": "2026-11-02",
+    "source": "web"
+  },
+  {
+    "id": "xdp-genesis",
+    "name": "XDP Genesis Airdrop",
+    "symbol": "XDP",
+    "category": "その他",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 100,
+    "description": "Genesis エアドロップのクレームが 11/28 12:00 UTC まで。",
+    "tasks": [
+      "資格を確認",
+      "期限内にクレーム"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "",
+    "is_hot": false,
+    "added_date": "2026-11-02",
+    "source": "web"
+  },
+  {
+    "id": "sophon-sunset",
+    "name": "Sophon (メインネット終了)",
+    "symbol": "SOPH",
+    "category": "Layer2",
+    "type": "終了注意",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Sophon メインネットが 11/30 に完全停止。資産の引き出し期限は 11/25。資金を残さないよう注意。",
+    "tasks": [
+      "資産を 11/25 までに引き出し"
+    ],
+    "end_date": "2026-11-25",
+    "logo": "",
+    "url": "",
+    "is_hot": false,
+    "added_date": "2026-11-02",
+    "source": "web"
+  }
+]
