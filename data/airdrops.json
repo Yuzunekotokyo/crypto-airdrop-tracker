@@ -1,1 +1,151 @@
-[]
+[
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "トークン/エアドロ確認済",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 1000,
+    "description": "CMOがトークンとエアドロップを公式に確認済み。スナップショット日・条件は未発表。※非公式サイトの『受取』リンクは詐欺に注意。公式はpolymarket.comのみ。",
+    "tasks": [
+      "予測市場で継続的に取引",
+      "取引量・活動の分散",
+      "公式発表を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-11-03",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 800,
+    "description": "2025年10月にポイントプログラム開始(スワップ/パープ/ブリッジ/紹介)。LINEA利用でポイント2倍と報じられる。公式の配布条件は未発表で推測を含む。",
+    "tasks": [
+      "MetaMask内でスワップ・パープ取引",
+      "ブリッジ利用",
+      "LINEAを利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": true,
+    "added_date": "2026-11-03",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT/マーケット",
+    "type": "トークン",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 500,
+    "description": "2026年Q1目標と報じられたが、ローンチ/請求状況は今回確認できず。供給の50%がコミュニティ向け。公式で最新状況を要確認。",
+    "tasks": [
+      "過去のOpenSea利用実績",
+      "OS2でのXP活動",
+      "公式請求ページのみ利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": false,
+    "added_date": "2026-11-03",
+    "source": "curated"
+  },
+  {
+    "id": "megaeth-mega",
+    "name": "MegaETH (MEGA)",
+    "symbol": "MEGA",
+    "category": "Layer2",
+    "type": "NFT保有者",
+    "status": "upcoming",
+    "difficulty": "hard",
+    "estimated_value_usd": 500,
+    "description": "公式の一般向けエアドロは未確認。The Fluffle NFT保有者に供給の5%以上が配布予定。",
+    "tasks": [
+      "エコシステムdApp利用",
+      "公式発表を監視"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://megaeth.com/",
+    "is_hot": false,
+    "added_date": "2026-11-03",
+    "source": "curated"
+  },
+  {
+    "id": "concrete-ct",
+    "name": "Concrete (CT)",
+    "symbol": "CT",
+    "category": "DeFi/利回り",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "2026年9月に独自トークンCTとTGE計画を発表。ポイントキャンペーンが参加入口。",
+    "tasks": [
+      "ポイントキャンペーンに参加",
+      "Vaultへ入金"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://concrete.xyz/",
+    "is_hot": false,
+    "added_date": "2026-11-03",
+    "source": "curated"
+  },
+  {
+    "id": "ekiden",
+    "name": "Ekiden",
+    "symbol": "",
+    "category": "DEX",
+    "type": "ポイント制",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "メインネット開始に合わせたリワードプログラムを予告。取引活動でポイント獲得。",
+    "tasks": [
+      "メインネット後に取引",
+      "ポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://ekiden.fi/",
+    "is_hot": false,
+    "added_date": "2026-11-03",
+    "source": "curated"
+  },
+  {
+    "id": "backpack-points",
+    "name": "Backpack (Points)",
+    "symbol": "",
+    "category": "取引所",
+    "type": "ポイント制",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "週次の取引活動が複数シーズンにわたりTGE配分を決定(第三者ガイドの情報)。",
+    "tasks": [
+      "Backpackで毎週取引"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://backpack.exchange/",
+    "is_hot": false,
+    "added_date": "2026-11-03",
+    "source": "curated"
+  }
+]
