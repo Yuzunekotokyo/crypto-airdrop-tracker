@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-11-06T00:10:20.873168+00:00",
+    "date": "2026-11-06",
+    "time_jst": "2026年11月06日 00:10",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Variational (VAR)",
+      "Aster (ASTER) Stage 6",
+      "StandX (DUSD)",
+      "Doppler Finance (XDP)",
+      "Kraken Ink 配布",
+      "ポイント制プログラム(Extended / RISEx / Ekiden / Teneo)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
