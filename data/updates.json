@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "timestamp": "2026-11-07T00:10:42.004440+00:00",
+    "date": "2026-11-07",
+    "time_jst": "2026年11月07日 00:10",
+    "total_airdrops": 6,
+    "added_count": 6,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Aster (ASTER) Stage 6",
+      "StandX (DUSD)",
+      "Variational (VAR)",
+      "Ink (Kraken L2)",
+      "Apyx",
+      "ポイント系Perp DEX (Extended / RISEx / Ekiden)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
