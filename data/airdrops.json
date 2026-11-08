@@ -1,1 +1,193 @@
-[]
+[
+  {
+    "id": "aster-stage6",
+    "name": "Aster (Stage 6)",
+    "symbol": "ASTER",
+    "category": "DeFi/DEX",
+    "type": "ポイント報酬",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Aster Stage 6 のクレーム受付中。11/4開始、期限は12月上旬。",
+    "tasks": [
+      "公式サイトでウォレット接続しクレーム",
+      "Stage 6 対象ポイントの確認"
+    ],
+    "end_date": "2026-12-05",
+    "logo": "",
+    "url": "https://www.asterdex.com/",
+    "is_hot": true,
+    "added_date": "2026-11-04",
+    "source": "curated",
+    "note": "期限は『12月上旬』のため目安日"
+  },
+  {
+    "id": "variational-genesis",
+    "name": "Variational",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "ジェネシス・エアドロップ",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "ポイント保有者向けジェネシスエアドロップ。TGEは2026年Q4目標、全量アンロック予定(MEXC掲載)。",
+    "tasks": [
+      "Variationalで取引してポイントを貯める"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-11-08",
+    "source": "curated",
+    "note": "TGE日未確定。Q4目標"
+  },
+  {
+    "id": "ink-kraken",
+    "name": "Ink (Kraken)",
+    "symbol": "INK",
+    "category": "Layer2",
+    "type": "レトロアクティブ",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Kraken系L2のINKエアドロップが発表済み。対象条件は未確定。",
+    "tasks": [
+      "Ink上でのDeFi/ブリッジ利用",
+      "公式の続報を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://inkonchain.com/",
+    "is_hot": true,
+    "added_date": "2026-11-08",
+    "source": "curated",
+    "note": "エリジビリティ未確定"
+  },
+  {
+    "id": "standx-claim",
+    "name": "StandX",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クレーム受付中(11/2開始)。",
+    "tasks": [
+      "公式でクレーム資格を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://standx.com/",
+    "is_hot": false,
+    "added_date": "2026-11-02",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "fables-claim",
+    "name": "Fables",
+    "symbol": "",
+    "category": "ゲーム",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クレーム期限 11/20。",
+    "tasks": [
+      "公式でクレーム資格を確認"
+    ],
+    "end_date": "2026-11-20",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-11-08",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "predictfun-claim",
+    "name": "Predict.fun",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クレーム期限 11/26。",
+    "tasks": [
+      "公式でクレーム資格を確認"
+    ],
+    "end_date": "2026-11-26",
+    "logo": "",
+    "url": "https://predict.fun/",
+    "is_hot": false,
+    "added_date": "2026-11-08",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "doppler-claim",
+    "name": "Doppler",
+    "symbol": "",
+    "category": "インフラ",
+    "type": "クレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "クレーム期限 11/28。",
+    "tasks": [
+      "公式でクレーム資格を確認"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-11-08",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "apyx",
+    "name": "Apyx",
+    "symbol": "",
+    "category": "DeFi",
+    "type": "配分確定",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "トークン配分は確定済みだがTGEは延期中。",
+    "tasks": [
+      "公式の続報を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://airdrops.io/",
+    "is_hot": false,
+    "added_date": "2026-11-08",
+    "source": "curated",
+    "note": ""
+  },
+  {
+    "id": "metric-qfex",
+    "name": "Metric / QFEX",
+    "symbol": "",
+    "category": "その他",
+    "type": "噂・未確認",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Cryptorankが11/7前後の潜在エアドロップとして掲載。未確認情報。",
+    "tasks": [
+      "公式情報の確認を優先"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting",
+    "is_hot": false,
+    "added_date": "2026-11-08",
+    "source": "curated",
+    "note": "未確認。詐欺・フィッシングに注意"
+  }
+]
