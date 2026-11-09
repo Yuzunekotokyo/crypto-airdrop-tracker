@@ -1,1 +1,126 @@
-[]
+[
+  {
+    "id": "aster-stage6",
+    "name": "Aster (ASTER) Stage 6",
+    "symbol": "ASTER",
+    "category": "DeFi/DEX",
+    "type": "ポイント配布",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "Stage 6で6,400万ASTERを配布。10,000ポイント以上のユーザーが対象。",
+    "tasks": [
+      "10,000ポイント以上を獲得",
+      "期限内にクレーム"
+    ],
+    "end_date": "2026-12-04",
+    "logo": "",
+    "url": "https://www.asterdex.com/",
+    "is_hot": true,
+    "added_date": "2026-11-09",
+    "source": "curated"
+  },
+  {
+    "id": "variational",
+    "name": "Variational",
+    "symbol": "",
+    "category": "DeFi/DEX",
+    "type": "TGE予定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 500,
+    "description": "トークン配分確定済み。ジェネシスエアドロップはTGE(2026年Q4目標)に連動。",
+    "tasks": [
+      "プラットフォームでの取引・ポイント獲得"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://variational.io/",
+    "is_hot": true,
+    "added_date": "2026-11-09",
+    "source": "curated"
+  },
+  {
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "symbol": "DUSD",
+    "category": "DeFi/DEX",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 300,
+    "description": "クレーム受付が2026-11-02に開始。対象者は期限内に請求が必要。",
+    "tasks": [
+      "公式サイトで対象アドレスを確認",
+      "期限内にクレーム実行"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "https://standx.com/",
+    "is_hot": true,
+    "added_date": "2026-11-09",
+    "source": "curated"
+  },
+  {
+    "id": "kraken-ink",
+    "name": "Kraken INK配布",
+    "symbol": "INK",
+    "category": "Layer2",
+    "type": "発表済み",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 300,
+    "description": "Krakenが配布を発表済みだが、対象条件は未確定。続報待ち。",
+    "tasks": [
+      "Ink関連アクティビティ",
+      "公式発表を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://inkonchain.com/",
+    "is_hot": false,
+    "added_date": "2026-11-09",
+    "source": "curated"
+  },
+  {
+    "id": "doppler-xdp",
+    "name": "Doppler Finance (XDP)",
+    "symbol": "XDP",
+    "category": "DeFi/DEX",
+    "type": "ジェネシス",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 200,
+    "description": "Base上でGenesis Airdropのクレーム受付中。2026-07-30以前にBaseアドレスを登録した人のみ対象。",
+    "tasks": [
+      "対象アドレスか確認",
+      "Base上でクレーム"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://www.doppler.finance/",
+    "is_hot": false,
+    "added_date": "2026-11-09",
+    "source": "curated"
+  },
+  {
+    "id": "metric",
+    "name": "Metric",
+    "symbol": "",
+    "category": "その他",
+    "type": "ポイント(推測)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ポイント制の推測段階。潜在的な日付は2026-11-07(CryptoRank)。確約なし。",
+    "tasks": [
+      "ポイント獲得タスクの実施"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://cryptorank.io/drophunting",
+    "is_hot": false,
+    "added_date": "2026-11-09",
+    "source": "curated"
+  }
+]
