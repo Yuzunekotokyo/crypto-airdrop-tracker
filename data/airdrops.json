@@ -1,1 +1,163 @@
-[]
+[
+  {
+    "id": "aster-stage6",
+    "name": "Aster (ASTER) Stage 6",
+    "symbol": "ASTER",
+    "category": "DeFi/DEX",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Stage6で6,400万ASTER(総供給の0.8%)を配布。10,000ポイント以上の参加者が対象。終了日はソースにより11/28〜12/4と不一致。",
+    "tasks": [
+      "10,000ポイント以上を保有",
+      "公式サイトでクレーム"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "https://www.asterdex.com/",
+    "is_hot": true,
+    "added_date": "2026-11-10",
+    "source": "curated"
+  },
+  {
+    "id": "fables",
+    "name": "Fables (FABLES)",
+    "symbol": "FABLES",
+    "category": "その他",
+    "type": "ポイントクレーム",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "ポイントのクレーム期限が11/20 23:59 UTC。期限間近。",
+    "tasks": [
+      "公式サイトでポイントをクレーム"
+    ],
+    "end_date": "2026-11-20",
+    "logo": "",
+    "url": "",
+    "is_hot": true,
+    "added_date": "2026-11-10",
+    "source": "curated"
+  },
+  {
+    "id": "opensea-sea",
+    "name": "OpenSea (SEA)",
+    "symbol": "SEA",
+    "category": "NFT",
+    "type": "ポイント/将来配布",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "SEAトークンは公式に確認済みで供給の50%をコミュニティへ。ただしローンチは複数回延期され日程未定。",
+    "tasks": [
+      "OpenSeaでの取引・利用"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://opensea.io/",
+    "is_hot": true,
+    "added_date": "2026-11-10",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket",
+    "name": "Polymarket",
+    "symbol": "",
+    "category": "予測市場",
+    "type": "未発表",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "CMOがトークンとエアドロップを確認済みだが、時期・条件は未公開。まず米国再開を優先。",
+    "tasks": [
+      "Polymarketでの取引を継続"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://polymarket.com/",
+    "is_hot": true,
+    "added_date": "2026-11-10",
+    "source": "curated"
+  },
+  {
+    "id": "doppler-xdp",
+    "name": "Doppler Finance (XDP)",
+    "symbol": "XDP",
+    "category": "DeFi",
+    "type": "ジェネシスエアドロップ",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Genesis Airdropは11/28終了。2026/7/30以前にBaseアドレスを登録済みのユーザーのみ対象(新規参加不可)。",
+    "tasks": [
+      "対象アドレスでクレーム"
+    ],
+    "end_date": "2026-11-28",
+    "logo": "",
+    "url": "",
+    "is_hot": false,
+    "added_date": "2026-11-10",
+    "source": "curated"
+  },
+  {
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "symbol": "DUSD",
+    "category": "DeFi",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "11/2からクレーム開放、12/31まで。",
+    "tasks": [
+      "公式サイトでクレーム"
+    ],
+    "end_date": "2026-12-31",
+    "logo": "",
+    "url": "",
+    "is_hot": false,
+    "added_date": "2026-11-10",
+    "source": "curated"
+  },
+  {
+    "id": "dango-dng",
+    "name": "Dango (DNG)",
+    "symbol": "DNG",
+    "category": "DeFi",
+    "type": "ポイントプログラム",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "ポイントプログラム実施中、TGEは2026年Q4予定(宣伝系ソースのため要注意)。",
+    "tasks": [
+      "ポイントプログラムに参加"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "",
+    "is_hot": false,
+    "added_date": "2026-11-10",
+    "source": "curated"
+  },
+  {
+    "id": "metamask-mask",
+    "name": "MetaMask (MASK)",
+    "symbol": "MASK",
+    "category": "ウォレット",
+    "type": "未確定",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "トークンは言及済みだがスナップショット・クレーム方法は未確認。",
+    "tasks": [
+      "MetaMaskの利用(Swaps/Perps等)"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://metamask.io/",
+    "is_hot": false,
+    "added_date": "2026-11-10",
+    "source": "curated"
+  }
+]

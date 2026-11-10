@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "timestamp": "2026-11-10T00:12:37.295542+00:00",
+    "date": "2026-11-10",
+    "time_jst": "2026年11月10日 (JST)",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Aster (ASTER) Stage 6",
+      "Fables (FABLES)",
+      "OpenSea (SEA)",
+      "Polymarket",
+      "Doppler Finance (XDP)",
+      "StandX (DUSD)",
+      "Dango (DNG)",
+      "MetaMask (MASK)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]
