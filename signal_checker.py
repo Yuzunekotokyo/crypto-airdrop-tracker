@@ -61,6 +61,7 @@ def _config_for(index: int) -> SignalConfig:
         confluence_pct=config.SIGNAL_CONFLUENCE_PCT,
         min_levels=config.SIGNAL_MIN_LEVELS,
         watch_pct=config.SIGNAL_WATCH_PCT,
+        touch_pct=config.SIGNAL_TOUCH_PCT,
         break_pct=config.SIGNAL_BREAK_PCT,
         swing_low=config.SIGNAL_SWING_LOW if index == 0 else None,
         swing_high=config.SIGNAL_SWING_HIGH if index == 0 else None,

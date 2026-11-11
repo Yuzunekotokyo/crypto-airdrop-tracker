@@ -27,6 +27,7 @@ SIGNAL_INTERVAL_MIN = int(os.getenv("SIGNAL_INTERVAL_MIN", "15"))
 SIGNAL_CONFLUENCE_PCT = float(os.getenv("SIGNAL_CONFLUENCE_PCT", "4")) / 100
 SIGNAL_MIN_LEVELS = int(os.getenv("SIGNAL_MIN_LEVELS", "3"))
 SIGNAL_WATCH_PCT = float(os.getenv("SIGNAL_WATCH_PCT", "3")) / 100
+SIGNAL_TOUCH_PCT = float(os.getenv("SIGNAL_TOUCH_PCT", "0.5")) / 100
 SIGNAL_BREAK_PCT = float(os.getenv("SIGNAL_BREAK_PCT", "2")) / 100
 SIGNAL_COOLDOWN_HOURS = float(os.getenv("SIGNAL_COOLDOWN_HOURS", "24"))
 # フィボの起点・終点を手動で固定したい場合 (最初の銘柄にのみ適用。空なら自動検出)

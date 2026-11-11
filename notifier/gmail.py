@@ -204,6 +204,8 @@ def build_signal_email(result: dict) -> tuple[str, str, str]:
     symbol = result["symbol"]
     status = result["status"]
     emoji, title, color, lead = _SIGNAL_STYLE.get(status, _SIGNAL_DEFAULT)
+    if result.get("touched"):
+        lead = "今週の安値が支持ゾーンにタッチ済み。反発を確認中です"
     zone = result.get("zone")
     plan = result.get("plan")
     in_zone = set(zone["levels"]) if zone else set()

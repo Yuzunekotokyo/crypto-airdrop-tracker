@@ -20,7 +20,8 @@ class SignalConfig:
     min_levels: int = 3           # 何本重なればシグナルにするか (2 or 3)
     watch_pct: float = 0.03       # ゾーン上限までこの距離に入ったら「接近中」
     break_pct: float = 0.02       # ゾーン下限をこれだけ割ったら「割れ」
-    swing_lookback: int = 104     # スイング高値・安値を探す週数
+    touch_pct: float = 0.005      # ゾーン上限のこの手前まで来たら「到達」とみなす誤差
+    swing_lookback: int = 52      # スイング安値を探す週数
     swing_low: float | None = None   # 手動指定 (例: 57800)
     swing_high: float | None = None
 
@@ -35,13 +36,20 @@ def kijun(candles: list[dict], n: int = 26) -> float:
 
 
 def find_swing(candles: list[dict], cfg: SignalConfig) -> tuple[float, float]:
-    """上昇スイングの (安値, 高値)。高値 = 直近lookback週の最高値、安値 = その高値より前の最安値。"""
+    """
+    直近の上昇スイングの (安値, 高値)。
+    安値 = 直近lookback週の最安値、高値 = その安値を付けた後の最高値。
+    いま最安値を更新中 (= 安値の後に上昇がまだ無い) の場合は、
+    期間内の最高値とそれ以前の最安値にフォールバックする。
+    """
     start = max(0, len(candles) - cfg.swing_lookback)
-    hi_idx = max(range(start, len(candles)), key=lambda i: candles[i]["high"])
-    high = cfg.swing_high or candles[hi_idx]["high"]
-    lo_start = max(0, hi_idx - cfg.swing_lookback)
-    low = cfg.swing_low or min(c["low"] for c in candles[lo_start:hi_idx + 1])
-    return low, high
+    idx = range(start, len(candles))
+    lo_idx = min(idx, key=lambda i: candles[i]["low"])
+    hi_idx = max(range(lo_idx, len(candles)), key=lambda i: candles[i]["high"])
+    if hi_idx == lo_idx:
+        hi_idx = max(idx, key=lambda i: candles[i]["high"])
+        lo_idx = min(range(max(0, hi_idx - cfg.swing_lookback), hi_idx + 1), key=lambda i: candles[i]["low"])
+    return cfg.swing_low or candles[lo_idx]["low"], cfg.swing_high or candles[hi_idx]["high"]
 
 
 def fib(low: float, high: float, ratio: float) -> float:
@@ -68,6 +76,7 @@ def evaluate(candles: list[dict], cfg: SignalConfig | None = None) -> dict:
       NONE   … 支持線が重なっていない / 価格がまだ遠い
       WATCH  … ゾーンに接近中 (予告)
       LONG   … ゾーンに到達 = 買いシグナル
+               (今週の安値がタッチ済みで、まだゾーン近くにいる場合も含む → touched=True)
       BROKEN … ゾーンを下に割った (シナリオ無効)
       BELOW  … 先週終値の時点で既にゾーンの下 (支持線として機能していない)
     """
@@ -107,15 +116,20 @@ def evaluate(candles: list[dict], cfg: SignalConfig | None = None) -> dict:
         "distance_pct": (price - zone_hi) / price,
     }
 
+    touch_line = zone_hi * (1 + cfg.touch_pct)
+    near = (price - zone_hi) / price <= cfg.watch_pct
     if prev_close < zone_lo:
         result["status"] = "BELOW"
-    elif price > zone_hi:
-        if (price - zone_hi) / price <= cfg.watch_pct:
-            result["status"] = "WATCH"
-    elif price >= stop:
-        result["status"] = "LONG"
-    else:
+    elif price < stop:
         result["status"] = "BROKEN"
+    elif price <= touch_line:
+        result["status"] = "LONG"
+    elif near and candles[-1]["low"] <= touch_line:
+        # 15分間隔の監視ではヒゲを取り逃がすので、週足の安値でタッチを拾う
+        result["status"] = "LONG"
+        result["touched"] = True
+    elif near:
+        result["status"] = "WATCH"
 
     if result["status"] in ("WATCH", "LONG"):
         entry = price if result["status"] == "LONG" else zone_hi

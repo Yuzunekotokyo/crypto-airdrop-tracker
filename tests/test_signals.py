@@ -41,6 +41,23 @@ def test_statuses_follow_price_into_and_through_zone():
     assert evaluate(pullback(zone["low"] * 0.95), cfg)["status"] == "BROKEN"
 
 
+def test_wick_touch_counts_as_long_while_price_is_still_near():
+    cfg = SignalConfig(confluence_pct=0.08)
+    zone = evaluate(pullback(81000), cfg)["zone"]
+    candles = pullback(zone["high"] * 1.02)
+    assert evaluate(candles, cfg)["status"] == "WATCH"
+    candles[-1]["low"] = zone["high"]
+    r = evaluate(candles, cfg)
+    assert r["status"] == "LONG" and r["touched"]
+
+
+def test_swing_uses_latest_up_leg_not_the_older_bigger_top():
+    # 126k → 57.8k → 87.4k → 押し。フィボの起点は 57.8k、終点は 87.4k になるべき
+    closes = [126000, 110000, 90000, 70000, 60000, 58000, 65000, 75000, 87000, 82000, 78000, 74000]
+    r = evaluate(make_candles([100000] * 20 + closes, wick=0.0), SignalConfig())
+    assert (r["swing_low"], r["swing_high"]) == (58000, 87000)
+
+
 def test_no_zone_when_levels_are_far_apart():
     r = evaluate(pullback(81000), SignalConfig(confluence_pct=0.001))
     assert r["zone"] is None and r["status"] == "NONE"
