@@ -8,3 +8,5 @@ build/
 venv/
 token.json
 credentials.json
+data/signal_state.json
+.pytest_cache/

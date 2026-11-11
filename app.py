@@ -9,7 +9,7 @@ from datetime import datetime
 
 from flask import Flask, jsonify, render_template, request
 
-from config import AIRDROPS_FILE, UPDATES_FILE
+from config import AIRDROPS_FILE, SIGNAL_STATE_FILE, UPDATES_FILE
 from scheduler import start_scheduler
 from updater import run_daily_update
 
@@ -62,6 +62,12 @@ def api_airdrops():
 def api_updates():
     updates = _load_json(UPDATES_FILE, [])
     return jsonify(updates[:10])
+
+
+@app.route("/api/signals")
+def api_signals():
+    """各銘柄の直近のシグナル判定結果"""
+    return jsonify(_load_json(SIGNAL_STATE_FILE, {}))
 
 
 @app.route("/api/trigger-update", methods=["POST"])

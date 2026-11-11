@@ -179,3 +179,115 @@ def send_hot_alert(airdrop: dict) -> bool:
     except Exception as e:
         logger.error(f"ホットアラート送信失敗: {e}")
         return False
+
+
+# ---------------------------------------------------------------------------
+# 週足コンフルエンス・シグナル通知
+# ---------------------------------------------------------------------------
+
+_SIGNAL_STYLE = {
+    "LONG": ("🚀", "LONGシグナル", "#198754", "支持線が重なるゾーンに到達しました"),
+    "WATCH": ("👀", "ゾーン接近中", "#fd7e14", "下に行くならこの辺りで反発候補です"),
+    "BROKEN": ("⚠️", "ゾーン割れ", "#dc3545", "支持ゾーンを下抜け。ロングのシナリオは無効です"),
+}
+_SIGNAL_DEFAULT = ("📊", "現在の判定", "#6c757d", "現在シグナルは出ていません")
+
+
+def _usd(v: float) -> str:
+    return f"${v:,.0f}"
+
+
+def build_signal_email(result: dict) -> tuple[str, str, str]:
+    """Returns: (subject, html, plain)"""
+    from signals.engine import LEVEL_LABELS
+
+    symbol = result["symbol"]
+    status = result["status"]
+    emoji, title, color, lead = _SIGNAL_STYLE.get(status, _SIGNAL_DEFAULT)
+    zone = result.get("zone")
+    plan = result.get("plan")
+    in_zone = set(zone["levels"]) if zone else set()
+
+    subject = f"{emoji} [{symbol} {title}] {_usd(result['price'])}"
+    if zone:
+        subject += f" — 週足{zone['strength']}本コンフルエンス {_usd(zone['low'])}〜{_usd(zone['high'])}"
+
+    lines = [f"{symbol} {title}: {lead}", f"現在値: {_usd(result['price'])}"]
+    level_rows = ""
+    for key, value in sorted(result["levels"].items(), key=lambda kv: -kv[1]):
+        mark = "● ゾーン構成" if key in in_zone else "—"
+        lines.append(f"  {LEVEL_LABELS[key]}: {_usd(value)} {mark}")
+        level_rows += (
+            f'<tr><td style="padding:8px;border-bottom:1px solid #dee2e6;">{LEVEL_LABELS[key]}</td>'
+            f'<td style="padding:8px;border-bottom:1px solid #dee2e6;text-align:right;font-weight:bold;">{_usd(value)}</td>'
+            f'<td style="padding:8px;border-bottom:1px solid #dee2e6;color:#6c757d;">{mark}</td></tr>'
+        )
+
+    plan_html = ""
+    if plan:
+        entry_label = "エントリー (現在値)" if status == "LONG" else "エントリー候補 (ゾーン上限)"
+        rows = [(entry_label, _usd(plan["entry"])), ("損切り目安 (ゾーン割れ)", _usd(plan["stop"]))]
+        rows += [(f"利確目標: {t['label']}", f"{_usd(t['price'])} (RR {t['rr']:.1f})") for t in plan["targets"]]
+        lines.append("")
+        lines += [f"{k}: {v}" for k, v in rows]
+        plan_html = '<h3 style="margin:20px 0 8px;">トレードプラン (参考)</h3><table style="width:100%;border-collapse:collapse;">' + "".join(
+            f'<tr><td style="padding:8px;border-bottom:1px solid #dee2e6;">{k}</td>'
+            f'<td style="padding:8px;border-bottom:1px solid #dee2e6;text-align:right;font-weight:bold;">{v}</td></tr>'
+            for k, v in rows
+        ) + "</table>"
+
+    zone_html = ""
+    if zone:
+        zone_html = (
+            f'<p style="font-size:16px;margin:12px 0;">支持ゾーン: <strong>{_usd(zone["low"])} 〜 {_usd(zone["high"])}</strong>'
+            f' <span style="color:#6c757d;">(現在値から {zone["distance_pct"] * 100:+.1f}%)</span></p>'
+        )
+
+    disclaimer = "※ 機械的な条件判定による自動通知です。売買の推奨ではありません。投資は自己責任で。"
+    lines += ["", f"フィボ計算の起点: 安値 {_usd(result['swing_low'])} → 高値 {_usd(result['swing_high'])}", disclaimer]
+
+    html = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
+<body style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+  <div style="background:{color};color:white;padding:20px;border-radius:8px 8px 0 0;">
+    <h2 style="margin:0;">{emoji} {symbol} {title}</h2>
+    <p style="margin:6px 0 0;opacity:0.9;">{lead}</p>
+  </div>
+  <div style="background:white;padding:20px;border:1px solid #dee2e6;border-top:none;border-radius:0 0 8px 8px;">
+    <p style="font-size:22px;margin:0;">現在値 <strong>{_usd(result['price'])}</strong></p>
+    {zone_html}
+    <table style="width:100%;border-collapse:collapse;">{level_rows}</table>
+    {plan_html}
+    <p style="color:#6c757d;font-size:12px;margin-top:20px;">
+      フィボ計算の起点: 安値 {_usd(result['swing_low'])} → 高値 {_usd(result['swing_high'])}
+      (データ: {result.get('source', '-')} 週足)<br>{disclaimer}
+    </p>
+  </div>
+</body></html>"""
+    return subject, html, "\n".join(lines)
+
+
+def send_signal_alert(result: dict) -> bool:
+    if not GMAIL_SENDER or not GMAIL_APP_PASSWORD:
+        logger.warning("Gmail認証情報が未設定のためシグナル通知をスキップ (.envを確認してください)")
+        return False
+
+    subject, html, plain = build_signal_email(result)
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = GMAIL_SENDER
+    msg["To"] = GMAIL_RECIPIENT
+    msg.attach(MIMEText(plain, "plain", "utf-8"))
+    msg.attach(MIMEText(html, "html", "utf-8"))
+
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(GMAIL_SENDER, GMAIL_APP_PASSWORD)
+            server.sendmail(GMAIL_SENDER, GMAIL_RECIPIENT, msg.as_string())
+        logger.info(f"シグナル通知送信: {subject}")
+        return True
+    except smtplib.SMTPAuthenticationError:
+        logger.error("Gmail認証失敗。アプリパスワードを確認してください。")
+        return False
+    except Exception as e:
+        logger.error(f"シグナル通知送信失敗: {e}")
+        return False

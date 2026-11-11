@@ -1,0 +1,55 @@
+name: BTC週足シグナル監視
+
+# 15分ごとに判定し、状態が変わったときだけ Gmail 通知する。
+# 必要な Secrets: GMAIL_SENDER / GMAIL_APP_PASSWORD (任意: GMAIL_RECIPIENT)
+# ※ schedule はデフォルトブランチ上のワークフローでのみ動く。
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "シグナルが無くても現在の判定をメール送信 (疎通確認)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: signal-check
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.31.0 python-dotenv==1.0.0
+
+      # 「どの通知を送ったか」の記録を実行間で引き継ぐ (重複メール防止)
+      - uses: actions/cache/restore@v4
+        with:
+          path: data/signal_state.json
+          key: signal-state-${{ github.run_id }}
+          restore-keys: signal-state-
+
+      - name: シグナル判定
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT || secrets.GMAIL_SENDER }}
+          SIGNAL_SYMBOLS: ${{ vars.SIGNAL_SYMBOLS || 'BTC' }}
+          SIGNAL_SWING_LOW: ${{ vars.SIGNAL_SWING_LOW }}
+          SIGNAL_SWING_HIGH: ${{ vars.SIGNAL_SWING_HIGH }}
+        run: python signal_checker.py ${{ inputs.force && '--force' || '' }}
+
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: data/signal_state.json
+          key: signal-state-${{ github.run_id }}

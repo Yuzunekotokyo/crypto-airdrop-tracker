@@ -7,7 +7,8 @@ Flaskアプリと一緒に起動する。
 import logging
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
-from config import UPDATE_HOUR, UPDATE_MINUTE
+from apscheduler.triggers.interval import IntervalTrigger
+from config import SIGNAL_INTERVAL_MIN, UPDATE_HOUR, UPDATE_MINUTE
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -35,8 +36,19 @@ def start_scheduler():
         id="daily_update",
         replace_existing=True,
     )
+    from signal_checker import run_signal_check
+
+    sched.add_job(
+        run_signal_check,
+        trigger=IntervalTrigger(minutes=SIGNAL_INTERVAL_MIN),
+        id="signal_check",
+        replace_existing=True,
+        max_instances=1,
+        coalesce=True,
+    )
     sched.start()
     logger.info(f"スケジューラ起動: 毎日 {UPDATE_HOUR:02d}:{UPDATE_MINUTE:02d} JST に更新実行")
+    logger.info(f"シグナル監視: {SIGNAL_INTERVAL_MIN}分ごとにチェック")
     return sched
 
 
