@@ -78,3 +78,29 @@ def fetch_weekly_candles(base: str = "BTC", limit: int = 260) -> tuple[list[dict
             errors.append(f"{name}: {e}")
             logger.warning(f"{name} からの週足取得に失敗: {e}")
     raise RuntimeError("週足データを取得できませんでした — " + " / ".join(errors))
+
+
+def fetch_hourly_candles(base: str = "BTC", limit: int = 720) -> list[dict]:
+    """1時間足 (古い順)。シグナルが「いつから」続いているかの逆算用。"""
+    base = base.upper()
+    try:
+        r = requests.get(
+            "https://data-api.binance.vision/api/v3/klines",
+            params={"symbol": f"{base}USDT", "interval": "1h", "limit": min(limit, 1000)},
+            headers=HEADERS,
+            timeout=TIMEOUT,
+        )
+        r.raise_for_status()
+        return [_candle(k[0] // 1000, k[1], k[2], k[3], k[4]) for k in r.json()]
+    except Exception as e:
+        logger.warning(f"binance の1時間足取得に失敗、Kraken へ: {e}")
+    pair = f"{'XBT' if base == 'BTC' else base}USD"
+    r = requests.get(
+        "https://api.kraken.com/0/public/OHLC", params={"pair": pair, "interval": 60}, headers=HEADERS, timeout=TIMEOUT
+    )
+    r.raise_for_status()
+    body = r.json()
+    if body.get("error"):
+        raise RuntimeError(f"Kraken error: {body['error']}")
+    rows = next(v for k, v in body["result"].items() if k != "last")
+    return [_candle(k[0], k[1], k[2], k[3], k[4]) for k in rows][-limit:]

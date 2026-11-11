@@ -140,3 +140,42 @@ def evaluate(candles: list[dict], cfg: SignalConfig | None = None) -> dict:
                 targets.append({"label": label, "price": tp, "rr": (tp - entry) / risk})
         result["plan"] = {"entry": entry, "stop": stop, "targets": targets}
     return result
+
+
+WEEK = 7 * 24 * 3600
+
+
+def status_since(weekly: list[dict], hourly: list[dict], cfg: SignalConfig | None = None) -> dict:
+    """
+    現在の status がいつから続いているかを、1時間足で過去を再現して逆算する。
+    各時刻について「その時点で見えていた週足」を組み立て直し、evaluate にかける。
+    Returns: {"since_ts": 秒 or None, "hours": 継続時間, "previous": 直前のstatus or None}
+      since_ts=None は「1時間足で遡れる範囲よりも前から同じ状態」。
+    """
+    current = evaluate(weekly, cfg)["status"]
+    since_ts, previous = None, None
+    # 新しい方から遡り、status が変わった最初の地点を探す
+    for k in range(len(hourly) - 1, -1, -1):
+        t = hourly[k]["ts"]
+        past = [w for w in weekly if w["ts"] + WEEK <= t]  # その時点で確定済みの週足
+        week_start = weekly[len(past)]["ts"] if len(past) < len(weekly) else None
+        if week_start is None or len(past) < 30:
+            break
+        hours = [h for h in hourly[: k + 1] if h["ts"] >= week_start]
+        if not hours or hours[0]["ts"] > week_start:
+            break  # その週の頭まで1時間足が無い = これ以上は正確に再現できない
+        forming = {
+            "ts": week_start,
+            "open": hours[0]["open"],
+            "high": max(h["high"] for h in hours),
+            "low": min(h["low"] for h in hours),
+            "close": hours[-1]["close"],
+        }
+        status = evaluate(past + [forming], cfg)["status"]
+        if status != current:
+            previous = status
+            break
+        since_ts = t
+    if previous is None:
+        return {"since_ts": None, "hours": None, "previous": None}
+    return {"since_ts": since_ts, "hours": (hourly[-1]["ts"] - since_ts) / 3600 + 1, "previous": previous}

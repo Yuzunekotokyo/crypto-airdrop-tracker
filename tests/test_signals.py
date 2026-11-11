@@ -5,7 +5,7 @@ import pytest
 import config
 import signal_checker
 from notifier.gmail import build_signal_email
-from signals.engine import SignalConfig, evaluate, fib, kijun, sma
+from signals.engine import WEEK, SignalConfig, evaluate, fib, kijun, sma, status_since
 
 
 def make_candles(closes, wick=0.01):
@@ -56,6 +56,20 @@ def test_swing_uses_latest_up_leg_not_the_older_bigger_top():
     closes = [126000, 110000, 90000, 70000, 60000, 58000, 65000, 75000, 87000, 82000, 78000, 74000]
     r = evaluate(make_candles([100000] * 20 + closes, wick=0.0), SignalConfig())
     assert (r["swing_low"], r["swing_high"]) == (58000, 87000)
+
+
+def test_status_since_finds_the_hour_the_signal_flipped():
+    cfg = SignalConfig(confluence_pct=0.08)
+    zone = evaluate(pullback(81000), cfg)["zone"]
+    far, hit = zone["high"] * 1.02, (zone["high"] + zone["low"]) / 2
+    weekly = pullback(hit)
+    start = weekly[-1]["ts"]
+    prices = [far] * 10 + [hit] * 5  # 今週10時間は接近中、その後5時間はゾーン内
+    hourly = [{"ts": start + i * 3600, "open": p, "high": p, "low": p, "close": p} for i, p in enumerate(prices)]
+    weekly[-1].update(high=far, low=hit)
+    r = status_since(weekly, hourly, cfg)
+    assert r == {"since_ts": start + 10 * 3600, "hours": 5.0, "previous": "WATCH"}
+    assert WEEK == 604800
 
 
 def test_no_zone_when_levels_are_far_apart():

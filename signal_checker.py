@@ -13,9 +13,9 @@ import sys
 from datetime import datetime, timezone
 
 import config
-from fetchers.market import fetch_weekly_candles
+from fetchers.market import fetch_hourly_candles, fetch_weekly_candles
 from notifier.gmail import send_signal_alert
-from signals.engine import SignalConfig, evaluate
+from signals.engine import SignalConfig, evaluate, status_since
 
 logger = logging.getLogger(__name__)
 
@@ -92,6 +92,11 @@ def run_signal_check(dry_run: bool = False, force: bool = False) -> dict:
             + (f" / ゾーン ${zone['low']:,.0f}–${zone['high']:,.0f} ({zone['strength']}本)" if zone else " / ゾーンなし")
         )
         if dry_run:
+            # 問い合わせ用: 今の状態がいつから続いているかも添える (通知の判定には使わない)
+            try:
+                result["since"] = status_since(candles, fetch_hourly_candles(symbol), _config_for(i))
+            except Exception as e:
+                logger.warning(f"{symbol}: 継続時間の逆算に失敗 — {e}")
             continue
 
         prev = state.get(symbol, {})
