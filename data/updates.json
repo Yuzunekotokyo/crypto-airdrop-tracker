@@ -1,1 +1,89 @@
-[]
+[
+  {
+    "timestamp": "2026-11-11T00:13:23.672560+00:00",
+    "date": "2026-11-11",
+    "time_jst": "2026年11月11日 09:13 JST",
+    "total_airdrops": 10,
+    "added_count": 2,
+    "removed_count": 0,
+    "changed_count": 6,
+    "hot_count": 6,
+    "added_names": [
+      "Saturn (STRN)",
+      "Predict.fun (PREDICT)"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "Aster (ASTER) Stage 6",
+        "changes": [
+          "期限: 2026-11-28 → 2026-12-04"
+        ]
+      },
+      {
+        "name": "Fables (FABLES)",
+        "changes": [
+          "説明を更新"
+        ]
+      },
+      {
+        "name": "Polymarket",
+        "changes": [
+          "説明を更新"
+        ]
+      },
+      {
+        "name": "Doppler Finance (XDP)",
+        "changes": [
+          "説明を更新"
+        ]
+      },
+      {
+        "name": "StandX (DUSD)",
+        "changes": [
+          "説明を更新"
+        ]
+      },
+      {
+        "name": "MetaMask (MASK)",
+        "changes": [
+          "説明を更新"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "notes": [
+      "🆕 Saturn (STRN): Season1/2 のエアドロップ登録が11/9開始、11/16 9:00 EST (23:00 JST) 締切。TGEは2026年Q4予定、Season2に供給の最大5%。登録URLが二次情報で不一致のため、必ず公式Xのリンクから。",
+      "🆕 Predict.fun (PREDICT): Binance上場延期に伴いTGE・Season1クレームが延期。即時35% / 12か月ベスティング100% の2択。",
+      "✏️ Aster Stage 6: クレーム終了日を 12/4 12:00 UTC に修正 (複数ソースで一致。11/28は外れ値)。",
+      "✏️ StandX: トークンローンチ自体は中止、DUSDクレームは12/31 08:00 UTC まで。",
+      "⏰ 期限が近い順: Saturn登録 11/16 → Fables 11/20 → Doppler 11/28 → Aster 12/4。",
+      "終了: infiniFi (INFI) の登録は11/10、KOR Protocol のクレームは11/9に締切済み。"
+    ],
+    "email_sent": false
+  },
+  {
+    "timestamp": "2026-11-10T00:12:37.295542+00:00",
+    "date": "2026-11-10",
+    "time_jst": "2026年11月10日 (JST)",
+    "total_airdrops": 8,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Aster (ASTER) Stage 6",
+      "Fables (FABLES)",
+      "OpenSea (SEA)",
+      "Polymarket",
+      "Doppler Finance (XDP)",
+      "StandX (DUSD)",
+      "Dango (DNG)",
+      "MetaMask (MASK)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

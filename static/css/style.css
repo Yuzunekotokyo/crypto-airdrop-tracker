@@ -492,3 +492,7 @@ main { padding: 28px 0 60px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* 更新バナー内の注記リスト */
+.update-notes { margin: 8px 0 0; padding-left: 1.2em; font-size: 0.85rem; line-height: 1.6; }
+.update-notes li { margin: 2px 0; }

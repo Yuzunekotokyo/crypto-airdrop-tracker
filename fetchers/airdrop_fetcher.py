@@ -52,118 +52,67 @@ def _scrape_airdrops_io() -> list[dict]:
         return []
 
 
+# その日の更新で特筆すべき点 (更新バナー最上部に表示)
+DAILY_NOTES = [
+    "🆕 Saturn (STRN): Season1/2 のエアドロップ登録が11/9開始、11/16 9:00 EST (23:00 JST) 締切。TGEは2026年Q4予定、Season2に供給の最大5%。登録URLが二次情報で不一致のため、必ず公式Xのリンクから。",
+    "🆕 Predict.fun (PREDICT): Binance上場延期に伴いTGE・Season1クレームが延期。即時35% / 12か月ベスティング100% の2択。",
+    "✏️ Aster Stage 6: クレーム終了日を 12/4 12:00 UTC に修正 (複数ソースで一致。11/28は外れ値)。",
+    "✏️ StandX: トークンローンチ自体は中止、DUSDクレームは12/31 08:00 UTC まで。",
+    "⏰ 期限が近い順: Saturn登録 11/16 → Fables 11/20 → Doppler 11/28 → Aster 12/4。",
+    "終了: infiniFi (INFI) の登録は11/10、KOR Protocol のクレームは11/9に締切済み。",
+]
+
+
 def _build_seed_airdrops() -> list[dict]:
-    """手動管理の注目エアドロップシードデータ (定期的に更新)"""
-    today = datetime.utcnow()
+    """手動管理の注目エアドロップ (2026-11-11 時点の検索結果に基づく)。
+    ポイント制は必ずしもトークン配布を保証しない。公式サイトで必ず確認すること。"""
+    d = "2026-11-11"
+
+    def mk(id_, name, symbol, cat, typ, status, diff, val, desc, tasks, end, url, hot):
+        return {
+            "id": id_, "name": name, "symbol": symbol, "category": cat, "type": typ,
+            "status": status, "difficulty": diff, "estimated_value_usd": val,
+            "description": desc, "tasks": tasks, "end_date": end, "logo": "",
+            "url": url, "is_hot": hot, "added_date": d, "source": "curated",
+        }
+
     return [
-        {
-            "id": "layerzero-zro",
-            "name": "LayerZero (ZRO)",
-            "symbol": "ZRO",
-            "category": "インフラ",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "medium",
-            "estimated_value_usd": 500,
-            "description": "クロスチェーンメッセージングプロトコル。ブリッジ・DeFi利用者向けエアドロップ。",
-            "tasks": ["Stargate経由でブリッジを実行", "複数チェーンでのトランザクション", "LayerZero対応dApps利用"],
-            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
-            "url": "https://layerzero.network/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "scroll-scr",
-            "name": "Scroll (SCR)",
-            "symbol": "SCR",
-            "category": "Layer2",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 300,
-            "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。",
-            "tasks": ["ScrollネットワークへETHブリッジ", "Scroll上でのDeFi利用", "複数週にわたるアクティビティ"],
-            "end_date": (today + timedelta(days=90)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
-            "url": "https://scroll.io/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "zksync-era",
-            "name": "zkSync Era",
-            "symbol": "ZK",
-            "category": "Layer2",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 200,
-            "description": "Matter Labsが開発するZK-Rollup。エコシステムが急拡大中。",
-            "tasks": ["Era上でのスワップ", "Syncswap/Mute利用", "zkSync公式ブリッジ利用"],
-            "end_date": (today + timedelta(days=45)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/38043/small/ZKTokenBlack.png",
-            "url": "https://zksync.io/",
-            "is_hot": False,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "hyperliquid-hype",
-            "name": "Hyperliquid (HYPE)",
-            "symbol": "HYPE",
-            "category": "DeFi/DEX",
-            "type": "取引所トークン",
-            "status": "active",
-            "difficulty": "medium",
-            "estimated_value_usd": 1000,
-            "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。",
-            "tasks": ["Hyperliquid上での先物取引", "流動性提供", "紹介プログラム参加"],
-            "end_date": (today + timedelta(days=30)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
-            "url": "https://hyperliquid.xyz/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "eigenlayer-eigen",
-            "name": "EigenLayer (EIGEN)",
-            "symbol": "EIGEN",
-            "category": "インフラ",
-            "type": "リステーキング",
-            "status": "active",
-            "difficulty": "hard",
-            "estimated_value_usd": 800,
-            "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。",
-            "tasks": ["ETHをリステーキング", "LST (stETH等) をデポジット", "AVSへの参加"],
-            "end_date": (today + timedelta(days=120)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/33751/small/eigen.png",
-            "url": "https://eigenlayer.xyz/",
-            "is_hot": False,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "movement-move",
-            "name": "Movement (MOVE)",
-            "symbol": "MOVE",
-            "category": "Layer2",
-            "type": "新規上場",
-            "status": "upcoming",
-            "difficulty": "easy",
-            "estimated_value_usd": 400,
-            "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ予定。",
-            "tasks": ["テストネット参加", "Discordコミュニティ参加", "テストトランザクション実行"],
-            "end_date": (today + timedelta(days=20)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/39619/small/MOVE_color.png",
-            "url": "https://movementlabs.xyz/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
+        mk("saturn-strn", "Saturn (STRN)", "STRN", "DeFi", "エアドロップ登録受付中", "active", "easy", 0,
+           "Season1/Season2のエアドロップ登録が11/9に開始、11/16 9:00 EST(23:00 JST)締切。TGEは2026年Q4予定で、Season2参加者に総供給の最大5%。"
+           "登録=配布保証ではない(財団明言)。Discordアカウントは作成5日以上が条件との情報あり。登録URLが二次情報で食い違うため公式Xのリンクのみ使用。",
+           ["公式Xで案内される登録ページでウォレット/Discordを登録(11/16まで)", "Season2ポイントの積み増しは登録締切後も継続"],
+           "2026-11-16", "", True),
+        mk("aster-stage6", "Aster (ASTER) Stage 6", "ASTER", "DeFi/DEX", "クレーム受付中", "active", "easy", 0,
+           "Stage6「Convergence」で6,400万ASTER(総供給の0.8%)を配布。100%ベスト済みクレームは11/4 12:00 UTC〜12/4 12:00 UTC。"
+           "Stage6で10,000ポイント以上、かつ4/20〜5/2に6か月ベスティングを選択した参加者が対象。",
+           ["対象か公式ページで確認", "12/4 12:00 UTCまでにクレーム"], "2026-12-04", "https://www.asterdex.com/", True),
+        mk("fables", "Fables (FABLES)", "FABLES", "DeFi/DEX", "ポイントクレーム", "active", "easy", 0,
+           "Robinhood Chain上のDEX(Uniswap v4 Hook)。ポイントクレーム期限は11/20 23:59 UTC。"
+           "10/19 02:00 UTCまでにクレームオプションを保存済みのウォレットのみ対象(新規参加不可)。",
+           ["fables.fi でポイントをクレーム(11/20まで)"], "2026-11-20", "https://fables.fi/", True),
+        mk("predict-fun", "Predict.fun (PREDICT)", "PREDICT", "予測市場", "TGE延期・クレーム待ち", "upcoming", "medium", 0,
+           "Binance Alpha/現物上場の延期に合わせ、TGEとSeason1クレームが延期(新日程未定)。即時クレームは割当の35%、12か月ベスティングなら100%。"
+           "選択フォーム締切は11/26 09:00 UTCとの報道あり(単一ソース・要公式確認)。",
+           ["公式Xで新しいクレーム日時を確認", "35%即時 / 100%ベスティングの選択を期限内に提出"],
+           "未定", "https://predict.fun/", True),
+        mk("opensea-sea", "OpenSea (SEA)", "SEA", "NFT", "ポイント/将来配布", "upcoming", "medium", 0,
+           "SEAトークンは公式に確認済みで供給の50%をコミュニティへ。ただしローンチは複数回延期され日程未定。",
+           ["OpenSeaでの取引・利用"], "未定", "https://opensea.io/", True),
+        mk("polymarket", "Polymarket", "POLY", "予測市場", "未発表", "upcoming", "medium", 0,
+           "CMOがPOLYトークンとエアドロップを確認済みだが、時期・条件は未公開(新情報なし)。",
+           ["Polymarketでの取引を継続"], "未定", "https://polymarket.com/", True),
+        mk("doppler-xdp", "Doppler Finance (XDP)", "XDP", "DeFi", "ジェネシスエアドロップ", "active", "easy", 0,
+           "Genesis Airdrop(総供給の1%、ロックなし)は11/28 12:00 UTC終了、未請求分は失効。2026/7/30以前にBaseアドレスを登録済みのユーザーのみ対象(新規参加不可)。",
+           ["対象アドレスでクレーム"], "2026-11-28", "", False),
+        mk("standx-dusd", "StandX (DUSD)", "DUSD", "DeFi", "クレーム受付中", "active", "easy", 0,
+           "11/2からDUSDクレーム開放、12/31 08:00 UTCまで。トークンローンチ自体は中止と報道。チェッカー/クレームは公式サイトのみ(偽サイト注意)。",
+           ["公式サイトでクレーム"], "2026-12-31", "", False),
+        mk("dango-dng", "Dango (DNG)", "DNG", "DeFi", "ポイントプログラム", "upcoming", "medium", 0,
+           "ポイントプログラム実施中、TGEは2026年Q4予定(宣伝系ソースのため要注意)。",
+           ["ポイントプログラムに参加"], "未定", "", False),
+        mk("metamask-mask", "MetaMask (MASK)", "MASK", "ウォレット", "未確定", "upcoming", "medium", 0,
+           "情報が錯綜。Rewards Season1は終了済みで「独自トークンの予定なし」とする報道と、11/26クレーム期限とする記載が混在。期待値は低めに見るべき。",
+           ["MetaMaskの利用(Swaps/Perps等)"], "未定", "https://metamask.io/", False),
     ]
 
 
@@ -202,6 +151,7 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
             seen_names.add(s["name"].lower())
 
     # 注目度でソート: is_hot → estimated_value_usd
+    # 同順位は手動キュレーションの並び (期限が近い/注目度順) を維持
     curated.sort(key=lambda x: (not x.get("is_hot"), -x.get("estimated_value_usd", 0)))
 
     return curated, new_items

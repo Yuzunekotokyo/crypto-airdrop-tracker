@@ -8,10 +8,10 @@
 import json
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR
-from fetchers.airdrop_fetcher import fetch_all_airdrops
+from fetchers.airdrop_fetcher import DAILY_NOTES, fetch_all_airdrops
 from fetchers.coingecko import get_trending_coins
 from notifier.gmail import send_daily_report, send_hot_alert
 
@@ -51,6 +51,12 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
                 diffs.append(
                     f"推定価値: ${old_a.get('estimated_value_usd',0):,} → ${new_a.get('estimated_value_usd',0):,}"
                 )
+            if old_a.get("end_date") != new_a.get("end_date"):
+                diffs.append(f"期限: {old_a.get('end_date')} → {new_a.get('end_date')}")
+            if bool(old_a.get("is_hot")) != bool(new_a.get("is_hot")):
+                diffs.append("ホット指定" if new_a.get("is_hot") else "ホット解除")
+            if old_a.get("description") != new_a.get("description") and not diffs:
+                diffs.append("説明を更新")
             if diffs:
                 changed.append({"name": new_a["name"], "changes": diffs})
 
@@ -63,10 +69,15 @@ def run_daily_update(force_email: bool = False) -> dict:
     logger.info(f"=== 日次更新開始 {now.isoformat()} ===")
 
     old_airdrops = _load_json(AIRDROPS_FILE, [])
+    # 既存案件の added_date は初出日のまま維持する
+    first_seen = {a["id"]: a.get("added_date") for a in old_airdrops}
 
     # データ取得
     new_airdrops, scraped_new = fetch_all_airdrops()
     trending = get_trending_coins()
+    for a in new_airdrops:
+        if first_seen.get(a["id"]):
+            a["added_date"] = first_seen[a["id"]]
 
     # 変更検出
     diff = _detect_changes(old_airdrops, new_airdrops)
@@ -83,7 +94,7 @@ def run_daily_update(force_email: bool = False) -> dict:
     summary = {
         "timestamp": now.isoformat(),
         "date": now.strftime("%Y-%m-%d"),
-        "time_jst": (now.astimezone()).strftime("%Y年%m月%d日 %H:%M"),
+        "time_jst": now.astimezone(timezone(timedelta(hours=9))).strftime("%Y年%m月%d日 %H:%M JST"),
         "total_airdrops": len(new_airdrops),
         "added_count": len(diff["added"]),
         "removed_count": len(diff["removed"]),
@@ -93,6 +104,7 @@ def run_daily_update(force_email: bool = False) -> dict:
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
+        "notes": list(DAILY_NOTES),
         "email_sent": False,
     }
 
