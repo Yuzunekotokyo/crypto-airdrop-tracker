@@ -1,5 +1,61 @@
 [
   {
+    "timestamp": "2026-11-12T00:13:27.909342+00:00",
+    "date": "2026-11-12",
+    "time_jst": "2026年11月12日 09:13 JST",
+    "total_airdrops": 13,
+    "added_count": 3,
+    "removed_count": 0,
+    "changed_count": 4,
+    "hot_count": 6,
+    "added_names": [
+      "Perpl (Purple Summer)",
+      "infiniFi (INFI)",
+      "Midnight (NIGHT) Glacier Drop"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "Saturn (STRN)",
+        "changes": [
+          "説明を更新"
+        ]
+      },
+      {
+        "name": "Fables (FABLES)",
+        "changes": [
+          "説明を更新"
+        ]
+      },
+      {
+        "name": "Predict.fun (PREDICT)",
+        "changes": [
+          "期限: 未定 → 2026-11-26"
+        ]
+      },
+      {
+        "name": "MetaMask (MASK)",
+        "changes": [
+          "説明を更新"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "notes": [
+      "📌 本日の結論: 新規の大型・高期待値エアドロップの発表は確認できず。最優先は引き続き Saturn (STRN) 登録 (締切 11/16 23:00 JST、残り4日)。",
+      "🆕 Perpl (Monad): Purple Summer の mPoints を3週間延長 (週5万mPoints、計15万追加+最終トーナメント)。報酬はMON建てで終了後1週間以内に配布との情報。今から参加できる数少ない案件。",
+      "🆕 infiniFi (INFI): Season1/2 登録は11/10 15:30 UTCで締切済み。TGEはQ4予定のまま日付未発表 (残工程: トークン文書→対象者公開→最終スナップショット→TGE)。Season3ポイントは継続中。",
+      "🆕 Midnight (NIGHT): Glacier Drop の解凍(thaw)期間が12/4終了、その後90日間の猶予期間でポータル閉鎖。既存の請求者は未償還分を確認。",
+      "✏️ Saturn: 11/16締切を2つ目のソースでも確認。Season2ポイントはTGEまたは12/8の早い方でスナップショット。",
+      "✏️ Predict.fun: 35%即時/100%ステーキングの選択フォーム締切 11/26 09:00 UTC (18:00 JST) を複数ソースで確認。TGE・クレーム新日程は未発表。",
+      "✏️ MetaMask: 「オプトイン締切 11/12・当選者は11/26 17:00 CETまでにクレーム開始 (KYC/税務確認あり)」との記載は1ソースのみ。公式サポートでは未確認のため、アプリ内 Rewards タブで要確認。",
+      "ℹ️ Binance Alpha: システムアップグレード補償として、11/6 23:59 UTC時点でAlphaポイント200以上のユーザーに計35万ドルを自動配布 (申請不要・配布日未定)。",
+      "⏰ 期限が近い順: Saturn登録 11/16 → Perpl最終スナップショット 11/18頃 → Fables 11/20 → Predict.fun選択 11/26 → Doppler 11/28 → Aster / Midnight解凍 12/4 → StandX 12/31。",
+      "⚠️ 本日は airdrops.io / cryptoticker.io に直接アクセスできず、検索結果の二次情報に基づく更新。日付は必ず公式チャネルで確認を。"
+    ],
+    "email_sent": false
+  },
+  {
     "timestamp": "2026-11-11T00:13:23.672560+00:00",
     "date": "2026-11-11",
     "time_jst": "2026年11月11日 09:13 JST",

@@ -8,10 +8,10 @@
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "Season1/Season2のエアドロップ登録が11/9に開始、11/16 9:00 EST(23:00 JST)締切。TGEは2026年Q4予定で、Season2参加者に総供給の最大5%。登録=配布保証ではない(財団明言)。Discordアカウントは作成5日以上が条件との情報あり。登録URLが二次情報で食い違うため公式Xのリンクのみ使用。",
+    "description": "Season1/Season2のエアドロップ登録は11/16 9:00 EST(23:00 JST)締切(複数ソースで確認)。TGEは2026年Q4予定で、Season2参加者に総供給の最大5%。Season2ポイントはTGEまたは12/8の早い方でスナップショット。登録=配布保証ではない(財団明言)。クレームはTGE時に別途開始。登録リンクは公式X(@Saturn_credit)のみ使用。",
     "tasks": [
       "公式Xで案内される登録ページでウォレット/Discordを登録(11/16まで)",
-      "Season2ポイントの積み増しは登録締切後も継続"
+      "Season2ポイントの積み増しはスナップショット(TGEまたは12/8)まで継続"
     ],
     "end_date": "2026-11-16",
     "logo": "",
@@ -50,7 +50,7 @@
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "Robinhood Chain上のDEX(Uniswap v4 Hook)。ポイントクレーム期限は11/20 23:59 UTC。10/19 02:00 UTCまでにクレームオプションを保存済みのウォレットのみ対象(新規参加不可)。",
+    "description": "Robinhood Chain上のDEX(Uniswap v4 Hook)。ポイントクレーム期限は11/20 23:59 UTC。PROLOGUEの償還も同日まで。10/19 02:00 UTCまでにクレームオプションを保存済みのウォレットのみ対象(新規参加不可)。",
     "tasks": [
       "fables.fi でポイントをクレーム(11/20まで)"
     ],
@@ -66,16 +66,16 @@
     "name": "Predict.fun (PREDICT)",
     "symbol": "PREDICT",
     "category": "予測市場",
-    "type": "TGE延期・クレーム待ち",
+    "type": "TGE延期・配布方法の選択受付",
     "status": "upcoming",
     "difficulty": "medium",
     "estimated_value_usd": 0,
-    "description": "Binance Alpha/現物上場の延期に合わせ、TGEとSeason1クレームが延期(新日程未定)。即時クレームは割当の35%、12か月ベスティングなら100%。選択フォーム締切は11/26 09:00 UTCとの報道あり(単一ソース・要公式確認)。",
+    "description": "Binance Alpha/現物上場の延期に合わせ、TGEとSeason1クレームが延期(新日程は未発表、公式Xで告知予定)。即時受取は割当の35%、1年ステーキングなら100%。選択フォームの締切は11/26 09:00 UTC(18:00 JST)と複数ソースが報道。期限欄はこのフォーム締切で、TGE日ではない。",
     "tasks": [
-      "公式Xで新しいクレーム日時を確認",
-      "35%即時 / 100%ベスティングの選択を期限内に提出"
+      "35%即時 / 100%(1年)の選択フォームを11/26 09:00 UTCまでに提出",
+      "公式Xで新しいTGE・クレーム日時を確認"
     ],
-    "end_date": "未定",
+    "end_date": "2026-11-26",
     "logo": "",
     "url": "https://predict.fun/",
     "is_hot": true,
@@ -191,8 +191,9 @@
     "status": "upcoming",
     "difficulty": "medium",
     "estimated_value_usd": 0,
-    "description": "情報が錯綜。Rewards Season1は終了済みで「独自トークンの予定なし」とする報道と、11/26クレーム期限とする記載が混在。期待値は低めに見るべき。",
+    "description": "情報が錯綜。Rewards Season1は終了済み。一部カレンダーに「オプトイン締切11/12、当選者は11/26 17:00 CETまでにクレーム開始(KYC・税務確認あり)」との記載があるが、公式サポートページでは確認できず(単一ソース)。MASKトークン自体は未発表。期待値は低めに見るべき。",
     "tasks": [
+      "MetaMaskアプリの Rewards タブで参加中キャンペーンの期限を確認",
       "MetaMaskの利用(Swaps/Perps等)"
     ],
     "end_date": "未定",
@@ -200,6 +201,69 @@
     "url": "https://metamask.io/",
     "is_hot": false,
     "added_date": "2026-11-10",
+    "source": "curated"
+  },
+  {
+    "id": "perpl-monad",
+    "name": "Perpl (Purple Summer)",
+    "symbol": "MON",
+    "category": "DeFi/DEX",
+    "type": "取引ポイント(MON報酬)",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Monad上のPerp DEX。7/8開始の16週キャンペーン「Purple Summer」のmPointsを3週間延長(週5万mPoints、計15万追加+最終トーナメント)。スナップショットは毎週水曜16:00 UTC、最終は11/18前後との情報。報酬はMON建てでキャンペーン終了後1週間以内に配布。延長分の原資は約15万ドル規模と小さめ。取引損失リスクあり。",
+    "tasks": [
+      "Perplでオーガニックな取引を行いmPointsを獲得",
+      "公式ブログ/Discordで最終スナップショット日を確認"
+    ],
+    "end_date": "2026-11-18",
+    "logo": "",
+    "url": "https://perpl.xyz/",
+    "is_hot": false,
+    "added_date": "2026-11-12",
+    "source": "curated"
+  },
+  {
+    "id": "infinifi-infi",
+    "name": "infiniFi (INFI)",
+    "symbol": "INFI",
+    "category": "DeFi",
+    "type": "TGE待ち(登録締切済)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Season1/2のエアドロップ登録は11/10 15:30 UTCで締切済み(延長なし)、配布は登録済みウォレットのみとの情報。TGEは2026年Q4目標で日付未発表。創業者が挙げた残工程はトークン文書→対象者公開→最終スナップショット→TGE。Season3ポイントは継続中。",
+    "tasks": [
+      "登録済みの場合: 公式Xで対象者公開・TGE日を待つ",
+      "未登録の場合: Season3ポイント(預入)が次回配布の対象になるか公式発表を確認"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "",
+    "is_hot": false,
+    "added_date": "2026-11-12",
+    "source": "curated"
+  },
+  {
+    "id": "midnight-night",
+    "name": "Midnight (NIGHT) Glacier Drop",
+    "symbol": "NIGHT",
+    "category": "L1/プライバシー",
+    "type": "償還(解凍)期間",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Glacier Dropの請求自体は2025年10月に終了済み(新規参加不可)。割当は360日かけて4回に分けて解凍され、解凍期間は12/4に終了。その後90日間の猶予期間(〜2027年3月初旬)でポータルが閉鎖されるため、請求済みの人は未償還トランシェを要確認。",
+    "tasks": [
+      "公式ポータルで解凍済みNIGHTを償還",
+      "猶予期間終了(2027年3月初旬)までに全トランシェを回収"
+    ],
+    "end_date": "2026-12-04",
+    "logo": "",
+    "url": "https://midnight.network/",
+    "is_hot": false,
+    "added_date": "2026-11-12",
     "source": "curated"
   }
 ]
