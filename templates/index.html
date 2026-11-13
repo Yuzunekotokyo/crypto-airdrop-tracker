@@ -8,14 +8,17 @@
 </head>
 <body>
 
-<!-- ===== 最新更新バナー ===== -->
+<!-- ===== 最新更新バナー (UPDATE) ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
     <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
-      <span class="update-time">{{ latest_update.time_jst }}</span>
+      <span class="update-badge">🔄 UPDATE</span>
+      <span class="update-time" data-date="{{ latest_update.date }}">{{ latest_update.time_jst }}</span>
     </div>
+    {% if latest_update.headline %}
+    <p class="update-headline">{{ latest_update.headline }}</p>
+    {% endif %}
     <div class="update-stats">
       <span class="stat-chip stat-total">
         📋 計 <strong>{{ latest_update.total_airdrops }}</strong> 件
@@ -33,17 +36,60 @@
         ✏️ 変更 <strong>{{ latest_update.changed_count }}</strong> 件
       </span>
       {% endif %}
+      {% if latest_update.removed_count > 0 %}
+      <span class="stat-chip stat-removed">
+        🗑 削除 <strong>{{ latest_update.removed_count }}</strong> 件
+      </span>
+      {% endif %}
       {% if latest_update.email_sent %}
       <span class="stat-chip stat-email">
         📧 メール送信済
       </span>
       {% endif %}
     </div>
+    {% if latest_update.highlights %}
+    <div class="update-block">
+      <p class="update-block-title">今回書き換えた点</p>
+      <ul class="update-highlights">
+        {% for h in latest_update.highlights %}
+        <li>{{ h }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% if latest_update.deadlines %}
+    <div class="update-block">
+      <p class="update-block-title">直近の締切・イベント</p>
+      <div class="deadline-strip">
+        {% for d in latest_update.deadlines %}
+        <span class="deadline-chip"><strong>{{ d.date }}</strong> {{ d.label }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% if latest_update.changes %}
+    <div class="update-block">
+      <p class="update-block-title">変更された案件</p>
+      <ul class="update-highlights">
+        {% for c in latest_update.changes %}
+        <li><strong>{{ c.name }}</strong> — {{ c.changes | join(' / ') }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
     {% if latest_update.added_names %}
     <div class="update-new-items">
       <strong>新規追加:</strong>
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if latest_update.removed_names %}
+    <div class="update-new-items">
+      <strong>削除:</strong>
+      {% for name in latest_update.removed_names %}
+      <span class="removed-tag">{{ name }}</span>
       {% endfor %}
     </div>
     {% endif %}
@@ -54,7 +100,7 @@
     </div>
     {% endif %}
   </div>
-  <button class="banner-close" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
+  <button class="banner-close" aria-label="閉じる" onclick="document.getElementById('update-banner').style.display='none'">✕</button>
 </div>
 {% endif %}
 
@@ -81,7 +127,8 @@
       <div class="filter-buttons" id="status-filter">
         <button class="filter-btn active" data-filter="all" onclick="filterAirdrops('status','all',this)">すべて</button>
         <button class="filter-btn" data-filter="active" onclick="filterAirdrops('status','active',this)">アクティブ</button>
-        <button class="filter-btn" data-filter="upcoming" onclick="filterAirdrops('status','upcoming',this)">近日開始</button>
+        <button class="filter-btn" data-filter="upcoming" onclick="filterAirdrops('status','upcoming',this)">近日/TGE待ち</button>
+        <button class="filter-btn" data-filter="watch" onclick="filterAirdrops('status','watch',this)">未確定・監視</button>
       </div>
     </div>
     <div class="filter-group">
@@ -110,7 +157,7 @@
   <section class="hot-section">
     <h2 class="section-title">🔥 今狙うべき注目エアドロップ</h2>
     <div class="hot-grid">
-      {% for airdrop in hot_airdrops[:3] %}
+      {% for airdrop in hot_airdrops[:4] %}
       <div class="hot-card" data-status="{{ airdrop.status }}" data-difficulty="{{ airdrop.difficulty }}" data-hot="true" data-name="{{ airdrop.name | lower }}">
         <div class="hot-card-header">
           {% if airdrop.logo %}
@@ -137,7 +184,7 @@
             </div>
             <div class="value-block">
               <span class="value-label">期限</span>
-              <span class="end-date">{{ airdrop.end_date }}</span>
+              <span class="end-date">{{ airdrop.deadline_note or airdrop.end_date }}</span>
             </div>
           </div>
           {% if airdrop.tasks %}
@@ -150,12 +197,15 @@
             </ul>
           </div>
           {% endif %}
+          {% if airdrop.caution %}
+          <p class="caution-note">⚠️ {{ airdrop.caution }}</p>
+          {% endif %}
         </div>
         <div class="hot-card-footer">
           <span class="status-badge status-{{ airdrop.status }}">
-            {% if airdrop.status == 'active' %}● アクティブ{% elif airdrop.status == 'upcoming' %}◎ 近日開始{% else %}✕ 終了{% endif %}
+            {% if airdrop.status == 'active' %}● アクティブ{% elif airdrop.status == 'upcoming' %}◎ 近日/TGE待ち{% elif airdrop.status == 'watch' %}👁 未確定・監視{% else %}✕ 終了{% endif %}
           </span>
-          <a href="{{ airdrop.url }}" target="_blank" rel="noopener" class="btn-participate">参加する →</a>
+          <a href="{{ airdrop.url }}" target="_blank" rel="noopener" class="btn-participate">公式サイト →</a>
         </div>
       </div>
       {% endfor %}
@@ -189,7 +239,7 @@
               data-name="{{ airdrop.name | lower }}"
               data-value="{{ airdrop.estimated_value_usd or 0 }}"
               data-category="{{ airdrop.category | lower }}"
-              title="{{ airdrop.description }}">
+              title="{{ airdrop.description }}{% if airdrop.caution %}&#10;⚠️ {{ airdrop.caution }}{% endif %}">
             <td>
               <div class="name-cell">
                 {% if airdrop.logo %}
@@ -213,11 +263,11 @@
             </td>
             <td><span class="difficulty-badge difficulty-{{ airdrop.difficulty }}">{{ airdrop.difficulty | upper }}</span></td>
             <td><span class="status-badge status-{{ airdrop.status }}">
-              {% if airdrop.status == 'active' %}● アクティブ{% elif airdrop.status == 'upcoming' %}◎ 近日{% else %}✕ 終了{% endif %}
+              {% if airdrop.status == 'active' %}● アクティブ{% elif airdrop.status == 'upcoming' %}◎ 近日{% elif airdrop.status == 'watch' %}👁 監視{% else %}✕ 終了{% endif %}
             </span></td>
-            <td class="date-cell">{{ airdrop.end_date }}</td>
+            <td class="date-cell">{{ airdrop.deadline_note or airdrop.end_date }}</td>
             <td>
-              <a href="{{ airdrop.url }}" target="_blank" rel="noopener" class="btn-sm">参加</a>
+              <a href="{{ airdrop.url }}" target="_blank" rel="noopener" class="btn-sm">公式</a>
             </td>
           </tr>
           {% endfor %}
@@ -239,7 +289,10 @@
           {% if upd.added_count > 0 %}<span class="h-new">+{{ upd.added_count }} 追加</span>{% endif %}
           {% if upd.changed_count > 0 %}<span class="h-changed">{{ upd.changed_count }} 変更</span>{% endif %}
           {% if upd.email_sent %}<span class="h-email">📧</span>{% endif %}
-          {% if upd.added_names %}
+          {% if upd.removed_count %}<span class="h-changed">−{{ upd.removed_count }} 削除</span>{% endif %}
+          {% if upd.headline %}
+          <span class="h-names">{{ upd.headline }}</span>
+          {% elif upd.added_names %}
           <span class="h-names">{{ upd.added_names | join(', ') }}</span>
           {% endif %}
         </div>
@@ -255,7 +308,7 @@
 <footer class="site-footer">
   <div class="container">
     <p>🪂 Crypto Airdrop Tracker — 毎日 {{ "%02d"|format(8) }}:00 JST 自動更新</p>
-    <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。投資は自己責任で行ってください。</p>
+    <p class="footer-disclaimer">※ 掲載情報は参考目的のみです。日程・条件は必ず各プロジェクトの公式発表で確認し、DMや返信欄のクレームリンクは使用しないでください。投資は自己責任で行ってください。</p>
   </div>
 </footer>
 

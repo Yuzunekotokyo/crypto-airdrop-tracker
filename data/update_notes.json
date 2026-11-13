@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-13",
+  "headline": "掲載案件を全面刷新 — 2024年の配布済み6件を削除し、2026年11月時点の14件に入れ替えました",
+  "highlights": [
+    "🔥 Predict.fun (PREDICT): 延期されていたTGEが11/18に再開予定。受取方法（即時35% or 1年ステーキングで100%）のフォーム締切は11/26",
+    "⏰ Fables (FABLES): ポイントのクレームとPROLOGUE交換が11/20 23:59 UTCで終了 — 今週最初の締切",
+    "🔥 Variational (VAR): 供給量の32%をポイント比例で配布と公式確認済み、TGEはQ4。今からポイントを積める確定案件",
+    "🔥 Saturn Credit (STRN): Season 2に供給量の最大5%。ウォレット登録11/16（未確認情報）、Season 2終了12/8",
+    "クレーム締切が続く: Doppler XDP 11/28 ・ Aster Stage 6 12/4 ・ Midnight NIGHT償還 12/4 ・ StandX DUSD 12/31",
+    "infiniFi (INFI) は登録が11/10で締切済み。Polymarket / OpenSea / Hyperliquid S2 / Base は公式未確定のため「監視」扱いに"
+  ],
+  "deadlines": [
+    {"date": "11/16", "label": "Saturn Credit ウォレット登録（未確認）"},
+    {"date": "11/18", "label": "Predict.fun TGE"},
+    {"date": "11/20", "label": "Fables クレーム締切"},
+    {"date": "11/26", "label": "Predict.fun 受取方法フォーム締切"},
+    {"date": "11/28", "label": "Doppler XDP クレーム締切"},
+    {"date": "12/4", "label": "Aster Stage 6 ・ Midnight 償還 締切"},
+    {"date": "12/8", "label": "Saturn Credit Season 2 終了"},
+    {"date": "12/31", "label": "StandX DUSD クレーム締切"}
+  ],
+  "removed_names": [
+    "LayerZero (ZRO)",
+    "Scroll (SCR)",
+    "zkSync Era",
+    "Hyperliquid (HYPE) Season 1",
+    "EigenLayer (EIGEN)",
+    "Movement (MOVE)"
+  ]
+}

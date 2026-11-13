@@ -101,8 +101,8 @@ function scheduleAutoRefresh() {
       .then(updates => {
         if (updates.length > 0) {
           const latestDate = updates[0].timestamp;
-          const pageDate = document.querySelector(".update-time")?.textContent;
-          if (latestDate && pageDate && !pageDate.includes(updates[0].date)) {
+          const pageDate = document.querySelector(".update-time")?.dataset.date;
+          if (latestDate && pageDate && pageDate !== updates[0].date) {
             showRefreshNotice();
           }
         }
