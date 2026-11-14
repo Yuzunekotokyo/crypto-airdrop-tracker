@@ -40,8 +40,8 @@ a:hover { color: var(--accent2); }
   background: linear-gradient(135deg, #0d2137, #1a1a2e);
   border-bottom: 2px solid var(--accent);
   padding: 14px 20px;
-  position: sticky;
-  top: 0;
+  /* 更新内容が長くなるため固定表示にしない (stickyだとスマホで本文を覆ってしまう) */
+  position: relative;
   z-index: 100;
   box-shadow: 0 2px 20px rgba(124,77,255,0.3);
   display: flex;

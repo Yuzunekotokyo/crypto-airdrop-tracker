@@ -1,5 +1,108 @@
 [
   {
+    "timestamp": "2026-11-14T00:12:38.238919+00:00",
+    "date": "2026-11-14",
+    "time_jst": "2026年11月14日 09:12 JST",
+    "headline": "新規3件を追加 — アーサー・ヘイズ氏のFlop Labsが11/24にテストネット＋エアドロップ開始。Saturnのウォレット登録は11/16 23:00(日本時間)が締切",
+    "highlights": [
+      "🆕🔥 Flop Labs (FLOP): アーサー・ヘイズ氏が11/13に、公開テストネットとエアドロップを11/24に開始すると告知。約90日間のテストネット利用が配分の主な手段で、資金不要で参加できる見込み。対象条件・配布量は未発表",
+      "⏰ Saturn Credit (STRN): ウォレット登録の締切が 11/16 14:00 UTC（日本時間23:00）と複数メディアで確認でき、「未確認」表記を解除。ポイント保有者は残り約2日。米国・EU・EEAは対象外",
+      "🔥 Predict.fun (PREDICT): クレーム開始は11/18 09:00 UTC。受取方法の選択はTGE完了まで、クレーム期間は30日間（12/18頃まで）と判明。100%受取は「12回の月次配布・各回手動クレーム」。11/18が上場日かは未確定",
+      "🆕 Zest Protocol (ZEST): Season 1ポイント保有者向けクレームが11/19 12:00 UTCに開始、締切12/10（既存保有者のみ）",
+      "✏️ Extended (XTEN): Xpointsが11/6に終了し、1 Xpoint = 約4.2857 XTEN に確定（3億XTEN = 供給量の30%、TGE時全額アンロック）。受取にはアプリ内の規約同意が必要（受付期間は未発表）",
+      "✏️ infiniFi (INFI): 11/13にチームが配布は「間もなく」と投稿。最初のトークンは凍結状態で届く見込み",
+      "🆕 Elysium（Hyperliquid初のL2、11/9稼働）を「監視」に追加。チェーン単位のエアドロップは未発表",
+      "参考: Binance Alphaがエアドロップを再開（35万ドル相当の感謝祭配布、KGEN / VELO / VELVETのいずれか1種を自動付与・申請不要）"
+    ],
+    "deadlines": [
+      {
+        "date": "11/16",
+        "label": "Saturn Credit ウォレット登録締切（23:00 JST）"
+      },
+      {
+        "date": "11/18",
+        "label": "Predict.fun クレーム開始（18:00 JST）"
+      },
+      {
+        "date": "11/19",
+        "label": "Zest クレーム開始（21:00 JST）"
+      },
+      {
+        "date": "11/20",
+        "label": "Fables クレーム締切（23:59 UTC）"
+      },
+      {
+        "date": "11/24",
+        "label": "Flop Labs テストネット＋エアドロップ開始"
+      },
+      {
+        "date": "11/26",
+        "label": "Predict.fun Binanceフォーム締切"
+      },
+      {
+        "date": "11/28",
+        "label": "Doppler XDP クレーム締切"
+      },
+      {
+        "date": "12/4",
+        "label": "Aster Stage 6 ・ Midnight 解凍期間 終了"
+      },
+      {
+        "date": "12/8",
+        "label": "Saturn Credit Season 2 終了"
+      },
+      {
+        "date": "12/10",
+        "label": "Zest クレーム締切"
+      },
+      {
+        "date": "12/31",
+        "label": "StandX DUSD クレーム締切"
+      }
+    ],
+    "total_airdrops": 17,
+    "added_count": 3,
+    "removed_count": 0,
+    "changed_count": 4,
+    "hot_count": 5,
+    "added_names": [
+      "Flop Labs (FLOP)",
+      "Zest Protocol (ZEST)",
+      "Elysium エコシステム (Kalos等)"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "Saturn Credit (STRN)",
+        "changes": [
+          "日程: ウォレット登録 11/16 14:00 UTC ・ Season 2終了 12/8"
+        ]
+      },
+      {
+        "name": "Predict.fun (PREDICT)",
+        "changes": [
+          "期限: 2026-11-26 → 2026-12-18",
+          "日程: クレーム開始 11/18 09:00 UTC ・ Binanceフォーム 11/26 ・ 受取期限 12/18頃"
+        ]
+      },
+      {
+        "name": "Extended (XTEN)",
+        "changes": [
+          "期限: 未定 → 2026年11月目標（日付未定）",
+          "日程: ポイント終了・レート確定済み ・ TGE 11月目標（日付未定）"
+        ]
+      },
+      {
+        "name": "infiniFi (INFI)",
+        "changes": [
+          "日程: 登録締切済み ・ 配布「間もなく」（日時未発表）"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": false
+  },
+  {
     "timestamp": "2026-11-13T00:14:15.090239+00:00",
     "date": "2026-11-13",
     "time_jst": "2026年11月13日 09:14 JST",

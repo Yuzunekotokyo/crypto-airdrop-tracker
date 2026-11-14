@@ -1,30 +1,61 @@
 {
-  "date": "2026-11-13",
-  "headline": "掲載案件を全面刷新 — 2024年の配布済み6件を削除し、2026年11月時点の14件に入れ替えました",
+  "date": "2026-11-14",
+  "headline": "新規3件を追加 — アーサー・ヘイズ氏のFlop Labsが11/24にテストネット＋エアドロップ開始。Saturnのウォレット登録は11/16 23:00(日本時間)が締切",
   "highlights": [
-    "🔥 Predict.fun (PREDICT): 延期されていたTGEが11/18に再開予定。受取方法（即時35% or 1年ステーキングで100%）のフォーム締切は11/26",
-    "⏰ Fables (FABLES): ポイントのクレームとPROLOGUE交換が11/20 23:59 UTCで終了 — 今週最初の締切",
-    "🔥 Variational (VAR): 供給量の32%をポイント比例で配布と公式確認済み、TGEはQ4。今からポイントを積める確定案件",
-    "🔥 Saturn Credit (STRN): Season 2に供給量の最大5%。ウォレット登録11/16（未確認情報）、Season 2終了12/8",
-    "クレーム締切が続く: Doppler XDP 11/28 ・ Aster Stage 6 12/4 ・ Midnight NIGHT償還 12/4 ・ StandX DUSD 12/31",
-    "infiniFi (INFI) は登録が11/10で締切済み。Polymarket / OpenSea / Hyperliquid S2 / Base は公式未確定のため「監視」扱いに"
+    "🆕🔥 Flop Labs (FLOP): アーサー・ヘイズ氏が11/13に、公開テストネットとエアドロップを11/24に開始すると告知。約90日間のテストネット利用が配分の主な手段で、資金不要で参加できる見込み。対象条件・配布量は未発表",
+    "⏰ Saturn Credit (STRN): ウォレット登録の締切が 11/16 14:00 UTC（日本時間23:00）と複数メディアで確認でき、「未確認」表記を解除。ポイント保有者は残り約2日。米国・EU・EEAは対象外",
+    "🔥 Predict.fun (PREDICT): クレーム開始は11/18 09:00 UTC。受取方法の選択はTGE完了まで、クレーム期間は30日間（12/18頃まで）と判明。100%受取は「12回の月次配布・各回手動クレーム」。11/18が上場日かは未確定",
+    "🆕 Zest Protocol (ZEST): Season 1ポイント保有者向けクレームが11/19 12:00 UTCに開始、締切12/10（既存保有者のみ）",
+    "✏️ Extended (XTEN): Xpointsが11/6に終了し、1 Xpoint = 約4.2857 XTEN に確定（3億XTEN = 供給量の30%、TGE時全額アンロック）。受取にはアプリ内の規約同意が必要（受付期間は未発表）",
+    "✏️ infiniFi (INFI): 11/13にチームが配布は「間もなく」と投稿。最初のトークンは凍結状態で届く見込み",
+    "🆕 Elysium（Hyperliquid初のL2、11/9稼働）を「監視」に追加。チェーン単位のエアドロップは未発表",
+    "参考: Binance Alphaがエアドロップを再開（35万ドル相当の感謝祭配布、KGEN / VELO / VELVETのいずれか1種を自動付与・申請不要）"
   ],
   "deadlines": [
-    {"date": "11/16", "label": "Saturn Credit ウォレット登録（未確認）"},
-    {"date": "11/18", "label": "Predict.fun TGE"},
-    {"date": "11/20", "label": "Fables クレーム締切"},
-    {"date": "11/26", "label": "Predict.fun 受取方法フォーム締切"},
-    {"date": "11/28", "label": "Doppler XDP クレーム締切"},
-    {"date": "12/4", "label": "Aster Stage 6 ・ Midnight 償還 締切"},
-    {"date": "12/8", "label": "Saturn Credit Season 2 終了"},
-    {"date": "12/31", "label": "StandX DUSD クレーム締切"}
+    {
+      "date": "11/16",
+      "label": "Saturn Credit ウォレット登録締切（23:00 JST）"
+    },
+    {
+      "date": "11/18",
+      "label": "Predict.fun クレーム開始（18:00 JST）"
+    },
+    {
+      "date": "11/19",
+      "label": "Zest クレーム開始（21:00 JST）"
+    },
+    {
+      "date": "11/20",
+      "label": "Fables クレーム締切（23:59 UTC）"
+    },
+    {
+      "date": "11/24",
+      "label": "Flop Labs テストネット＋エアドロップ開始"
+    },
+    {
+      "date": "11/26",
+      "label": "Predict.fun Binanceフォーム締切"
+    },
+    {
+      "date": "11/28",
+      "label": "Doppler XDP クレーム締切"
+    },
+    {
+      "date": "12/4",
+      "label": "Aster Stage 6 ・ Midnight 解凍期間 終了"
+    },
+    {
+      "date": "12/8",
+      "label": "Saturn Credit Season 2 終了"
+    },
+    {
+      "date": "12/10",
+      "label": "Zest クレーム締切"
+    },
+    {
+      "date": "12/31",
+      "label": "StandX DUSD クレーム締切"
+    }
   ],
-  "removed_names": [
-    "LayerZero (ZRO)",
-    "Scroll (SCR)",
-    "zkSync Era",
-    "Hyperliquid (HYPE) Season 1",
-    "EigenLayer (EIGEN)",
-    "Movement (MOVE)"
-  ]
+  "removed_names": []
 }
