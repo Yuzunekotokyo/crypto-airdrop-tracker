@@ -1,5 +1,96 @@
 [
   {
+    "timestamp": "2026-11-15T00:12:43.720228+00:00",
+    "date": "2026-11-15",
+    "time_jst": "2026年11月15日 09:12 JST",
+    "headline": "⏰ Saturn Creditのウォレット登録は明日11/16 23:00(日本時間)締切。新規の大型案件は無し — Raycashを「監視」に追加、infiniFiは11/16のSpacesで日程発表の可能性",
+    "highlights": [
+      "⏰ Saturn Credit (STRN): ウォレット登録の締切まで残り約1日（11/16 14:00 UTC = 日本時間23:00）。ポイント保有者は最優先で対応。12/8は「トークンローンチ日」ではなくSeason 2スナップショット期限である点を注記に追加",
+      "🔥 Predict.fun (PREDICT): 11/18 09:00 UTC（日本時間18:00）のクレーム開始を再確認。受取方法はTGE完了後は変更不可。TGE・Binance Alpha取引再開の日付は引き続き未発表（一部サイトは旧日程10/30のまま）",
+      "✏️ infiniFi (INFI): 11/14にチームが、Season 1・2の未クレーム分の一部をSeason 3報酬に上乗せすると投稿。11/16にSpacesを予定。「初日に最低500 INFIが流動化」との記事は1媒体のみで未確認",
+      "🆕 Raycash を「監視」に追加: Zama発のステーブルコイン秘匿決済アプリが11/9にEthereumでプライベートベータ開始。ウェイトリスト登録は無料、ポイント制度あり。ただしトークンは未発表",
+      "✏️ Flop Labs (FLOP): 11/24開始は変更なし（変更時は事前告知とヘイズ氏）。配布量は「12億」「44億」と情報源で食い違い、公式の対象条件は未発表のまま",
+      "✏️ Fables: 締切11/20 23:59 UTCまで残り5日、11/19までの完了を推奨。Doppler: 締切時刻に12:00/09:00 UTCの食い違いがあり11/27までの完了を推奨",
+      "参考: FLOAT（Solanaのローンチパッド系トークン）が11/14に保有者向け配布（手数料の15%）を告知と報じられたが、公式ドキュメントの記載と条件が食い違うため掲載は見送り",
+      "変更なし: Variational（TGEはQ4・日付未定）、Extended（TGE 11月目標・日付未定）、Zest（11/19開始）、Polymarket / OpenSea / Hyperliquid / Base（いずれも公式の新情報なし）"
+    ],
+    "deadlines": [
+      {
+        "date": "11/16",
+        "label": "Saturn Credit ウォレット登録締切（23:00 JST）・ infiniFi Spaces"
+      },
+      {
+        "date": "11/18",
+        "label": "Predict.fun クレーム開始（18:00 JST）"
+      },
+      {
+        "date": "11/19",
+        "label": "Zest クレーム開始（21:00 JST）"
+      },
+      {
+        "date": "11/20",
+        "label": "Fables クレーム締切（23:59 UTC）"
+      },
+      {
+        "date": "11/24",
+        "label": "Flop Labs テストネット＋エアドロップ開始"
+      },
+      {
+        "date": "11/26",
+        "label": "Predict.fun Binanceフォーム締切"
+      },
+      {
+        "date": "11/28",
+        "label": "Doppler XDP クレーム締切"
+      },
+      {
+        "date": "12/4",
+        "label": "Aster Stage 6 ・ Midnight 解凍期間 終了"
+      },
+      {
+        "date": "12/8",
+        "label": "Saturn Credit Season 2 終了"
+      },
+      {
+        "date": "12/10",
+        "label": "Zest クレーム締切"
+      },
+      {
+        "date": "12/18",
+        "label": "Predict.fun クレーム期限（頃）"
+      },
+      {
+        "date": "12/31",
+        "label": "StandX DUSD クレーム締切"
+      }
+    ],
+    "total_airdrops": 18,
+    "added_count": 1,
+    "removed_count": 0,
+    "changed_count": 2,
+    "hot_count": 5,
+    "added_names": [
+      "Raycash（Raycash Points）"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "Saturn Credit (STRN)",
+        "changes": [
+          "日程: ウォレット登録 11/16 14:00 UTC（明日締切） ・ Season 2終了 12/8"
+        ]
+      },
+      {
+        "name": "infiniFi (INFI)",
+        "changes": [
+          "日程: 登録締切済み ・ 11/16 Spaces ・ 配布日時は未発表"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": false
+  },
+  {
     "timestamp": "2026-11-14T00:12:38.238919+00:00",
     "date": "2026-11-14",
     "time_jst": "2026年11月14日 09:12 JST",
