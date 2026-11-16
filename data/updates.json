@@ -1,1 +1,73 @@
-[]
+[
+  {
+    "timestamp": "2026-11-16T00:12:30.101609+00:00",
+    "date": "2026-11-16",
+    "time_jst": "2026年11月16日 09:12",
+    "total_airdrops": 13,
+    "added_count": 13,
+    "removed_count": 6,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Variational (VAR)",
+      "Predict.fun (PREDICT)",
+      "Arcus",
+      "Fables (FABLES)",
+      "Doppler Finance (XDP)",
+      "Aster ステージ6 (ASTER)",
+      "Saturn (STRN)",
+      "Zest Protocol (ZEST)",
+      "Treehouse シーズン2 (TREE)",
+      "RISEx (RISE Points)",
+      "Pacifica",
+      "Polymarket (POLY)",
+      "MetaMask (MASK)"
+    ],
+    "removed_names": [
+      "LayerZero (ZRO)",
+      "Scroll (SCR)",
+      "zkSync Era",
+      "Hyperliquid (HYPE)",
+      "EigenLayer (EIGEN)",
+      "Movement (MOVE)"
+    ],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "headline": "掲載案件を2026年11月の最新情報に全面入れ替え (13件)",
+    "highlights": [
+      {
+        "kind": "new",
+        "text": "注目: Variational (VAR) — 総供給の32%をポイント保有者に配布と公式発表済み。TGEは2026年Q4予定(日付未定)、1ポイントでも対象。今からでも参加可能。"
+      },
+      {
+        "kind": "new",
+        "text": "注目: Predict.fun (PREDICT) — シーズン1クレームが11/18 09:00 UTC開始との報道。ただし延期報道もあり情報が割れているため公式確認が必須。"
+      },
+      {
+        "kind": "new",
+        "text": "注目: Arcus — Robinhood Chain上の取引所。10/1開始のポイント シーズン1が進行中(トークン化は未確定)。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Fables (FABLES) クレームは11/20 23:59 UTCで終了 — 対象者は11/19までに請求を。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Doppler Finance (XDP) は11/28 12:00 UTC、Aster ステージ6は12/4 12:00 UTCでクレーム終了。Treehouse S2は11/25期限との報道(未確認)。"
+      },
+      {
+        "kind": "new",
+        "text": "そのほか Saturn (STRN)、Zest Protocol、RISEx、Pacifica、Polymarket (POLY)、MetaMask (MASK) を追加。"
+      },
+      {
+        "kind": "removed",
+        "text": "配布が2024年に完了済みの旧案件 6件を削除: LayerZero (ZRO)、Scroll (SCR)、zkSync Era、Hyperliquid (HYPE)、EigenLayer (EIGEN)、Movement (MOVE)。"
+      },
+      {
+        "kind": "changed",
+        "text": "推定価値は根拠のある数字が無いため全案件「未定」に変更。各案件に情報ソースを記録。"
+      }
+    ]
+  }
+]

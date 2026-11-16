@@ -492,3 +492,19 @@ main { padding: 28px 0 60px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ===== UPDATE: 書き換え内容 ===== */
+.update-log { background: #12122a; border-bottom: 2px solid #7c4dff; color: #e8e8f5; }
+.update-log-inner { max-width: 1300px; margin: 0 auto; padding: 14px 20px; }
+.update-log-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
+.update-log-badge { background: #7c4dff; color: #fff; font-weight: 800; font-size: 12px; letter-spacing: .08em; padding: 3px 10px; border-radius: 4px; }
+.update-log-date { font-size: 13px; opacity: .8; }
+.update-log-headline { font-size: 15px; }
+.update-log-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.update-log-list li { display: flex; gap: 10px; align-items: baseline; font-size: 14px; line-height: 1.5; }
+.ul-kind { flex: 0 0 auto; min-width: 72px; font-weight: 700; font-size: 12px; white-space: nowrap; }
+.ul-new .ul-kind { color: #69f0ae; }
+.ul-deadline .ul-kind { color: #ffd54f; }
+.ul-removed .ul-kind { color: #ff8a80; }
+.ul-changed .ul-kind { color: #82b1ff; }
+@media (max-width: 600px) { .update-log-list li { flex-direction: column; gap: 2px; } }

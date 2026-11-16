@@ -8,6 +8,27 @@
 </head>
 <body>
 
+<!-- ===== UPDATE: 今回書き換えた点 ===== -->
+{% if highlight_update %}
+<section class="update-log" aria-label="UPDATE">
+  <div class="update-log-inner">
+    <div class="update-log-head">
+      <span class="update-log-badge">UPDATE</span>
+      <span class="update-log-date">{{ highlight_update.date }} 更新分</span>
+      {% if highlight_update.headline %}<strong class="update-log-headline">{{ highlight_update.headline }}</strong>{% endif %}
+    </div>
+    <ul class="update-log-list">
+      {% for h in highlight_update.highlights %}
+      <li class="ul-{{ h.kind }}">
+        <span class="ul-kind">{% if h.kind == 'new' %}🆕 新規{% elif h.kind == 'deadline' %}⏰ 期限{% elif h.kind == 'removed' %}🗑 削除{% elif h.kind == 'changed' %}✏️ 変更{% else %}ℹ️ 情報{% endif %}</span>
+        <span class="ul-text">{{ h.text }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
 <!-- ===== 最新更新バナー ===== -->
 {% if latest_update %}
 <div id="update-banner" class="update-banner">

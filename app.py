@@ -34,10 +34,13 @@ def index():
     airdrops = _load_json(AIRDROPS_FILE, [])
     updates = _load_json(UPDATES_FILE, [])
     latest_update = updates[0] if updates else None
+    # 直近の「書き換え内容」付き更新 (自動更新のみの日は前回分を表示し続ける)
+    highlight_update = next((u for u in updates if u.get("highlights")), None)
     return render_template(
         "index.html",
         airdrops=airdrops,
         latest_update=latest_update,
+        highlight_update=highlight_update,
         updates=updates[:5],
         now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
     )
