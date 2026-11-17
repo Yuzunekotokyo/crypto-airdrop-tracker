@@ -1,5 +1,52 @@
 [
   {
+    "id": "predict-fun-predict",
+    "name": "Predict.fun (PREDICT)",
+    "symbol": "PREDICT",
+    "category": "予測市場",
+    "type": "シーズン1クレーム (明日開始予定)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "予測市場Predict.funのシーズン1エアドロップ(7,000万PREDICT=総供給10億の7%)。11/12の告知に基づき、クレームは11/18 09:00 UTC(日本時間18:00)開始・期間30日と複数メディアが報道。受取は即時35%(残りは放棄)か12か月の月次分割で100%かを選択。Binance経由でPredict Pointsを得た人はBinance Walletのフォームを11/26 09:00 UTC(日本時間18:00)までに提出。11/18がTGE(上場)日かは未確定で、Binance Alphaの上場は10/30から延期されたまま新日程なし。延期を伝える記事は11/12告知より前のものとみられるが、本日時点で公式の一次情報は確認できていないため、必ず公式X/サイトで確認を。非公式クレームサイトには接続しないこと。",
+    "tasks": [
+      "11/18 18:00(日本時間)以降、公式サイトでクレーム開始を確認",
+      "受取方式(即時35% / 12か月分割で100%)を選択 — TGE完了後は変更不可",
+      "クレーム開始から30日以内(12/18頃まで)に請求",
+      "Binance経由のポイントはBinance Walletフォームを11/26までに提出"
+    ],
+    "end_date": "2026-11-18 開始 → 12/18頃まで (要公式確認)",
+    "logo": "",
+    "url": "https://predict.fun/",
+    "is_hot": true,
+    "added_date": "2026-11-16",
+    "source": "curated",
+    "source_url": "https://www.coingabbar.com/en/predict-fun-token-airdrop-claim-date-vesting-tge-date"
+  },
+  {
+    "id": "flop-labs-flop",
+    "name": "Flop Labs (FLOP)",
+    "symbol": "FLOP",
+    "category": "AI/インフラ",
+    "type": "テストネット (開始前・無料)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "BitMEX共同創業者アーサー・ヘイズ氏が率いるAI計算チェーン。11/13に公開テストネットとエアドロップを11/24に開始すると告知(変更時は事前に知らせるとのこと)。ただしFlop Labs側は「準備状況次第の目標日」としており暫定。テストネット利用がジェネシス時の配分を得る主な手段とされ、保有だけでは対象外・AIタスクへの支払いで実際に使う必要がある。配布量「12億FLOP(ジェネシス供給の27.27%)」は個人のX投稿に基づく未確定情報。報酬は全額が即流動にはならず、ロック分3 FLOPをAI計算に使うと1 FLOPが譲渡可能になる案。メインネットは2027年Q1目標。FLOPトークンは現時点で存在せず、販売・ミントをうたうものは全て詐欺。",
+    "tasks": [
+      "11/24のテストネット開始を待つ (公式X @flop_labs / @CryptoHayes とGitHubのみ確認)",
+      "開始後: フォーセットでテストトークンを受け取り、AIタスクの支払いに実際に使う",
+      "対象条件・配布量の公式発表を監視"
+    ],
+    "end_date": "2026-11-24 開始目標 (暫定)",
+    "logo": "",
+    "url": "https://x.com/CryptoHayes",
+    "is_hot": true,
+    "added_date": "2026-11-17",
+    "source": "curated",
+    "source_url": "https://www.kucoin.com/news/flash/arthur-hayes-announces-flop-token-airdrop-and-testnet-launch-on-november-24"
+  },
+  {
     "id": "variational-var",
     "name": "Variational (VAR)",
     "symbol": "VAR",
@@ -21,29 +68,6 @@
     "added_date": "2026-11-16",
     "source": "curated",
     "source_url": "https://x.com/variational_io/status/2102929439063765192"
-  },
-  {
-    "id": "predict-fun-predict",
-    "name": "Predict.fun (PREDICT)",
-    "symbol": "PREDICT",
-    "category": "予測市場",
-    "type": "シーズン1クレーム",
-    "status": "upcoming",
-    "difficulty": "easy",
-    "estimated_value_usd": 0,
-    "description": "予測市場Predict.funのシーズン1エアドロップ。11/18 09:00 UTC(日本時間18:00)にクレーム開始・期間30日と複数メディアが報道。ただし「TGEとクレームは延期、新日程は後日」とする報道もあり情報が割れている。受取は即時35%か12か月分割かを選択。必ず公式発表を確認し、非公式のクレームサイトには接続しないこと。",
-    "tasks": [
-      "公式X/サイトで11/18開始が有効か確認",
-      "シーズン1ポイント保有ウォレットで受取方式(即時35% / 12か月分割)を選択",
-      "クレーム開始後30日以内に請求"
-    ],
-    "end_date": "2026-11-18 開始報道 (要公式確認)",
-    "logo": "",
-    "url": "https://predict.fun/",
-    "is_hot": true,
-    "added_date": "2026-11-16",
-    "source": "curated",
-    "source_url": "https://www.tokenpost.com/news/business/55448"
   },
   {
     "id": "arcus",
@@ -77,7 +101,7 @@
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "ポイント保有者向けFABLESクレームが11/20 23:59 UTC(日本時間11/21 8:59)で終了。PROLOGUE引換も同日まで。安全のため11/19までの請求を推奨。10/19までに受取方式を保存済みのポイント保有者のみ対象で、新規参加は不可。",
+    "description": "ポイント保有者向けFABLESクレームが11/20 23:59 UTC(日本時間11/21 8:59)で終了 — 残り3日。PROLOGUE引換も同日まで。安全のため11/19までの請求を推奨。10/19までに受取方式を保存済みのポイント保有者のみ対象で、新規参加は不可。",
     "tasks": [
       "ポイントが付与されたウォレットを接続",
       "ポートフォリオ内「Claim your FABLES」から請求",
@@ -90,6 +114,51 @@
     "added_date": "2026-11-16",
     "source": "curated",
     "source_url": "https://www.bitrue.com/blog/fables-airdrop-guide"
+  },
+  {
+    "id": "zest-protocol-zest",
+    "name": "Zest Protocol (ZEST)",
+    "symbol": "ZEST",
+    "category": "BTCFi/レンディング",
+    "type": "シーズン1クレーム",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Stacks上のBTCレンディング。シーズン1エアドロップ900万ZEST(供給の約0.9%)が本日11/17にアンロック予定(DefiLlama)。クレーム開始は11/19 12:00 UTC(日本時間21:00)、締切は12/10とされるが、本日の調査では公式の一次情報を再確認できず(二次情報)。対象は2026/5/13スナップショット時点のシーズン1ポイント保有者のみで、新規参加は不可。",
+    "tasks": [
+      "Zest公式(docs.zestprotocol.com / 公式X)でクレーム開始日時を確認",
+      "11/19 21:00(日本時間)以降、シーズン1で利用したウォレットで請求",
+      "12/10(報道)までに完了"
+    ],
+    "end_date": "2026-11-19 開始 → 12/10 (要公式確認)",
+    "logo": "",
+    "url": "https://defillama.com/unlocks/zest",
+    "is_hot": false,
+    "added_date": "2026-11-16",
+    "source": "curated",
+    "source_url": "https://defillama.com/unlocks/zest"
+  },
+  {
+    "id": "treehouse-tree-s2",
+    "name": "Treehouse シーズン2 (TREE)",
+    "symbol": "TREE",
+    "category": "DeFi/固定金利",
+    "type": "クレーム期限間近 (報道)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "GoNutsシーズン2のTREEクレーム(Gaia Foundation経由、4/29開始)。期限は11/25 07:00 UTC(日本時間16:00)と報道。ベスティング期間が終了したため、対象者は現在は全量を受け取れるとされる。公式ドキュメントでは日付を確認できていないため、対象者は早めに公式クレームページで確認を。",
+    "tasks": [
+      "公式のエアドロップチェッカーで対象確認",
+      "未請求なら11/25より前に請求"
+    ],
+    "end_date": "2026-11-25 (報道・要公式確認)",
+    "logo": "",
+    "url": "https://www.treehouse.finance/blog/s2-airdrop",
+    "is_hot": false,
+    "added_date": "2026-11-16",
+    "source": "curated",
+    "source_url": "https://www.treehouse.finance/blog/s2-airdrop"
   },
   {
     "id": "doppler-finance-xdp",
@@ -136,19 +205,41 @@
     "source_url": "https://coinranking.com/news/aster-stage-6-airdrop-claim-opens-november-4-full"
   },
   {
+    "id": "midnight-night",
+    "name": "Midnight (NIGHT)",
+    "symbol": "NIGHT",
+    "category": "Layer1/プライバシー",
+    "type": "償還期限",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Cardano系プライバシーチェーン。Glacier Drop / Scavenger Mineで獲得済みのNIGHTの償還(解凍)期間が12/4に終了。新規クレームは不可(2025年に締切済み)。過去にクレームした人は全トランシェの償還を確認。",
+    "tasks": [
+      "過去にクレーム済みなら解凍済みトランシェを償還",
+      "12/4までに全トランシェを確認"
+    ],
+    "end_date": "2026-12-04",
+    "logo": "",
+    "url": "https://midnight.network/",
+    "is_hot": false,
+    "added_date": "2026-11-17",
+    "source": "curated",
+    "source_url": "https://midnight.network/"
+  },
+  {
     "id": "saturn-strn",
     "name": "Saturn (STRN)",
     "symbol": "STRN",
     "category": "DeFi/クレジット",
-    "type": "ポイント→TGE",
+    "type": "登録締切済み・TGE待ち",
     "status": "active",
     "difficulty": "medium",
     "estimated_value_usd": 0,
-    "description": "シーズン1・2のウォレット登録(claim.saturn.credit)は11/16で締切(登録はクレームではない)。シーズン2のポイント蓄積はTGEまたは12/8のスナップショットまで継続。TGEは2026年Q4予定で日付・配分・上場先は未発表。",
+    "description": "シーズン1・2のウォレット登録(claim.saturn.credit)は11/16で締切済み。未登録ウォレットは対象外の可能性が高い。シーズン2のポイント蓄積はTGEまたは12/8のスナップショット(早い方)まで継続し、シーズン2にはSTRN総供給の最大5%を割当(TGEが早まると按分で縮小)。TGEは2026年Q4予定で日付・配分・上場先は本日時点でも未発表。",
     "tasks": [
-      "登録済みの場合はTGE発表を待つ",
+      "登録済みの場合はTGE・クレーム日程の公式発表(X: @saturn_credit)を待つ",
       "シーズン2ポイントを12/8スナップショットまで積み増す",
-      "非公式の配分チェッカーに注意"
+      "非公式の配分チェッカー・クレームサイトに注意"
     ],
     "end_date": "2026-12-08 (S2スナップショット)",
     "logo": "",
@@ -156,51 +247,98 @@
     "is_hot": false,
     "added_date": "2026-11-16",
     "source": "curated",
-    "source_url": "https://www.bitrue.com/blog/saturn-credit-airdrop-guide"
+    "source_url": "https://x.com/saturn_credit/status/2103290807847645584"
   },
   {
-    "id": "zest-protocol-zest",
-    "name": "Zest Protocol (ZEST)",
-    "symbol": "ZEST",
-    "category": "BTCFi/レンディング",
-    "type": "シーズン1クレーム",
+    "id": "extended-xten",
+    "name": "Extended (XTEN)",
+    "symbol": "XTEN",
+    "category": "DeFi/Perp DEX",
+    "type": "TGE待ち (新規参加不可)",
     "status": "upcoming",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "Stacks上のBTCレンディング。シーズン1エアドロップ900万ZEST(供給の約0.9%)が11/17にアンロック予定(DefiLlama)。クレーム開始は11/19 12:00 UTCとの報道あり(二次情報のみ・要公式確認)。対象はシーズン1のオンチェーンポイント保有者。",
+    "description": "元Revolutチームが開発するPerp DEX。コミュニティ向けに3億XTEN(総供給10億の30%)をTGE時に全額アンロックで配布。ポイントプログラムは終了済みで今からの参入は不可。TGEは11月目標だが本日時点で日付未発表、規制手続き次第。受取にはアプリ内での規約同意(署名)が必須で、受付期間は未発表。EEA居住者はローンチ時に現物取引不可の可能性。",
     "tasks": [
-      "Zest公式発表でクレーム開始日時を確認",
-      "シーズン1で利用したウォレットで請求"
+      "ポイント保有者: アプリ内の規約同意の受付開始を待ち、期間内に必ず署名",
+      "TGE日とクレーム窓口の公式発表を監視",
+      "偽のクレームチェッカーに注意"
     ],
-    "end_date": "2026-11-19 開始報道 (要公式確認)",
+    "end_date": "2026年11月目標 (日付未定)",
     "logo": "",
-    "url": "https://defillama.com/unlocks/zest",
+    "url": "https://extended.exchange/",
     "is_hot": false,
-    "added_date": "2026-11-16",
+    "added_date": "2026-11-17",
     "source": "curated",
-    "source_url": "https://defillama.com/unlocks/zest"
+    "source_url": "https://phemex.com/news/article/extended-unveils-xten-tokenomics-30-supply-airdropped-fully-at-tge-team-tokens-locked-12-months-102185"
   },
   {
-    "id": "treehouse-tree-s2",
-    "name": "Treehouse シーズン2 (TREE)",
-    "symbol": "TREE",
-    "category": "DeFi/固定金利",
-    "type": "クレーム期限 (未確認)",
+    "id": "infinifi-infi",
+    "name": "infiniFi (INFI)",
+    "symbol": "INFI",
+    "category": "DeFi/ステーブルコイン",
+    "type": "TGE待ち (登録締切済み)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "iUSD / siUSDの利回りプロトコル。シーズン1・2のエアドロップ登録は11/10で締切済み。11/16にINFIのロック版「wINFI」を発表(ロック者に排出報酬を按分する仕組み。排出率・ロック期間・引出条件は未公表)。トークンは登録ウォレットへ直接配布され、配布後まもなく全保有者同時に譲渡可能になる予定。TGEはQ4目標で日付未発表。残る工程は「トークン文書→対象確認→最終スナップショット→TGE」。シーズン3は継続中で、未クレーム分の一部が上乗せされる。",
+    "tasks": [
+      "登録済みの場合: 公式Xで配布日程の告知を待つ",
+      "最終スナップショットまでポジション(iUSD / siUSD等)を維持",
+      "未登録でもシーズン3で参加余地あり"
+    ],
+    "end_date": "2026年Q4 (日付未定)",
+    "logo": "",
+    "url": "https://infinifi.xyz/",
+    "is_hot": false,
+    "added_date": "2026-11-17",
+    "source": "curated",
+    "source_url": "https://www.coingabbar.com/en/infinifi-token-launch-winfi-locking-rewards-ahead-of-tge"
+  },
+  {
+    "id": "standx-dusd",
+    "name": "StandX (DUSD)",
+    "symbol": "DUSD",
+    "category": "DeFi/Perp DEX",
+    "type": "クレーム受付中",
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "GoNutsシーズン2のTREEクレーム(Gaia Foundation経由、4/29開始)。期限が11/25 07:00 UTCとする報道が1件あるが、公式ドキュメントでは日付を確認できず。対象者は早めに公式クレームページで確認を。",
+    "description": "TGE中止を発表し、代わりに過去の利用実績(プレデポジット・Alphaテスト・取引・MM・紹介)に対してDUSDを配布。クレームは11/2開始、12/31 08:00 UTCまで。プロジェクトは終了手続き中のため新規ファーミング対象ではない。未クレーム分は失効。",
     "tasks": [
-      "公式のエアドロップチェッカーで対象確認",
-      "未請求なら11/25より前に請求"
+      "StandX公式サイトのチェッカーで割当を確認",
+      "利用したウォレット(BNB ChainまたはSolana)でクレーム",
+      "12/31 08:00 UTCまでに完了"
     ],
-    "end_date": "2026-11-25 (報道・要公式確認)",
+    "end_date": "2026-12-31",
     "logo": "",
-    "url": "https://www.treehouse.finance/blog/s2-airdrop",
+    "url": "https://standx.com/",
     "is_hot": false,
-    "added_date": "2026-11-16",
+    "added_date": "2026-11-17",
     "source": "curated",
-    "source_url": "https://www.treehouse.finance/blog/s2-airdrop"
+    "source_url": "https://www.coingabbar.com/en/standx-airdrop-claim-opens-as-tge-cancle-price-reacts"
+  },
+  {
+    "id": "ritual-ritual",
+    "name": "Ritual (RITUAL)",
+    "symbol": "RITUAL",
+    "category": "AI/Layer1",
+    "type": "クレーム受付中 (対象者限定)",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "AI特化L1。10/26にメインネット稼働と同時にTGEを実施。エアドロップは5,000万RITUAL(初期供給100億の0.5%)で、Infernetノード運営者・Frenrug利用者・コミュニティ向け、初日から全額アンロック。対象は約850ウォレットと少数との報道。クレーム期限は確認できず。二次情報のみのため公式サイトでクレーム窓口を確認のこと。",
+    "tasks": [
+      "過去にInfernetノード運営やFrenrugを利用した人は公式クレームページで対象確認",
+      "偽クレームサイトに注意"
+    ],
+    "end_date": "未定 (期限未確認)",
+    "logo": "",
+    "url": "https://ritual.net/",
+    "is_hot": false,
+    "added_date": "2026-11-17",
+    "source": "curated",
+    "source_url": "https://theindustryspread.com/ritual-mainnet-token-unlock/"
   },
   {
     "id": "risex",
@@ -248,6 +386,51 @@
     "source_url": "https://airdropalert.com/airdrops/pacifica-solana-exchange/"
   },
   {
+    "id": "raycash-points",
+    "name": "Raycash (Raycash Points)",
+    "symbol": "",
+    "category": "決済/プライバシー",
+    "type": "未確定・監視 (無料登録)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "FHE開発企業Zamaからスピンオフしたステーブルコイン決済アプリ。11/9にEthereumメインネットでプライベートベータ開始。ウェイトリスト登録後、招待が届くと課題と紹介で「Raycash Points」が貯まる。トークンもポイント換算も未発表で純粋な先行投機。入金は少額に。",
+    "tasks": [
+      "公式サイトでウェイトリストに登録(無料)",
+      "招待後、課題と紹介でポイント獲得",
+      "トークン発表を監視"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://raycash.com/",
+    "is_hot": false,
+    "added_date": "2026-11-17",
+    "source": "curated",
+    "source_url": "https://raycash.com/"
+  },
+  {
+    "id": "kalos-elysium",
+    "name": "Kalos (Elysium / Hyperliquid L2)",
+    "symbol": "KALOS",
+    "category": "Layer2/Hyperliquid",
+    "type": "未確定・監視",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "KinetiqのHyperliquid向けL2「Elysium」上のアプリ。毎日5万ポイントを利用者で按分(NFT取引・有料ミント・SNS活動が対象、スワップ等は現状対象外との情報)。ポイント→KALOS配布が「確定」とする集計サイトと「未確定」とする集計サイトで食い違いあり、配分・日程は未発表。Elysiumチェーン自体のトークン・エアドロップは未発表。",
+    "tasks": [
+      "Kalos公式発表でポイント制度を確認してから少額で試す",
+      "「Elysiumトークンのクレーム」を名乗るものは詐欺"
+    ],
+    "end_date": "未定",
+    "logo": "",
+    "url": "https://kinetiq.xyz/",
+    "is_hot": false,
+    "added_date": "2026-11-17",
+    "source": "curated",
+    "source_url": "https://cryptobriefing.com/kinetiq-elysium-l2-hyperliquid-hype-gas/"
+  },
+  {
     "id": "polymarket-poly",
     "name": "Polymarket (POLY)",
     "symbol": "POLY",
@@ -256,7 +439,7 @@
     "status": "upcoming",
     "difficulty": "medium",
     "estimated_value_usd": 0,
-    "description": "CMOが2025年10月に「トークンとエアドロップはある」と発言。POLY / $POLYの商標出願が2026/11/3に公告承認されたが、公式ヘルプは「エアドロップやTGEの計画は未発表」としており日程なし。年内ローンチの市場予想は約3%。偽クレームサイトが多いので要注意。",
+    "description": "CMOが2025年10月に「トークンとエアドロップはある」と発言。POLY / $POLYの商標出願が2026/11/3に公告承認されたが、公式ヘルプは「エアドロップやTGEの計画は未発表」としており日程なし。年内ローンチの市場予想は約3%。偽クレームサイトが多いので要注意。 11/11の報道では、ウォーレン上院議員の銀行委員長就任観測により規制圧力が強まり、日程がさらに遅れる可能性が指摘されている。",
     "tasks": [
       "Polymarketを通常利用して取引実績を作る",
       "公式発表のみを信頼する(偽エアドロップ注意)"

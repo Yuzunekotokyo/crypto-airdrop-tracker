@@ -1,5 +1,101 @@
 [
   {
+    "timestamp": "2026-11-17T00:12:42.447353+00:00",
+    "date": "2026-11-17",
+    "time_jst": "2026年11月17日 09:12",
+    "total_airdrops": 21,
+    "added_count": 8,
+    "removed_count": 0,
+    "changed_count": 6,
+    "hot_count": 4,
+    "added_names": [
+      "Flop Labs (FLOP)",
+      "Extended (XTEN)",
+      "infiniFi (INFI)",
+      "StandX (DUSD)",
+      "Midnight (NIGHT)",
+      "Ritual (RITUAL)",
+      "Raycash (Raycash Points)",
+      "Kalos (Elysium / Hyperliquid L2)"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "Predict.fun (PREDICT)",
+        "changes": [
+          "クレーム開始(11/18 18:00 JST予定)を前日警告、Binanceフォーム期限11/26を追記"
+        ]
+      },
+      {
+        "name": "Saturn (STRN)",
+        "changes": [
+          "ウォレット登録が11/16で締切済みに"
+        ]
+      },
+      {
+        "name": "Zest Protocol (ZEST)",
+        "changes": [
+          "本日アンロック、クレーム11/19開始→12/10締切(要公式確認)"
+        ]
+      },
+      {
+        "name": "Fables (FABLES)",
+        "changes": [
+          "クレーム終了まで残り3日"
+        ]
+      },
+      {
+        "name": "Treehouse シーズン2 (TREE)",
+        "changes": [
+          "期限11/25 07:00 UTC、現在は全量受取可との報道を追記"
+        ]
+      },
+      {
+        "name": "Polymarket (POLY)",
+        "changes": [
+          "規制リスクによる遅延観測を追記"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": false,
+    "headline": "Predict.funクレームが明日開始予定 / Flop Labsテストネット(11/24)ほか8件を追加",
+    "highlights": [
+      {
+        "kind": "deadline",
+        "text": "【明日】Predict.fun (PREDICT) シーズン1クレームが11/18 09:00 UTC(日本時間18:00)開始予定。即時35%か12か月分割100%かを選択。TGE日は未確定で公式の一次確認は取れていないため、公式X/サイトで確認を。Binance経由のポイントはフォーム提出期限11/26。"
+      },
+      {
+        "kind": "new",
+        "text": "注目: Flop Labs (FLOP) — アーサー・ヘイズ氏のAI計算チェーン。テストネット＋エアドロップを11/24開始と告知(暫定・準備状況次第)。無料で今から準備でき、テストネットを実際に使うことが配分条件。トークンは未発行で「販売・ミント」は全て詐欺。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Fables (FABLES) クレームは11/20 23:59 UTCで終了 — 残り3日。Zest Protocol (ZEST) は本日アンロック、クレームは11/19 21:00(日本時間)開始との情報(要公式確認)。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Treehouse S2は11/25 07:00 UTC、Doppler (XDP) は11/28、Aster ステージ6とMidnight (NIGHT) 償還は12/4、StandX (DUSD) は12/31が期限。Pear Protocolのクレーム(HYPE払い)は本日11/17までとの報道が1件あり — 対象者は至急公式で確認を。"
+      },
+      {
+        "kind": "changed",
+        "text": "Saturn (STRN): ウォレット登録は11/16で締切済み。シーズン2ポイントは12/8スナップショットまで継続、TGE日は未発表のまま。"
+      },
+      {
+        "kind": "new",
+        "text": "TGE待ち案件を追加: Extended (XTEN・総供給の30%をTGE時全額アンロック、11月目標だが日付未定)、infiniFi (INFI・11/16にwINFIロックを発表、配布日未定)。いずれも新規参加は締切済み。"
+      },
+      {
+        "kind": "new",
+        "text": "そのほか Ritual (RITUAL・対象者限定クレーム)、Raycash (無料ウェイトリスト)、Kalos (Hyperliquid L2「Elysium」上のポイント) を監視枠で追加。"
+      },
+      {
+        "kind": "info",
+        "text": "本日確認した範囲では、Variational (VAR)・Polymarket (POLY)・MetaMask (MASK) のTGE日程に新しい公式発表なし。新規監視候補としてLoopscale・OnRe Finance・Ascendのポイントプログラムが集計サイトに掲載(トークン未確定・未検証)。"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-16T00:12:30.101609+00:00",
     "date": "2026-11-16",
     "time_jst": "2026年11月16日 09:12",
