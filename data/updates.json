@@ -1,5 +1,98 @@
 [
   {
+    "timestamp": "2026-11-18T00:11:44.267694+00:00",
+    "date": "2026-11-18",
+    "time_jst": "2026年11月18日 09:11",
+    "total_airdrops": 22,
+    "added_count": 1,
+    "removed_count": 0,
+    "changed_count": 6,
+    "hot_count": 4,
+    "added_names": [
+      "Flint Trade (Flint Points)"
+    ],
+    "removed_names": [],
+    "changes": [
+      {
+        "name": "Predict.fun (PREDICT)",
+        "changes": [
+          "本日開始予定だったクレーム・TGEが延期 (今後2〜4週間が目標、日付未定)"
+        ]
+      },
+      {
+        "name": "Zest Protocol (ZEST)",
+        "changes": [
+          "クレーム開始は明日11/19 21:00 JST、締切12/10 — 公式リマインドで確度上昇"
+        ]
+      },
+      {
+        "name": "infiniFi (INFI)",
+        "changes": [
+          "ステータス: upcoming → active (TGE 11/17設定、エアドロップ分は配布済み。アンロック実行は未確認)"
+        ]
+      },
+      {
+        "name": "Extended (XTEN)",
+        "changes": [
+          "割当チェッカー公開・規約同意の期限12/31を追記、TGE日は未発表のまま"
+        ]
+      },
+      {
+        "name": "Fables (FABLES)",
+        "changes": [
+          "クレーム終了まで残り2日"
+        ]
+      },
+      {
+        "name": "MetaMask (MASK)",
+        "changes": [
+          "公式ヘルプは「MASKの計画なし」、11/26期限はPerps大会上位30名のみと注記"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": false,
+    "headline": "Predict.funのクレームが延期 / Zest (ZEST) クレームは明日21時開始",
+    "highlights": [
+      {
+        "kind": "changed",
+        "text": "【延期】Predict.fun (PREDICT): 本日11/18開始予定だったシーズン1クレームとTGEが延期(11/17告知と複数メディアが報道)。新目標は「今後2〜4週間」で日付未定。受取方式の選択・変更はTGEまで可能。今「クレームできる」とうたうサイトは偽物。Binance Walletフォーム(11/26)は念のため当初期限どおり提出を。"
+      },
+      {
+        "kind": "deadline",
+        "text": "【明日】Zest Protocol (ZEST) シーズン1クレームが11/19 12:00 UTC(日本時間21:00)開始、12/10締切。Zest公式のリマインドで日程を確認。TGE時アンロックは割当の10%、残りは6か月ベスティング。5/13スナップショットのポイント保有者のみ対象。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Fables (FABLES) クレームは11/20 23:59 UTC(日本時間11/21 8:59)で終了 — 残り2日。明日中の請求を推奨。"
+      },
+      {
+        "kind": "changed",
+        "text": "infiniFi (INFI): TGEは11/17 15:30 UTC(日本時間11/18 0:30)に設定。エアドロップ分は11/16から凍結状態で直接配布済みで、TGE後に一斉アンロックの段取り。実際のアンロック完了と価格は本日の調査では未確認 — 登録済みの方はウォレットを確認。"
+      },
+      {
+        "kind": "changed",
+        "text": "Extended (XTEN): 割当チェッカー公開済み、アプリ内の規約同意は12/31まで(未同意分は没収)。TGE日は未発表で「11月」は集計サイトの推定。"
+      },
+      {
+        "kind": "new",
+        "text": "監視枠に追加: Flint Trade — Solanaの現物＋Perp DEX。11/13にポイントプログラム開始、デブネット取引大会は11/20 20:00(日本時間)まで(実資金不要)。トークンは未発表・情報源が少なく未検証。"
+      },
+      {
+        "kind": "deadline",
+        "text": "引き続き: Flop Labsテストネット11/24開始目標(延期の発表なし)、Treehouse S2 11/25、Doppler (XDP) 11/28、Aster ステージ6・Midnight 12/4、Saturn S2スナップショット12/8、StandX 12/31。"
+      },
+      {
+        "kind": "info",
+        "text": "資産保全の注意: Sophonメインネットが11/30に恒久停止、出金期限は11/25との情報(集計サイト経由・要公式確認)。資産を置いている場合は早めに確認を。Hibachiはポイントプログラムを終了。"
+      },
+      {
+        "kind": "info",
+        "text": "MetaMaskの公式ヘルプは「MASKトークンの計画なし」と記載。集計サイトの「MetaMask 11/26クレーム期限」はPerps大会上位30名のみ対象。Pacifica 11/23・Arcus 11/27の「終了日」は他ソースで裏付けが取れず未反映。Variational・PolymarketのTGE日程に新発表なし。本日は新規の大型注目案件なし。"
+      }
+    ]
+  },
+  {
     "timestamp": "2026-11-17T00:12:42.447353+00:00",
     "date": "2026-11-17",
     "time_jst": "2026年11月17日 09:12",

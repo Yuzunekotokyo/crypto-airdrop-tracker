@@ -1,29 +1,5 @@
 [
   {
-    "id": "predict-fun-predict",
-    "name": "Predict.fun (PREDICT)",
-    "symbol": "PREDICT",
-    "category": "予測市場",
-    "type": "シーズン1クレーム (明日開始予定)",
-    "status": "upcoming",
-    "difficulty": "easy",
-    "estimated_value_usd": 0,
-    "description": "予測市場Predict.funのシーズン1エアドロップ(7,000万PREDICT=総供給10億の7%)。11/12の告知に基づき、クレームは11/18 09:00 UTC(日本時間18:00)開始・期間30日と複数メディアが報道。受取は即時35%(残りは放棄)か12か月の月次分割で100%かを選択。Binance経由でPredict Pointsを得た人はBinance Walletのフォームを11/26 09:00 UTC(日本時間18:00)までに提出。11/18がTGE(上場)日かは未確定で、Binance Alphaの上場は10/30から延期されたまま新日程なし。延期を伝える記事は11/12告知より前のものとみられるが、本日時点で公式の一次情報は確認できていないため、必ず公式X/サイトで確認を。非公式クレームサイトには接続しないこと。",
-    "tasks": [
-      "11/18 18:00(日本時間)以降、公式サイトでクレーム開始を確認",
-      "受取方式(即時35% / 12か月分割で100%)を選択 — TGE完了後は変更不可",
-      "クレーム開始から30日以内(12/18頃まで)に請求",
-      "Binance経由のポイントはBinance Walletフォームを11/26までに提出"
-    ],
-    "end_date": "2026-11-18 開始 → 12/18頃まで (要公式確認)",
-    "logo": "",
-    "url": "https://predict.fun/",
-    "is_hot": true,
-    "added_date": "2026-11-16",
-    "source": "curated",
-    "source_url": "https://www.coingabbar.com/en/predict-fun-token-airdrop-claim-date-vesting-tge-date"
-  },
-  {
     "id": "flop-labs-flop",
     "name": "Flop Labs (FLOP)",
     "symbol": "FLOP",
@@ -93,15 +69,63 @@
     "source_url": "https://www.bitrue.com/blog/arcus-airdrop-guide-earn-points-robinhood-chain"
   },
   {
+    "id": "predict-fun-predict",
+    "name": "Predict.fun (PREDICT)",
+    "symbol": "PREDICT",
+    "category": "予測市場",
+    "type": "延期 (TGE・シーズン1クレーム)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "予測市場Predict.funのシーズン1エアドロップ(7,000万PREDICT)。11/18開始予定だったクレームとTGEは、11/17の告知で延期されたと複数メディアが報道。新しい目標は「今後2〜4週間」で具体的な日付は未発表。割当の確認と受取方式(即時35%で残りは放棄 / 12か月の月次分割で100%)の選択・変更はTGEまで引き続き可能。延期後も請求期間が30日のままかは未確認。延期の理由としてBinanceのAlpha・現物取引停止を挙げる報道が1件あるが二次情報。Binance Walletフォームの期限(11/26)が延期後も有効かは未確認のため、対象者は当初期限どおりに提出しておくのが安全。公式が再開を告知するまで「クレーム可能」をうたうサイト・DMは全て偽物として扱うこと。公式Xは直接確認できていない。",
+    "tasks": [
+      "クレームはまだ開始されていない — 公式X/サイトで新日程の発表を待つ",
+      "待機中に公式サイトで割当と受取方式(即時35% / 12か月分割100%)を確認・必要なら変更",
+      "Binance経由のポイント保有者: Binance Walletフォームは念のため11/26までに提出",
+      "「今すぐクレーム」をうたう非公式サイトには接続しない"
+    ],
+    "end_date": "延期 — 今後2〜4週間が目標 (日付未定)",
+    "logo": "",
+    "url": "https://predict.fun/",
+    "is_hot": true,
+    "added_date": "2026-11-16",
+    "source": "curated",
+    "source_url": "https://www.coininsider.org/news/predict-fun-delays-predict-token-launch-and-season-1-claims/"
+  },
+  {
+    "id": "zest-protocol-zest",
+    "name": "Zest Protocol (ZEST)",
+    "symbol": "ZEST",
+    "category": "BTCFi/レンディング",
+    "type": "シーズン1クレーム (明日開始)",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "description": "Stacks上のBTCレンディング。シーズン1エアドロップ(総供給の1%)のクレームが11/19 12:00 UTC(日本時間21:00)に開始、12/10までにZestのPointsページで請求 — Zest公式のリマインド投稿をKuCoinが転載しており、昨日までの「二次情報のみ」から確度が上がった。期限後の未請求分は永久に失効。TGE時アンロックは割当の10%で、残りは6か月かけてベスティング(公式ドキュメント)。対象は2026/5/13スナップショット時点のシーズン1ポイント保有者のみで、新規参加は不可。",
+    "tasks": [
+      "11/19 21:00(日本時間)以降、公式アプリのPointsページ(app.zestprotocol.com/points)で請求",
+      "シーズン1で利用したウォレットを接続",
+      "12/10までに完了 (未請求分は失効)",
+      "公式ドキュメント/公式X経由以外のリンクは踏まない"
+    ],
+    "end_date": "2026-11-19 21:00 JST 開始 → 12/10",
+    "logo": "",
+    "url": "https://docs.zestprotocol.com/zest-token/airdrop",
+    "is_hot": false,
+    "added_date": "2026-11-16",
+    "source": "curated",
+    "source_url": "https://www.kucoin.com/news/community/ZEST/6af5ff91777a4400075539b1"
+  },
+  {
     "id": "fables-fables",
     "name": "Fables (FABLES)",
     "symbol": "FABLES",
     "category": "DeFi",
-    "type": "クレーム期限間近",
+    "type": "クレーム期限間近 (残り2日)",
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "ポイント保有者向けFABLESクレームが11/20 23:59 UTC(日本時間11/21 8:59)で終了 — 残り3日。PROLOGUE引換も同日まで。安全のため11/19までの請求を推奨。10/19までに受取方式を保存済みのポイント保有者のみ対象で、新規参加は不可。",
+    "description": "ポイント保有者向けFABLESクレームが11/20 23:59 UTC(日本時間11/21 8:59)で終了 — 残り2日。PROLOGUE引換も同日まで。安全のため明日11/19までの請求を推奨。10/19までに受取方式を保存済みのポイント保有者のみ対象で、新規参加は不可。",
     "tasks": [
       "ポイントが付与されたウォレットを接続",
       "ポートフォリオ内「Claim your FABLES」から請求",
@@ -114,29 +138,6 @@
     "added_date": "2026-11-16",
     "source": "curated",
     "source_url": "https://www.bitrue.com/blog/fables-airdrop-guide"
-  },
-  {
-    "id": "zest-protocol-zest",
-    "name": "Zest Protocol (ZEST)",
-    "symbol": "ZEST",
-    "category": "BTCFi/レンディング",
-    "type": "シーズン1クレーム",
-    "status": "upcoming",
-    "difficulty": "easy",
-    "estimated_value_usd": 0,
-    "description": "Stacks上のBTCレンディング。シーズン1エアドロップ900万ZEST(供給の約0.9%)が本日11/17にアンロック予定(DefiLlama)。クレーム開始は11/19 12:00 UTC(日本時間21:00)、締切は12/10とされるが、本日の調査では公式の一次情報を再確認できず(二次情報)。対象は2026/5/13スナップショット時点のシーズン1ポイント保有者のみで、新規参加は不可。",
-    "tasks": [
-      "Zest公式(docs.zestprotocol.com / 公式X)でクレーム開始日時を確認",
-      "11/19 21:00(日本時間)以降、シーズン1で利用したウォレットで請求",
-      "12/10(報道)までに完了"
-    ],
-    "end_date": "2026-11-19 開始 → 12/10 (要公式確認)",
-    "logo": "",
-    "url": "https://defillama.com/unlocks/zest",
-    "is_hot": false,
-    "added_date": "2026-11-16",
-    "source": "curated",
-    "source_url": "https://defillama.com/unlocks/zest"
   },
   {
     "id": "treehouse-tree-s2",
@@ -258,42 +259,43 @@
     "status": "upcoming",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "元Revolutチームが開発するPerp DEX。コミュニティ向けに3億XTEN(総供給10億の30%)をTGE時に全額アンロックで配布。ポイントプログラムは終了済みで今からの参入は不可。TGEは11月目標だが本日時点で日付未発表、規制手続き次第。受取にはアプリ内での規約同意(署名)が必須で、受付期間は未発表。EEA居住者はローンチ時に現物取引不可の可能性。",
+    "description": "元Revolutチームが開発するPerp DEX。コミュニティ向けに3億XTEN(総供給10億の30%)を配布。割当チェッカーは公開済みで、受取にはアプリ内での規約同意が必須、期限は12/31と報道(期限までに同意しない分はエコシステム基金へ移される)。TGE日・クレーム窓口は本日時点でも未発表で、集計サイトの「11月」は推定にすぎない。TGE時アンロックは「全額」とする報道と「32.9%」とする報道があり要公式確認。ポイントプログラムは終了済みで今からの参入は不可。EEA居住者はローンチ時に現物取引不可の可能性。",
     "tasks": [
-      "ポイント保有者: アプリ内の規約同意の受付開始を待ち、期間内に必ず署名",
+      "ポイント保有者: 公式アプリで割当を確認し、12/31までに規約同意を完了",
       "TGE日とクレーム窓口の公式発表を監視",
-      "偽のクレームチェッカーに注意"
+      "偽のクレームチェッカーに注意 (公式アプリ内のみ)"
     ],
-    "end_date": "2026年11月目標 (日付未定)",
+    "end_date": "規約同意 12/31まで・TGE日未定",
     "logo": "",
     "url": "https://extended.exchange/",
     "is_hot": false,
     "added_date": "2026-11-17",
     "source": "curated",
-    "source_url": "https://phemex.com/news/article/extended-unveils-xten-tokenomics-30-supply-airdropped-fully-at-tge-team-tokens-locked-12-months-102185"
+    "source_url": "https://www.tokenpost.com/news/business/55046"
   },
   {
     "id": "infinifi-infi",
     "name": "infiniFi (INFI)",
     "symbol": "INFI",
     "category": "DeFi/ステーブルコイン",
-    "type": "TGE待ち (登録締切済み)",
-    "status": "upcoming",
+    "type": "TGE実施日 (11/17)・配布済み",
+    "status": "active",
     "difficulty": "medium",
     "estimated_value_usd": 0,
-    "description": "iUSD / siUSDの利回りプロトコル。シーズン1・2のエアドロップ登録は11/10で締切済み。11/16にINFIのロック版「wINFI」を発表(ロック者に排出報酬を按分する仕組み。排出率・ロック期間・引出条件は未公表)。トークンは登録ウォレットへ直接配布され、配布後まもなく全保有者同時に譲渡可能になる予定。TGEはQ4目標で日付未発表。残る工程は「トークン文書→対象確認→最終スナップショット→TGE」。シーズン3は継続中で、未クレーム分の一部が上乗せされる。",
+    "description": "iUSD / siUSDの利回りプロトコル。INFIのTGEは11/17 15:30 UTC(日本時間11/18 0:30)に設定され、EthereumとBaseで譲渡可能になる予定だった。エアドロップ分は11/16から登録ウォレットへ「凍結(譲渡不可)」状態で直接配布済みで、TGE後のアンロック取引で全保有者が同時に譲渡可能になる段取り。ロック版wINFIの排出は11/18開始予定。Kraken上場は1ソースのみの情報。本日の調査で見つかった記事はいずれもTGE当日以前のもので、アンロックの実行と市場価格は未確認 — 公式Xとウォレットで確認を。シーズン1・2の登録は11/10で締切済み、シーズン3は継続中。",
     "tasks": [
-      "登録済みの場合: 公式Xで配布日程の告知を待つ",
-      "最終スナップショットまでポジション(iUSD / siUSD等)を維持",
-      "未登録でもシーズン3で参加余地あり"
+      "登録済みの場合: ウォレットにINFIが着金し譲渡可能になっているか確認",
+      "売却・保有・wINFIロックを判断 (wINFIの排出率・ロック条件は公式で確認)",
+      "未登録でもシーズン3で参加余地あり",
+      "偽の「INFIクレーム」サイトに注意 — 配布は直接着金でクレーム操作は不要"
     ],
-    "end_date": "2026年Q4 (日付未定)",
+    "end_date": "2026-11-17 TGE予定日 (実施は要確認)",
     "logo": "",
     "url": "https://infinifi.xyz/",
     "is_hot": false,
     "added_date": "2026-11-17",
     "source": "curated",
-    "source_url": "https://www.coingabbar.com/en/infinifi-token-launch-winfi-locking-rewards-ahead-of-tge"
+    "source_url": "https://www.tokenpost.com/news/business/59046"
   },
   {
     "id": "standx-dusd",
@@ -386,6 +388,29 @@
     "source_url": "https://airdropalert.com/airdrops/pacifica-solana-exchange/"
   },
   {
+    "id": "flint-trade",
+    "name": "Flint Trade (Flint Points)",
+    "symbol": "",
+    "category": "DeFi/DEX (Solana)",
+    "type": "ポイントプログラム (未確定・監視)",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "Solana上の現物＋Perp DEX。現物は2026年7月からメインネット稼働、Perpはデブネット段階。11/13にFlint Pointsプログラムを開始し、同時開催のデブネット取引大会は11/20 11:00 UTC(日本時間20:00)まで(損益上位20名に各500 USDCとの情報)。デブネットは実資金不要で、順位に関係なく取引でポイントが付く。ポイントはメインネット/クローズドアルファへのアクセスに使われるとされる。トークン・エアドロップは未発表で、情報源はほぼ集計サイト1件のみ・資金調達元も未確認のため監視枠。",
+    "tasks": [
+      "公式サイト/公式Xでポイント制度と大会要項を確認",
+      "デブネット(実資金不要)で取引してポイントを獲得 — 大会は11/20 20:00(日本時間)まで",
+      "メインネットで資金を入れる前に公式情報を再確認"
+    ],
+    "end_date": "2026-11-20 (デブネット大会)・ポイントは継続",
+    "logo": "",
+    "url": "https://airdrops.io/calendar/",
+    "is_hot": false,
+    "added_date": "2026-11-18",
+    "source": "curated",
+    "source_url": "https://airdrops.io/calendar/"
+  },
+  {
     "id": "raycash-points",
     "name": "Raycash (Raycash Points)",
     "symbol": "",
@@ -457,11 +482,11 @@
     "name": "MetaMask (MASK)",
     "symbol": "MASK",
     "category": "ウォレット",
-    "type": "未確定 (日程なし)",
+    "type": "未確定 (公式は「計画なし」)",
     "status": "upcoming",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "MetaMask Rewardsでポイントを獲得可能(シーズン1報酬はLINEAトークン)。MASKトークンは経営陣が言及しているものの公式日程・ロードマップなし。今回の調査で2026年11月の新情報は見つからず。",
+    "description": "MetaMask Rewardsシーズン2が進行中でポイントを獲得可能(シーズン1報酬はLINEAトークンで、請求は2026年初に終了済み)。2026年10月のMetaMaskヘルプセンターは「MASKトークンの計画はない」と記載しており、MASK配布は現時点で投機的。集計サイトに載る「11/26クレーム期限」は秋のPerps大会の上位30名だけが対象(11/26 16:00 UTC=日本時間11/27 1:00)で、一般向けのクレームではない。",
     "tasks": [
       "MetaMask内のスワップ・Perps等でRewardsポイントを獲得",
       "metamask.io と公式Xのみを確認"
@@ -472,6 +497,6 @@
     "is_hot": false,
     "added_date": "2026-11-16",
     "source": "curated",
-    "source_url": "https://bingx.com/en/learn/what-is-metamask-airdrop-how-to-participate-earn-mask-rewards"
+    "source_url": "https://airdrops.io/metamask/"
   }
 ]
