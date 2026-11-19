@@ -13,7 +13,7 @@
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
     <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
+      <span class="update-badge">🔄 UPDATE</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
     </div>
     <div class="update-stats">
@@ -39,6 +39,26 @@
       </span>
       {% endif %}
     </div>
+    {% if latest_update.highlights %}
+    <div class="update-highlights">
+      <strong class="update-heading">📝 今回の更新内容</strong>
+      <ul>
+        {% for h in latest_update.highlights %}
+        <li><span class="hl-tag hl-{{ h.kind }}">{{ h.label }}</span><span><strong>{{ h.title }}</strong> — {{ h.detail }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% if latest_update.alerts %}
+    <div class="update-highlights update-alerts">
+      <strong class="update-heading">⚠️ 注意喚起</strong>
+      <ul>
+        {% for al in latest_update.alerts %}
+        <li><span>{{ al }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
     {% if latest_update.added_names %}
     <div class="update-new-items">
       <strong>新規追加:</strong>
@@ -66,7 +86,7 @@
       <p class="header-sub">最新のエアドロップ情報をリアルタイム追跡 · 毎日自動更新</p>
     </div>
     <div class="header-info">
-      <span class="last-updated">最終更新: {{ now }}</span>
+      <span class="last-updated">最終更新: {{ latest_update.time_jst if latest_update else now }} JST</span>
     </div>
   </div>
 </header>
@@ -130,6 +150,7 @@
               <span class="value-amount">
                 {% if airdrop.estimated_value_usd %}~${{ "{:,}".format(airdrop.estimated_value_usd) }}{% else %}未定{% endif %}
               </span>
+              {% if airdrop.reward_note %}<span class="reward-note">{{ airdrop.reward_note }}</span>{% endif %}
             </div>
             <div class="value-block">
               <span class="value-label">難易度</span>
@@ -150,12 +171,13 @@
             </ul>
           </div>
           {% endif %}
+          {% if airdrop.note %}<p class="airdrop-note">⚠️ {{ airdrop.note }}</p>{% endif %}
         </div>
         <div class="hot-card-footer">
           <span class="status-badge status-{{ airdrop.status }}">
             {% if airdrop.status == 'active' %}● アクティブ{% elif airdrop.status == 'upcoming' %}◎ 近日開始{% else %}✕ 終了{% endif %}
           </span>
-          <a href="{{ airdrop.url }}" target="_blank" rel="noopener" class="btn-participate">参加する →</a>
+          <a href="{{ airdrop.url }}" target="_blank" rel="noopener" class="btn-participate">詳細を見る →</a>
         </div>
       </div>
       {% endfor %}
@@ -189,7 +211,7 @@
               data-name="{{ airdrop.name | lower }}"
               data-value="{{ airdrop.estimated_value_usd or 0 }}"
               data-category="{{ airdrop.category | lower }}"
-              title="{{ airdrop.description }}">
+              title="{{ airdrop.description }}{% if airdrop.note %} ※{{ airdrop.note }}{% endif %}">
             <td>
               <div class="name-cell">
                 {% if airdrop.logo %}
@@ -208,7 +230,7 @@
               {% if airdrop.estimated_value_usd %}
               <span class="value-text">~${{ "{:,}".format(airdrop.estimated_value_usd) }}</span>
               {% else %}
-              <span class="value-unknown">未定</span>
+              <span class="value-unknown">{{ airdrop.reward_note or '未定' }}</span>
               {% endif %}
             </td>
             <td><span class="difficulty-badge difficulty-{{ airdrop.difficulty }}">{{ airdrop.difficulty | upper }}</span></td>
@@ -217,7 +239,7 @@
             </span></td>
             <td class="date-cell">{{ airdrop.end_date }}</td>
             <td>
-              <a href="{{ airdrop.url }}" target="_blank" rel="noopener" class="btn-sm">参加</a>
+              <a href="{{ airdrop.url }}" target="_blank" rel="noopener" class="btn-sm">詳細</a>
             </td>
           </tr>
           {% endfor %}

@@ -1,1 +1,108 @@
-[]
+[
+  {
+    "timestamp": "2026-11-19T00:11:16+00:00",
+    "date": "2026-11-19",
+    "time_jst": "2026年11月19日 09:11",
+    "total_airdrops": 15,
+    "added_count": 15,
+    "removed_count": 6,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Predict.fun (PREDICT)",
+      "Variational (VAR)",
+      "Flop Labs",
+      "Fables (FABLES)",
+      "Treehouse (TREE) シーズン2",
+      "Doppler Finance (XDP)",
+      "Aster (ASTER) ステージ6",
+      "ZEST",
+      "Midnight (Thawフェーズ)",
+      "StandX",
+      "Pacifica",
+      "Polymarket (POLY)",
+      "Saturn (STRN)",
+      "GenLayer (GEN)",
+      "infiniFi (INFI)"
+    ],
+    "removed_names": [
+      "LayerZero (ZRO)",
+      "Scroll (SCR)",
+      "zkSync Era",
+      "Hyperliquid (HYPE)",
+      "EigenLayer (EIGEN)",
+      "Movement (MOVE)"
+    ],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "highlights": [
+      {
+        "kind": "new",
+        "label": "新着",
+        "title": "Predict.fun (PREDICT)",
+        "detail": "11/18 09:00 UTCにシーズン1のクレーム開始。7,000万PREDICT(供給量7%)。35%即時か12か月分割かを選択、開始30日で失効。"
+      },
+      {
+        "kind": "new",
+        "label": "新着",
+        "title": "Flop Labs",
+        "detail": "11/24にテストネット+エアドロップ開始予定(暫定)。条件・配布量は未発表。"
+      },
+      {
+        "kind": "new",
+        "label": "新着",
+        "title": "ZEST",
+        "detail": "11/19 12:00 UTCにクレーム開始、12/10締切(情報源1件)。"
+      },
+      {
+        "kind": "new",
+        "label": "注目",
+        "title": "Variational (VAR)",
+        "detail": "供給量の32%をポイント比例で配布、TGEはQ4予定(日付未定)。今からでもポイント獲得可能。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切",
+        "title": "Fables",
+        "detail": "11/20 23:59 UTCでポイント請求とPROLOGUE交換が終了。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切",
+        "title": "Treehouse シーズン2",
+        "detail": "11/25 07:00 UTCまで(gaiafoundation.xyz)。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切",
+        "title": "Doppler Finance (XDP)",
+        "detail": "11/28 12:00 UTCまで。登録済みBaseウォレットのみ。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切",
+        "title": "Aster ステージ6 / Midnight Thaw",
+        "detail": "どちらも12/4まで(Asterは11/28とする情報源もあり)。"
+      },
+      {
+        "kind": "removed",
+        "label": "削除",
+        "title": "旧サンプル6件",
+        "detail": "LayerZero・Scroll・zkSync・Hyperliquid・EigenLayer・Movementは配布済みの古い内容だったため一覧から外し、最新の15件に入れ替え。"
+      },
+      {
+        "kind": "changed",
+        "label": "変更",
+        "title": "推定価値の表示",
+        "detail": "根拠のあるドル換算値がないため「未定」とし、代わりに公表済みの配布量を表示。"
+      }
+    ],
+    "alerts": [
+      "Hyperliquid「シーズン2」は公式発表なし。vercel.app等の「Season 2 claim」ページは詐欺の可能性が高く、ウォレットを接続しないこと。",
+      "MetaMaskの「11/26クレーム締切」情報は裏付けなし。公式はリワードのシーズン1終了・MASKトークンの予定なしと案内。",
+      "Sophonメインネットが11/30に恒久停止、出金期限は11/25と報じられている(情報源1件)。資産がある場合は公式で確認を。",
+      "掲載日程は二次情報を含みます。クレーム前に必ず各プロジェクトの公式チャンネルで確認してください。"
+    ]
+  }
+]

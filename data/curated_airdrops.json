@@ -1,0 +1,393 @@
+[
+  {
+    "id": "predict-fun",
+    "name": "Predict.fun (PREDICT)",
+    "symbol": "PREDICT",
+    "category": "予測市場",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "7,000万PREDICT(供給量の7%)",
+    "description": "予測市場Predict.funのシーズン1エアドロップ。11/18 09:00 UTCにクレーム開始。35%を即時受取、またはTGE後12か月の分割で全額受取を選択(TGE完了前に選択必須、未選択は分割扱い)。",
+    "tasks": [
+      "公式サイトで対象ウォレットの割当を確認(対象はシーズン1のポイント保有者)",
+      "「35%即時」か「全額を12か月分割」を選択",
+      "クレーム開始から30日以内に手続き(未請求分は失効)"
+    ],
+    "end_date": "2026-12-18",
+    "note": "総供給量は10億とする報道と100億とする報道があり不一致。期限はクレーム開始30日後という報道からの算出。公式発表で要確認。",
+    "url": "https://predict.fun/",
+    "sources": [
+      "https://www.tokenpost.com/news/business/55448",
+      "https://www.techflowpost.com/en-US/newsletter/144301"
+    ],
+    "logo": "",
+    "is_hot": true,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "variational-var",
+    "name": "Variational (VAR)",
+    "symbol": "VAR",
+    "category": "DeFi/Perp DEX",
+    "type": "ポイントファーミング",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "reward_note": "供給量の32%をポイント比例で配布予定",
+    "description": "Perp DEXのVariational。VAR総供給量の32%をジェネシス配布としてポイント保有トレーダーに配る方針。TGEは2026年Q4予定(Q3から延期、正確な日付は未発表)。",
+    "tasks": [
+      "Variationalで取引してポイントを獲得",
+      "TGE日程の公式発表を確認"
+    ],
+    "end_date": "未定",
+    "note": "情報源は主にアグリゲーター。取引には損失リスクがあるため、エアドロップ目的だけの大きな取引は非推奨。",
+    "url": "https://airdroplet.com/airdrop/variational",
+    "sources": [
+      "https://airdroplet.com/airdrop/variational",
+      "https://incrypted.com/en/variational-will-distribute-32-of-var-tokens-via-an-airdrop/"
+    ],
+    "logo": "",
+    "is_hot": true,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "flop-labs",
+    "name": "Flop Labs",
+    "symbol": "",
+    "category": "テストネット",
+    "type": "テストネット",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "配布量・条件は未発表",
+    "description": "11/24にテストネット開始予定(暫定)。エアドロップ付きと報じられ、airdrops.ioでは「確定」扱い。スナップショット・対象条件・配布量はまだ公表されていない。",
+    "tasks": [
+      "11/24のテストネット開始を待つ",
+      "公式発表で参加手順を確認"
+    ],
+    "end_date": "未定",
+    "note": "日付は暫定で、情報源が少ない新規案件。資金を入れる前に公式情報を確認。",
+    "url": "https://airdrops.io/flop-labs/",
+    "sources": [
+      "https://airdrops.io/flop-labs/",
+      "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines"
+    ],
+    "logo": "",
+    "is_hot": true,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "fables",
+    "name": "Fables (FABLES)",
+    "symbol": "FABLES",
+    "category": "DeFi/DEX",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "ポイント請求とPROLOGUE→FABLES交換",
+    "description": "Robinhood Chain上のDEX。ポイント請求とPROLOGUEからFABLESへの交換が11/20 23:59 UTCで終了。交換できるのは10/17スナップショット時点で残高を持っていたウォレットのみ。",
+    "tasks": [
+      "公式サイトのポートフォリオ画面からポイントを請求",
+      "スナップショット時のウォレットでPROLOGUEをFABLESに交換"
+    ],
+    "end_date": "2026-11-20",
+    "note": "締切を11/21 00:00 UTCとする情報源もあり。交換比率も約37.68〜40 PROLOGUE = 1 FABLESと不一致。PROLOGUEを別途送金するとそのウォレットの請求権が無効になるとの警告あり。",
+    "url": "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines",
+    "sources": [
+      "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines",
+      "https://airdrops.io/calendar/"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "treehouse-tree-s2",
+    "name": "Treehouse (TREE) シーズン2",
+    "symbol": "TREE",
+    "category": "DeFi",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "ベスティング完了済みのため全額受取可",
+    "description": "GoNutsシーズン2報酬のクレーム。受付は11/25 07:00 UTCまで。対象スナップショットは4/25。未請求分はプロジェクトのトレジャリーに戻る。",
+    "tasks": [
+      "gaiafoundation.xyz で「Season 2」を選択",
+      "GoNutsで使ったウォレットを接続して割当を確認・請求"
+    ],
+    "end_date": "2026-11-25",
+    "note": "TreehouseはDMでクレームリンクを送らないと明言。公式ポータル以外で署名しないこと。",
+    "url": "https://gaiafoundation.xyz/",
+    "sources": [
+      "https://www.treehouse.finance/blog/s2-airdrop",
+      "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "doppler-finance-xdp",
+    "name": "Doppler Finance (XDP)",
+    "symbol": "XDP",
+    "category": "DeFi/XRP",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "1億XDP(供給量の1%)・ロックなし",
+    "description": "XRPエコシステムの利回りプラットフォーム。ジェネシスエアドロップのクレームは11/28 12:00 UTCまで。登録は締切済みで、登録済みのBaseウォレットからのみ請求可能。",
+    "tasks": [
+      "app.doppler.finance に登録済みのBaseウォレットを接続",
+      "割当を確認してXDPを請求"
+    ],
+    "end_date": "2026-11-28",
+    "note": "期限までに請求しない割当は失効。新規登録は不可。",
+    "url": "https://app.doppler.finance/",
+    "sources": [
+      "https://airdrops.io/doppler-finance/",
+      "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "aster-stage6",
+    "name": "Aster (ASTER) ステージ6",
+    "symbol": "ASTER",
+    "category": "DeFi/Perp DEX",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "reward_note": "約6,400万ASTER(供給量の0.8%)",
+    "description": "Perp DEX Asterのステージ6「Convergence」。1万ポイント以上の参加者が対象。割当ウィンドウは12/4 12:00 UTCまで。",
+    "tasks": [
+      "Asterの割当ページで対象か確認",
+      "期限までに割当を受け取る"
+    ],
+    "end_date": "2026-12-04",
+    "note": "終了日を11/28 12:00 UTCとする情報源もあるため、早めの対応が安全。",
+    "url": "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines",
+    "sources": [
+      "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "zest",
+    "name": "ZEST",
+    "symbol": "ZEST",
+    "category": "DeFi",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "配布量は未確認",
+    "description": "$ZESTのクレームが11/19 12:00 UTCに開始、12/10に締切とairdrops.ioが掲載。",
+    "tasks": [
+      "公式チャンネルでクレームページと対象条件を確認"
+    ],
+    "end_date": "2026-12-10",
+    "note": "情報源はairdrops.ioの1件のみ。対象条件・配布量は未確認。",
+    "url": "https://airdrops.io/claims/",
+    "sources": [
+      "https://airdrops.io/claims/"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "midnight-thaw",
+    "name": "Midnight (Thawフェーズ)",
+    "symbol": "NIGHT",
+    "category": "インフラ",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "既存割当の解凍分",
+    "description": "MidnightのThaw(解凍)フェーズが12/4に終了と報じられている。既に割当を持つ人向け。",
+    "tasks": [
+      "公式ポータルで未請求の解凍分がないか確認"
+    ],
+    "end_date": "2026-12-04",
+    "note": "詳細は確認できていない(情報源1件)。",
+    "url": "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines",
+    "sources": [
+      "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "standx",
+    "name": "StandX",
+    "symbol": "",
+    "category": "DeFi/Perp DEX",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "配布量は未確認",
+    "description": "StandXのクレームは11/2から受付中で、12/31まで開いていると報じられている。",
+    "tasks": [
+      "公式サイトで対象か確認して請求"
+    ],
+    "end_date": "2026-12-31",
+    "note": "期限は二次情報。公式で要確認。",
+    "url": "https://airdrops.io/calendar/",
+    "sources": [
+      "https://airdrops.io/calendar/"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "pacifica",
+    "name": "Pacifica",
+    "symbol": "",
+    "category": "DeFi/Perp DEX",
+    "type": "ポイントファーミング",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "reward_note": "トークン未発表(ポイント制)",
+    "description": "Solana系Perp DEX。2025/9/4からポイントプログラムを継続中。トークンもTGE日程も未発表。11/9〜11/23はクリエイター向けに10万ポイントの「Educators Sprint」を実施。",
+    "tasks": [
+      "Pacificaで取引してポイントを獲得",
+      "トークン発表の有無を公式で確認"
+    ],
+    "end_date": "未定",
+    "note": "トークン発行は保証されていない。",
+    "url": "https://orbitperpscreener.com/airdrop-calendar",
+    "sources": [
+      "https://orbitperpscreener.com/airdrop-calendar"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "polymarket-poly",
+    "name": "Polymarket (POLY)",
+    "symbol": "POLY",
+    "category": "予測市場",
+    "type": "見込み(日程未定)",
+    "status": "upcoming",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "reward_note": "配布量は未発表",
+    "description": "2025年10月にCMOがPOLYトークンとエアドロップの計画を認めたが、スナップショット日・クレーム日は今も未発表。",
+    "tasks": [
+      "Polymarketの利用実績を作る(対象条件は未公表)",
+      "公式発表を待つ"
+    ],
+    "end_date": "未定",
+    "note": "「供給量の5〜10%」は噂で公式の数字ではない。",
+    "url": "https://polymarket.com/",
+    "sources": [
+      "https://www.theblock.co/post/376048/polymarket-cmo-confirms-poly-token-airdrop-plans"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "saturn-strn",
+    "name": "Saturn (STRN)",
+    "symbol": "STRN",
+    "category": "DeFi",
+    "type": "登録締切済み",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "配布量・価格は未発表",
+    "description": "エアドロップ登録は11/16に締切。STRNのクレーム開始日・TGE日は未確定(Q4見込みとの報道あり)。登録しても割当は保証されない。",
+    "tasks": [
+      "登録済みの人はSaturn Foundation公式Xの発表を待つ"
+    ],
+    "end_date": "未定",
+    "note": "公式Xが告知するまで「今すぐクレーム」系のリンクは偽物と考える。",
+    "url": "https://airdrops.io/saturn-credit/",
+    "sources": [
+      "https://airdrops.io/saturn-credit/"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "genlayer-gen",
+    "name": "GenLayer (GEN)",
+    "symbol": "GEN",
+    "category": "インフラ/AI",
+    "type": "登録制",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "クレーム日は未発表",
+    "description": "GENのトークノミクス公開後、10/26に締め切った登録を10月末に数日間再開したと報じられた。クレーム日は未定。",
+    "tasks": [
+      "公式チャンネルで登録状況を確認"
+    ],
+    "end_date": "未定",
+    "note": "公式チャンネル同士で内容が食い違っているとの指摘あり。登録が今も開いているかは未確認。",
+    "url": "https://www.coingabbar.com/en/genlayer-airdrop-registration-reopens-gen-tokenomics-out",
+    "sources": [
+      "https://www.coingabbar.com/en/genlayer-airdrop-registration-reopens-gen-tokenomics-out"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  },
+  {
+    "id": "infinifi-infi",
+    "name": "infiniFi (INFI)",
+    "symbol": "INFI",
+    "category": "DeFi",
+    "type": "登録制",
+    "status": "upcoming",
+    "difficulty": "easy",
+    "estimated_value_usd": 0,
+    "reward_note": "登録済みウォレットへ直接配布",
+    "description": "INFIを登録済みの全ウォレットへ直接エアドロップすると案内。配布日は未発表。",
+    "tasks": [
+      "公式発表で配布日を確認"
+    ],
+    "end_date": "未定",
+    "note": "情報源はairdrops.ioの1件のみ。",
+    "url": "https://airdrops.io/confirmed/",
+    "sources": [
+      "https://airdrops.io/confirmed/"
+    ],
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-19",
+    "source": "curated"
+  }
+]
