@@ -1,5 +1,89 @@
 [
   {
+    "timestamp": "2026-11-20T00:11:58+00:00",
+    "date": "2026-11-20",
+    "time_jst": "2026年11月20日 09:11",
+    "total_airdrops": 15,
+    "added_count": 1,
+    "removed_count": 1,
+    "changed_count": 9,
+    "hot_count": 3,
+    "added_names": [
+      "Extended (XTEN)"
+    ],
+    "removed_names": [
+      "infiniFi (INFI)"
+    ],
+    "changes": [
+      {
+        "name": "Predict.fun (PREDICT)",
+        "changes": [
+          "ステータス: active → upcoming"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "email_sent": false,
+    "highlights": [
+      {
+        "kind": "deadline",
+        "label": "本日締切",
+        "title": "Fables (FABLES)",
+        "detail": "11/20 23:59 UTC(日本時間11/21 08:59)でポイント請求とPROLOGUE交換が終了。未請求分は失効。"
+      },
+      {
+        "kind": "new",
+        "label": "新着・注目",
+        "title": "Extended (XTEN)",
+        "detail": "割当チェッカー公開中。3億XTEN(供給量30%)をポイント保有者に配布。12/31 23:59 UTCまでにアプリで規約に同意しないと割当が失われる。TGE日は未発表。"
+      },
+      {
+        "kind": "changed",
+        "label": "訂正",
+        "title": "Predict.fun (PREDICT)",
+        "detail": "前回「11/18クレーム開始」と掲載したが、実際は11/17に延期が発表済み。新日程は2〜4週間以内目標で未確定。ステータスを「近日開始」に戻し、注目枠から外した。"
+      },
+      {
+        "kind": "changed",
+        "label": "更新",
+        "title": "Flop Labs (FLOP)",
+        "detail": "11/24テストネット開始まで4日。配布は12億FLOP(27.27%)との情報(別情報源は約20%)。テストネット上でAIタスクを購入した量に応じて配布、保有のみは対象外。"
+      },
+      {
+        "kind": "changed",
+        "label": "更新",
+        "title": "Zest Protocol (ZEST)",
+        "detail": "クレーム受付中(11/19 12:00 UTC〜12/10)。配布は総供給量の1%と公式ドキュメントで確認。"
+      },
+      {
+        "kind": "removed",
+        "label": "削除",
+        "title": "infiniFi (INFI)",
+        "detail": "11/17 15:30 UTCにTGE完了。供給量8.3%が登録済みウォレットへ直接配布済みでクレーム手続きは不要のため一覧から外した。"
+      },
+      {
+        "kind": "changed",
+        "label": "更新",
+        "title": "Saturn / StandX / Midnight / Aster / Variational",
+        "detail": "Saturnはシーズン2が最大5%・クレームはTGE時。StandXは12/31 08:00 UTCまで。MidnightはThaw終了後90日の猶予あり。Asterは公式ページが12/4締切と表示。VariationalはTGE日未発表のまま。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切",
+        "title": "今後の締切",
+        "detail": "Treehouse S2 11/25 07:00 UTC / Doppler XDP 11/28 12:00 UTC / Aster・Midnight 12/4 / Zest 12/10 / StandX・Extended同意 12/31。"
+      }
+    ],
+    "alerts": [
+      "Sophonメインネットは11/30に恒久停止、出金期限は11/25(複数の情報源で確認)。期限後は資産を取り出せなくなる恐れがあるため、残高がある場合はclaim.sophon.comから出金を。",
+      "INFIは直接配布済みでクレーム不要。「INFIをクレーム」と誘導するページは偽物の可能性が高い。Predict.funも延期中のため、現時点のクレームページは偽物。",
+      "「Omni」の70万OMNIエアドロップ(先着850ウォレット)とプレセールは、根拠が自社サイトのみで取引所の上場確認もない。高リスクのため掲載を見送り。",
+      "MetaMaskの「11/26締切」は秋のPerps大会の当選者向けの話で、一般向けのMASKエアドロップではない。Hyperliquid「シーズン2」も引き続き公式発表なし。",
+      "Flint Tradeのdevnet大会は本日11:00 UTCで終了。トークン・エアドロップは未発表のため一覧には載せていない。",
+      "掲載日程は二次情報を含みます。クレーム前に必ず各プロジェクトの公式チャンネルで確認してください。"
+    ]
+  },
+  {
     "timestamp": "2026-11-19T00:11:16+00:00",
     "date": "2026-11-19",
     "time_jst": "2026年11月19日 09:11",
