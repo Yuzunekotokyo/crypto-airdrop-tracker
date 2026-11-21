@@ -1,5 +1,88 @@
 [
   {
+    "timestamp": "2026-11-21T00:11:30+00:00",
+    "date": "2026-11-21",
+    "time_jst": "2026年11月21日 09:11",
+    "total_airdrops": 16,
+    "added_count": 2,
+    "removed_count": 1,
+    "changed_count": 5,
+    "hot_count": 3,
+    "added_names": [
+      "Grass シーズン2 (USDC)",
+      "USD.AI シーズン2"
+    ],
+    "removed_names": [
+      "Fables (FABLES)"
+    ],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "highlights": [
+      {
+        "kind": "changed",
+        "label": "概況",
+        "title": "本日は大型の新規案件なし",
+        "detail": "過去24時間で新しい有望エアドロップの発表は確認できず。注目3件(Extended / Variational / Flop Labs)は変わらず。次の山場は11/24のFlop Labsテストネット開始。"
+      },
+      {
+        "kind": "deadline",
+        "label": "あと3日",
+        "title": "Flop Labs (FLOP)",
+        "detail": "11/24テストネット開始予定のまま、日程変更の報道なし。開始後に無料のテストネットトークンでAIタスクを実行した量が配布基準。FLOPトークンはまだ存在せず、販売・配布をうたうサイトは詐欺。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切間近",
+        "title": "Treehouse S2 / Doppler XDP",
+        "detail": "Treehouseシーズン2は11/25 07:00 UTC(日本時間16:00)まで残り4日。Doppler XDPは11/28 12:00 UTC(日本時間21:00)まで残り7日。"
+      },
+      {
+        "kind": "removed",
+        "label": "削除",
+        "title": "Fables (FABLES)",
+        "detail": "11/20 23:59 UTCでポイント請求とPROLOGUE交換が終了したため一覧から外した。"
+      },
+      {
+        "kind": "new",
+        "label": "追加",
+        "title": "USD.AI シーズン2",
+        "detail": "Arbitrum上でクレーム受付中(10/20〜2027/1/31)。既に割当を持つ人向け。"
+      },
+      {
+        "kind": "new",
+        "label": "追加",
+        "title": "Grass シーズン2 (USDC)",
+        "detail": "USDC払いのクレームが2027/1/22まで受付中。支払額は数ドル程度との報告が多く、期待値は小さい。"
+      },
+      {
+        "kind": "changed",
+        "label": "更新",
+        "title": "Predict.fun (PREDICT)",
+        "detail": "新しいTGE・クレーム日は今日も未発表(目標は12月前半ごろ)。出回っている「11/26選択期限」は延期前の情報で、選択はTGEまで変更可能。"
+      },
+      {
+        "kind": "changed",
+        "label": "変更なし",
+        "title": "Extended / Variational / Saturn / Polymarket / Pacifica",
+        "detail": "いずれもTGE日は未発表のまま。Extendedの規約同意は12/31 23:59 UTCまで。PacificaのEducators Sprintは11/23まで。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切",
+        "title": "今後の締切",
+        "detail": "Treehouse S2 11/25 / Doppler XDP 11/28 / Aster・Midnight 12/4 / Zest 12/10 / StandX・Extended同意 12/31 / Grass 1/22 / USD.AI 1/31。"
+      }
+    ],
+    "alerts": [
+      "Sophonの出金期限は11/25(残り4日)、メインネットは11/30に恒久停止。ブリッジや公式サイトは11/25から順次停止するため、11/30までの猶予には頼らず早めに出金を。対象はSOPH・ETH・USDC・ステーキング報酬・Farmポジション。",
+      "Predict.funは延期中、Flop Labsはトークン未発行。この2つの「クレームページ」「トークン販売」は現時点ですべて偽物。",
+      "Predict.funに「返金オプション開始」との見出しの記事があるが、本文を確認できなかったため掲載内容には反映していない。",
+      "Binance Alphaの11/20エアドロップ(250ポイント以上・先着順)は既に終了している可能性が高い。Alphaポイント保有者は公式告知で次回を確認。",
+      "本日は一部の情報サイトに接続できず、検索結果の要約を中心に確認した。日程は二次情報を含むため、クレーム前に必ず各プロジェクトの公式チャンネルで確認を。"
+    ]
+  },
+  {
     "timestamp": "2026-11-20T00:11:58+00:00",
     "date": "2026-11-20",
     "time_jst": "2026年11月20日 09:11",

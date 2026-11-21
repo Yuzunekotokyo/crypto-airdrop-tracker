@@ -66,14 +66,14 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "12億FLOP(ジェネシス供給量の27.27%)との情報あり・未確定",
-    "description": "アーサー・ヘイズ氏が率いるFlop Labs。テストネットとエアドロップを11/24に開始すると11/13に発表(変更時は事前告知)。テストネットは90日間とされる。無料のテストネットトークンでAIタスク(計算資源)を購入し、検証済み購入量のシェアに応じて配布される仕組みと伝えられている。保有するだけでは対象外。",
+    "description": "アーサー・ヘイズ氏が率いるFlop Labs。テストネットとエアドロップを11/24に開始すると11/13に発表(変更時は事前告知、Flop Labs側は「暫定」と説明)。11/21時点で日程変更の報道はない。テストネットは90日間とされる。無料のテストネットトークンでAIタスク(計算資源)を購入し、検証済み購入量のシェアに応じて配布される仕組みと伝えられている。保有するだけでは対象外。",
     "tasks": [
       "11/24のテストネット開始を待つ(devnetでの活動は報酬対象外)",
       "公式GitHubと公式X(@flop_labs)で参加手順を確認",
       "無料のテストネットトークンでAIタスクを実行"
     ],
     "end_date": "未定",
-    "note": "配布量は「12億FLOP・27.27%」(X投稿)と「総供給量の約20%を10年かけて配布」(airdrops.io)で不一致。対象条件の詳細は未発表。FLOPトークンはまだ市場に存在せず、販売・ミントの勧誘はすべて詐欺と公式が警告。",
+    "note": "FLOPトークンはまだ存在しない(ヘイズ氏本人が明言)。「FLOPを販売・配布」とうたうサイトは詐欺。配布量は情報源により食い違いあり。",
     "url": "https://airdrops.io/flop-labs/",
     "sources": [
       "https://panews.io/articles/01a1d3d5-425a-7074-8e85-3116fdf883d5",
@@ -82,33 +82,6 @@
     ],
     "logo": "",
     "is_hot": true,
-    "added_date": "2026-11-19",
-    "source": "curated"
-  },
-  {
-    "id": "fables",
-    "name": "Fables (FABLES)",
-    "symbol": "FABLES",
-    "category": "DeFi/DEX",
-    "type": "クレーム受付中",
-    "status": "active",
-    "difficulty": "easy",
-    "estimated_value_usd": 0,
-    "reward_note": "ポイント請求とPROLOGUE→FABLES交換",
-    "description": "【本日締切】Robinhood Chain上のDEX。ポイント請求とPROLOGUEからFABLESへの交換が11/20 23:59 UTC(日本時間11/21 08:59)で終了。交換できるのは10/17スナップショット時点で残高を持っていたウォレットのみ。未請求分はミントされない。",
-    "tasks": [
-      "公式サイトのポートフォリオ画面からポイントを請求",
-      "スナップショット時のウォレットでPROLOGUEをFABLESに交換"
-    ],
-    "end_date": "2026-11-20",
-    "note": "締切を11/21 00:00 UTCとする情報源もあり。交換比率も約37.68〜40 PROLOGUE = 1 FABLESと不一致。PROLOGUEを別途送金するとそのウォレットの請求権が無効になるとの警告あり。",
-    "url": "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines",
-    "sources": [
-      "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines",
-      "https://airdrops.io/calendar/"
-    ],
-    "logo": "",
-    "is_hot": false,
     "added_date": "2026-11-19",
     "source": "curated"
   },
@@ -122,7 +95,7 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "ベスティング完了済みのため全額受取可",
-    "description": "GoNutsシーズン2報酬のクレーム。受付は11/25 07:00 UTCまで。対象スナップショットは4/25。未請求分はプロジェクトのトレジャリーに戻る。",
+    "description": "【残り4日】GoNutsシーズン2報酬のクレーム。受付は11/25 07:00 UTCまで。対象スナップショットは4/25。未請求分はプロジェクトのトレジャリーに戻る。",
     "tasks": [
       "gaiafoundation.xyz で「Season 2」を選択",
       "GoNutsで使ったウォレットを接続して割当を確認・請求"
@@ -149,7 +122,7 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "1億XDP(供給量の1%)・ロックなし",
-    "description": "XRPエコシステムの利回りプラットフォーム。ジェネシスエアドロップのクレームは11/28 12:00 UTCまで。登録は締切済みで、登録済みのBaseウォレットからのみ請求可能。",
+    "description": "XRPエコシステムの利回りプラットフォーム。ジェネシスエアドロップ(1億XDP)のクレームは11/28 12:00 UTCまで。登録は締切済みで、登録済みのBaseウォレットからのみ請求可能。",
     "tasks": [
       "app.doppler.finance に登録済みのBaseウォレットを接続",
       "割当を確認してXDPを請求"
@@ -270,6 +243,58 @@
     "source": "curated"
   },
   {
+    "symbol": "GRASS",
+    "estimated_value_usd": 0,
+    "note": "未請求のUSDCは期限後に再配分されずGrass側に残る。",
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-21",
+    "source": "curated",
+    "id": "grass-s2",
+    "name": "Grass シーズン2 (USDC)",
+    "category": "DePIN",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "reward_note": "USDC払い・少額の報告多い",
+    "description": "帯域共有DePINのGrass。シーズン2報酬はGRASSではなくネットワーク収益からのUSDCで支払われ、7/22から受付中。締切は2027/1/22(1/20とする情報源もある)。対象は2024/10/14〜2026/6/8にNetwork Pointsを獲得したアカウント。数ドル程度だったという報告が多い。",
+    "tasks": [
+      "app.grass.io のダッシュボード「Allocation」タブで割当を確認",
+      "2027/1/22までにUSDCを請求(早めに)"
+    ],
+    "end_date": "2027-01-22",
+    "url": "https://app.grass.io/",
+    "sources": [
+      "https://airdrops.io/grass/"
+    ]
+  },
+  {
+    "symbol": "",
+    "estimated_value_usd": 0,
+    "note": "期限と対象条件は二次情報(CoinMarketCal経由)。請求前に公式で確認を。",
+    "logo": "",
+    "is_hot": false,
+    "added_date": "2026-11-21",
+    "source": "curated",
+    "id": "usdai-s2",
+    "name": "USD.AI シーズン2",
+    "category": "DeFi/AI",
+    "type": "クレーム受付中",
+    "status": "active",
+    "difficulty": "easy",
+    "reward_note": "割当済み分を請求",
+    "description": "AIインフラ向け融資のステーブルコインUSD.AI。シーズン2エアドロップのクレームがArbitrum上で10/20から受付中で、2027/1/31まで。既に割当を持つ人向けで、新規に条件を満たすことはできない。",
+    "tasks": [
+      "公式アプリに対象ウォレットを接続して割当を確認",
+      "2027/1/31までにArbitrum上で請求"
+    ],
+    "end_date": "2027-01-31",
+    "url": "https://www.tradingview.com/news/coinmarketcal:92fbcfa61094b:0-usd-ai-season-2-airdrop-claims-open-on-arbitrum-20-oct-2026-to-31-jan-2027/",
+    "sources": [
+      "https://www.tradingview.com/news/coinmarketcal:92fbcfa61094b:0-usd-ai-season-2-airdrop-claims-open-on-arbitrum-20-oct-2026-to-31-jan-2027/"
+    ]
+  },
+  {
     "id": "pacifica",
     "name": "Pacifica",
     "symbol": "",
@@ -279,7 +304,7 @@
     "difficulty": "medium",
     "estimated_value_usd": 0,
     "reward_note": "トークン未発表(ポイント制)",
-    "description": "Solana系Perp DEX。2025/9/4からポイントプログラムを継続中。トークンもTGE日程も未発表。11/9〜11/23はクリエイター向けに10万ポイントの「Educators Sprint」を実施。",
+    "description": "Solana系Perp DEX。2025/9/4からポイントプログラムを継続中(毎週木曜に配布)。トークンもTGE日程も未発表。クリエイター向け10万ポイントの「Educators Sprint」は11/23まで。",
     "tasks": [
       "Pacificaで取引してポイントを獲得",
       "トークン発表の有無を公式で確認"
@@ -305,14 +330,14 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "7,000万PREDICT(供給量の7%)",
-    "description": "予測市場Predict.funのシーズン1エアドロップ。11/18に予定されていたTGEとクレームは11/17に延期が発表され、新しい日程は「2〜4週間以内」を目標とするのみで未確定。BinanceのAlpha/現物取引の延期が理由と報じられている。35%即時か12か月分割で全額かの選択はTGEまで自由に変更できる。",
+    "description": "予測市場Predict.funのシーズン1エアドロップ。11/18に予定されていたTGEとクレームは11/17に延期が発表され、新しい日程は「2〜4週間以内」(12月前半ごろ)を目標とするのみで11/21時点も未確定。35%即時か12か月分割で全額かの選択はTGEまで自由に変更できる。一部で出回っている「11/26が選択期限」は延期前の情報。",
     "tasks": [
       "公式アプリで割当を確認し、「35%即時」か「全額を12か月分割」を選択(TGEまで変更可)",
       "公式Xで新しいTGE・クレーム日時の発表を待つ",
       "クレーム開始後は30日以内に手続き(当初案内。延期後も同じかは要確認)"
     ],
     "end_date": "未定",
-    "note": "延期後の日程は未発表。それまでに出回る「クレーム開始」ページやDMは偽物と考えること。総供給量は10億と100億の報道があり不一致。",
+    "note": "公式が新日程を出すまで、クレームをうたうページはすべて偽物と考えてよい。",
     "url": "https://predict.fun/",
     "sources": [
       "https://www.coingabbar.com/en/predict-fun-tge-delayed",
