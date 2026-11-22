@@ -1,5 +1,86 @@
 [
   {
+    "timestamp": "2026-11-22T00:11:27+00:00",
+    "date": "2026-11-22",
+    "time_jst": "2026年11月22日 09:11",
+    "total_airdrops": 18,
+    "added_count": 2,
+    "removed_count": 0,
+    "changed_count": 7,
+    "hot_count": 3,
+    "added_names": [
+      "Tzero (T0)",
+      "Axis Robotics (AXIS) シーズン2"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "highlights": [
+      {
+        "kind": "changed",
+        "label": "概況",
+        "title": "新規2件を追加、注目3件は変わらず",
+        "detail": "無料で参加できるテストネット案件Tzeroと、タスク報酬型のAxis Robotics シーズン2を追加。どちらも裏取りが不十分なため注目枠には入れていない。注目3件(Extended / Variational / Flop Labs)は日程の新発表なし。"
+      },
+      {
+        "kind": "deadline",
+        "label": "あと2日",
+        "title": "Flop Labs (FLOP)",
+        "detail": "11/24テストネット開始予定のまま、日程変更の報道なし。期間は約90日(2027/2/22ごろまで)とされる。FLOPトークンはまだ存在せず、販売・配布をうたうサイトは詐欺。"
+      },
+      {
+        "kind": "new",
+        "label": "新着",
+        "title": "Tzero (T0)",
+        "detail": "Base Sepoliaテストネットのローンチパッド。T0供給量の11%(テストネット分5%)をポイント保有者に配布予定。実資金不要、500ポイント以上が対象。運営の実績は未確認で、公式ページを直接確認できていない。"
+      },
+      {
+        "kind": "new",
+        "label": "新着",
+        "title": "Axis Robotics (AXIS) シーズン2",
+        "detail": "6,000万AXIS(供給量の6%)をTGE後の貢献者に配布。ブラウザでロボットアームを操作するタスクで報酬を得る。毎週土曜クレームに変わったとの情報があるが1情報源のみ。"
+      },
+      {
+        "kind": "deadline",
+        "label": "本日締切",
+        "title": "Predict.fun Prime Sale返金申請",
+        "detail": "Binance WalletのPrime Sale参加者のみ、11/22 23:59 UTC(日本時間11/23 08:59)まで返金を申請できると報道。エアドロップ割当には関係なし。TGE・クレームの新日程は今日も未発表。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切間近",
+        "title": "Treehouse S2 / Doppler XDP / Pacifica",
+        "detail": "Treehouseシーズン2は11/25 07:00 UTC(日本時間16:00)まで残り3日。Doppler XDPは11/28 12:00 UTC(日本時間21:00)まで残り6日。PacificaのEducators Sprintは11/23まで。"
+      },
+      {
+        "kind": "changed",
+        "label": "更新",
+        "title": "StandX / GenLayer",
+        "detail": "StandXは「TGE中止」との報道が1件(公式未確認)、クレームは12/31まで継続。GenLayerはクレーム時20%・以後毎月20%のアンロック方式との情報を追記。"
+      },
+      {
+        "kind": "changed",
+        "label": "変更なし",
+        "title": "Extended / Variational / Saturn / Polymarket",
+        "detail": "いずれもTGE日は未発表のまま。Extendedの規約同意は12/31 23:59 UTCまで。Saturnのシーズン2スナップショットはTGE時か12/8の早い方。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切",
+        "title": "今後の締切",
+        "detail": "Treehouse S2 11/25 / Doppler XDP 11/28 / Aster・Midnight 12/4 / Zest 12/10 / StandX・Extended同意 12/31 / Axis S1請求 1/21 / Grass 1/22 / USD.AI 1/31。"
+      }
+    ],
+    "alerts": [
+      "Sophonの出金期限は11/25(残り3日、締切の時刻は公表されていない)。メインネットは11/30に恒久停止。ブリッジや公式サイトは11/25から順次停止するため、今日・明日中の出金を。対象はSOPH・ETH・USDC・ステーキング報酬・Guardian報酬・Farmポジション。",
+      "Predict.funは延期中、Flop LabsとTzeroはトークン未発行。これらの「クレームページ」「トークン販売」「返金リンク」は公式案内以外すべて偽物と考えること。",
+      "Antseed (ANTS) は毎週木曜にANTSを受け取れるポイント制を実施中だが、有料のAIサービス利用が条件で、ANTSの取引市場も確認できないため掲載を見送った。",
+      "LayerZeroの「Zero」メインネットとlzATLASは11/30開始予定。これに連動したエアドロップやポイント制度の発表は確認できていない。",
+      "本日も多くの情報サイトと公式ドキュメントに直接接続できず、検索結果の要約を中心に確認した。新規2件を含め日程・条件は二次情報のため、参加・クレーム前に必ず各プロジェクトの公式チャンネルで確認を。"
+    ]
+  },
+  {
     "timestamp": "2026-11-21T00:11:30+00:00",
     "date": "2026-11-21",
     "time_jst": "2026年11月21日 09:11",
