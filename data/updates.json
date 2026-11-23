@@ -1,5 +1,89 @@
 [
   {
+    "timestamp": "2026-11-23T00:12:05+00:00",
+    "date": "2026-11-23",
+    "time_jst": "2026年11月23日 09:12",
+    "total_airdrops": 18,
+    "added_count": 0,
+    "removed_count": 0,
+    "changed_count": 10,
+    "hot_count": 3,
+    "added_names": [],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false,
+    "highlights": [
+      {
+        "kind": "changed",
+        "label": "概況",
+        "title": "Extended (XTEN) のTGEが11/30と報道、新規追加はなし",
+        "detail": "注目案件に初めて具体的な日付が出た。掲載18件のうち10件の記載を更新。新しく追加できる水準の案件は今日は見つからなかった。"
+      },
+      {
+        "kind": "new",
+        "label": "重要",
+        "title": "Extended (XTEN) — TGE 11/30",
+        "detail": "ExtendedがXで11/30のトークン開始を告知したと複数媒体が11/21に報道(時刻・上場先は未発表)。TGE前にアプリで規約に同意すると最初の送付バッチに入るとされる。Xpoints保有者は今週中に同意を。配布は3億XTEN(30%)、全量アンロック。公式投稿は直接確認できていない。"
+      },
+      {
+        "kind": "deadline",
+        "label": "明日開始",
+        "title": "Flop Labs (FLOP)",
+        "detail": "11/24テストネット開始予定のまま、日程変更の報道なし(開始時刻は未発表)。devnetでの活動は対象外。FLOPトークンはまだ存在せず、販売・配布をうたうサイトは詐欺。開始直後は偽サイトに特に注意。"
+      },
+      {
+        "kind": "deadline",
+        "label": "あと2日",
+        "title": "Treehouse シーズン2",
+        "detail": "クレームは11/25 07:00 UTC(日本時間16:00)まで。未請求分はトレジャリーに戻る。"
+      },
+      {
+        "kind": "deadline",
+        "label": "11/26",
+        "title": "Predict.fun — Binance Wallet経由の選択フォーム",
+        "detail": "Binance側のPredict Points保有者は、35%即時か1年後全額かの選択フォームが11/26 09:00 UTC(日本時間18:00)締切と報道。提出は1回限り、未提出は自動で「1年後全額」。延期後も締切が同じかは未確認。TGE新日程は今日も未発表、Prime Sale返金申請は締切済み。"
+      },
+      {
+        "kind": "deadline",
+        "label": "あと5日",
+        "title": "Doppler Finance (XDP)",
+        "detail": "クレームは11/28 12:00 UTC(日本時間21:00)まで。登録済みのBaseウォレットのみ。"
+      },
+      {
+        "kind": "changed",
+        "label": "更新",
+        "title": "Axis Robotics シーズン2",
+        "detail": "ポイント制を廃止し、承認された作業1件ごとに1〜2.5 AXISを直接支払う方式になったと複数媒体で確認。毎週土曜10:00 UTCに確定、請求期限なしとされる。AXIS価格は0.14〜0.27ドルと報道に幅。"
+      },
+      {
+        "kind": "changed",
+        "label": "更新",
+        "title": "Tzero / Pacifica / GenLayer",
+        "detail": "Tzeroは最終スナップショットを7日前に告知、未請求分は90日で次シーズンへ。PacificaのEducators Sprintは本日終了、トークンは今も未発表。GenLayerは「TGE時アンロックを16%に縮小」との見出しがあるが詳細未確認。"
+      },
+      {
+        "kind": "changed",
+        "label": "変更なし",
+        "title": "Variational / Saturn / Polymarket / StandX",
+        "detail": "VariationalはQ4予定のまま日付未発表。SaturnもTGE日未発表(12/8まであと15日)。Polymarketは新情報なし。StandXのクレームは12/31まで。"
+      },
+      {
+        "kind": "deadline",
+        "label": "締切",
+        "title": "今後の締切",
+        "detail": "Treehouse S2 11/25 / Predict(Binance)フォーム 11/26 / Doppler XDP 11/28 / Extended TGE 11/30 / Aster・Midnight 12/4 / Zest 12/10 / StandX・Extended同意 12/31 / Axis S1請求 1/21 / Grass 1/22 / USD.AI 1/31。"
+      }
+    ],
+    "alerts": [
+      "Sophonの出金期限は11/25(残り2日、締切の時刻は公表されていない)。メインネットは11/30に恒久停止し、期限後の資産は取り戻せないとされる。今日中の出金を。対象はSOPH・ETH・USDC・ステーキング報酬・Guardian報酬・Farmポジション。",
+      "ExtendedのTGE(11/30)とFlop Labsのテストネット開始(11/24)が近く、偽の「クレームページ」「チェッカー」「トークン販売」が増える時期。XTEN・FLOP・PREDICT・T0はいずれもまだ配布されていない。リンクは必ず各プロジェクトの公式Xから辿ること。",
+      "LayerZeroが本日11/23からZROの事前ステーキングを開始(Zeroメインネットは11/30)。これはエアドロップではなく、預けたZROは2027/3/31ごろまで引き出せず途中解約もできない。報酬は年1%目標の新規発行分からで、バリデーター手数料10%が引かれる。Zeroに連動したエアドロップやポイント制度の公式発表は今も確認できていない。",
+      "BinanceがRLUSD保有者向けに計60万XRPを配るキャンペーンを実施中と報道(11/11〜12/18、報酬の計算は11/20から)。取引所の保有キャンペーンでありエアドロップ案件としては掲載していない。条件はBinance公式で確認を。",
+      "本日も情報サイトと公式ドキュメントの多くに直接接続できず、検索結果の要約を中心に確認した。ExtendedのTGE日を含め日程・条件は二次情報のため、参加・クレーム前に必ず各プロジェクトの公式チャンネルで確認を。"
+    ]
+  },
+  {
     "timestamp": "2026-11-22T00:11:27+00:00",
     "date": "2026-11-22",
     "time_jst": "2026年11月22日 09:11",

@@ -4,21 +4,24 @@
     "name": "Extended (XTEN)",
     "symbol": "XTEN",
     "category": "DeFi/Perp DEX",
-    "type": "割当確認・同意受付中",
+    "type": "TGE 11/30予定・同意受付中",
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "3億XTEN(ジェネシス供給量の30%)",
-    "description": "Perp DEXのExtended。Xpoints保有者向けの割当チェッカーが公開中。アプリ内で「Community Distribution Terms」に同意すると割当が表示される。同意期限は12/31 23:59 UTCで、同意しない割当はエコシステム基金に移る。配布分はTGE時に全量アンロックの方針。TGE日とクレーム開始日は未発表。",
+    "description": "Perp DEXのExtended。【TGEは11/30と報道】ExtendedがXの告知でXTENを11/30に開始すると発表したと11/21に複数の媒体が報じた(開始時刻と上場先は未発表)。TGE前にアプリ内で「Community Distribution Terms」に同意したユーザーは最初の送付バッチに入るとされる。配布はXpoints保有者向けに3億XTEN(供給量の30%)、TGE時に全量アンロック。交換レートは1 Xpointあたり約4.29 XTEN(11/6スナップショット)との情報。同意の最終期限は12/31 23:59 UTCで、同意しない割当はエコシステム基金に移る。",
     "tasks": [
       "Extendedアプリでウォレットを接続",
-      "Community Distribution Termsに同意して割当を確認(12/31 23:59 UTCまで)",
-      "TGE・クレーム日程の公式発表を待つ"
+      "11/30のTGEより前にCommunity Distribution Termsに同意して割当を確認(最初の送付バッチに入るため。最終期限は12/31 23:59 UTC)",
+      "公式XでTGEの開始時刻・受取方法・上場先の発表を確認"
     ],
     "end_date": "2026-12-31",
-    "note": "クレームはまだ始まっていない。早期クレームや送金を求めるサイト・DM・広告は詐欺。TGEは11月見込みとの報道もあるが未確定。",
+    "note": "11/30のTGE日は二次情報(ニュース媒体とニュースレター)による確認で、公式投稿は直接開けていない。XTENはまだ配布されておらず、早期クレームや送金を求めるサイト・DM・広告は詐欺。EU居住者はExtended上でXTENの現物取引ができないとの報道が1件ある(受取・保有・ステーキング・送金は可能とされる)。プレマーケットの評価額は約2.5億ドルとの情報が1件あるが、流動性が薄く参考程度。",
     "url": "https://www.tokenpost.com/news/business/55046",
     "sources": [
+      "https://www.kucoin.com/news/insight/BTC/6b01c0b49278e40007d8f432",
+      "https://www.coingabbar.com/en/xten-launch-date-confirmed-november-30-tge-price-slide",
+      "https://thekafka.substack.com/p/the-edge-weekly-74",
       "https://www.tokenpost.com/news/business/55046",
       "https://panews.io/articles/01a19f5b-04b0-75f4-9d11-a81b326ab00c"
     ],
@@ -66,14 +69,14 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "12億FLOP(ジェネシス供給量の27.27%)との情報あり・未確定",
-    "description": "アーサー・ヘイズ氏が率いるFlop Labs。【開始まであと2日】テストネットとエアドロップを11/24に開始すると11/13に発表(変更時は事前告知、Flop Labs側は「暫定」と説明)。11/22時点で日程変更の報道はない。テストネットは約90日間(2027/2/22ごろまで)とされる。無料のテストネットトークンでAIタスク(計算資源)を購入するなど、検証可能な貢献量に応じて配布される仕組みと伝えられている。保有するだけでは対象外。",
+    "description": "アーサー・ヘイズ氏が率いるFlop Labs。【明日11/24開始予定】テストネットとエアドロップを11/24に開始すると11/13に発表(変更時は事前告知、Flop Labs側は「暫定」と説明)。11/23時点で日程変更の報道はなく、開始時刻は未発表。テストネットは約90日間(2027/2/22ごろまで)とされる。無料のテストネットトークンでAIタスク(計算資源)を購入するなど、検証可能な貢献量に応じて配布される仕組みと伝えられている。保有するだけでは対象外で、既存のdevnetでの活動も対象外。",
     "tasks": [
-      "11/24のテストネット開始を待つ(devnetでの活動は報酬対象外)",
+      "11/24のテストネット開始を公式X(@flop_labs)で確認(devnetでの活動は報酬対象外)",
       "公式GitHubと公式X(@flop_labs)で参加手順を確認",
       "無料のテストネットトークンでAIタスクを実行"
     ],
     "end_date": "未定",
-    "note": "FLOPトークンはまだ存在しない(ヘイズ氏本人が明言)。「FLOPを販売・配布」とうたうサイトは詐欺。配布量は「供給量の約20%」「12億FLOP(27.27%)」など情報源により食い違いあり。対象となる行動の詳細も公式の最終発表待ち。",
+    "note": "FLOPトークンはまだ存在しない(ヘイズ氏本人が明言)。「FLOPを販売・配布」とうたうサイトは詐欺。配布量は「供給量の約20%」「12億FLOP(27.27%)」「ジェネシス供給44億FLOPを全量エアドロップ(草案)」など情報源により食い違いあり。ホワイトペーパーと検証方法の詳細は未公開で、対象となる行動も公式の最終発表待ち。開始直後は偽サイトが増えるため、リンクは必ず公式Xから辿ること。",
     "url": "https://airdrops.io/flop-labs/",
     "sources": [
       "https://panews.io/articles/01a1d3d5-425a-7074-8e85-3116fdf883d5",
@@ -95,7 +98,7 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "ベスティング完了済みのため全額受取可",
-    "description": "【残り3日】GoNutsシーズン2報酬のクレーム。受付は11/25 07:00 UTCまで。対象スナップショットは4/25。未請求分はプロジェクトのトレジャリーに戻る。",
+    "description": "【残り2日】GoNutsシーズン2報酬のクレーム。受付は11/25 07:00 UTCまで。対象スナップショットは4/25。未請求分はプロジェクトのトレジャリーに戻る。",
     "tasks": [
       "gaiafoundation.xyz で「Season 2」を選択",
       "GoNutsで使ったウォレットを接続して割当を確認・請求"
@@ -122,7 +125,7 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "1億XDP(供給量の1%)・ロックなし",
-    "description": "【残り6日】XRPエコシステムの利回りプラットフォーム。ジェネシスエアドロップ(1億XDP)のクレームは11/28 12:00 UTCまで。登録は締切済みで、登録済みのBaseウォレットからのみ請求可能。",
+    "description": "【残り5日】XRPエコシステムの利回りプラットフォーム。ジェネシスエアドロップ(1億XDP)のクレームは11/28 12:00 UTCまで。登録は締切済みで、登録済みのBaseウォレットからのみ請求可能。",
     "tasks": [
       "app.doppler.finance に登録済みのBaseウォレットを接続",
       "割当を確認してXDPを請求"
@@ -304,7 +307,7 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "T0供給量の11%(うちテストネット分5%)",
-    "description": "Base Sepoliaテストネット上で動くローンチパッド。11/6に「Pre-flight Points シーズン0」を発表し、T0供給量の11%をユーザー向けに確保(シーズン0=テストネット分5%、メインネット以降のシーズン分6%)。テストネットなので実資金は不要。500ポイント以上のウォレットが対象で、ポイント比例で配布、1ウォレットあたり上限は供給量の0.1%。メインネット移行はLayerZeroの「Zero」メインネット(11/30予定)の一般開放後とされる。",
+    "description": "Base Sepoliaテストネット上で動くローンチパッド。11/6に「Pre-flight Points シーズン0」を発表し、T0供給量の11%をユーザー向けに確保(シーズン0=テストネット分5%、メインネット以降のシーズン分6%)。テストネットなので実資金は不要。500ポイント以上のウォレットが対象で、ポイント比例で配布、1ウォレットあたり上限は供給量の0.1%。メインネット移行はLayerZeroの「Zero」メインネット(11/30予定)の一般開放後とされる。 最終スナップショットは7日前に告知され、画面上のポイントはそれまで暫定値。請求開始から90日以内に請求しない分は次のシーズンに回る。",
     "tasks": [
       "公式テストネット(testnet.tzer0.fun)にウォレットを接続し、テスト用ETHを入手",
       "ミッションのトークンを購入(1 ETH分の購入で1,000ポイント。売却・0.0005 ETH未満・自分が立てたミッションは対象外)",
@@ -313,7 +316,7 @@
       "合計500ポイント以上を目指す"
     ],
     "end_date": "未定",
-    "note": "当サイトでは公式ドキュメントを直接開けておらず、検索結果の要約に基づく掲載。運営チームの実績・資金調達は未確認で、トークンはまだ存在しない。スナップショット日も未発表。複数ウォレットでの参加はシビル判定で除外され得る。テストネット以外で実資金の送金を求められたら詐欺を疑うこと。",
+    "note": "ポイントの条件は公式ドキュメントの内容として検索で確認できたが、当サイトから直接は開けていない。運営チームの実績・資金調達は未確認で、トークンはまだ存在しない。スナップショット日も未発表。自動化ボットが出回っており、複数ウォレットでの参加はシビル判定で除外され得る。テストネット以外で実資金の送金を求められたら詐欺を疑うこと。",
     "url": "https://testnet.tzer0.fun/docs/points",
     "sources": [
       "https://testnet.tzer0.fun/docs/points",
@@ -334,7 +337,7 @@
     "difficulty": "medium",
     "estimated_value_usd": 0,
     "reward_note": "6,000万AXIS(供給量の6%)",
-    "description": "ロボット学習用データを集めるAxis Robotics(Base、調達額1,300万ドルとの情報)。TGEは10/21に実施済みで、AXISは既に取引されている(10月時点で約0.27ドルとの報道、現在値は未確認)。シーズン2はTGE後の貢献者向けに6,000万AXISを割当。ブラウザ上でロボットアームを操作するタスクをこなし、承認されたデータに応じて報酬を得る。直近の情報では、報酬がAXISで直接支払われ毎週土曜10:00 UTCにクレームできる方式に変わり、初回が11/21だったとされる。参加は無料。",
+    "description": "ロボット学習用データを集めるAxis Robotics(Base、調達額1,300万ドルとの情報)。TGEは10/21に実施済みでAXISは既に取引されている(価格は0.14〜0.27ドルと報道により幅があり、現在値は未確認)。シーズン2はTGE後の貢献者向けに6,000万AXISを割当。ブラウザ上でロボットアームを操作するタスクをこなし、承認されたデータに応じて報酬を得る。ポイント制は廃止され、承認された作業1件ごとにAXISが直接支払われる方式に変わったと複数の媒体が報道(2つ星1 AXIS、3つ星1.5、4つ星2、5つ星2.5。練習と1つ星は報酬なし)。毎週土曜10:00 UTCに確定し、Base上で請求でき、期限切れはないとされる。初回は11/21。参加は無料。",
     "tasks": [
       "Axis Robotics Hubにログイン(メール・Google・XまたはEVMウォレット)",
       "物をつかむ・置く・積むなどのタスクでシミュレーション上のアームを操作",
@@ -342,12 +345,13 @@
       "シーズン1の割当がある人は 2027/1/21 12:00 UTC までに請求"
     ],
     "end_date": "未定",
-    "note": "週次クレームと単価(2つ星タスク1 AXIS〜5つ星2.5 AXIS、練習・1つ星は報酬なし)は1つの情報源のみで、旧来の「2週間ごとのポイント制」という説明と食い違う。公式ドキュメントで要確認。偽のチェッカーが出回っており、公式は airdrop.axisrobotics.ai とされる。",
+    "note": "方式変更の開始日は10/23説と11/14説があり、シーズン2の規約全文は確認できていない。1件あたりの報酬は小さいので、作業時間に見合うかは各自で判断を。偽のチェッカーが出回っており、公式は airdrop.axisrobotics.ai とされる。",
     "url": "https://docs.axisrobotics.ai/economics-and-provenance/tokenomics",
     "sources": [
       "https://docs.axisrobotics.ai/economics-and-provenance/tokenomics",
       "https://airdrops.io/axis-robotics/",
-      "https://x.com/airdrops_io/status/2112816675221319805"
+      "https://x.com/airdrops_io/status/2112816675221319805",
+      "https://cryptonews.net/news/altcoins/33762297/"
     ],
     "logo": "",
     "is_hot": false,
@@ -364,13 +368,13 @@
     "difficulty": "medium",
     "estimated_value_usd": 0,
     "reward_note": "トークン未発表(ポイント制)",
-    "description": "Solana系Perp DEX。2025/9/4からポイントプログラムを継続中(毎週木曜に配布、週1,000万ポイントとの情報)。トークンもTGE日程も未発表。クリエイター向け10万ポイントの「Educators Sprint」は11/23まで(明日終了)。",
+    "description": "Solana系Perp DEX。2025/9/4からポイントプログラムを継続中(毎週木曜00:00 UTCにスナップショット、週1,000万ポイントとの情報)。トークンもTGE日程も未発表で、公式ドキュメントにもトークンやエアドロップの記載はないとされる。クリエイター向け10万ポイントの「Educators Sprint」は本日11/23で終了。",
     "tasks": [
       "Pacificaで取引してポイントを獲得",
       "トークン発表の有無を公式で確認"
     ],
     "end_date": "未定",
-    "note": "トークン発行は保証されていない。",
+    "note": "トークン発行は保証されていない。カレンダー系サイトに載るTGE日(2027/5/1など)は推定値で公式発表ではない。",
     "url": "https://orbitperpscreener.com/airdrop-calendar",
     "sources": [
       "https://orbitperpscreener.com/airdrop-calendar"
@@ -390,9 +394,10 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "7,000万PREDICT(供給量の7%)",
-    "description": "予測市場Predict.funのシーズン1エアドロップ。11/18に予定されていたTGEとクレームは11/17に延期が発表され、新しい日程は「2〜4週間以内」(12月前半ごろ)を目標とするのみで11/22時点も未確定。35%即時か12か月分割で全額かの選択はTGEまで自由に変更できる。なおBinance WalletのPrime Sale(事前販売)参加者に限り、待ちたくない場合は11/22 23:59 UTC(日本時間11/23 08:59)までに申請フォームを出せば返金を受けられると報じられている。エアドロップ割当とは別の話。",
+    "description": "予測市場Predict.funのシーズン1エアドロップ。11/18に予定されていたTGEとクレームは11/17に延期が発表され、新しい日程は「2〜4週間以内」(12月前半ごろ)を目標とするのみで11/23時点も未確定。Predict.funアプリ側では、35%即時か12か月分割で全額かの選択をTGEまで自由に変更できる。一方、Binance Wallet / Binance経由のPredict Points保有者向けの選択フォームは締切が11/26 09:00 UTC(日本時間18:00)と報じられており、提出は1回限りで変更不可、未提出は自動的に「1年ステーキングで全額」扱いになる(延期後にこの締切が変わったかは未確認)。Prime Saleの返金申請は11/22 23:59 UTCで締切済み。",
     "tasks": [
       "公式アプリで割当を確認し、「35%即時」か「全額を12か月分割」を選択(TGEまで変更可)",
+      "Binance Wallet経由のPredict Points保有者は、選択フォームの締切(11/26 09:00 UTCと報道)をBinance公式で確認",
       "公式Xで新しいTGE・クレーム日時の発表を待つ",
       "クレーム開始後は30日以内に手続き(当初案内。延期後も同じかは要確認)"
     ],
@@ -402,7 +407,8 @@
     "sources": [
       "https://www.coingabbar.com/en/predict-fun-tge-delayed",
       "https://www.tokenpost.com/news/business/55448",
-      "https://panews.io/articles/01a1e81c-0b80-72c2-a09d-448516b508fd"
+      "https://panews.io/articles/01a1e81c-0b80-72c2-a09d-448516b508fd",
+      "https://panews.io/articles/01a181a0-e87e-72a1-847c-7f9c23dcf482"
     ],
     "logo": "",
     "is_hot": false,
@@ -445,7 +451,7 @@
     "difficulty": "easy",
     "estimated_value_usd": 0,
     "reward_note": "シーズン2は供給量の最大5%",
-    "description": "シーズン1・2のエアドロップ登録は11/16 14:00 UTCに締切。STRNのTGEはQ4予定だが日付は未発表で、クレームはTGE時に開始見込み。TGEが12/8より前ならシーズン2は直前のスナップショットで終了する。",
+    "description": "シーズン1・2のエアドロップ登録は11/16 14:00 UTCに締切。STRNのTGEはQ4予定だが日付は未発表で、クレームはTGE時に開始見込み。TGEが12/8より前ならシーズン2は直前のスナップショットで終了する(12/8まであと15日)。11/23時点もTGE日は未発表。",
     "tasks": [
       "登録済みの人はSaturn Foundation公式Xの発表を待つ"
     ],
@@ -476,7 +482,7 @@
       "公式チャンネルで登録状況を確認"
     ],
     "end_date": "未定",
-    "note": "公式チャンネル同士で内容が食い違っているとの指摘あり。登録が今も開いているかは未確認。",
+    "note": "公式チャンネル同士で内容が食い違っているとの指摘あり。登録が今も開いているかは未確認。 11/20更新の情報サイトに「TGE時アンロックを供給量の16%に縮小」との見出しがあるが、詳細は未確認。",
     "url": "https://www.coingabbar.com/en/genlayer-airdrop-registration-reopens-gen-tokenomics-out",
     "sources": [
       "https://www.coingabbar.com/en/genlayer-airdrop-registration-reopens-gen-tokenomics-out"
