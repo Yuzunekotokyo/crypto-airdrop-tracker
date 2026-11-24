@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "timestamp": "2026-11-24T00:13:33.853726+00:00",
+    "date": "2026-11-24",
+    "time_jst": "2026年11月24日 09:13",
+    "headline": "掲載案件を全面刷新 — 2024年の古い6件を削除し、2026年11月時点の16件に入れ替えました",
+    "highlights": [
+      {
+        "type": "deadline",
+        "title": "Treehouse (TREE) Season 2 — 明日 11/25 16:00 JST でクレーム締切",
+        "detail": "2,310万TREEの配布。期限後は失効するため、対象ウォレットがあれば最優先で確認。"
+      },
+      {
+        "type": "new",
+        "title": "Variational (VAR) — 供給量の32%をエアドロップ、TGEは年内予定",
+        "detail": "今回の調査で最も規模が大きい確定案件。ポイント保有比率で配布しTGE時に100%アンロック。日付は未発表で、まだポイントを積める状態。"
+      },
+      {
+        "type": "change",
+        "title": "Predict.fun (PREDICT) — TGE延期、12月前半が目安",
+        "detail": "11/17に延期発表。公式は『2〜4週間後』、外部トラッカーは12/1〜12/15と推定。受取方法 (即時35% / ベスティング100%) はTGEまで変更可能。"
+      },
+      {
+        "type": "new",
+        "title": "Extended (XTEN) — チェッカー公開、12/31までに規約署名が必要",
+        "detail": "3億XTEN (供給の30%) をポイント保有者へ。署名しないと割当を確認できない。"
+      },
+      {
+        "type": "deadline",
+        "title": "今後の締切: Doppler (XDP) 11/28 ／ Aster Stage 6 12/4 ／ StandX (DUSD) 12/31",
+        "detail": "Dopplerは7/30までの登録者限定、Asterは1万ポイント以上が対象。"
+      },
+      {
+        "type": "warn",
+        "title": "『Hyperliquid Season 2』『MASKクレーム』『Baseチェッカー』は公式未発表",
+        "detail": "いずれも公式発表なし。該当をうたうクレームサイトはフィッシングの可能性が高い。Baseは11/22に『検討中だが急がない』と発言。"
+      },
+      {
+        "type": "change",
+        "title": "削除: LayerZero / Scroll / zkSync / Hyperliquid(初回) / EigenLayer / Movement",
+        "detail": "いずれも2024年に配布が完了した案件のため一覧から除外。"
+      }
+    ],
+    "sources": [
+      {
+        "title": "KuCoin: Crypto Airdrops Week 47",
+        "url": "https://www.kucoin.com/news/flash/crypto-airdrops-week-47-fables-treehouse-and-doppler-finance-deadlines"
+      },
+      {
+        "title": "PANews: Variational $VAR tokenomics",
+        "url": "https://panews.io/articles/01a0d112-1a42-712b-83f2-510955095514"
+      },
+      {
+        "title": "CoinInsider: Predict.fun delays PREDICT launch",
+        "url": "https://www.coininsider.org/news/predict-fun-delays-predict-token-launch-and-season-1-claims/"
+      },
+      {
+        "title": "KuCoin: Base still exploring token",
+        "url": "https://www.kucoin.com/news/flash/base-chief-still-exploring-token-possibility-but-not-rushing"
+      },
+      {
+        "title": "The Block: Polymarket CMO confirms POLY",
+        "url": "https://www.theblock.co/post/376048/polymarket-cmo-confirms-poly-token-airdrop-plans"
+      },
+      {
+        "title": "PANews: Binance Alpha airdrop (250pt)",
+        "url": "https://panews.io/articles/01a1f81d-16cf-7483-9581-e1e21fbd9882"
+      }
+    ],
+    "total_airdrops": 16,
+    "added_count": 16,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 5,
+    "added_names": [
+      "Treehouse (TREE) Season 2",
+      "Variational (VAR)",
+      "Predict.fun (PREDICT)",
+      "Extended (XTEN)",
+      "Aster (ASTER) Stage 6",
+      "Doppler Finance (XDP) Genesis",
+      "StandX (DUSD)",
+      "Binance Alpha エアドロップ",
+      "Pacifica",
+      "Polymarket (POLY)",
+      "MetaMask Rewards",
+      "GenLayer (GEN)",
+      "Base (トークン検討中)",
+      "Hyperliquid『Season 2』",
+      "infiniFi (INFI)",
+      "Fables"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "email_sent": false
+  }
+]

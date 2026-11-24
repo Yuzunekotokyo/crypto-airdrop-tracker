@@ -5,7 +5,8 @@ Crypto Airdrop Tracker — Flask メインアプリケーション
 import json
 import logging
 import os
-from datetime import datetime
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 
 from flask import Flask, jsonify, render_template, request
 
@@ -29,9 +30,20 @@ def _load_json(path: str, default):
     return default
 
 
+def _with_days_left(airdrops: list[dict]) -> list[dict]:
+    """end_date が YYYY-MM-DD の案件に残り日数 (JST基準) を付ける"""
+    today = datetime.now(ZoneInfo("Asia/Tokyo")).date()
+    for a in airdrops:
+        try:
+            a["days_left"] = (date.fromisoformat(a.get("end_date", "")) - today).days
+        except ValueError:
+            a["days_left"] = None
+    return airdrops
+
+
 @app.route("/")
 def index():
-    airdrops = _load_json(AIRDROPS_FILE, [])
+    airdrops = _with_days_left(_load_json(AIRDROPS_FILE, []))
     updates = _load_json(UPDATES_FILE, [])
     latest_update = updates[0] if updates else None
     return render_template(
@@ -39,7 +51,7 @@ def index():
         airdrops=airdrops,
         latest_update=latest_update,
         updates=updates[:5],
-        now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
+        now=datetime.now(ZoneInfo("Asia/Tokyo")).strftime("%Y年%m月%d日 %H:%M"),
     )
 
 

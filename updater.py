@@ -9,8 +9,9 @@ import json
 import logging
 import os
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
-from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR
+from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR, NOTES_FILE
 from fetchers.airdrop_fetcher import fetch_all_airdrops
 from fetchers.coingecko import get_trending_coins
 from notifier.gmail import send_daily_report, send_hot_alert
@@ -79,11 +80,20 @@ def run_daily_update(force_email: bool = False) -> dict:
     # データ保存
     _save_json(AIRDROPS_FILE, new_airdrops)
 
+    # 当日分の手書き更新メモ (data/daily_notes.json)。日付が違えば古いメモなので載せない
+    jst_now = now.astimezone(ZoneInfo("Asia/Tokyo"))
+    notes = _load_json(NOTES_FILE, {})
+    if notes.get("date") != jst_now.strftime("%Y-%m-%d"):
+        notes = {}
+
     # 更新ログ
     summary = {
         "timestamp": now.isoformat(),
-        "date": now.strftime("%Y-%m-%d"),
-        "time_jst": (now.astimezone()).strftime("%Y年%m月%d日 %H:%M"),
+        "date": jst_now.strftime("%Y-%m-%d"),
+        "time_jst": jst_now.strftime("%Y年%m月%d日 %H:%M"),
+        "headline": notes.get("headline", ""),
+        "highlights": notes.get("highlights", []),
+        "sources": notes.get("sources", []),
         "total_airdrops": len(new_airdrops),
         "added_count": len(diff["added"]),
         "removed_count": len(diff["removed"]),
@@ -97,6 +107,8 @@ def run_daily_update(force_email: bool = False) -> dict:
     }
 
     updates_log = _load_json(UPDATES_FILE, [])
+    # 同じ日に再実行した場合は当日分を置き換える
+    updates_log = [u for u in updates_log if u.get("date") != summary["date"]]
     updates_log.insert(0, summary)
     updates_log = updates_log[:30]  # 直近30件を保持
     _save_json(UPDATES_FILE, updates_log)
