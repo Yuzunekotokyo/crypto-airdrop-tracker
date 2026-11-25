@@ -8,14 +8,16 @@
 import json
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from config import AIRDROPS_FILE, UPDATES_FILE, DATA_DIR
-from fetchers.airdrop_fetcher import fetch_all_airdrops
+from fetchers.airdrop_fetcher import fetch_all_airdrops, CURATED_NOTES, CURATED_UPDATED
 from fetchers.coingecko import get_trending_coins
 from notifier.gmail import send_daily_report, send_hot_alert
 
 logger = logging.getLogger(__name__)
+
+JST = timezone(timedelta(hours=9))
 
 
 def _load_json(path: str, default):
@@ -83,7 +85,7 @@ def run_daily_update(force_email: bool = False) -> dict:
     summary = {
         "timestamp": now.isoformat(),
         "date": now.strftime("%Y-%m-%d"),
-        "time_jst": (now.astimezone()).strftime("%Y年%m月%d日 %H:%M"),
+        "time_jst": now.astimezone(JST).strftime("%Y年%m月%d日 %H:%M"),
         "total_airdrops": len(new_airdrops),
         "added_count": len(diff["added"]),
         "removed_count": len(diff["removed"]),
@@ -93,6 +95,8 @@ def run_daily_update(force_email: bool = False) -> dict:
         "removed_names": diff["removed"],
         "changes": diff["changed"],
         "trending_coins": [t["name"] for t in trending[:5]],
+        # キュレーション更新日当日のみ、手動メモをUPDATEとして掲載
+        "highlights": CURATED_NOTES if CURATED_UPDATED == now.astimezone(JST).strftime("%Y-%m-%d") else [],
         "email_sent": False,
     }
 

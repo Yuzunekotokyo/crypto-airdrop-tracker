@@ -1,1 +1,71 @@
-[]
+[
+  {
+    "timestamp": "2026-11-25T00:12:01.299261+00:00",
+    "date": "2026-11-25",
+    "time_jst": "2026年11月25日 09:12",
+    "total_airdrops": 15,
+    "added_count": 15,
+    "removed_count": 0,
+    "changed_count": 0,
+    "hot_count": 3,
+    "added_names": [
+      "Extended (XTEN)",
+      "Predict.fun (PREDICT)",
+      "Polymarket (POLY)",
+      "Doppler Finance (XDP)",
+      "Aster (ASTER) Stage 6",
+      "Midnight (NIGHT)",
+      "Zest Protocol (ZEST)",
+      "StandX (DUSD)",
+      "Bitbase ORIGIN",
+      "infiniFi (INFI)",
+      "Saturn (STRN)",
+      "Base",
+      "MetaMask Rewards (MASK)",
+      "Treehouse (TREE) Season 2",
+      "Fables (FABLES)"
+    ],
+    "removed_names": [],
+    "changes": [],
+    "trending_coins": [],
+    "highlights": [
+      {
+        "kind": "deadline",
+        "text": "Doppler Finance (XDP) のGenesisエアドロップ請求は 11/28 12:00 UTC 締切。未請求分は失効。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Aster (ASTER) Stage 6 の請求期限は情報源により 11/28 または 12/4。早い方の 11/28 までに請求を。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Midnight (NIGHT) Glacier Drop の解凍期間は 12/4 終了 (その後90日の猶予期間)。"
+      },
+      {
+        "kind": "hot",
+        "text": "Extended (XTEN): 3億XTEN (供給量の30%) の割当チェッカー公開中。12/31 23:59 UTC までにアプリで規約へ署名しないと割当は失効。TGE日は未発表。"
+      },
+      {
+        "kind": "hot",
+        "text": "Predict.fun (PREDICT): 11/17 にTGEとSeason 1請求を延期 (2〜4週間後めど)。新日程は未確定、偽の請求サイトに注意。"
+      },
+      {
+        "kind": "new",
+        "text": "新着: Bitbase「ORIGIN」ポイントシーズン (11/4〜2027/5/4、毎週100万ポイント配布)。将来のトークン・エアドロップ計画が報じられているが公式詳細は未確認。"
+      },
+      {
+        "kind": "new",
+        "text": "新着: Zest Protocol (ZEST) Season 1 の請求受付中。締切は 12/10 (12/19 との記載もあり要確認)。"
+      },
+      {
+        "kind": "ended",
+        "text": "終了: Treehouse (TREE) Season 2 請求 (11/25 07:00 UTC)、Fables ポイント交換 (11/20)。"
+      },
+      {
+        "kind": "removed",
+        "text": "一覧を全面刷新: 配布済みの旧案件 (LayerZero, Scroll, zkSync, Hyperliquid, EigenLayer, Movement) を削除。Hyperliquid「Season 2」は公式発表なしのため掲載見送り。"
+      }
+    ],
+    "email_sent": false
+  }
+]

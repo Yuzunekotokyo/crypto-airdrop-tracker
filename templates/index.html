@@ -13,7 +13,7 @@
 <div id="update-banner" class="update-banner">
   <div class="update-banner-inner">
     <div class="update-meta">
-      <span class="update-badge">🔄 最新更新</span>
+      <span class="update-badge">🔄 UPDATE</span>
       <span class="update-time">{{ latest_update.time_jst }}</span>
     </div>
     <div class="update-stats">
@@ -45,6 +45,27 @@
       {% for name in latest_update.added_names %}
       <span class="new-tag">{{ name }}</span>
       {% endfor %}
+    </div>
+    {% endif %}
+    {% if latest_update.highlights %}
+    <ul class="update-highlights">
+      {% for h in latest_update.highlights %}
+      <li class="hl hl-{{ h.kind }}">
+        <span class="hl-tag">{% if h.kind == 'hot' %}🔥 注目{% elif h.kind == 'new' %}🆕 新着{% elif h.kind == 'deadline' %}⏰ 締切間近{% elif h.kind == 'ended' %}✕ 終了{% else %}🧹 整理{% endif %}</span>
+        <span class="hl-text">{{ h.text }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if latest_update.removed_names %}
+    <div class="update-new-items">
+      <strong>削除:</strong> {{ latest_update.removed_names | join(' · ') }}
+    </div>
+    {% endif %}
+    {% if latest_update.changes %}
+    <div class="update-new-items">
+      <strong>変更:</strong>
+      {% for c in latest_update.changes %}{{ c.name }} ({{ c.changes | join(', ') }}){% if not loop.last %} · {% endif %}{% endfor %}
     </div>
     {% endif %}
     {% if latest_update.trending_coins %}

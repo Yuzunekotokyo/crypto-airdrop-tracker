@@ -5,7 +5,7 @@ Airdrop情報をWeb/APIから収集するモジュール。
 
 import requests
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 from bs4 import BeautifulSoup
 from fetchers.coingecko import get_trending_coins, get_new_coins
 
@@ -52,118 +52,104 @@ def _scrape_airdrops_io() -> list[dict]:
         return []
 
 
+# 手動キュレーションの最終確認日と、その日の更新メモ (サイト最上部のUPDATEに表示)
+CURATED_UPDATED = "2026-11-25"
+CURATED_NOTES = [
+    {"kind": "deadline", "text": "Doppler Finance (XDP) のGenesisエアドロップ請求は 11/28 12:00 UTC 締切。未請求分は失効。"},
+    {"kind": "deadline", "text": "Aster (ASTER) Stage 6 の請求期限は情報源により 11/28 または 12/4。早い方の 11/28 までに請求を。"},
+    {"kind": "deadline", "text": "Midnight (NIGHT) Glacier Drop の解凍期間は 12/4 終了 (その後90日の猶予期間)。"},
+    {"kind": "hot", "text": "Extended (XTEN): 3億XTEN (供給量の30%) の割当チェッカー公開中。12/31 23:59 UTC までにアプリで規約へ署名しないと割当は失効。TGE日は未発表。"},
+    {"kind": "hot", "text": "Predict.fun (PREDICT): 11/17 にTGEとSeason 1請求を延期 (2〜4週間後めど)。新日程は未確定、偽の請求サイトに注意。"},
+    {"kind": "new", "text": "新着: Bitbase「ORIGIN」ポイントシーズン (11/4〜2027/5/4、毎週100万ポイント配布)。将来のトークン・エアドロップ計画が報じられているが公式詳細は未確認。"},
+    {"kind": "new", "text": "新着: Zest Protocol (ZEST) Season 1 の請求受付中。締切は 12/10 (12/19 との記載もあり要確認)。"},
+    {"kind": "ended", "text": "終了: Treehouse (TREE) Season 2 請求 (11/25 07:00 UTC)、Fables ポイント交換 (11/20)。"},
+    {"kind": "removed", "text": "一覧を全面刷新: 配布済みの旧案件 (LayerZero, Scroll, zkSync, Hyperliquid, EigenLayer, Movement) を削除。Hyperliquid「Season 2」は公式発表なしのため掲載見送り。"},
+]
+
+
+def _a(id, name, symbol, category, type_, status, difficulty, description, tasks,
+       end_date, url, is_hot=False, added_date=CURATED_UPDATED, value=0):
+    return {
+        "id": id, "name": name, "symbol": symbol, "category": category, "type": type_,
+        "status": status, "difficulty": difficulty, "estimated_value_usd": value,
+        "description": description, "tasks": tasks, "end_date": end_date, "logo": "",
+        "url": url, "is_hot": is_hot, "added_date": added_date, "source": "curated",
+    }
+
+
 def _build_seed_airdrops() -> list[dict]:
-    """手動管理の注目エアドロップシードデータ (定期的に更新)"""
-    today = datetime.utcnow()
+    """手動管理の注目エアドロップ一覧 (最終確認日: CURATED_UPDATED)。
+
+    推定価値は根拠のある数字が無い限り 0 (=未定) とする。
+    日付はアグリゲーター経由の情報を含むため、参加前に必ず公式発表で確認すること。
+    """
     return [
-        {
-            "id": "layerzero-zro",
-            "name": "LayerZero (ZRO)",
-            "symbol": "ZRO",
-            "category": "インフラ",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "medium",
-            "estimated_value_usd": 500,
-            "description": "クロスチェーンメッセージングプロトコル。ブリッジ・DeFi利用者向けエアドロップ。",
-            "tasks": ["Stargate経由でブリッジを実行", "複数チェーンでのトランザクション", "LayerZero対応dApps利用"],
-            "end_date": (today + timedelta(days=60)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/28206/small/ftxG9_TJ_400x400.jpeg",
-            "url": "https://layerzero.network/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "scroll-scr",
-            "name": "Scroll (SCR)",
-            "symbol": "SCR",
-            "category": "Layer2",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 300,
-            "description": "EVM互換ZK-Rollup。Ethereum L2でのトランザクション実績でエアドロップ獲得可能。",
-            "tasks": ["ScrollネットワークへETHブリッジ", "Scroll上でのDeFi利用", "複数週にわたるアクティビティ"],
-            "end_date": (today + timedelta(days=90)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/25734/small/scroll.png",
-            "url": "https://scroll.io/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "zksync-era",
-            "name": "zkSync Era",
-            "symbol": "ZK",
-            "category": "Layer2",
-            "type": "レトロアクティブ",
-            "status": "active",
-            "difficulty": "easy",
-            "estimated_value_usd": 200,
-            "description": "Matter Labsが開発するZK-Rollup。エコシステムが急拡大中。",
-            "tasks": ["Era上でのスワップ", "Syncswap/Mute利用", "zkSync公式ブリッジ利用"],
-            "end_date": (today + timedelta(days=45)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/38043/small/ZKTokenBlack.png",
-            "url": "https://zksync.io/",
-            "is_hot": False,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "hyperliquid-hype",
-            "name": "Hyperliquid (HYPE)",
-            "symbol": "HYPE",
-            "category": "DeFi/DEX",
-            "type": "取引所トークン",
-            "status": "active",
-            "difficulty": "medium",
-            "estimated_value_usd": 1000,
-            "description": "高速オンチェーン永久先物DEX。独自L1チェーン上で動作。取引量によるポイント報酬。",
-            "tasks": ["Hyperliquid上での先物取引", "流動性提供", "紹介プログラム参加"],
-            "end_date": (today + timedelta(days=30)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/42277/small/hyperliquid.jpg",
-            "url": "https://hyperliquid.xyz/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "eigenlayer-eigen",
-            "name": "EigenLayer (EIGEN)",
-            "symbol": "EIGEN",
-            "category": "インフラ",
-            "type": "リステーキング",
-            "status": "active",
-            "difficulty": "hard",
-            "estimated_value_usd": 800,
-            "description": "Ethereumのリステーキングプロトコル。ETHをステーキングし追加報酬を獲得。",
-            "tasks": ["ETHをリステーキング", "LST (stETH等) をデポジット", "AVSへの参加"],
-            "end_date": (today + timedelta(days=120)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/33751/small/eigen.png",
-            "url": "https://eigenlayer.xyz/",
-            "is_hot": False,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
-        {
-            "id": "movement-move",
-            "name": "Movement (MOVE)",
-            "symbol": "MOVE",
-            "category": "Layer2",
-            "type": "新規上場",
-            "status": "upcoming",
-            "difficulty": "easy",
-            "estimated_value_usd": 400,
-            "description": "Move VMを使用するEthereum L2。高速・低コストトランザクション。テストネット参加者向けエアドロップ予定。",
-            "tasks": ["テストネット参加", "Discordコミュニティ参加", "テストトランザクション実行"],
-            "end_date": (today + timedelta(days=20)).strftime("%Y-%m-%d"),
-            "logo": "https://assets.coingecko.com/coins/images/39619/small/MOVE_color.png",
-            "url": "https://movementlabs.xyz/",
-            "is_hot": True,
-            "added_date": today.strftime("%Y-%m-%d"),
-            "source": "curated",
-        },
+        _a("extended-xten", "Extended (XTEN)", "XTEN", "DeFi/DEX", "確定エアドロップ", "active", "easy",
+           "Perp DEX。ポイント保有者に3億XTEN (総供給10億の30%) を配布、TGE時に全量アンロック。"
+           "11/11に割当チェッカー公開。期限までに規約へ署名しない分はエコシステム基金へ移る。TGE日は未発表。",
+           ["Extendedアプリで割当を確認", "12/31 23:59 UTC までに規約へ署名 (受諾)", "TGE日程は公式発表を待つ"],
+           "2026-12-31", "https://extended.exchange/", is_hot=True),
+        _a("predict-fun", "Predict.fun (PREDICT)", "PREDICT", "予測市場", "確定エアドロップ", "upcoming", "easy",
+           "予測市場。Season 1エアドロップ確定済みだが、11/17にTGEと請求開始を延期 (2〜4週間後めど、新日程未確定)。"
+           "TGEまで「即時35%受取」か「12か月ベスティング」を選択・変更可能。請求開始後の受付は30日間との報道。",
+           ["公式サイトで割当を確認", "即時35% or 12か月ベスティングを選択", "公式Xで新しい請求日を確認 (偽サイト注意)"],
+           "未定 (12月見込み)", "https://predict.fun/", is_hot=True),
+        _a("polymarket-poly", "Polymarket (POLY)", "POLY", "予測市場", "ポイント/利用実績", "active", "medium",
+           "最大手の予測市場。CMOが「トークンもエアドロップもある」と発言しPOLYは確定視されているが、"
+           "日程・配分・条件は未公表 (10月時点)。取引実績が基準になるとの見方が多い。",
+           ["Polymarketで継続的に取引", "複数カテゴリの市場に参加", "流動性提供 (指値注文)"],
+           "未定", "https://polymarket.com/", is_hot=True),
+        _a("doppler-xdp", "Doppler Finance (XDP)", "XDP", "DeFi", "請求受付中", "active", "easy",
+           "Genesisエアドロップの請求受付中。2026/7/30までにBaseアドレスを登録済みのユーザーのみ対象。"
+           "11/28 12:00 UTC までに請求しないと失効。",
+           ["対象か確認 (7/30までに登録済みか)", "公式ポータルで請求"],
+           "2026-11-28", "https://doppler.finance/"),
+        _a("aster-stage6", "Aster (ASTER) Stage 6", "ASTER", "DeFi/DEX", "請求受付中", "active", "easy",
+           "Stage 6で6,400万ASTER (供給量の0.8%) を1万ポイント以上の参加者へ配布。"
+           "請求期限は情報源により11/28 12:00 UTCまたは12/4と食い違いあり — 早い方を期限と考えるのが安全。",
+           ["公式サイトで請求", "期限は公式で再確認"],
+           "2026-11-28", "https://www.asterdex.com/"),
+        _a("midnight-night", "Midnight (NIGHT)", "NIGHT", "インフラ", "請求受付中", "active", "easy",
+           "Glacier Drop / Scavenger Mineで獲得したNIGHTの償還。解凍期間は12/4に終了し、その後90日の猶予期間。"
+           "新規の獲得受付は終了済み (既存の対象者向け)。",
+           ["対応ウォレットで償還ポータルに接続", "解凍済みトランシェを償還"],
+           "2026-12-04", "https://midnight.network/"),
+        _a("zest-zest", "Zest Protocol (ZEST)", "ZEST", "DeFi", "請求受付中", "active", "easy",
+           "Season 1エアドロップの請求受付中。締切は12/10との情報 (12/19との記載もあり、公式で要確認)。",
+           ["公式サイトで対象・割当を確認", "締切までに請求"],
+           "2026-12-10", "https://www.zestprotocol.com/"),
+        _a("standx-dusd", "StandX (DUSD)", "DUSD", "DeFi/DEX", "請求受付中", "active", "easy",
+           "TGEを中止し、ロックアップなしのエアドロップに変更。請求は11/1開始、12/31 08:00 UTCまで。",
+           ["公式サイトで請求"],
+           "2026-12-31", "https://standx.com/"),
+        _a("bitbase-origin", "Bitbase ORIGIN", "", "取引所", "ポイントプログラム", "active", "medium",
+           "取引所Bitbaseの初回ポイントシーズン (11/4〜2027/5/4の26週間)。毎週100万ポイントを貢献度に応じて配布、自動参加。"
+           "ポイントを基にした取引所トークンのエアドロップ計画が報じられている (11/18報道)。トークン詳細は未公表。",
+           ["Bitbaseで取引 (自動エンロール)", "継続的な利用でポイント蓄積", "bitbase.com/points で順位確認"],
+           "2027-05-04", "https://bitbase.com/points"),
+        _a("infinifi-infi", "infiniFi (INFI)", "INFI", "DeFi", "確定エアドロップ", "upcoming", "medium",
+           "Season 1/2のウォレット登録は11/10に締切済み。TGEはQ4 2026見込みだが日付未発表、初回トークンは凍結状態で届く予定。"
+           "未請求分はSeason 3報酬に上乗せ — Season 3は引き続き参加可能。",
+           ["登録済みならTGE発表を待つ", "Season 3でポイント獲得を継続"],
+           "未定 (Q4見込み)", "https://infinifi.xyz/"),
+        _a("saturn-strn", "Saturn (STRN)", "STRN", "DeFi", "確定エアドロップ", "upcoming", "easy",
+           "エアドロップ登録は11/16に締切済み。請求はTGE時に開始予定だが、TGE日・上場先は未発表。",
+           ["登録済みならTGE発表を待つ"],
+           "未定", "https://www.coingabbar.com/en/saturn-airdrop-registration-closed-strn-claim-token-launch-soon"),
+        _a("base-token", "Base", "", "Layer2", "未確定 (観測)", "active", "easy",
+           "CoinbaseのL2。トークン発行を「検討」と示唆したのみで、発行もエアドロップも未確定。期待先行の案件。",
+           ["Base上でdApps利用", "ブリッジ・スワップ等のオンチェーン実績"],
+           "未定", "https://www.base.org/"),
+        _a("metamask-rewards", "MetaMask Rewards (MASK)", "MASK", "ウォレット", "未確定 (観測)", "active", "easy",
+           "MetaMaskのリワードポイント制度。将来のMASKトークンとの関連が示唆されているが、発行・配布は未確定。",
+           ["MetaMask内でスワップ/ブリッジ/Perps利用", "リワードポイントを蓄積"],
+           "未定", "https://metamask.io/"),
+        _a("treehouse-tree", "Treehouse (TREE) Season 2", "TREE", "DeFi", "請求終了", "ended", "easy",
+           "Season 2 (2,310万TREE) の請求は11/25 07:00 UTCで終了。未請求分はトレジャリーへ。",
+           [], "2026-11-25", "https://www.treehouse.finance/"),
+        _a("fables", "Fables (FABLES)", "FABLES", "その他", "請求終了", "ended", "easy",
+           "ポイント→トークン交換とPROLOGUE償還は11/20 23:59 UTCで終了。",
+           [], "2026-11-20", "https://cryptoticker.io/en/most-profitable-crypto-airdrops-week-47-2026/"),
     ]
 
 
@@ -201,7 +187,7 @@ def fetch_all_airdrops() -> tuple[list[dict], list[str]]:
             new_items.append(s["name"])
             seen_names.add(s["name"].lower())
 
-    # 注目度でソート: is_hot → estimated_value_usd
-    curated.sort(key=lambda x: (not x.get("is_hot"), -x.get("estimated_value_usd", 0)))
+    # ソート: 終了案件は末尾 → is_hot → estimated_value_usd
+    curated.sort(key=lambda x: (x.get("status") == "ended", not x.get("is_hot"), -x.get("estimated_value_usd", 0)))
 
     return curated, new_items
