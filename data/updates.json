@@ -1,5 +1,81 @@
 [
   {
+    "timestamp": "2026-11-26T00:12:10.557537+00:00",
+    "date": "2026-11-26",
+    "time_jst": "2026年11月26日 09:12",
+    "total_airdrops": 20,
+    "added_count": 6,
+    "removed_count": 1,
+    "changed_count": 2,
+    "hot_count": 4,
+    "added_names": [
+      "Flop Labs (FLOP)",
+      "Variational (VAR)",
+      "Grass Season 2 (USDC)",
+      "USD.AI Season 2",
+      "Tzero (T0)",
+      "GenLayer (GEN)"
+    ],
+    "removed_names": [
+      "Fables (FABLES)"
+    ],
+    "changes": [
+      {
+        "name": "Aster (ASTER) Stage 6",
+        "changes": [
+          "期限: 2026-11-28 → 2026-12-04"
+        ]
+      },
+      {
+        "name": "infiniFi (INFI)",
+        "changes": [
+          "ステータス: upcoming → ended",
+          "期限: 未定 (Q4見込み) → 2026-11-17"
+        ]
+      }
+    ],
+    "trending_coins": [],
+    "highlights": [
+      {
+        "kind": "hot",
+        "text": "Extended (XTEN): 公式XがTGEを 11/30 と発表済み (前日の「TGE日は未発表」を訂正)。TGE前にアプリで規約へ署名すると初回送付バッチに入る。署名の最終期限は 12/31 23:59 UTC。"
+      },
+      {
+        "kind": "new",
+        "text": "Flop Labs (FLOP) — アーサー・ヘイズ氏のAI計算チェーン。テストネットが 11/24 07:00 UTC に開始。実資金不要で、エージェントがフォーセットのFLOPを推論に「使った量」がエアドロップの基準 (保有だけでは対象外)。配布量・条件の詳細は未公表。"
+      },
+      {
+        "kind": "new",
+        "text": "Variational (VAR) — Perp DEX。供給量の32%をポイント保有者へ配布しTGE時に全量アンロック。TGEはQ4 2026予定 (日付未発表)、ポイントはTGEまで毎週配布中。"
+      },
+      {
+        "kind": "deadline",
+        "text": "本日 11/26 09:00 UTC (18:00 JST): Binance Wallet経由のPredict Points保有者向け受取方式フォームの締切 (即時35% or 1年後100%)。PREDICTのTGE新日程は引き続き未確定。"
+      },
+      {
+        "kind": "deadline",
+        "text": "あと2日: Doppler Finance (XDP) の請求は 11/28 12:00 UTC 締切。未請求分は失効。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Aster (ASTER) Stage 6: 請求期限を 12/4 12:00 UTC に修正 (11/28とする古い報道あり。念のため早めに請求を)。同じ 12/4 にMidnight (NIGHT) の解凍期間も終了。"
+      },
+      {
+        "kind": "ended",
+        "text": "配布済み: infiniFi (INFI) は 11/17 にTGE実施、Season 1/2分は登録ウォレットへ直接送付済み (前日の「TGE日未発表」を訂正)。「INFIを請求」と誘導するページは偽物。"
+      },
+      {
+        "kind": "new",
+        "text": "一覧に追加 (既存の対象者向け・請求受付中など): Grass Season 2 (USDC、2027/1/22まで)、USD.AI Season 2 (2027/1/31まで)、GenLayer (GEN、登録締切済み・TGE待ち)、Tzero (T0、テストネットポイント)。"
+      },
+      {
+        "kind": "removed",
+        "text": "Fables (11/20終了) を削除。Polymarket (POLY) は新情報がないため「注目」から通常掲載へ変更。"
+      }
+    ],
+    "email_sent": false
+  },
+  {
     "timestamp": "2026-11-25T00:12:01.299261+00:00",
     "date": "2026-11-25",
     "time_jst": "2026年11月25日 09:12",

@@ -49,6 +49,8 @@ def _detect_changes(old_airdrops: list[dict], new_airdrops: list[dict]) -> dict:
             diffs = []
             if old_a.get("status") != new_a.get("status"):
                 diffs.append(f"ステータス: {old_a.get('status')} → {new_a.get('status')}")
+            if old_a.get("end_date") != new_a.get("end_date"):
+                diffs.append(f"期限: {old_a.get('end_date')} → {new_a.get('end_date')}")
             if old_a.get("estimated_value_usd") != new_a.get("estimated_value_usd"):
                 diffs.append(
                     f"推定価値: ${old_a.get('estimated_value_usd',0):,} → ${new_a.get('estimated_value_usd',0):,}"

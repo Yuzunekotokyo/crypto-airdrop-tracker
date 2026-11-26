@@ -5,7 +5,7 @@ Crypto Airdrop Tracker — Flask メインアプリケーション
 import json
 import logging
 import os
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 from flask import Flask, jsonify, render_template, request
 
@@ -39,7 +39,7 @@ def index():
         airdrops=airdrops,
         latest_update=latest_update,
         updates=updates[:5],
-        now=datetime.now().strftime("%Y年%m月%d日 %H:%M"),
+        now=datetime.now(timezone(timedelta(hours=9))).strftime("%Y年%m月%d日 %H:%M JST"),
     )
 
 

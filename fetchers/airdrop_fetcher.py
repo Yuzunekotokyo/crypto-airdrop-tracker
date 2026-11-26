@@ -53,22 +53,24 @@ def _scrape_airdrops_io() -> list[dict]:
 
 
 # 手動キュレーションの最終確認日と、その日の更新メモ (サイト最上部のUPDATEに表示)
-CURATED_UPDATED = "2026-11-25"
+CURATED_UPDATED = "2026-11-26"
 CURATED_NOTES = [
-    {"kind": "deadline", "text": "Doppler Finance (XDP) のGenesisエアドロップ請求は 11/28 12:00 UTC 締切。未請求分は失効。"},
-    {"kind": "deadline", "text": "Aster (ASTER) Stage 6 の請求期限は情報源により 11/28 または 12/4。早い方の 11/28 までに請求を。"},
-    {"kind": "deadline", "text": "Midnight (NIGHT) Glacier Drop の解凍期間は 12/4 終了 (その後90日の猶予期間)。"},
-    {"kind": "hot", "text": "Extended (XTEN): 3億XTEN (供給量の30%) の割当チェッカー公開中。12/31 23:59 UTC までにアプリで規約へ署名しないと割当は失効。TGE日は未発表。"},
-    {"kind": "hot", "text": "Predict.fun (PREDICT): 11/17 にTGEとSeason 1請求を延期 (2〜4週間後めど)。新日程は未確定、偽の請求サイトに注意。"},
-    {"kind": "new", "text": "新着: Bitbase「ORIGIN」ポイントシーズン (11/4〜2027/5/4、毎週100万ポイント配布)。将来のトークン・エアドロップ計画が報じられているが公式詳細は未確認。"},
-    {"kind": "new", "text": "新着: Zest Protocol (ZEST) Season 1 の請求受付中。締切は 12/10 (12/19 との記載もあり要確認)。"},
-    {"kind": "ended", "text": "終了: Treehouse (TREE) Season 2 請求 (11/25 07:00 UTC)、Fables ポイント交換 (11/20)。"},
-    {"kind": "removed", "text": "一覧を全面刷新: 配布済みの旧案件 (LayerZero, Scroll, zkSync, Hyperliquid, EigenLayer, Movement) を削除。Hyperliquid「Season 2」は公式発表なしのため掲載見送り。"},
+    {"kind": "hot", "text": "Extended (XTEN): 公式XがTGEを 11/30 と発表済み (前日の「TGE日は未発表」を訂正)。TGE前にアプリで規約へ署名すると初回送付バッチに入る。署名の最終期限は 12/31 23:59 UTC。"},
+    {"kind": "new", "text": "Flop Labs (FLOP) — アーサー・ヘイズ氏のAI計算チェーン。テストネットが 11/24 07:00 UTC に開始。実資金不要で、エージェントがフォーセットのFLOPを推論に「使った量」がエアドロップの基準 (保有だけでは対象外)。配布量・条件の詳細は未公表。"},
+    {"kind": "new", "text": "Variational (VAR) — Perp DEX。供給量の32%をポイント保有者へ配布しTGE時に全量アンロック。TGEはQ4 2026予定 (日付未発表)、ポイントはTGEまで毎週配布中。"},
+    {"kind": "deadline", "text": "本日 11/26 09:00 UTC (18:00 JST): Binance Wallet経由のPredict Points保有者向け受取方式フォームの締切 (即時35% or 1年後100%)。PREDICTのTGE新日程は引き続き未確定。"},
+    {"kind": "deadline", "text": "あと2日: Doppler Finance (XDP) の請求は 11/28 12:00 UTC 締切。未請求分は失効。"},
+    {"kind": "deadline", "text": "Aster (ASTER) Stage 6: 請求期限を 12/4 12:00 UTC に修正 (11/28とする古い報道あり。念のため早めに請求を)。同じ 12/4 にMidnight (NIGHT) の解凍期間も終了。"},
+    {"kind": "ended", "text": "配布済み: infiniFi (INFI) は 11/17 にTGE実施、Season 1/2分は登録ウォレットへ直接送付済み (前日の「TGE日未発表」を訂正)。「INFIを請求」と誘導するページは偽物。"},
+    {"kind": "new", "text": "一覧に追加 (既存の対象者向け・請求受付中など): Grass Season 2 (USDC、2027/1/22まで)、USD.AI Season 2 (2027/1/31まで)、GenLayer (GEN、登録締切済み・TGE待ち)、Tzero (T0、テストネットポイント)。"},
+    {"kind": "removed", "text": "Fables (11/20終了) を削除。Polymarket (POLY) は新情報がないため「注目」から通常掲載へ変更。"},
 ]
+
+_PREV = "2026-11-25"  # 前回から掲載している案件の追加日
 
 
 def _a(id, name, symbol, category, type_, status, difficulty, description, tasks,
-       end_date, url, is_hot=False, added_date=CURATED_UPDATED, value=0):
+       end_date, url, is_hot=False, added_date=_PREV, value=0):
     return {
         "id": id, "name": name, "symbol": symbol, "category": category, "type": type_,
         "status": status, "difficulty": difficulty, "estimated_value_usd": value,
@@ -83,59 +85,87 @@ def _build_seed_airdrops() -> list[dict]:
     推定価値は根拠のある数字が無い限り 0 (=未定) とする。
     日付はアグリゲーター経由の情報を含むため、参加前に必ず公式発表で確認すること。
     """
+    new = CURATED_UPDATED
     return [
         _a("extended-xten", "Extended (XTEN)", "XTEN", "DeFi/DEX", "確定エアドロップ", "active", "easy",
-           "Perp DEX。ポイント保有者に3億XTEN (総供給10億の30%) を配布、TGE時に全量アンロック。"
-           "11/11に割当チェッカー公開。期限までに規約へ署名しない分はエコシステム基金へ移る。TGE日は未発表。",
-           ["Extendedアプリで割当を確認", "12/31 23:59 UTC までに規約へ署名 (受諾)", "TGE日程は公式発表を待つ"],
+           "Perp DEX。【TGEは11/30】公式Xが11/20に「XTENは11/30にローンチ」と発表。Xpoints保有者に3億XTEN (総供給10億の30%、1 Xpoint≒4.29 XTEN) を配布、TGE時に全量アンロック。"
+           "TGE前に規約へ署名すれば初回送付バッチ、TGE後の署名分は順次送付。署名期限は12/31 23:59 UTCで、未署名分は失効。EU居住者は当初スポット取引不可との報道。",
+           ["Extendedアプリで割当を確認", "11/30のTGE前に規約へ署名 (初回バッチ入り)", "最終期限は12/31 23:59 UTC"],
            "2026-12-31", "https://extended.exchange/", is_hot=True),
+        _a("flop-labs", "Flop Labs (FLOP)", "FLOP", "AI/インフラ", "テストネット", "active", "medium",
+           "アーサー・ヘイズ氏が率いるAI計算 (推論) ブロックチェーン。テストネットが11/24 07:00 UTCに開始 (約90日間との情報)。承認・ウェイトリストなし、実資金不要。"
+           "エージェントが毎日フォーセットからテストネットFLOPを受け取り、推論に使った量でエアドロップを計測 (保有のみ・Devnet分は対象外)。開始直後で機能は順次有効化中。"
+           "配布総量や詳細条件は未公表、ホワイトペーパーも未整備との指摘あり。",
+           ["公式ドキュメント (docs.flop.network) で手順と稼働状況を確認", "フォーセットでテストネットFLOPを毎日取得", "エージェントで推論にFLOPを消費", "非公式ツール・偽サイトに注意"],
+           "未定 (2027年2月ごろまで)", "https://x.com/flop_labs", is_hot=True, added_date=new),
+        _a("variational-var", "Variational (VAR)", "VAR", "DeFi/DEX", "確定エアドロップ", "active", "medium",
+           "Arbitrum上のPerp DEX。VAR供給量の32%をジェネシス・エアドロップとしてポイント保有者に比例配布、TGE時に全量アンロック。"
+           "TGEはQ4 2026予定 (Q3から延期、日付未発表)。ポイントはTGEまで毎週15万ポイント配布。1ポイント以上で請求対象、未請求分はバーン。",
+           ["ArbitrumウォレットでUSDCを入金して取引", "TGE前に利用規約へ署名", "公式XでTGE日を確認"],
+           "未定 (Q4見込み)", "https://x.com/variational_io/status/2102929439063765192", is_hot=True, added_date=new),
         _a("predict-fun", "Predict.fun (PREDICT)", "PREDICT", "予測市場", "確定エアドロップ", "upcoming", "easy",
-           "予測市場。Season 1エアドロップ確定済みだが、11/17にTGEと請求開始を延期 (2〜4週間後めど、新日程未確定)。"
-           "TGEまで「即時35%受取」か「12か月ベスティング」を選択・変更可能。請求開始後の受付は30日間との報道。",
+           "予測市場。Season 1エアドロップ確定済みだが、11/17にTGEと請求開始を延期 (2〜4週間後めど)。11/25時点の報道でも新日程は未確定。"
+           "アプリ側はTGEまで「即時35%」か「12か月分割で100%」を選択・変更可能。Binance Wallet経由のポイント保有者向け選択フォームは11/26 09:00 UTC締切。"
+           "TGE前に請求を促すページは偽物。",
            ["公式サイトで割当を確認", "即時35% or 12か月ベスティングを選択", "公式Xで新しい請求日を確認 (偽サイト注意)"],
            "未定 (12月見込み)", "https://predict.fun/", is_hot=True),
-        _a("polymarket-poly", "Polymarket (POLY)", "POLY", "予測市場", "ポイント/利用実績", "active", "medium",
-           "最大手の予測市場。CMOが「トークンもエアドロップもある」と発言しPOLYは確定視されているが、"
-           "日程・配分・条件は未公表 (10月時点)。取引実績が基準になるとの見方が多い。",
-           ["Polymarketで継続的に取引", "複数カテゴリの市場に参加", "流動性提供 (指値注文)"],
-           "未定", "https://polymarket.com/", is_hot=True),
         _a("doppler-xdp", "Doppler Finance (XDP)", "XDP", "DeFi", "請求受付中", "active", "easy",
-           "Genesisエアドロップの請求受付中。2026/7/30までにBaseアドレスを登録済みのユーザーのみ対象。"
+           "【残り2日】Genesisエアドロップの請求受付中。登録済みのBaseウォレットのみ対象 (登録は締切済み)。"
            "11/28 12:00 UTC までに請求しないと失効。",
-           ["対象か確認 (7/30までに登録済みか)", "公式ポータルで請求"],
-           "2026-11-28", "https://doppler.finance/"),
+           ["対象か確認 (登録済みか)", "公式ポータルで請求"],
+           "2026-11-28", "https://app.doppler.finance/"),
         _a("aster-stage6", "Aster (ASTER) Stage 6", "ASTER", "DeFi/DEX", "請求受付中", "active", "easy",
-           "Stage 6で6,400万ASTER (供給量の0.8%) を1万ポイント以上の参加者へ配布。"
-           "請求期限は情報源により11/28 12:00 UTCまたは12/4と食い違いあり — 早い方を期限と考えるのが安全。",
-           ["公式サイトで請求", "期限は公式で再確認"],
-           "2026-11-28", "https://www.asterdex.com/"),
+           "Stage 6「Convergence」で6,400万ASTER (供給量の0.8%) を1万ポイント以上の参加者へ配布。"
+           "ベスティング選択者向けの請求は11/4開始、12/4 12:00 UTCまで (複数媒体で一致)。11/28とする古い報道もあるため早めの請求が安全。",
+           ["公式サイト (asterdex.com) で請求", "期限は公式ページで再確認"],
+           "2026-12-04", "https://www.asterdex.com/"),
         _a("midnight-night", "Midnight (NIGHT)", "NIGHT", "インフラ", "請求受付中", "active", "easy",
            "Glacier Drop / Scavenger Mineで獲得したNIGHTの償還。解凍期間は12/4に終了し、その後90日の猶予期間。"
            "新規の獲得受付は終了済み (既存の対象者向け)。",
            ["対応ウォレットで償還ポータルに接続", "解凍済みトランシェを償還"],
            "2026-12-04", "https://midnight.network/"),
         _a("zest-zest", "Zest Protocol (ZEST)", "ZEST", "DeFi", "請求受付中", "active", "easy",
-           "Season 1エアドロップの請求受付中。締切は12/10との情報 (12/19との記載もあり、公式で要確認)。",
-           ["公式サイトで対象・割当を確認", "締切までに請求"],
+           "Season 1エアドロップの請求受付中 (11/19 12:00 UTC開始)。締切は公式リマインダーによれば12/10、未請求分はトレジャリーへ。"
+           "対象は5/13スナップショット時点のポイント保有者のみ。",
+           ["公式サイトで対象・割当を確認", "12/10までに請求"],
            "2026-12-10", "https://www.zestprotocol.com/"),
         _a("standx-dusd", "StandX (DUSD)", "DUSD", "DeFi/DEX", "請求受付中", "active", "easy",
-           "TGEを中止し、ロックアップなしのエアドロップに変更。請求は11/1開始、12/31 08:00 UTCまで。",
+           "TGEを中止し、ロックアップなしのエアドロップに変更。請求は11月初旬から受付中、12/31 08:00 UTCまで。チェッカーと請求は公式サイトのみ。",
            ["公式サイトで請求"],
            "2026-12-31", "https://standx.com/"),
+        _a("grass-s2", "Grass Season 2 (USDC)", "GRASS", "DePIN", "請求受付中", "active", "easy",
+           "帯域共有DePIN。Season 2報酬はネットワーク収益からUSDCで支払われ、2027/1/22まで請求可能。"
+           "既にNetwork Pointsを獲得済みのアカウント向け (新規に条件を満たすことは不可)。少額だったとの報告が多い。",
+           ["Grassダッシュボードで対象を確認", "2027/1/22までに請求"],
+           "2027-01-22", "https://app.grass.io/", added_date=new),
+        _a("usdai-s2", "USD.AI Season 2", "", "DeFi", "請求受付中", "active", "easy",
+           "AIインフラ向け融資のステーブルコイン。Season 2エアドロップの請求がArbitrum上で10/20から受付中、2027/1/31まで。既存の割当保有者向け。",
+           ["公式サイトで割当を確認", "2027/1/31までに請求"],
+           "2027-01-31", "https://www.tradingview.com/news/coinmarketcal:92fbcfa61094b:0-usd-ai-season-2-airdrop-claims-open-on-arbitrum-20-oct-2026-to-31-jan-2027/", added_date=new),
         _a("bitbase-origin", "Bitbase ORIGIN", "", "取引所", "ポイントプログラム", "active", "medium",
            "取引所Bitbaseの初回ポイントシーズン (11/4〜2027/5/4の26週間)。毎週100万ポイントを貢献度に応じて配布、自動参加。"
-           "ポイントを基にした取引所トークンのエアドロップ計画が報じられている (11/18報道)。トークン詳細は未公表。",
+           "ポイントを基にした取引所トークンのエアドロップ計画が報じられている (開始2週間で1.7万人超がポイント獲得)。トークンの時期・詳細は未公表。",
            ["Bitbaseで取引 (自動エンロール)", "継続的な利用でポイント蓄積", "bitbase.com/points で順位確認"],
            "2027-05-04", "https://bitbase.com/points"),
-        _a("infinifi-infi", "infiniFi (INFI)", "INFI", "DeFi", "確定エアドロップ", "upcoming", "medium",
-           "Season 1/2のウォレット登録は11/10に締切済み。TGEはQ4 2026見込みだが日付未発表、初回トークンは凍結状態で届く予定。"
-           "未請求分はSeason 3報酬に上乗せ — Season 3は引き続き参加可能。",
-           ["登録済みならTGE発表を待つ", "Season 3でポイント獲得を継続"],
-           "未定 (Q4見込み)", "https://infinifi.xyz/"),
+        _a("polymarket-poly", "Polymarket (POLY)", "POLY", "予測市場", "ポイント/利用実績", "active", "medium",
+           "最大手の予測市場。2025年10月にCMOが「トークンもエアドロップもある」と発言したが、スナップショット日・配分・条件は今も未公表 "
+           "(公式ヘルプは「トークンなし・エアドロップ未発表」と記載)。偽のPOLY請求サイトが多いので注意。",
+           ["Polymarketで継続的に取引", "複数カテゴリの市場に参加", "流動性提供 (指値注文)"],
+           "未定", "https://polymarket.com/"),
+        _a("tzero-t0", "Tzero (T0)", "T0", "ローンチパッド", "テストネット", "active", "easy",
+           "Base Sepoliaテストネット上のローンチパッド。「Pre-flight Points Season 0」でT0供給量の11%をユーザー向けに確保 (Season 0分5%)。実資金不要。"
+           "メインネット移行はLayerZeroの「Zero」メインネット (11/30予定との情報) 以降の見込み。情報源が限られるため公式ドキュメントで要確認。",
+           ["テストネットでポイントを獲得 (500ポイント以上が対象との情報)", "公式ドキュメントで条件を確認"],
+           "未定", "https://testnet.tzer0.fun/docs/points", added_date=new),
         _a("saturn-strn", "Saturn (STRN)", "STRN", "DeFi", "確定エアドロップ", "upcoming", "easy",
-           "エアドロップ登録は11/16に締切済み。請求はTGE時に開始予定だが、TGE日・上場先は未発表。",
+           "Season 1/2のエアドロップ登録は11/16に締切済み。請求はTGE時に開始予定だが、TGE日 (Q4予定)・上場先は未発表。"
+           "Season 2のスナップショットはTGE時または12/8のいずれか早い方。請求リンクは公式X (@saturn_credit) のみで告知。",
            ["登録済みならTGE発表を待つ"],
            "未定", "https://www.coingabbar.com/en/saturn-airdrop-registration-closed-strn-claim-token-launch-soon"),
+        _a("genlayer-gen", "GenLayer (GEN)", "GEN", "インフラ", "確定エアドロップ", "upcoming", "easy",
+           "登録は10/31に締切済み。請求はTGE時に開始 (日付未発表)。請求時に20%、以後毎月20%ずつアンロックされる方式と報じられている。",
+           ["登録済みならTGE発表を待つ"],
+           "未定", "https://www.coingabbar.com/en/genlayer-airdrop-registration-reopens-gen-tokenomics-out", added_date=new),
         _a("base-token", "Base", "", "Layer2", "未確定 (観測)", "active", "easy",
            "CoinbaseのL2。トークン発行を「検討」と示唆したのみで、発行もエアドロップも未確定。期待先行の案件。",
            ["Base上でdApps利用", "ブリッジ・スワップ等のオンチェーン実績"],
@@ -144,12 +174,13 @@ def _build_seed_airdrops() -> list[dict]:
            "MetaMaskのリワードポイント制度。将来のMASKトークンとの関連が示唆されているが、発行・配布は未確定。",
            ["MetaMask内でスワップ/ブリッジ/Perps利用", "リワードポイントを蓄積"],
            "未定", "https://metamask.io/"),
+        _a("infinifi-infi", "infiniFi (INFI)", "INFI", "DeFi", "配布済み", "ended", "medium",
+           "11/17 15:30 UTCにTGE実施。Season 1/2分は11/10までに登録したウォレットへ直接送付済みで、請求手続きは不要 (「INFIを請求」と誘導するページは偽物)。"
+           "Season 3は別枠で継続中との情報。",
+           [], "2026-11-17", "https://infinifi.xyz/"),
         _a("treehouse-tree", "Treehouse (TREE) Season 2", "TREE", "DeFi", "請求終了", "ended", "easy",
            "Season 2 (2,310万TREE) の請求は11/25 07:00 UTCで終了。未請求分はトレジャリーへ。",
            [], "2026-11-25", "https://www.treehouse.finance/"),
-        _a("fables", "Fables (FABLES)", "FABLES", "その他", "請求終了", "ended", "easy",
-           "ポイント→トークン交換とPROLOGUE償還は11/20 23:59 UTCで終了。",
-           [], "2026-11-20", "https://cryptoticker.io/en/most-profitable-crypto-airdrops-week-47-2026/"),
     ]
 
 
