@@ -1,5 +1,54 @@
 [
   {
+    "timestamp": "2026-11-27T00:11:30.213210+00:00",
+    "date": "2026-11-27",
+    "time_jst": "2026年11月27日 09:11",
+    "total_airdrops": 20,
+    "added_count": 1,
+    "removed_count": 1,
+    "changed_count": 0,
+    "hot_count": 4,
+    "added_names": [
+      "Antseed (ANTS)"
+    ],
+    "removed_names": [
+      "Treehouse (TREE) Season 2"
+    ],
+    "changes": [],
+    "trending_coins": [],
+    "highlights": [
+      {
+        "kind": "hot",
+        "text": "Extended (XTEN): 配布日程が確定。初回バッチは 11/29 に送付、対象になるには 11/29 08:30 UTC (17:30 JST) までにアプリで規約署名と各種確認を完了すること。XTEN/USDCスポット取引は 11/30 15:00 UTC (12/1 0:00 JST) 開始。以降の署名分は順次送付、最終期限は 12/31 23:59 UTC。"
+      },
+      {
+        "kind": "deadline",
+        "text": "明日締切: Doppler Finance (XDP) の請求は 11/28 12:00 UTC (21:00 JST) まで。未請求分は失効し、再請求の機会はなし。"
+      },
+      {
+        "kind": "hot",
+        "text": "Flop Labs (FLOP): テストネット分のエアドロップ上限は36億FLOPと報道 (マイナー・バリデーター・AIエージェントに均等3分割)。約90日後に1回のスナップショット、メインネットは2027年Q1予定。前日の「配布量は未公表」を更新。"
+      },
+      {
+        "kind": "new",
+        "text": "Antseed (ANTS) を追加 — AI利用マーケットプレイス。有料のAI利用でポイントが貯まり、毎週木曜にANTSを請求できる (10/26開始)。実費がかかる点、請求したANTSは現時点で譲渡・売却不可との情報、報酬は運営裁量で変更・停止されうる点に注意。"
+      },
+      {
+        "kind": "deadline",
+        "text": "Predict.fun (PREDICT): Binance Wallet経由の受取方式フォームは 11/26 に締切済み。TGE・請求の新日程は引き続き未発表 (11/17の延期時点で「2〜4週間後」)。アプリ側の受取方式はTGEまで変更可能。"
+      },
+      {
+        "kind": "deadline",
+        "text": "来週の締切: 12/4 12:00 UTC に Aster (ASTER) Stage 6 の請求期限、同日 Midnight (NIGHT) の解凍期間終了。12/10 に Zest (ZEST) の請求期限。"
+      },
+      {
+        "kind": "removed",
+        "text": "Treehouse (TREE) Season 2 は 11/25 に請求終了のため一覧から削除。Variational (VAR) はTGE日が引き続き未発表 (Q4 2026予定)。"
+      }
+    ],
+    "email_sent": false
+  },
+  {
     "timestamp": "2026-11-26T00:12:10.557537+00:00",
     "date": "2026-11-26",
     "time_jst": "2026年11月26日 09:12",

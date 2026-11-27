@@ -8,10 +8,11 @@
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "Perp DEX。【TGEは11/30】公式Xが11/20に「XTENは11/30にローンチ」と発表。Xpoints保有者に3億XTEN (総供給10億の30%、1 Xpoint≒4.29 XTEN) を配布、TGE時に全量アンロック。TGE前に規約へ署名すれば初回送付バッチ、TGE後の署名分は順次送付。署名期限は12/31 23:59 UTCで、未署名分は失効。EU居住者は当初スポット取引不可との報道。",
+    "description": "Perp DEX。【初回送付は11/29、取引開始は11/30】Xpoints保有者に3億XTEN (総供給10億の30%、1 Xpoint≒4.29 XTEN) を配布、TGE時に全量アンロック。11/29 08:30 UTC (17:30 JST) までに規約署名と各種確認を済ませると初回バッチに入り、取引開始前に着金。XTEN/USDCスポットは11/30 15:00 UTC (12/1 0:00 JST) 開始と報道。以降の署名分は順次送付。署名期限は12/31 23:59 UTCで、未署名分は失効。ステーキング中・解除中のトークンは7日間移転不可、EU居住者は当初スポット取引不可との報道。請求はExtendedアプリ内のみ (偽チェッカーの報告あり)。",
     "tasks": [
       "Extendedアプリで割当を確認",
-      "11/30のTGE前に規約へ署名 (初回バッチ入り)",
+      "11/29 08:30 UTC (17:30 JST) までに規約へ署名 (初回バッチ入り)",
+      "11/30 15:00 UTC の取引開始を公式Xで確認",
       "最終期限は12/31 23:59 UTC"
     ],
     "end_date": "2026-12-31",
@@ -30,7 +31,7 @@
     "status": "active",
     "difficulty": "medium",
     "estimated_value_usd": 0,
-    "description": "アーサー・ヘイズ氏が率いるAI計算 (推論) ブロックチェーン。テストネットが11/24 07:00 UTCに開始 (約90日間との情報)。承認・ウェイトリストなし、実資金不要。エージェントが毎日フォーセットからテストネットFLOPを受け取り、推論に使った量でエアドロップを計測 (保有のみ・Devnet分は対象外)。開始直後で機能は順次有効化中。配布総量や詳細条件は未公表、ホワイトペーパーも未整備との指摘あり。",
+    "description": "アーサー・ヘイズ氏が率いるAI計算 (推論) ブロックチェーン。テストネットが11/24 07:00 UTCに開始 (約90日間との情報)。承認・ウェイトリストなし、実資金不要。エージェントが毎日フォーセットからテストネットFLOPを受け取り、推論に使った量でエアドロップを計測 (保有のみ・Devnet分は対象外)。開始直後で機能は順次有効化中。テストネット分のエアドロップ上限は36億FLOP (マイナー・バリデーター・AIエージェントに均等3分割) と報道。終了時に1回のスナップショット、メインネットは2027年Q1予定。個別の配分式は未公表、ホワイトペーパーも未整備との指摘あり。",
     "tasks": [
       "公式ドキュメント (docs.flop.network) で手順と稼働状況を確認",
       "フォーセットでテストネットFLOPを毎日取得",
@@ -75,7 +76,7 @@
     "status": "upcoming",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "予測市場。Season 1エアドロップ確定済みだが、11/17にTGEと請求開始を延期 (2〜4週間後めど)。11/25時点の報道でも新日程は未確定。アプリ側はTGEまで「即時35%」か「12か月分割で100%」を選択・変更可能。Binance Wallet経由のポイント保有者向け選択フォームは11/26 09:00 UTC締切。TGE前に請求を促すページは偽物。",
+    "description": "予測市場。Season 1エアドロップ確定済みだが、11/17にTGEと請求開始を延期 (2〜4週間後めど)。11/27時点でも新日程は未発表。アプリ側はTGEまで「即時35%」か「12か月分割で100%」を選択・変更可能。Binance Wallet経由のポイント保有者向け選択フォームは11/26に締切済み。TGE前に請求を促すページは偽物。",
     "tasks": [
       "公式サイトで割当を確認",
       "即時35% or 12か月ベスティングを選択",
@@ -97,7 +98,7 @@
     "status": "active",
     "difficulty": "easy",
     "estimated_value_usd": 0,
-    "description": "【残り2日】Genesisエアドロップの請求受付中。登録済みのBaseウォレットのみ対象 (登録は締切済み)。11/28 12:00 UTC までに請求しないと失効。",
+    "description": "【明日締切】Genesisエアドロップの請求受付中。登録済みのBaseウォレットのみ対象 (登録は締切済み)。11/28 12:00 UTC (21:00 JST) までに請求しないと失効。",
     "tasks": [
       "対象か確認 (登録済みか)",
       "公式ポータルで請求"
@@ -257,6 +258,28 @@
     "source": "curated"
   },
   {
+    "id": "antseed-ants",
+    "name": "Antseed (ANTS)",
+    "symbol": "ANTS",
+    "category": "AI/インフラ",
+    "type": "ポイントプログラム",
+    "status": "active",
+    "difficulty": "medium",
+    "estimated_value_usd": 0,
+    "description": "AIサービスのマーケットプレイス。10/26開始のAntseed Pointsで、有料のAI利用額×プロバイダー倍率に応じてポイントが貯まり、毎週木曜の締め後にANTSをウォレットへ請求できる。無料モデル・倍率0のプロバイダーは対象外、1人あたり週次プールの5%が上限。実費がかかる点に注意。請求したANTSは現時点で譲渡・売却不可との情報があり、報酬は運営の裁量で変更・停止されうる (規約)。",
+    "tasks": [
+      "公式ブログで条件を確認",
+      "対象プロバイダーの有料AIを利用 (実費)",
+      "毎週木曜にANTSを請求"
+    ],
+    "end_date": "未定 (毎週配布)",
+    "logo": "",
+    "url": "https://antseed.com/blog/antseed-points/",
+    "is_hot": false,
+    "added_date": "2026-11-27",
+    "source": "curated"
+  },
+  {
     "id": "polymarket-poly",
     "name": "Polymarket (POLY)",
     "symbol": "POLY",
@@ -395,24 +418,6 @@
     "end_date": "2026-11-17",
     "logo": "",
     "url": "https://infinifi.xyz/",
-    "is_hot": false,
-    "added_date": "2026-11-25",
-    "source": "curated"
-  },
-  {
-    "id": "treehouse-tree",
-    "name": "Treehouse (TREE) Season 2",
-    "symbol": "TREE",
-    "category": "DeFi",
-    "type": "請求終了",
-    "status": "ended",
-    "difficulty": "easy",
-    "estimated_value_usd": 0,
-    "description": "Season 2 (2,310万TREE) の請求は11/25 07:00 UTCで終了。未請求分はトレジャリーへ。",
-    "tasks": [],
-    "end_date": "2026-11-25",
-    "logo": "",
-    "url": "https://www.treehouse.finance/",
     "is_hot": false,
     "added_date": "2026-11-25",
     "source": "curated"
