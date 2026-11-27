@@ -245,8 +245,12 @@ def build_signal_email(result: dict) -> tuple[str, str, str]:
             f' <span style="color:#6c757d;">(現在値から {zone["distance_pct"] * 100:+.1f}%)</span></p>'
         )
 
+    if result.get("swing_low"):
+        swing_text = f"フィボ計算の起点: 安値 {_usd(result['swing_low'])} → 高値 {_usd(result['swing_high'])}"
+    else:
+        swing_text = "フィボ: 安値更新の直後で上昇波がまだ無いため計算対象外"
     disclaimer = "※ 機械的な条件判定による自動通知です。売買の推奨ではありません。投資は自己責任で。"
-    lines += ["", f"フィボ計算の起点: 安値 {_usd(result['swing_low'])} → 高値 {_usd(result['swing_high'])}", disclaimer]
+    lines += ["", swing_text, disclaimer]
 
     html = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
@@ -260,7 +264,7 @@ def build_signal_email(result: dict) -> tuple[str, str, str]:
     <table style="width:100%;border-collapse:collapse;">{level_rows}</table>
     {plan_html}
     <p style="color:#6c757d;font-size:12px;margin-top:20px;">
-      フィボ計算の起点: 安値 {_usd(result['swing_low'])} → 高値 {_usd(result['swing_high'])}
+      {swing_text}
       (データ: {result.get('source', '-')} 週足)<br>{disclaimer}
     </p>
   </div>

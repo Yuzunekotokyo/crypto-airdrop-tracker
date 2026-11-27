@@ -35,20 +35,20 @@ def kijun(candles: list[dict], n: int = 26) -> float:
     return (max(c["high"] for c in window) + min(c["low"] for c in window)) / 2
 
 
-def find_swing(candles: list[dict], cfg: SignalConfig) -> tuple[float, float]:
+def find_swing(candles: list[dict], cfg: SignalConfig) -> tuple[float, float] | None:
     """
     直近の上昇スイングの (安値, 高値)。
     安値 = 直近lookback週の最安値、高値 = その安値を付けた後の最高値。
-    いま最安値を更新中 (= 安値の後に上昇がまだ無い) の場合は、
-    期間内の最高値とそれ以前の最安値にフォールバックする。
+    安値を付けた週より後に高値が無い (= 最安値を更新した直後で、まだ上昇波が無い)
+    場合は None。古い波で代用すると無意味なフィボになるため、フィボ無しとして扱う。
     """
+    if cfg.swing_low and cfg.swing_high:
+        return cfg.swing_low, cfg.swing_high
     start = max(0, len(candles) - cfg.swing_lookback)
-    idx = range(start, len(candles))
-    lo_idx = min(idx, key=lambda i: candles[i]["low"])
+    lo_idx = min(range(start, len(candles)), key=lambda i: candles[i]["low"])
     hi_idx = max(range(lo_idx, len(candles)), key=lambda i: candles[i]["high"])
     if hi_idx == lo_idx:
-        hi_idx = max(idx, key=lambda i: candles[i]["high"])
-        lo_idx = min(range(max(0, hi_idx - cfg.swing_lookback), hi_idx + 1), key=lambda i: candles[i]["low"])
+        return None
     return cfg.swing_low or candles[lo_idx]["low"], cfg.swing_high or candles[hi_idx]["high"]
 
 
@@ -86,12 +86,11 @@ def evaluate(candles: list[dict], cfg: SignalConfig | None = None) -> dict:
 
     price = candles[-1]["close"]
     prev_close = candles[-2]["close"]
-    swing_low, swing_high = find_swing(candles, cfg)
-    levels = {
-        "fib50": fib(swing_low, swing_high, 0.5),
-        "kijun": kijun(candles),
-        "sma25": sma(candles, 25),
-    }
+    swing = find_swing(candles, cfg)
+    swing_low, swing_high = swing or (None, None)
+    levels = {"kijun": kijun(candles), "sma25": sma(candles, 25)}
+    if swing:
+        levels["fib50"] = fib(swing_low, swing_high, 0.5)
     result = {
         "price": price,
         "levels": levels,
@@ -135,7 +134,8 @@ def evaluate(candles: list[dict], cfg: SignalConfig | None = None) -> dict:
         entry = price if result["status"] == "LONG" else zone_hi
         risk = entry - stop
         targets = []
-        for label, tp in (("フィボ0.382", fib(swing_low, swing_high, 0.382)), ("直近高値", swing_high)):
+        candidates = (("フィボ0.382", fib(swing_low, swing_high, 0.382)), ("直近高値", swing_high)) if swing else ()
+        for label, tp in candidates:
             if tp > entry and risk > 0:
                 targets.append({"label": label, "price": tp, "rr": (tp - entry) / risk})
         result["plan"] = {"entry": entry, "stop": stop, "targets": targets}

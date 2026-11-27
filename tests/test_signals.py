@@ -72,6 +72,17 @@ def test_status_since_finds_the_hour_the_signal_flipped():
     assert WEEK == 604800
 
 
+def test_no_fib_right_after_a_fresh_low():
+    # 安値を更新した週より後に高値が無い = 上昇波が無いので、古い波のフィボで代用しない
+    closes = [126000, 110000, 90000, 98000, 85000, 75000, 65000, 55000, 54000]
+    candles = make_candles([100000] * 25 + closes, wick=0.0)
+    candles[-1].update(high=54000, low=54000)
+    r = evaluate(candles, SignalConfig(min_levels=2, confluence_pct=0.5))
+    assert "fib50" not in r["levels"] and r["swing_low"] is None
+    r.update(symbol="BTC", source="test")
+    assert "上昇波がまだ無い" in build_signal_email(r)[2]
+
+
 def test_no_zone_when_levels_are_far_apart():
     r = evaluate(pullback(81000), SignalConfig(confluence_pct=0.001))
     assert r["zone"] is None and r["status"] == "NONE"
